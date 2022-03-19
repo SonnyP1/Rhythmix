@@ -1,0 +1,2476 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1001 &56886596
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1100.3389
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &56886597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 56886596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &56886598
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56886597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &61101103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1771432554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &65262792 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1105297190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &113136947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -262.37878
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &113136948 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 113136947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &113136949
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113136948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &141343691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -421.23877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &141343692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 141343691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &141343693
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141343692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &155238426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 155238428}
+  - component: {fileID: 155238427}
+  m_Layer: 0
+  m_Name: Directional Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &155238427
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155238426}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 1
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &155238428
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155238426}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &163247093 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 803256528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &182615150 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 56886596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &221768585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1709392581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &244344013 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1645398111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &252117571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1422306465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &330872315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -601.13873
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &330872316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 330872315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &330872317
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330872316}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &332141364
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1175.0789
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &332141365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 332141364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &332141366
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332141365}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &396790362 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1190652170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &478784445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -685.0588
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &478784446 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 478784445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &478784447
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478784446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &503211620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -94.33879
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &503211621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 503211620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &503211622
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503211621}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &675474919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1985891863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &705362725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1542251795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &705362729
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705362725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &706233637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1523.0189
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &706233638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 706233637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &706233639
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706233638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &757929581 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 330872315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &803256528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -178.45879
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &803256529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 803256528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &803256530
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803256529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &846787053 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 113136947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &861566500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1343.1188
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &861566501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 861566500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &861566502
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861566501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &889919133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1865401587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &933132440
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -836.5188
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &933132441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 933132440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &933132442
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933132441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1043057022 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 861566500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1084365585
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1259.1989
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1084365586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1084365585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1084365587
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084365586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1091542528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1084365585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1105297190
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4412003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1114027595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 478784445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1178472801
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4214735926795313121, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Name
+      value: PlayerPrefabGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000016391277
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3200006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.4299994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9605162
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27822417
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.000000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+--- !u!1001 &1190652170
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -920.4388
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1190652171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1190652170}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1190652172
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190652171}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1304723553 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 503211620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1379389006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 141343691}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1392944694
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -505.15875
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1392944695 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1392944694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1392944696
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392944695}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1398259034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1542251795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1422306465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -932.29877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1422306466 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1422306465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1422306467
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422306466}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &1436657292
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -337.11877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1436657293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1436657292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1436657294
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436657293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &1542251795
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.5612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1611189885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 332141364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1645398111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -82.47879
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1672627490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1645398111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1672627492
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672627490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &1709392581
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -752.3988
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1709392582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1709392581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1709392583
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709392582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &1771432554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1354.9789
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1771432555 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1771432554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1771432556
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771432555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1814357067 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1392944694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1824886026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824886030}
+  - component: {fileID: 1824886029}
+  - component: {fileID: 1824886028}
+  - component: {fileID: 1824886027}
+  m_Layer: 0
+  m_Name: Main_Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1824886027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824886026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!81 &1824886028
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824886026}
+  m_Enabled: 1
+--- !u!20 &1824886029
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824886026}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1824886030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824886026}
+  m_LocalRotation: {x: 0.19673449, y: -0.67918646, z: 0.19673388, w: 0.67918855}
+  m_LocalPosition: {x: 13.789999, y: 16.18, z: -0.05000699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1854811536
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1439.0988
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1854811537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1854811536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1854811538
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854811537}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1001 &1865401587
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -517.01874
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1865401588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1865401587}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1865401589
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865401588}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &1916342611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1854811536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1945277072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1436657292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1985891863
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2105109041}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1016.41876
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -18.400593
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.6757698
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+      propertyPath: m_Name
+      value: Cyberpunk_Song1_GrayBox (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1985891864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1985891863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1985891865
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985891864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!1 &1997891954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5635648308888094064, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 1105297190}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1997891956
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997891954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7177582377190089013, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+--- !u!4 &2095607033 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 933132440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2098714210 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12982dd60be15434caa4db8b5912b594, type: 3}
+  m_PrefabInstance: {fileID: 706233637}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2105109040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2105109041}
+  m_Layer: 0
+  m_Name: TempTrackGeo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2105109041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105109040}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -85.5612, y: 18.400593, z: 0.6757698}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1398259034}
+  - {fileID: 65262792}
+  - {fileID: 244344013}
+  - {fileID: 1304723553}
+  - {fileID: 163247093}
+  - {fileID: 846787053}
+  - {fileID: 1945277072}
+  - {fileID: 1379389006}
+  - {fileID: 1814357067}
+  - {fileID: 1114027595}
+  - {fileID: 757929581}
+  - {fileID: 889919133}
+  - {fileID: 221768585}
+  - {fileID: 2095607033}
+  - {fileID: 396790362}
+  - {fileID: 182615150}
+  - {fileID: 675474919}
+  - {fileID: 252117571}
+  - {fileID: 61101103}
+  - {fileID: 1916342611}
+  - {fileID: 2098714210}
+  - {fileID: 1043057022}
+  - {fileID: 1091542528}
+  - {fileID: 1611189885}
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3540333746733821116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.602566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.470255
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.63619745
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012585, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012591, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_Name
+      value: SceneAudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
