@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Lush_DarkForest_Scene.unity
     guid: fc8ec5f91f4f6a54eaf802d269daeade
   - enabled: 1
