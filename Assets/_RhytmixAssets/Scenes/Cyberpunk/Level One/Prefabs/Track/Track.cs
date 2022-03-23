@@ -7,6 +7,7 @@ public class Track : MonoBehaviour
     [SerializeField] Transform[] SpawnTrans;
     [SerializeField] GameObject[] EnvironmentToSpawn;
     Transform _playerTransform;
+    float _distanceToCheck = 150f;
 
 
     private void Start()
@@ -31,7 +32,7 @@ public class Track : MonoBehaviour
     {
         while(true)
         {
-            if(Vector3.Distance(_playerTransform.position,transform.position) < 100f)
+            if(Vector3.Distance(_playerTransform.position,transform.position) < _distanceToCheck)
             {
                 SpawnEnvironment();
                 StartCoroutine(DeleteSelfWhenBehindPlayer());
@@ -45,7 +46,7 @@ public class Track : MonoBehaviour
     {
         while (true)
         {
-            if (Vector3.Distance(_playerTransform.position, transform.position) > 100f)
+            if (Vector3.Distance(_playerTransform.position, transform.position) > _distanceToCheck)
             {
                 Destroy(gameObject);
                 break;
