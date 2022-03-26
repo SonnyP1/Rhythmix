@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class Track : MonoBehaviour
 {
+    private float _trackMovementSpeed;
+    public void SetTrackMovementSpeed(float newSpeed)
+    {
+        _trackMovementSpeed = newSpeed; ;
+    }
+
+    [SerializeField] MeshRenderer _roadMeshRenderer;
     [SerializeField] Transform[] SpawnTrans;
     [SerializeField] GameObject[] EnvironmentToSpawn;
 
     [SerializeField] bool HasAccentEnvironment = false;
     [SerializeField] Transform[] AccentSpawnTrans;
     [SerializeField] GameObject[] AccentEnvironmentToSpawn;
-    Transform _playerTransform;
-    [SerializeField] float DistanceToCheckToSpawn = 150f;
 
+
+
+    public float GetMeshRenderedOfRoad()
+    {
+        return _roadMeshRenderer.bounds.size.z;
+    }
 
     private void Start()
     {
-        _playerTransform = FindObjectOfType<BasicPlayer>().GetComponent<Transform>();
-        StartCoroutine(CheckIfPlayerCloseEnough());
+        SpawnEnvironment();
     }
 
     private void SpawnEnvironment()
@@ -50,30 +60,14 @@ public class Track : MonoBehaviour
         return AccentEnvironmentToSpawn[rand];
     }
 
-    IEnumerator CheckIfPlayerCloseEnough()
+
+    private void Update()
     {
-        while(true)
+        transform.Translate(0, 0, _trackMovementSpeed * Time.deltaTime);
+        if (transform.position.z > Camera.main.transform.position.z+80)
         {
-            if(Vector3.Distance(_playerTransform.position,transform.position) < DistanceToCheckToSpawn)
-            {
-                SpawnEnvironment();
-                StartCoroutine(DeleteSelfWhenBehindPlayer());
-                break;
-            }
-            yield return new WaitForEndOfFrame();
+            Destroy(gameObject);
         }
     }
 
-    IEnumerator DeleteSelfWhenBehindPlayer()
-    {
-        while (true)
-        {
-            if (Vector3.Distance(_playerTransform.position, transform.position) > DistanceToCheckToSpawn)
-            {
-                Destroy(gameObject);
-                break;
-            }
-            yield return new WaitForEndOfFrame();
-        }
-    }
 }
