@@ -2,30 +2,98 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Melanchall.DryWetMidi.Core;
+using Melanchall.DryWetMidi.Interaction;
+using System.IO;
 
 public class LevelAudioManager : MonoBehaviour
 {
     [SerializeField] float SongFiftyPercentDoneInSecounds;
-    bool isAlreadyFiftyPercent = false;
+
+
+    [SerializeField] Lane[] Lanes;
+    [SerializeField] float SongDelayInSecounds;
+
+    public double GetMarginOfError()
+    {
+        return MarginOfError;
+    }
+    [SerializeField] double MarginOfError; // in seconds
+
+    public float GetInputDelayInMillieseconds()
+    {
+        return InputDelayInMilliseconds;
+    }
+    [SerializeField] float InputDelayInMilliseconds;
+
+
+    [SerializeField] string FileLoc;
+    public float GetNoteTime()
+    {
+        return NoteTime;
+    }
+    [SerializeField] float NoteTime;
+
+    public float GetNoteSpawnZ()
+    {
+        return NoteSpawnZ;
+    }
+    [SerializeField] float NoteSpawnZ;
+
+    [SerializeField] float NoteTapZ;
+
+    public MidiFile GetMidiFile()
+    {
+        return _midiFile;
+    }
+    private static MidiFile _midiFile;
+
+    public float NoteDespawnY()
+    {
+        return NoteTapZ - (NoteSpawnZ - NoteTapZ);
+    }
+
     AudioSource _songAudioSource;
+
+
+
     private void Start()
     {
         _songAudioSource = GetComponent<AudioSource>();
+        _midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + FileLoc);
+        if(_midiFile == null)
+        {
+            Debug.Log("Data not assign");
+            return;
+        }
+        else
+        {
+            Debug.Log("Data Assign");
+        }
+        GetDataFromMidi();
     }
 
-    private void Update()
+    public void GetDataFromMidi()
     {
-        if(_songAudioSource.time >= _songAudioSource.clip.length)
-        {
-            //temp for testing
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            Debug.Log("LOAD NEXT LEVEL");
-        }
+        var notes = _midiFile.GetNotes();
+        var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
+        notes.CopyTo(array, 0);
 
-        if(_songAudioSource.time > SongFiftyPercentDoneInSecounds && !isAlreadyFiftyPercent)
-        {
-            Debug.Log("HALF WAY THERE");
-            isAlreadyFiftyPercent = true;
-        }
+        foreach (var lane in Lanes) lane.SetTimeStamps(array);
+
+        Invoke(nameof(StartSong), SongDelayInSecounds);
     }
+
+    public double GetAudioSourceTime()
+    {
+        return (double)_songAudioSource.timeSamples / _songAudioSource.clip.frequency;
+    }
+
+    public void StartSong()
+    {
+        _songAudioSource.Play();
+    }
+
+
+
 }

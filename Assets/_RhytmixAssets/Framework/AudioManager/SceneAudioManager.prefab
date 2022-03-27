@@ -141,3 +141,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SongFiftyPercentDoneInSecounds: 60
+  Lanes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SongDelayInSecounds: 0
+  MarginOfError: 0.7
+  InputDelayInMilliseconds: 0
+  FileLoc: we_made_a_chart_pog.mid
+  NoteTime: 1
+  NoteSpawnZ: 35
+  NoteTapZ: 3
