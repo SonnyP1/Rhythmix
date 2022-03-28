@@ -8,9 +8,6 @@ using System.IO;
 
 public class LevelAudioManager : MonoBehaviour
 {
-    [SerializeField] float SongFiftyPercentDoneInSecounds;
-
-
     [SerializeField] Lane[] Lanes;
     [SerializeField] float SongDelayInSecounds;
 
@@ -47,15 +44,17 @@ public class LevelAudioManager : MonoBehaviour
         return _midiFile;
     }
     private static MidiFile _midiFile;
-
     public float NoteDespawnY()
     {
         return NoteTapZ - (NoteSpawnZ - NoteTapZ);
     }
-
     AudioSource _songAudioSource;
 
-
+    public bool IsSongHalfWayDone()
+    {
+        return _isSongHalfWayDone;
+    }
+    private bool _isSongHalfWayDone = false;
 
     private void Start()
     {
@@ -94,6 +93,12 @@ public class LevelAudioManager : MonoBehaviour
         _songAudioSource.Play();
     }
 
-
+    private void Update()
+    {
+        if(_isSongHalfWayDone == false && _songAudioSource.time/_songAudioSource.clip.length >= 0.5)
+        {
+            _isSongHalfWayDone = true;
+        }
+    }
 
 }

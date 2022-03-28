@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SceneTrackSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject TrackToSpawn;
+    [SerializeField] GameObject[] TrackToSpawn;
     [SerializeField] float TrackSpeed;
     [SerializeField] float TrackSizeOffset;
+    [SerializeField] LevelAudioManager LevelAudioManager;
     float _trackSize;
     void Start()
     {
-        _trackSize = TrackToSpawn.GetComponent<Track>().GetMeshRenderedOfRoad() + TrackSizeOffset;
+        _trackSize = TrackToSpawn[0].GetComponent<Track>().GetMeshRenderedOfRoad() + TrackSizeOffset;
         GenerateBeginningTiles();
     }
 
@@ -26,7 +27,8 @@ public class SceneTrackSpawner : MonoBehaviour
         {
             float SpawnLocZ = transform.position.z + i * _trackSize;
             Vector3 SpawnLoc = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, SpawnLocZ);
-            GameObject newTrack = Instantiate(TrackToSpawn, SpawnLoc, Quaternion.identity);
+            GameObject newTrack = Instantiate(TrackToSpawn[0], SpawnLoc, Quaternion.identity);
+
             newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
         }
 
@@ -45,10 +47,20 @@ public class SceneTrackSpawner : MonoBehaviour
                 SpawnLoc = previousTrack.transform.position - new Vector3(0f, 0f, _trackSize);
             }
 
-            GameObject newTile = Instantiate(TrackToSpawn, SpawnLoc, Quaternion.identity);
-            newTile.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
+            GameObject newTrack = null;
 
-            previousTrack = newTile;
+            switch (LevelAudioManager.IsSongHalfWayDone())
+            {
+                case false:
+                    newTrack = Instantiate(TrackToSpawn[0], SpawnLoc, Quaternion.identity);
+                    break;
+                case true:
+                    newTrack = Instantiate(TrackToSpawn[1], SpawnLoc, Quaternion.identity);
+                    break;
+            }
+            newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
+
+            previousTrack = newTrack;
             float timeToGeneratorTheNextTile = _trackSize / TrackSpeed;
             yield return new WaitForSeconds(timeToGeneratorTheNextTile);
         }
