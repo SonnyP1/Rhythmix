@@ -11,14 +11,17 @@ public class Lane : MonoBehaviour
     [SerializeField] GameObject notePrefab;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
-    LevelAudioManager _levelAudioManager;
+    [SerializeField] LevelAudioManager _levelAudioManager;
 
     int spawnIndex = 0;
     int inputIndex = 0;
 
     public void Start()
     {
-        _levelAudioManager = FindObjectOfType<LevelAudioManager>();
+        if(_levelAudioManager != null)
+        {
+            _levelAudioManager = FindObjectOfType<LevelAudioManager>();
+        }
     }
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
@@ -51,6 +54,7 @@ public class Lane : MonoBehaviour
             double marginOfError = _levelAudioManager.GetMarginOfError();
             double audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
+            //Input.GetTouch
             if (Input.GetKeyDown(input))
             {
                 if (AbsValueDouble(audioTime - timeStamp) < marginOfError)

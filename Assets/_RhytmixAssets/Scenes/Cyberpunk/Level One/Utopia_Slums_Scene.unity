@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &14274438 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+  m_PrefabInstance: {fileID: 3540333746733821116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c8bc757bd70d7b4b9129bfabab22e85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155238426
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +396,10 @@ PrefabInstance:
       propertyPath: noteRestriction
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1513881728569854358, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: _levelAudioManager
+      value: 
+      objectReference: {fileID: 14274438}
     - target: {fileID: 2456136658496697246, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -413,6 +428,10 @@ PrefabInstance:
       propertyPath: noteRestriction
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5659581132240131100, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: _levelAudioManager
+      value: 
+      objectReference: {fileID: 14274438}
     - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -453,6 +472,10 @@ PrefabInstance:
       propertyPath: noteRestriction
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8054011675631799610, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: _levelAudioManager
+      value: 
+      objectReference: {fileID: 14274438}
     - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_RootOrder
       value: 11
