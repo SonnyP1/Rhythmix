@@ -248,6 +248,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 168409662}
+    - target: {fileID: 5964533091258253638, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Name
+      value: Song_HomeStretchBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 168409662}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SongHomeStretchBtnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533091429223522, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_Name
       value: SongSelectionCyberpunkCanvas
@@ -540,6 +572,38 @@ PrefabInstance:
       value: 'Fantasy
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253638, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Name
+      value: Castle_SongBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 168409662}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SongCastleBtnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5964533091258253641, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_AnchorMax.y

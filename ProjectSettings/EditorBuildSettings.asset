@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/_RhytmixAssets/Scenes/MainMenu/MainMenuScene.unity
     guid: 92c71d2006a06f74ba46391f5a51ea0a
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Lush_DarkForest_Scene.unity
-    guid: fc8ec5f91f4f6a54eaf802d269daeade
-  - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Fanstay_Forest.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Fanstay_Forest_Scene.unity
     guid: 6bcbda21130af5d458de0d0799d22637
+  - enabled: 1
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level Two/Fanstay_Castle_Scene.unity
+    guid: 9db893feaab395a40863f6a4f620e0f0
+  - enabled: 1
+    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level One/Utopia_Slums_Scene.unity
+    guid: f6112aa3c6dcea64ebe1b9a0bc6da682
+  - enabled: 1
+    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level Two/Slums_Scene.unity
+    guid: d3eb5f515a1ec2f46b792dba59efa5ca
   m_configObjects: {}

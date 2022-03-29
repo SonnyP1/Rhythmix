@@ -35,10 +35,21 @@ public class MainMenuManager : MonoBehaviour
     }
     public void SongHeroJourneyBtnClick()
     {
-        SceneManager.LoadScene("Lush_DarkForest_Scene",LoadSceneMode.Single);
+        SceneManager.LoadScene("Fanstay_Forest_Scene",LoadSceneMode.Single);
     }
+
+    public void SongCastleBtnClick()
+    {
+        SceneManager.LoadScene("Fanstay_Castle_Scene", LoadSceneMode.Single);
+    }
+
     public void SongAlleyRatsBtnClick()
     {
         SceneManager.LoadScene("Utopia_Slums_Scene",LoadSceneMode.Single);
+    }
+
+    public void SongHomeStretchBtnClick()
+    {
+        SceneManager.LoadScene("Slums_Scene",LoadSceneMode.Single);
     }
 }
