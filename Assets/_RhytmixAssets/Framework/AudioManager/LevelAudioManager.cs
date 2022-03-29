@@ -19,7 +19,7 @@ public class LevelAudioManager : MonoBehaviour
 
     public float GetInputDelayInMillieseconds()
     {
-        return InputDelayInMilliseconds;
+         return InputDelayInMilliseconds;
     }
     [SerializeField] float InputDelayInMilliseconds;
 
@@ -95,7 +95,7 @@ public class LevelAudioManager : MonoBehaviour
 
     private void Update()
     {
-        if(_isSongHalfWayDone == false && _songAudioSource.time/_songAudioSource.clip.length >= 0.5)
+        if(_isSongHalfWayDone == false && _songAudioSource.time/(_songAudioSource.clip.length/10) >= 0.5)
         {
             _isSongHalfWayDone = true;
         }

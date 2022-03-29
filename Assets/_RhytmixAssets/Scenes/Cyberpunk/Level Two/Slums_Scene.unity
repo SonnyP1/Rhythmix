@@ -1114,7 +1114,7 @@ PrefabInstance:
       objectReference: {fileID: 14274438}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: HasTransitionTrack
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TransitionTrackToSpawn
@@ -1122,15 +1122,15 @@ PrefabInstance:
       objectReference: {fileID: 3220473469058107055, guid: c6eb4d739874db84fa89aa9e773b732c, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[0]
       value: 
-      objectReference: {fileID: 3220473469058107055, guid: a09f3fb586964114e8acce8245e3b648, type: 3}
+      objectReference: {fileID: 3220473469058107055, guid: 35cafa40f73552e4da7bc8d3a80d3f13, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 3220473469058107055, guid: 35cafa40f73552e4da7bc8d3a80d3f13, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}

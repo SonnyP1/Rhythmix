@@ -19,8 +19,11 @@ public class Track : MonoBehaviour
     [SerializeField] GameObject[] AccentEnvironmentToSpawn;
 
 
-
-    public float GetMeshRenderedOfRoad()
+    public float GetMeshRenderedOfRoadSizeY()
+    {
+        return _roadMeshRenderer.bounds.size.y;
+    }
+    public float GetMeshRenderedOfRoadSizeZ()
     {
         return _roadMeshRenderer.bounds.size.z;
     }
@@ -64,7 +67,7 @@ public class Track : MonoBehaviour
     private void Update()
     {
         transform.Translate(0, 0, _trackMovementSpeed * Time.deltaTime);
-        if (transform.position.z > Camera.main.transform.position.z+80)
+        if (transform.position.z > Camera.main.transform.position.z+200)
         {
             Destroy(gameObject);
         }

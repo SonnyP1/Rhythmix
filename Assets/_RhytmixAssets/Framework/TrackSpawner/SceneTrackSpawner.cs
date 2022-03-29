@@ -6,12 +6,16 @@ public class SceneTrackSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] TrackToSpawn;
     [SerializeField] float TrackSpeed;
-    [SerializeField] float TrackSizeOffset;
+    [SerializeField] float TrackSizeOffsetZ;
     [SerializeField] LevelAudioManager LevelAudioManager;
     float _trackSize;
+    [SerializeField] bool HasTransitionTrack;
+    [SerializeField] float TrackSizeYOffset;
+    [SerializeField] GameObject TransitionTrackToSpawn;
+    bool _isTrackTransitionAlreadySpawn = false;
     void Start()
     {
-        _trackSize = TrackToSpawn[0].GetComponent<Track>().GetMeshRenderedOfRoad() + TrackSizeOffset;
+        _trackSize = TrackToSpawn[0].GetComponent<Track>().GetMeshRenderedOfRoadSizeZ() + TrackSizeOffsetZ;
         GenerateBeginningTiles();
     }
 
@@ -49,15 +53,28 @@ public class SceneTrackSpawner : MonoBehaviour
 
             GameObject newTrack = null;
 
-            switch (LevelAudioManager.IsSongHalfWayDone())
+            switch (LevelAudioManager.IsSongHalfWayDone() && HasTransitionTrack)
             {
                 case false:
                     newTrack = Instantiate(TrackToSpawn[0], SpawnLoc, Quaternion.identity);
                     break;
                 case true:
+                    if(HasTransitionTrack)
+                    {
+                        if(!_isTrackTransitionAlreadySpawn)
+                        {
+                            _isTrackTransitionAlreadySpawn = true;
+                            newTrack = Instantiate(TransitionTrackToSpawn, SpawnLoc, Quaternion.identity);
+                            break;
+                        }
+                        SpawnLoc = previousTrack.transform.position - new Vector3(0f,
+                            TransitionTrackToSpawn.GetComponent<Track>().GetMeshRenderedOfRoadSizeY() + TrackSizeYOffset + previousTrack.transform.position.y, 
+                            previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ()+ TrackSizeOffsetZ);
+                    }
                     newTrack = Instantiate(TrackToSpawn[1], SpawnLoc, Quaternion.identity);
                     break;
             }
+
             newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
 
             previousTrack = newTrack;
