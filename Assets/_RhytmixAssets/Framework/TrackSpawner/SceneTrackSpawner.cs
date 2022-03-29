@@ -12,7 +12,9 @@ public class SceneTrackSpawner : MonoBehaviour
     [SerializeField] bool HasTransitionTrack;
     [SerializeField] float TrackSizeYOffset;
     [SerializeField] GameObject TransitionTrackToSpawn;
+    [SerializeField] GameObject TrackToSpawnAfterTransition;
     bool _isTrackTransitionAlreadySpawn = false;
+
     void Start()
     {
         _trackSize = TrackToSpawn[0].GetComponent<Track>().GetMeshRenderedOfRoadSizeZ() + TrackSizeOffsetZ;
@@ -56,7 +58,7 @@ public class SceneTrackSpawner : MonoBehaviour
             switch (LevelAudioManager.IsSongHalfWayDone() && HasTransitionTrack)
             {
                 case false:
-                    newTrack = Instantiate(TrackToSpawn[0], SpawnLoc, Quaternion.identity);
+                    newTrack = Instantiate(ChooseRandomTrackToSpawn(), SpawnLoc, Quaternion.identity);
                     break;
                 case true:
                     if(HasTransitionTrack)
@@ -71,9 +73,10 @@ public class SceneTrackSpawner : MonoBehaviour
                             TransitionTrackToSpawn.GetComponent<Track>().GetMeshRenderedOfRoadSizeY() + TrackSizeYOffset + previousTrack.transform.position.y, 
                             previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ()+ TrackSizeOffsetZ);
                     }
-                    newTrack = Instantiate(TrackToSpawn[1], SpawnLoc, Quaternion.identity);
+                    newTrack = Instantiate(TrackToSpawnAfterTransition, SpawnLoc, Quaternion.identity);
                     break;
             }
+
 
             newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
 
@@ -81,5 +84,11 @@ public class SceneTrackSpawner : MonoBehaviour
             float timeToGeneratorTheNextTile = _trackSize / TrackSpeed;
             yield return new WaitForSeconds(timeToGeneratorTheNextTile);
         }
+    }
+
+    private GameObject ChooseRandomTrackToSpawn()
+    {
+        int rand = Random.Range(0, TrackToSpawn.Length);
+        return TrackToSpawn[rand];
     }
 }

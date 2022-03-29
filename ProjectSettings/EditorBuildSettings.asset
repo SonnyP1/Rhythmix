@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Lush_DarkForest_Scene.unity
     guid: fc8ec5f91f4f6a54eaf802d269daeade
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level One/Utopia_Slums_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Fanstay_Forest.unity
     guid: 6bcbda21130af5d458de0d0799d22637
   m_configObjects: {}
