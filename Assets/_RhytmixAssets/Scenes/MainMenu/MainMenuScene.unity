@@ -244,6 +244,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5964533090387241867, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Text
+      value: Home Stretch
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533090982956909, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -535,6 +539,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5964533090387241867, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Text
+      value: Castle Battle
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533090894280544, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -22.699951
