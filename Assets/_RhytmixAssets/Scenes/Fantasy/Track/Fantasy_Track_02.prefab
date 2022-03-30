@@ -113,16 +113,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[0]
       value: 
-      objectReference: {fileID: 8006462048573584191, guid: 344ea55ea14195e4996385e872eb5176, type: 3}
+      objectReference: {fileID: 8006462048573584191, guid: 413581609ff883e4da2841deccca1bf6, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 8006462048573584191, guid: 8e5bd7ea1f9eb1642aefceeef896fe86, type: 3}
+      objectReference: {fileID: 8006462048573584191, guid: c8c33f2cd1d45474c8151d411273a0bc, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[2]
       value: 
@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933908899515412527, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: m_Name
-      value: Fantasy_Track
+      value: Fantasy_Track_02
       objectReference: {fileID: 0}
     - target: {fileID: 8936659235901270545, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: m_RootOrder

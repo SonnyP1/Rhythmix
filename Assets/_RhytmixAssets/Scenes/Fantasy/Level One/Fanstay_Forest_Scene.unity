@@ -398,11 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 14274438}
     - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000001870032
+      value: 0.000000008362396
       objectReference: {fileID: 0}
     - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000004513585
+      value: -0.0000000020211945
       objectReference: {fileID: 0}
     - target: {fileID: 8054011675631799610, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: _levelAudioManager
@@ -699,8 +699,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824886026}
-  m_LocalRotation: {x: 0.000000004513585, y: 0.9720856, z: -0.23462655, w: 0.00000001870032}
-  m_LocalPosition: {x: 0, y: 2.85, z: 2.74}
+  m_LocalRotation: {x: 0.0000000020211945, y: 0.97201097, z: -0.23493546, w: 0.000000008362396}
+  m_LocalPosition: {x: 0, y: 4.6, z: 6.1400013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1033,8 +1033,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3220473469058107055, guid: a09f3fb586964114e8acce8245e3b648, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
+      propertyPath: TrackSizeOffsetZ
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackSizeYOffset
-      value: -0.9
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: LevelAudioManager
@@ -1042,12 +1046,12 @@ PrefabInstance:
       objectReference: {fileID: 14274438}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: HasTransitionTrack
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TransitionTrackToSpawn
       value: 
-      objectReference: {fileID: 3220473469058107055, guid: c6eb4d739874db84fa89aa9e773b732c, type: 3}
+      objectReference: {fileID: 3220473469058107055, guid: 58f286641407b7b43bc429c22acc5306, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.size
       value: 1
@@ -1064,5 +1068,9 @@ PrefabInstance:
       propertyPath: TrackToSpawn.Array.data[2]
       value: 
       objectReference: {fileID: 3220473469058107055, guid: 58f286641407b7b43bc429c22acc5306, type: 3}
+    - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
+      propertyPath: TrackToSpawnAfterTransition
+      value: 
+      objectReference: {fileID: 3220473469058107055, guid: 9486bd14f1bb4b74e84bd8ba2ba72c0a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
