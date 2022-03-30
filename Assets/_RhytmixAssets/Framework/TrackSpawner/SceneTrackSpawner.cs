@@ -12,7 +12,7 @@ public class SceneTrackSpawner : MonoBehaviour
     [SerializeField] bool HasTransitionTrack;
     [SerializeField] float TrackSizeYOffset;
     [SerializeField] GameObject TransitionTrackToSpawn;
-    [SerializeField] GameObject TrackToSpawnAfterTransition;
+    [SerializeField] GameObject[] TrackToSpawnAfterTransition;
     bool _isTrackTransitionAlreadySpawn = false;
 
     void Start()
@@ -73,7 +73,7 @@ public class SceneTrackSpawner : MonoBehaviour
                             TransitionTrackToSpawn.GetComponent<Track>().GetMeshRenderedOfRoadSizeY() + TrackSizeYOffset + previousTrack.transform.position.y, 
                             previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ()+ TrackSizeOffsetZ);
                     }
-                    newTrack = Instantiate(TrackToSpawnAfterTransition, SpawnLoc, Quaternion.identity);
+                    newTrack = Instantiate(ChooseRandomTrackToSpawnAfterTransition(), SpawnLoc, Quaternion.identity);
                     break;
             }
 
@@ -90,5 +90,11 @@ public class SceneTrackSpawner : MonoBehaviour
     {
         int rand = Random.Range(0, TrackToSpawn.Length);
         return TrackToSpawn[rand];
+    }
+
+    private GameObject ChooseRandomTrackToSpawnAfterTransition()
+    {
+        int rand = Random.Range(0, TrackToSpawnAfterTransition.Length);
+        return TrackToSpawnAfterTransition[rand];
     }
 }
