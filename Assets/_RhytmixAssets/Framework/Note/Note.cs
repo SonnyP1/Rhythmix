@@ -7,9 +7,14 @@ public class Note : MonoBehaviour
     double timeInstantiated;
     public float assignedTime;
     LevelAudioManager _levelAudioManager;
+    [SerializeField] MeshRenderer[] Meshrenderers;
     void Start()
     {
-        GetComponentInChildren<MeshRenderer>().enabled = false;
+        foreach(MeshRenderer meshRender in Meshrenderers)
+        {
+            meshRender.enabled = false;
+        }
+
         _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         Debug.Log("Note Started");
         timeInstantiated = _levelAudioManager.GetAudioSourceTime();
@@ -29,7 +34,10 @@ public class Note : MonoBehaviour
         else
         {
             transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
-            GetComponentInChildren<MeshRenderer>().enabled = true;
+            foreach (MeshRenderer meshRender in Meshrenderers)
+            {
+                meshRender.enabled = true;
+            }
         }
     }
 }
