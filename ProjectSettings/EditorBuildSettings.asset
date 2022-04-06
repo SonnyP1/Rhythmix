@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level Two/Slums_Scene.unity
     guid: d3eb5f515a1ec2f46b792dba59efa5ca
+  - enabled: 1
+    path: Assets/_RhytmixAssets/Scenes/TestingScene/TestingScene.unity
+    guid: cc1b54226aedec646a2b281f540bfee9
   m_configObjects: {}

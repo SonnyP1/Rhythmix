@@ -52,4 +52,9 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("Slums_Scene",LoadSceneMode.Single);
     }
+
+    public void TestingSceneBtnClick()
+    {
+        SceneManager.LoadScene("TestingScene", LoadSceneMode.Single);
+    }
 }
