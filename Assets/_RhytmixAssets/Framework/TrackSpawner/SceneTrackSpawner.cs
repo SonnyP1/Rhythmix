@@ -8,12 +8,13 @@ public class SceneTrackSpawner : MonoBehaviour
     [SerializeField] float TrackSpeed;
     [SerializeField] float TrackSizeOffsetZ;
     [SerializeField] LevelAudioManager LevelAudioManager;
-    float _trackSize;
-    [SerializeField] bool HasTransitionTrack;
     [SerializeField] float TrackSizeYOffset;
-    [SerializeField] GameObject TransitionTrackToSpawn;
-    [SerializeField] GameObject[] TrackToSpawnAfterTransition;
-    bool _isTrackTransitionAlreadySpawn = false;
+    float _trackSize;
+
+    //[SerializeField] bool HasTransitionTrack;
+    //[SerializeField] GameObject TransitionTrackToSpawn;
+    //[SerializeField] GameObject[] TrackToSpawnAfterTransition;
+    //bool _isTrackTransitionAlreadySpawn = false;
 
     void Start()
     {
@@ -46,41 +47,10 @@ public class SceneTrackSpawner : MonoBehaviour
         GameObject previousTrack = null;
         while (true)
         {
-            Vector3 SpawnLoc = transform.position;
+            
+            //newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
 
-            if (previousTrack != null)
-            {
-                SpawnLoc = previousTrack.transform.position - new Vector3(0f, 0f, _trackSize);
-            }
-
-            GameObject newTrack = null;
-
-            switch (LevelAudioManager.IsSongHalfWayDone() && HasTransitionTrack)
-            {
-                case false:
-                    newTrack = Instantiate(ChooseRandomTrackToSpawn(), SpawnLoc, Quaternion.identity);
-                    break;
-                case true:
-                    if(HasTransitionTrack)
-                    {
-                        if(!_isTrackTransitionAlreadySpawn)
-                        {
-                            _isTrackTransitionAlreadySpawn = true;
-                            newTrack = Instantiate(TransitionTrackToSpawn, SpawnLoc, Quaternion.identity);
-                            break;
-                        }
-                        SpawnLoc = previousTrack.transform.position - new Vector3(0f,
-                            TransitionTrackToSpawn.GetComponent<Track>().GetMeshRenderedOfRoadSizeY() + TrackSizeYOffset + previousTrack.transform.position.y, 
-                            previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ()+ TrackSizeOffsetZ);
-                    }
-                    newTrack = Instantiate(ChooseRandomTrackToSpawnAfterTransition(), SpawnLoc, Quaternion.identity);
-                    break;
-            }
-
-
-            newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
-
-            previousTrack = newTrack;
+            //previousTrack = newTrack;
             float timeToGeneratorTheNextTile = _trackSize / TrackSpeed;
             yield return new WaitForSeconds(timeToGeneratorTheNextTile);
         }
@@ -92,9 +62,11 @@ public class SceneTrackSpawner : MonoBehaviour
         return TrackToSpawn[rand];
     }
 
+    /*
     private GameObject ChooseRandomTrackToSpawnAfterTransition()
     {
         int rand = Random.Range(0, TrackToSpawnAfterTransition.Length);
         return TrackToSpawnAfterTransition[rand];
     }
+    */
 }

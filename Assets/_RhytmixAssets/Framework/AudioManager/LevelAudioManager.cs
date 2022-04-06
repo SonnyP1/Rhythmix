@@ -8,9 +8,6 @@ using System.IO;
 
 public class LevelAudioManager : MonoBehaviour
 {
-    [SerializeField] GameObject TestRemoveThis;
-    [SerializeField] Transform TestSpawnRemoveThis;
-
     [SerializeField] Lane[] Lanes;
     [SerializeField] float SongDelayInSecounds;
 
@@ -66,7 +63,6 @@ public class LevelAudioManager : MonoBehaviour
         if(_midiFile == null)
         {
             Debug.Log("Data not assign");
-            Instantiate(TestRemoveThis, TestSpawnRemoveThis.position,Quaternion.identity);
             return;
         }
         else

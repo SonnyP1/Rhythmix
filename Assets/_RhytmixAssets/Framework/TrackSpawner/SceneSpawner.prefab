@@ -43,6 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c0b5133f661824fb4adb3d9e48f2a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackToSpawn: {fileID: 8933908899515412527, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
+  TrackToSpawn:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   TrackSpeed: 20
-  TrackSizeOffset: -0.1
+  TrackSizeOffsetZ: 0
+  LevelAudioManager: {fileID: 0}
+  HasTransitionTrack: 0
+  TrackSizeYOffset: 0
+  TransitionTrackToSpawn: {fileID: 0}
+  TrackToSpawnAfterTransition: []
