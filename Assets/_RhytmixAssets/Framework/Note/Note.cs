@@ -16,7 +16,7 @@ public class Note : MonoBehaviour
         }
 
         _levelAudioManager = FindObjectOfType<LevelAudioManager>();
-        Debug.Log("Note Started");
+        //Debug.Log("Note Started");
         timeInstantiated = _levelAudioManager.GetAudioSourceTime();
     }
 

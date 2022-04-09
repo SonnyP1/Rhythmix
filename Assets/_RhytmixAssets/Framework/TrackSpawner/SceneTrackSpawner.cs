@@ -47,10 +47,24 @@ public class SceneTrackSpawner : MonoBehaviour
         GameObject previousTrack = null;
         while (true)
         {
-            
-            //newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
+            Vector3 SpawnLoc = transform.position;
+            GameObject SpawnRef;
+            SpawnRef = ChooseRandomTrackToSpawn();
 
-            //previousTrack = newTrack;
+            if(previousTrack != null)
+            {
+                float previousTrackSize = previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ();
+                SpawnLoc = previousTrack.transform.position - new Vector3(0f, 0f, previousTrackSize);
+                SpawnLoc.y = transform.position.y;
+            }
+
+            GameObject newTrack = Instantiate(SpawnRef,SpawnLoc,Quaternion.identity);
+            float newY = newTrack.GetComponent<Track>().GetYSpawnTransform();
+            transform.position = new Vector3(transform.position.x,newY,transform.position.z);
+
+            newTrack.GetComponent<Track>().SetTrackMovementSpeed(TrackSpeed);
+
+            previousTrack = newTrack;
             float timeToGeneratorTheNextTile = _trackSize / TrackSpeed;
             yield return new WaitForSeconds(timeToGeneratorTheNextTile);
         }

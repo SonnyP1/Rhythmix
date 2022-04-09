@@ -10,6 +10,11 @@ public class Track : MonoBehaviour
         _trackMovementSpeed = newSpeed; ;
     }
 
+    public float GetYSpawnTransform()
+    {
+        return RoadSpawnerYTransform.position.y;
+    }
+    [SerializeField] Transform RoadSpawnerYTransform;
     [SerializeField] MeshRenderer _roadMeshRenderer;
     [SerializeField] Transform[] SpawnTrans;
     [SerializeField] GameObject[] EnvironmentToSpawn;

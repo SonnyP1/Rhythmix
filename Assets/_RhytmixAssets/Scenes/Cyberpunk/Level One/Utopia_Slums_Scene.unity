@@ -757,7 +757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3540333748101012584, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012584, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_PlayOnAwake
@@ -1003,11 +1003,11 @@ PrefabInstance:
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 3220473469058107055, guid: c6eb4d739874db84fa89aa9e773b732c, type: 3}
+      objectReference: {fileID: 6636028460624966842, guid: c9ad43417368adf4ebeef49b6d50818e, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[2]
       value: 
-      objectReference: {fileID: 6636028460624966842, guid: c9ad43417368adf4ebeef49b6d50818e, type: 3}
+      objectReference: {fileID: 3220473469058107055, guid: c6eb4d739874db84fa89aa9e773b732c, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawnAfterTransition
       value: 
