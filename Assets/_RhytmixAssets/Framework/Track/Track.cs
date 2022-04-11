@@ -40,6 +40,11 @@ public class Track : MonoBehaviour
 
     private void SpawnEnvironment()
     {
+        if(EnvironmentToSpawn.Length <=0)
+        {
+            Debug.Log($"{gameObject.name} does not have EnvironmentToSpawn");
+            return;
+        }
         foreach(Transform trans in SpawnTrans)
         {
             GameObject randEnviroment = Instantiate(PickRandomEnvironment(),trans);

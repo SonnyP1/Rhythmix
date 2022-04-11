@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/MainMenu/MainMenuScene.unity
+    path: Assets/_RhytmixAssets/Scenes/Other/MainMenu/MainMenuScene.unity
     guid: 92c71d2006a06f74ba46391f5a51ea0a
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level One/Fanstay_Forest_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelOne_Forest/Fanstay_Forest_Scene.unity
     guid: 6bcbda21130af5d458de0d0799d22637
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/Level Two/Fanstay_Castle_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelTwo_Castle/Fanstay_Castle_Scene.unity
     guid: 9db893feaab395a40863f6a4f620e0f0
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level One/Utopia_Slums_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/LevelOne_Utopia/Utopia_Slums_Scene.unity
     guid: f6112aa3c6dcea64ebe1b9a0bc6da682
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/Level Two/Slums_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Cyberpunk/LevelTwo_Slums/Slums_Scene.unity
     guid: d3eb5f515a1ec2f46b792dba59efa5ca
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/TestingScene/TestingScene.unity
+    path: Assets/_RhytmixAssets/Scenes/Other/TestingScene/TestingScene.unity
     guid: cc1b54226aedec646a2b281f540bfee9
   m_configObjects: {}

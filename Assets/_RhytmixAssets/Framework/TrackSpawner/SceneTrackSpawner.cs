@@ -8,7 +8,6 @@ public class SceneTrackSpawner : MonoBehaviour
     [SerializeField] float TrackSpeed;
     [SerializeField] float TrackSizeOffsetZ;
     [SerializeField] LevelAudioManager LevelAudioManager;
-    [SerializeField] float TrackSizeYOffset;
     float _trackSize;
 
     //[SerializeField] bool HasTransitionTrack;
@@ -76,7 +75,7 @@ public class SceneTrackSpawner : MonoBehaviour
         return TrackToSpawn[rand];
     }
 
-    /*
+    /*Will be added once all track have basic track spawning again
     private GameObject ChooseRandomTrackToSpawnAfterTransition()
     {
         int rand = Random.Range(0, TrackToSpawnAfterTransition.Length);
