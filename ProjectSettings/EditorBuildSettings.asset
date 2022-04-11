@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelOne_Forest/Fanstay_Forest_Scene.unity
     guid: 6bcbda21130af5d458de0d0799d22637
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelTwo_Castle/Fanstay_Castle_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelTwo_Castle/Fantasy_Castle_Scene.unity
     guid: 9db893feaab395a40863f6a4f620e0f0
   - enabled: 1
     path: Assets/_RhytmixAssets/Scenes/Cyberpunk/LevelOne_Utopia/Utopia_Slums_Scene.unity

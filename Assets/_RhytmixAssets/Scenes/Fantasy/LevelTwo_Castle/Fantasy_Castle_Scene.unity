@@ -889,6 +889,10 @@ PrefabInstance:
       value: SceneSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
+      propertyPath: TrackSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn
       value: 
       objectReference: {fileID: 3220473469058107055, guid: a09f3fb586964114e8acce8245e3b648, type: 3}
