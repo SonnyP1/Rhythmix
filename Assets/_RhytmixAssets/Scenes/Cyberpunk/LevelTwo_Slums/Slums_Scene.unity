@@ -991,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3220473469058107055, guid: ba305bda8d0d6f84a909bec2867a3692, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawnAfterTransition.Array.size
       value: 0
