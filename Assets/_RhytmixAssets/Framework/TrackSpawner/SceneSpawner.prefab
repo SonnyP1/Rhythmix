@@ -50,7 +50,3 @@ MonoBehaviour:
   TrackSpeed: 20
   TrackSizeOffsetZ: 0
   LevelAudioManager: {fileID: 0}
-  HasTransitionTrack: 0
-  TrackSizeYOffset: 0
-  TransitionTrackToSpawn: {fileID: 0}
-  TrackToSpawnAfterTransition: []

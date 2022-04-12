@@ -77,7 +77,7 @@ public class Track : MonoBehaviour
     private void Update()
     {
         transform.Translate(0, 0, _trackMovementSpeed * Time.deltaTime);
-        if (transform.position.z > Camera.main.transform.position.z+200)
+        if (transform.position.z > Camera.main.transform.position.z+500)
         {
             Destroy(gameObject);
         }
