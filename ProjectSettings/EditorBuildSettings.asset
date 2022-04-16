@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_RhytmixAssets/Scenes/Other/MainMenu/MainMenuScene.unity
     guid: 92c71d2006a06f74ba46391f5a51ea0a
   - enabled: 1
-    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelOne_Forest/Fanstay_Forest_Scene.unity
+    path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelOne_Forest/Fantasy_Forest_Scene.unity
     guid: 6bcbda21130af5d458de0d0799d22637
   - enabled: 1
     path: Assets/_RhytmixAssets/Scenes/Fantasy/LevelTwo_Castle/Fantasy_Castle_Scene.unity

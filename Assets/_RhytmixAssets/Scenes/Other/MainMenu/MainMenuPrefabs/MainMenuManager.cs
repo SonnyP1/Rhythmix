@@ -35,12 +35,12 @@ public class MainMenuManager : MonoBehaviour
     }
     public void SongHeroJourneyBtnClick()
     {
-        SceneManager.LoadScene("Fanstay_Forest_Scene",LoadSceneMode.Single);
+        SceneManager.LoadScene("Fantasy_Forest_Scene", LoadSceneMode.Single);
     }
 
     public void SongCastleBtnClick()
     {
-        SceneManager.LoadScene("Fanstay_Castle_Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Fantasy_Castle_Scene", LoadSceneMode.Single);
     }
 
     public void SongAlleyRatsBtnClick()
