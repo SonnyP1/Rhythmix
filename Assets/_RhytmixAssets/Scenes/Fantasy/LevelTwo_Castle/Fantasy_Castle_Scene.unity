@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -897,6 +897,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3220473469058107055, guid: a09f3fb586964114e8acce8245e3b648, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
+      propertyPath: TrackSizeOffsetZ
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackSizeYOffset
       value: -0.9
       objectReference: {fileID: 0}
@@ -914,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 3220473469058107055, guid: c6eb4d739874db84fa89aa9e773b732c, type: 3}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn.Array.data[0]
@@ -928,5 +932,9 @@ PrefabInstance:
       propertyPath: TrackToSpawn.Array.data[2]
       value: 
       objectReference: {fileID: 3220473469058107055, guid: e797855a31e4d3643a1aedfe9b504374, type: 3}
+    - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
+      propertyPath: TrackToSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 3220473469058107055, guid: 6aa0a56071d896740824f60ec6a4ed95, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}

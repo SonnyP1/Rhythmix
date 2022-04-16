@@ -53,7 +53,7 @@ public class SceneTrackSpawner : MonoBehaviour
             if(previousTrack != null)
             {
                 float previousTrackSize = previousTrack.GetComponent<Track>().GetMeshRenderedOfRoadSizeZ();
-                SpawnLoc = previousTrack.transform.position - new Vector3(0f, 0f, previousTrackSize);
+                SpawnLoc = previousTrack.transform.position - new Vector3(0f, 0f, previousTrackSize + TrackSizeOffsetZ);
                 SpawnLoc.y = transform.position.y;
             }
 

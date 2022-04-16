@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Interaction;
 using System.IO;
+using System;
 
 public class LevelAudioManager : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class LevelAudioManager : MonoBehaviour
     private void Start()
     {
         _songAudioSource = GetComponent<AudioSource>();
-        _midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + FileLoc);
+        _midiFile = MidiFile.Read(LoadStreamingAssets(FileLoc));
         if(_midiFile == null)
         {
             Debug.Log("Data not assign");
@@ -71,6 +72,7 @@ public class LevelAudioManager : MonoBehaviour
         }
         GetDataFromMidi();
     }
+
 
     public void GetDataFromMidi()
     {
@@ -99,6 +101,17 @@ public class LevelAudioManager : MonoBehaviour
         {
             _isSongHalfWayDone = true;
         }
+    }
+    private string LoadStreamingAssets(string fileLoc)
+    {
+        string results;
+        #if UNITY_ANDRIOD
+        results = "jar:file://" + Application.dataPath + FileLoc;
+        return results;
+        #endif
+        results = Application.streamingAssetsPath + "/" + FileLoc;
+
+        return results;
     }
 
 }
