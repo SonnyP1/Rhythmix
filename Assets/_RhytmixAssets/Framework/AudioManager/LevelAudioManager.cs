@@ -105,10 +105,14 @@ public class LevelAudioManager : MonoBehaviour
     private string LoadStreamingAssets(string fileLoc)
     {
         string results;
-#if UNITY_ANDRIOD
-        results = "jar:file://" + Application.dataPath + fileLoc;
-        return results;
-#endif
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            WWW reader = new WWW(fileLoc);
+            while (!reader.isDone) { }
+
+            results = reader.text;
+            return results;
+        }
         results = Application.streamingAssetsPath + "/" + fileLoc;
 
         return results;
