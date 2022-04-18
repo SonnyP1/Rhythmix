@@ -107,10 +107,7 @@ public class LevelAudioManager : MonoBehaviour
         string results;
         if (Application.platform == RuntimePlatform.Android)
         {
-            WWW reader = new WWW(fileLoc);
-            while (!reader.isDone) { }
-
-            results = reader.text;
+            results = "jar:file://" + Application.dataPath + "!/assets/" + fileLoc;
             return results;
         }
         results = Application.streamingAssetsPath + "/" + fileLoc;
