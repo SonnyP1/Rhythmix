@@ -6,6 +6,7 @@ using Melanchall.DryWetMidi.Core;
 using Melanchall.DryWetMidi.Interaction;
 using System.IO;
 using System;
+using UnityEngine.Networking;
 
 public class LevelAudioManager : MonoBehaviour
 {
@@ -60,17 +61,13 @@ public class LevelAudioManager : MonoBehaviour
     private void Start()
     {
         _songAudioSource = GetComponent<AudioSource>();
-        _midiFile = MidiFile.Read(LoadStreamingAssets(FileLoc));
-        if(_midiFile == null)
+        string readFile = LoadStreamingAssets(FileLoc);
+        if(readFile != null)
         {
-            Debug.Log("Data not assign");
-            return;
+            _midiFile = MidiFile.Read(readFile);
+            GetDataFromMidi();
         }
-        else
-        {
-            Debug.Log("Data Assign");
-        }
-        GetDataFromMidi();
+
     }
 
 
@@ -107,12 +104,34 @@ public class LevelAudioManager : MonoBehaviour
         string results;
         if (Application.platform == RuntimePlatform.Android)
         {
-            results = "jar:file://" + Application.dataPath + "!/assets/" + fileLoc;
-            return results;
+            StartCoroutine(ReadFromWebsite(fileLoc));
+            return null;
         }
         results = Application.streamingAssetsPath + "/" + fileLoc;
 
         return results;
+    }
+
+    private IEnumerator ReadFromWebsite(string fileLoc)
+    {
+        using (UnityWebRequest www = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + fileLoc))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.LogError(www.error);
+            }
+            else
+            {
+                byte[] results = www.downloadHandler.data;
+                using (var stream = new MemoryStream(results))
+                {
+                    _midiFile = MidiFile.Read(stream);
+                    GetDataFromMidi();
+                }
+            }
+        }
     }
 
 }
