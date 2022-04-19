@@ -268,7 +268,7 @@ PrefabInstance:
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 8041644320369999106, guid: 6f87cb229ebbe5747a157893ea5b4599, type: 3}
+      objectReference: {fileID: 8041644320369999106, guid: b5ddeecbd34125a4e8eaf607dd57cd2d, type: 3}
     - target: {fileID: 1535030639354397507, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
