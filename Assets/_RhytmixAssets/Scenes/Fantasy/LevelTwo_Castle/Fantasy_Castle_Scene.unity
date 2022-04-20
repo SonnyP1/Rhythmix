@@ -890,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackSpeed
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7600258971249412375, guid: f4e066c935bd2364eaa69bdfec2c5419, type: 3}
       propertyPath: TrackToSpawn

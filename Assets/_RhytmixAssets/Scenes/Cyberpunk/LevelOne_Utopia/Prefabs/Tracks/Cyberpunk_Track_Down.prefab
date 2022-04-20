@@ -269,6 +269,7 @@ MonoBehaviour:
   - {fileID: 139954375278953701}
   EnvironmentToSpawn:
   - {fileID: 8041644320369999106, guid: 6f87cb229ebbe5747a157893ea5b4599, type: 3}
+  - {fileID: 8041644320369999106, guid: b5ddeecbd34125a4e8eaf607dd57cd2d, type: 3}
   HasAccentEnvironment: 0
   AccentSpawnTrans: []
   AccentEnvironmentToSpawn: []
