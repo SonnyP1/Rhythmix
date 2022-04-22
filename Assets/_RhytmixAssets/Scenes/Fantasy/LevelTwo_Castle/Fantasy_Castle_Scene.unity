@@ -570,10 +570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2005062319, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 4.2800293
-      objectReference: {fileID: 0}
     - target: {fileID: 1580726604206319824, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -665,10 +661,6 @@ PrefabInstance:
     - target: {fileID: 1580726604802841597, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
       propertyPath: m_Name
       value: GameCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580726605201339938, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -29.599976
       objectReference: {fileID: 0}
     - target: {fileID: 1580726605201339949, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
