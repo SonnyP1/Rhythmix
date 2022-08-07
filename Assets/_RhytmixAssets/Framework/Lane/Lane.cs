@@ -2,19 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Melanchall.DryWetMidi.Interaction;
-
+using UnityEngine.UI;
+using System;
 
 public class Lane : MonoBehaviour
 {
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     [SerializeField] KeyCode input;
+    [SerializeField] Button ButtonToPress;
     [SerializeField] GameObject notePrefab;
+
+    [Header("Effects")]
+    [SerializeField] GameObject missEffect;
+    [SerializeField] GameObject EarlyEffect;
+    [SerializeField] GameObject LateEffect;
+    [SerializeField] GameObject PerfectEffect;
+
+
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     [SerializeField] LevelAudioManager _levelAudioManager;
 
+    double timeStamp;
+    double marginOfError;
+    double audioTime;
     int spawnIndex = 0;
     int inputIndex = 0;
+
+    public void Awake()
+    {
+        if(ButtonToPress != null)
+        {
+            Debug.Log("Added listener");
+            ButtonToPress.onClick.AddListener(HitNote);
+        }
+    }
+
+    private void HitNote()
+    {
+        if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
+        {
+            Hit();
+            //print($"Hit on {inputIndex} note");
+            Destroy(notes[inputIndex].gameObject);
+            inputIndex++;
+        }
+        else
+        {
+            print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
+        }
+        if (timeStamp + marginOfError <= audioTime)
+        {
+            Miss();
+            //print($"Missed {inputIndex} note");
+            inputIndex++;
+        }
+    }
 
     public void Start()
     {
@@ -50,9 +93,9 @@ public class Lane : MonoBehaviour
 
         if (inputIndex < timeStamps.Count)
         {
-            double timeStamp = timeStamps[inputIndex];
-            double marginOfError = _levelAudioManager.GetMarginOfError();
-            double audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
+            timeStamp = timeStamps[inputIndex];
+            marginOfError = _levelAudioManager.GetMarginOfError();
+            audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
             //Input.GetTouch
             if (Input.GetKeyDown(input))
@@ -80,11 +123,25 @@ public class Lane : MonoBehaviour
     }
     private void Hit()
     {
-        Debug.Log("Hit Note");
+        double accuracy = AbsValueDouble(audioTime - timeStamp);
+        Debug.Log(accuracy);
+        if(accuracy > 0.2f)
+        {
+            Instantiate(EarlyEffect, ButtonToPress.transform);
+        }
+        else if(accuracy < 0.05f)
+        {
+            Instantiate(PerfectEffect, ButtonToPress.transform);
+        }
+        else
+        {
+            Instantiate(LateEffect, ButtonToPress.transform);
+        }
     }
     private void Miss()
     {
         //Debug.Log("Miss Note");
+        Instantiate(missEffect,ButtonToPress.transform);
     }
 
     private static double AbsValueDouble(double number)
