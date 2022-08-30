@@ -18,6 +18,9 @@ public class Lane : MonoBehaviour
     [SerializeField] GameObject LateEffect;
     [SerializeField] GameObject PerfectEffect;
 
+    [Header("AnimationForPlayer")]
+    [SerializeField] Animator PlayerAnimator;
+
 
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
@@ -140,8 +143,11 @@ public class Lane : MonoBehaviour
     }
     private void Miss()
     {
-        //Debug.Log("Miss Note");
         Instantiate(missEffect,ButtonToPress.transform);
+        if(PlayerAnimator != null)
+        {
+            PlayerAnimator.SetTrigger("HitTrigger");
+        }
     }
 
     private static double AbsValueDouble(double number)

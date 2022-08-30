@@ -882,6 +882,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7252506848818957568, guid: 25f0a31f89574b44696e685fbc500ac3, type: 3}
     - target: {fileID: 403965879487392411, guid: 05a3dfd629164884984843200c9c0144, type: 3}
+      propertyPath: PlayerAnimator
+      value: 
+      objectReference: {fileID: 2258949446483573012}
+    - target: {fileID: 403965879487392411, guid: 05a3dfd629164884984843200c9c0144, type: 3}
       propertyPath: noteRestriction
       value: 9
       objectReference: {fileID: 0}
@@ -934,6 +938,11 @@ PrefabInstance:
 --- !u!4 &2548387209269430468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5261053788579426149, guid: 05a3dfd629164884984843200c9c0144, type: 3}
+  m_PrefabInstance: {fileID: 7664761673195497377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2258949446483573012 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8432940464691175093, guid: 05a3dfd629164884984843200c9c0144, type: 3}
   m_PrefabInstance: {fileID: 7664761673195497377}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8460063550488526101
