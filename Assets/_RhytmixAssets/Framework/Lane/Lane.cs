@@ -43,6 +43,11 @@ public class Lane : MonoBehaviour
 
     private void HitNote()
     {
+        if (PlayerAnimator != null)
+        {
+            PlayerAnimator.SetTrigger("AttackTrigger");
+        }
+
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
         {
             Hit();
