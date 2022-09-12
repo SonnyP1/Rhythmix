@@ -20,7 +20,7 @@ public class Lane : MonoBehaviour
 
     [Header("AnimationForPlayer")]
     [SerializeField] Animator PlayerAnimator;
-
+    HeathComponent HealthComp;
 
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
@@ -73,6 +73,7 @@ public class Lane : MonoBehaviour
         {
             _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         }
+        HealthComp = GetComponentInParent<HeathComponent>();
     }
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
@@ -123,7 +124,6 @@ public class Lane : MonoBehaviour
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
-                //print($"Missed {inputIndex} note");
                 inputIndex++;
             }
         }
@@ -152,6 +152,11 @@ public class Lane : MonoBehaviour
         if(PlayerAnimator != null)
         {
             PlayerAnimator.SetTrigger("HitTrigger");
+        }
+
+        if (HealthComp != null)
+        {
+            HealthComp.TakeDmg(1);
         }
     }
 

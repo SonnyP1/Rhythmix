@@ -668,6 +668,17 @@ PrefabInstance:
       objectReference: {fileID: 4498475071886265216}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
+--- !u!114 &1580726603954287078 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2445868599647666393, guid: 6fb94156b1455e54ba56b80d347ac1db, type: 3}
+  m_PrefabInstance: {fileID: 1580726603954287077}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3540333746733821116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -768,6 +779,10 @@ PrefabInstance:
       propertyPath: PauseMenu
       value: 
       objectReference: {fileID: 1961032379}
+    - target: {fileID: -1984221354308136424, guid: 948174da4718fbe408f8051ad1213eb7, type: 3}
+      propertyPath: PlayerHealthBar
+      value: 
+      objectReference: {fileID: 1580726603954287078}
     - target: {fileID: 3250636931422504787, guid: 948174da4718fbe408f8051ad1213eb7, type: 3}
       propertyPath: m_RootOrder
       value: 2
