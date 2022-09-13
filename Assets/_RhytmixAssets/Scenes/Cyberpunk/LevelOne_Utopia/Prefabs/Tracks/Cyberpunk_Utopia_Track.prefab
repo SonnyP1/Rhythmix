@@ -155,7 +155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: AccentSpawnTrans.Array.data[2]
@@ -164,31 +164,31 @@ PrefabInstance:
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[0]
       value: 
-      objectReference: {fileID: 919132149155446097, guid: e9f22be1efedce3488e3ed8957486370, type: 3}
+      objectReference: {fileID: 2808218495001828320, guid: 059c1fdeb72634f42b180704d28626e0, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[1]
       value: 
-      objectReference: {fileID: 919132149155446097, guid: a4085bf7978f2f144b9e1c6d0c62e2af, type: 3}
+      objectReference: {fileID: 2808218495001828320, guid: 3283845136ae5a048935642a992dc384, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[2]
       value: 
-      objectReference: {fileID: 919132149155446097, guid: 22f35bd21b5d8d640a3744002dda56a1, type: 3}
+      objectReference: {fileID: 2808218495001828320, guid: 092c9cebbabdbe34d9bb18d7683bb064, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[3]
       value: 
-      objectReference: {fileID: 919132149155446097, guid: 55d8fc7ad6d0a614fb18a34e098827e3, type: 3}
+      objectReference: {fileID: 2285470589194842584, guid: b611f36a781b256459f1e78ed5421053, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[4]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: b611f36a781b256459f1e78ed5421053, type: 3}
+      objectReference: {fileID: 2285470589194842584, guid: edc4b96dbd9870e469c9df6d4cf20331, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[5]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: edc4b96dbd9870e469c9df6d4cf20331, type: 3}
+      objectReference: {fileID: 2285470589194842584, guid: 5a8315de0c7315145aecc94599071c07, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[6]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 5a8315de0c7315145aecc94599071c07, type: 3}
+      objectReference: {fileID: 2285470589194842584, guid: 9afa45df7b301164fb02bf0d75e73865, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[7]
       value: 

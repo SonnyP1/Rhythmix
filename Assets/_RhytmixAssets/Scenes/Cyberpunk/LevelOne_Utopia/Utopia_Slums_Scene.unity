@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: MovementSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2456136658496697246, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: playerAnimators.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3263986793892688197, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_CastShadows
       value: 1
@@ -494,6 +498,14 @@ PrefabInstance:
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 14274438}
+    - target: {fileID: 8054011675631799610, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: attackAnimationCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054011675631799610, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: hasMultipleAttackAnimation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8741831151369508801, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_RootOrder
       value: 9

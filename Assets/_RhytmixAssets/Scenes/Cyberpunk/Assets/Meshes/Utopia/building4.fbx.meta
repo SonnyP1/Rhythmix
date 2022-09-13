@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gus3
-    second: {fileID: 2100000, guid: 2f1a0e81e5612af458202d28a1da8519, type: 2}
+    second: {fileID: 2100000, guid: aa8fb1ba03b99bd43a9faf11584ebd7a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
