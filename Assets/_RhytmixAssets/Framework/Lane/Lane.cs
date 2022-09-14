@@ -20,8 +20,10 @@ public class Lane : MonoBehaviour
 
     [Header("AnimationForPlayer")]
     [SerializeField] Animator PlayerAnimator;
-    HeathComponent HealthComp;
+    [SerializeField] bool hasMultipleAttackAnimation;
+    [SerializeField][Range(1,4)] int attackAnimationCount;
 
+    HeathComponent HealthComp;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     [SerializeField] LevelAudioManager _levelAudioManager;
@@ -45,7 +47,34 @@ public class Lane : MonoBehaviour
     {
         if (PlayerAnimator != null)
         {
-            PlayerAnimator.SetTrigger("AttackTrigger");
+            if(hasMultipleAttackAnimation)
+            {
+                System.Random rand = new System.Random();
+                int randomNum = rand.Next(1,attackAnimationCount+1);
+                print(randomNum);
+                switch(randomNum)
+                {
+                    case 1:
+                        PlayerAnimator.SetTrigger("AttackTrigger1");
+                        break;
+                    case 2:
+                        PlayerAnimator.SetTrigger("AttackTrigger2");
+                        break;
+                    case 3:
+                        PlayerAnimator.SetTrigger("AttackTrigger3");
+                        break;
+                    case 4:
+                        PlayerAnimator.SetTrigger("AttackTrigger4");
+                        break;
+                    default:
+                        PlayerAnimator.SetTrigger("AttackTrigger1");
+                        break;
+                }
+            }
+            else
+            {
+                PlayerAnimator.SetTrigger("AttackTrigger1");
+            }
         }
 
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
@@ -57,7 +86,7 @@ public class Lane : MonoBehaviour
         }
         else
         {
-            print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
+            //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
         }
         if (timeStamp + marginOfError <= audioTime)
         {
@@ -109,17 +138,7 @@ public class Lane : MonoBehaviour
             //Input.GetTouch
             if (Input.GetKeyDown(input))
             {
-                if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
-                {
-                    Hit();
-                    //print($"Hit on {inputIndex} note");
-                    Destroy(notes[inputIndex].gameObject);
-                    inputIndex++;
-                }
-                else
-                {
-                    //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
-                }
+                HitNote();
             }
             if (timeStamp + marginOfError <= audioTime)
             {

@@ -9,7 +9,7 @@ public class BasicPlayer : MonoBehaviour
     CharacterController characterController;
     HeathComponent healthComp;
     bool isDead = false;
-    Animator[] playerAnimators;
+    [SerializeField] Animator[] playerAnimators;
 
     private void Start()
     {
@@ -25,9 +25,13 @@ public class BasicPlayer : MonoBehaviour
         {
             print("I Die");
             isDead = false;
-            foreach(Animator animator in playerAnimators)
+            if(playerAnimators != null)
             {
-                animator.SetTrigger("DeathTrigger");
+                foreach(Animator animator in playerAnimators)
+                {
+                    animator.SetTrigger("DeathTrigger");
+                    animator.SetLayerWeight(1,0);
+                }
             }
         }
     }
