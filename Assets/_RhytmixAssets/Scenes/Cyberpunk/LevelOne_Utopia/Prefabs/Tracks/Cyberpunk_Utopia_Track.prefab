@@ -155,7 +155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: AccentSpawnTrans.Array.data[2]
@@ -192,7 +192,7 @@ PrefabInstance:
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[7]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 9afa45df7b301164fb02bf0d75e73865, type: 3}
+      objectReference: {fileID: 2285470589194842584, guid: 770137a384f190849b98772bac4ca6f0, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[8]
       value: 
