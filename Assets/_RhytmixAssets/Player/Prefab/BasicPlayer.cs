@@ -23,7 +23,7 @@ public class BasicPlayer : MonoBehaviour
     {
         if(!isDead)
         {
-            print("I Die");
+            //print("I Die");
             isDead = false;
             if(playerAnimators != null)
             {

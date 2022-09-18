@@ -59,5 +59,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 7185935708056811193, guid: 41025f7e74391604fa70a783e6a3d586, type: 3}
+      propertyPath: EffectSpawn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41025f7e74391604fa70a783e6a3d586, type: 3}

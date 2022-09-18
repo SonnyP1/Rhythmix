@@ -8,6 +8,10 @@ public class Note : MonoBehaviour
     public float assignedTime;
     LevelAudioManager _levelAudioManager;
     [SerializeField] MeshRenderer[] Meshrenderers;
+    [SerializeField] AttackType NoteType;
+
+    public AttackType GetNoteType(){
+        return NoteType;}
     void Start()
     {
         foreach(MeshRenderer meshRender in Meshrenderers)

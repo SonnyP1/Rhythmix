@@ -9,10 +9,10 @@ public class Lane : MonoBehaviour
 {
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     [SerializeField] KeyCode input;
-    [SerializeField] Button ButtonToPress;
     [SerializeField] GameObject notePrefab;
 
     [Header("Effects")]
+    [SerializeField] Transform EffectSpawn;
     [SerializeField] GameObject missEffect;
     [SerializeField] GameObject EarlyEffect;
     [SerializeField] GameObject LateEffect;
@@ -34,25 +34,41 @@ public class Lane : MonoBehaviour
     int spawnIndex = 0;
     int inputIndex = 0;
 
-    public void Awake()
+
+    public void HitNote(AttackType attackType)
     {
-        if(ButtonToPress != null)
+        PlayAttackAnimation();
+        print(attackType);
+
+        if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
-            Debug.Log("Added listener");
-            ButtonToPress.onClick.AddListener(HitNote);
+            Hit();
+            //print($"Hit on {inputIndex} note");
+            Destroy(notes[inputIndex].gameObject);
+            inputIndex++;
+        }
+        else
+        {
+            //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
+        }
+        if (timeStamp + marginOfError <= audioTime)
+        {
+            Miss();
+            inputIndex++;
+            //print($"Missed {inputIndex} note");
         }
     }
 
-    private void HitNote()
+    private void PlayAttackAnimation()
     {
         if (PlayerAnimator != null)
         {
-            if(hasMultipleAttackAnimation)
+            if (hasMultipleAttackAnimation)
             {
                 System.Random rand = new System.Random();
-                int randomNum = rand.Next(1,attackAnimationCount+1);
-                print(randomNum);
-                switch(randomNum)
+                int randomNum = rand.Next(1, attackAnimationCount + 1);
+                //print(randomNum);
+                switch (randomNum)
                 {
                     case 1:
                         PlayerAnimator.SetTrigger("AttackTrigger1");
@@ -76,26 +92,7 @@ public class Lane : MonoBehaviour
                 PlayerAnimator.SetTrigger("AttackTrigger1");
             }
         }
-
-        if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
-        {
-            Hit();
-            //print($"Hit on {inputIndex} note");
-            Destroy(notes[inputIndex].gameObject);
-            inputIndex++;
-        }
-        else
-        {
-            //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
-        }
-        if (timeStamp + marginOfError <= audioTime)
-        {
-            Miss();
-            //print($"Missed {inputIndex} note");
-            inputIndex++;
-        }
     }
-
     public void Start()
     {
         if(_levelAudioManager != null)
@@ -115,7 +112,6 @@ public class Lane : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
     void Update()
     {
         if (spawnIndex < timeStamps.Count)
@@ -135,10 +131,9 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
-            //Input.GetTouch
             if (Input.GetKeyDown(input))
             {
-                HitNote();
+                HitNote(AttackType.Tap);
             }
             if (timeStamp + marginOfError <= audioTime)
             {
@@ -154,20 +149,20 @@ public class Lane : MonoBehaviour
         Debug.Log(accuracy);
         if(accuracy > 0.2f)
         {
-            Instantiate(EarlyEffect, ButtonToPress.transform);
+            Instantiate(EarlyEffect, EffectSpawn);
         }
         else if(accuracy < 0.05f)
         {
-            Instantiate(PerfectEffect, ButtonToPress.transform);
+            Instantiate(PerfectEffect, EffectSpawn);
         }
         else
         {
-            Instantiate(LateEffect, ButtonToPress.transform);
+            Instantiate(LateEffect, EffectSpawn);
         }
     }
     private void Miss()
     {
-        Instantiate(missEffect,ButtonToPress.transform);
+        Instantiate(missEffect, EffectSpawn);
         if(PlayerAnimator != null)
         {
             PlayerAnimator.SetTrigger("HitTrigger");
