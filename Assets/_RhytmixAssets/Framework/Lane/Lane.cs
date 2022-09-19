@@ -37,7 +37,7 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        PlayAttackAnimation();
+        PlayAttackAnimation(attackType);
         print(attackType);
 
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
@@ -59,39 +59,51 @@ public class Lane : MonoBehaviour
         }
     }
 
-    private void PlayAttackAnimation()
+    private void PlayAttackAnimation(AttackType attackType)
     {
         if (PlayerAnimator != null)
         {
-            if (hasMultipleAttackAnimation)
+            if(attackType == AttackType.Tap)
             {
-                System.Random rand = new System.Random();
-                int randomNum = rand.Next(1, attackAnimationCount + 1);
-                //print(randomNum);
-                switch (randomNum)
+                if (hasMultipleAttackAnimation)
                 {
-                    case 1:
-                        PlayerAnimator.SetTrigger("AttackTrigger1");
-                        break;
-                    case 2:
-                        PlayerAnimator.SetTrigger("AttackTrigger2");
-                        break;
-                    case 3:
-                        PlayerAnimator.SetTrigger("AttackTrigger3");
-                        break;
-                    case 4:
-                        PlayerAnimator.SetTrigger("AttackTrigger4");
-                        break;
-                    default:
-                        PlayerAnimator.SetTrigger("AttackTrigger1");
-                        break;
+                    System.Random rand = new System.Random();
+                    int randomNum = rand.Next(1, attackAnimationCount + 1);
+                    //print(randomNum);
+                    switch (randomNum)
+                    {
+                        case 1:
+                            PlayerAnimator.SetTrigger("AttackTrigger1");
+                            break;
+                        case 2:
+                            PlayerAnimator.SetTrigger("AttackTrigger2");
+                            break;
+                        case 3:
+                            PlayerAnimator.SetTrigger("AttackTrigger3");
+                            break;
+                        case 4:
+                            PlayerAnimator.SetTrigger("AttackTrigger4");
+                            break;
+                        default:
+                            PlayerAnimator.SetTrigger("AttackTrigger1");
+                            break;
+                    }
+                }
+                else
+                {
+                    PlayerAnimator.SetTrigger("AttackTrigger1");
                 }
             }
-            else
+            else if(attackType == AttackType.SwipeUp)
             {
-                PlayerAnimator.SetTrigger("AttackTrigger1");
+                PlayerAnimator.SetLayerWeight(2,1);
             }
         }
+    }
+
+    void ExitSwipe()
+    {
+        PlayerAnimator.SetLayerWeight(2, 0);
     }
     public void Start()
     {

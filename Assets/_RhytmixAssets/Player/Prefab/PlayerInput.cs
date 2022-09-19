@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public enum AttackType 
-{Tap,SwipeRight,SwipeLeft };
+public enum AttackType
+{Tap,SwipeRight,SwipeLeft,SwipeUp };
 
 
 public class PlayerInput : MonoBehaviour
@@ -66,21 +66,28 @@ public class PlayerInput : MonoBehaviour
         {
             //end of click
             Vector3 end = Input.mousePosition;
-            if (Mathf.Abs(end.x - start.x) > 30)
+            if(lane != null)
             {
-                if(end.x > start.x)
+                if (Mathf.Abs(end.x - start.x) > 30)
                 {
-                    lane.HitNote(AttackType.SwipeRight);
+                    if(end.x > start.x)
+                    {
+                        lane.HitNote(AttackType.SwipeRight);
+                    }
+                    else
+                    {
+                        lane.HitNote(AttackType.SwipeLeft);
+                    }
+
+                }
+                else if(Mathf.Abs(end.y - start.y) > 50)
+                {
+                    lane.HitNote(AttackType.SwipeUp);
                 }
                 else
                 {
-                    lane.HitNote(AttackType.SwipeLeft);
+                    lane.HitNote(AttackType.Tap);
                 }
-
-            }
-            else
-            {
-                lane.HitNote(AttackType.Tap);
             }
         }
     }
