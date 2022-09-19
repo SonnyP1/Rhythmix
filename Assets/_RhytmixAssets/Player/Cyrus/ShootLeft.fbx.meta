@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e97e4c8dbf188945a9b93eb0c1ad174
+guid: 22bc53e18acde5a409c99786f063edb1
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -21,12 +21,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'ShootLeft' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'RootPart2_M' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'Spine1Part1_M' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Chest_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -51,11 +46,11 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
