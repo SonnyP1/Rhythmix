@@ -9,10 +9,10 @@ public class Lane : MonoBehaviour
 {
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     [SerializeField] KeyCode input;
-    [SerializeField] Button ButtonToPress;
     [SerializeField] GameObject notePrefab;
 
     [Header("Effects")]
+    [SerializeField] Transform EffectSpawn;
     [SerializeField] GameObject missEffect;
     [SerializeField] GameObject EarlyEffect;
     [SerializeField] GameObject LateEffect;
@@ -34,50 +34,13 @@ public class Lane : MonoBehaviour
     int spawnIndex = 0;
     int inputIndex = 0;
 
-    public void Awake()
-    {
-        if(ButtonToPress != null)
-        {
-            Debug.Log("Added listener");
-            ButtonToPress.onClick.AddListener(HitNote);
-        }
-    }
 
-    private void HitNote()
+    public void HitNote(AttackType attackType)
     {
-        if (PlayerAnimator != null)
-        {
-            if(hasMultipleAttackAnimation)
-            {
-                System.Random rand = new System.Random();
-                int randomNum = rand.Next(1,attackAnimationCount+1);
-                print(randomNum);
-                switch(randomNum)
-                {
-                    case 1:
-                        PlayerAnimator.SetTrigger("AttackTrigger1");
-                        break;
-                    case 2:
-                        PlayerAnimator.SetTrigger("AttackTrigger2");
-                        break;
-                    case 3:
-                        PlayerAnimator.SetTrigger("AttackTrigger3");
-                        break;
-                    case 4:
-                        PlayerAnimator.SetTrigger("AttackTrigger4");
-                        break;
-                    default:
-                        PlayerAnimator.SetTrigger("AttackTrigger1");
-                        break;
-                }
-            }
-            else
-            {
-                PlayerAnimator.SetTrigger("AttackTrigger1");
-            }
-        }
+        PlayAttackAnimation(attackType);
+        print(attackType);
 
-        if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
+        if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
             //print($"Hit on {inputIndex} note");
@@ -91,11 +54,57 @@ public class Lane : MonoBehaviour
         if (timeStamp + marginOfError <= audioTime)
         {
             Miss();
-            //print($"Missed {inputIndex} note");
             inputIndex++;
+            //print($"Missed {inputIndex} note");
         }
     }
 
+    private void PlayAttackAnimation(AttackType attackType)
+    {
+        if (PlayerAnimator != null)
+        {
+            if(attackType == AttackType.Tap)
+            {
+                if (hasMultipleAttackAnimation)
+                {
+                    System.Random rand = new System.Random();
+                    int randomNum = rand.Next(1, attackAnimationCount + 1);
+                    //print(randomNum);
+                    switch (randomNum)
+                    {
+                        case 1:
+                            PlayerAnimator.SetTrigger("AttackTrigger1");
+                            break;
+                        case 2:
+                            PlayerAnimator.SetTrigger("AttackTrigger2");
+                            break;
+                        case 3:
+                            PlayerAnimator.SetTrigger("AttackTrigger3");
+                            break;
+                        case 4:
+                            PlayerAnimator.SetTrigger("AttackTrigger4");
+                            break;
+                        default:
+                            PlayerAnimator.SetTrigger("AttackTrigger1");
+                            break;
+                    }
+                }
+                else
+                {
+                    PlayerAnimator.SetTrigger("AttackTrigger1");
+                }
+            }
+            else if(attackType == AttackType.SwipeUp)
+            {
+                PlayerAnimator.SetLayerWeight(2,1);
+            }
+        }
+    }
+
+    void ExitSwipe()
+    {
+        PlayerAnimator.SetLayerWeight(2, 0);
+    }
     public void Start()
     {
         if(_levelAudioManager != null)
@@ -115,7 +124,6 @@ public class Lane : MonoBehaviour
             }
         }
     }
-    // Update is called once per frame
     void Update()
     {
         if (spawnIndex < timeStamps.Count)
@@ -135,10 +143,9 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
-            //Input.GetTouch
             if (Input.GetKeyDown(input))
             {
-                HitNote();
+                HitNote(AttackType.Tap);
             }
             if (timeStamp + marginOfError <= audioTime)
             {
@@ -154,20 +161,20 @@ public class Lane : MonoBehaviour
         Debug.Log(accuracy);
         if(accuracy > 0.2f)
         {
-            Instantiate(EarlyEffect, ButtonToPress.transform);
+            Instantiate(EarlyEffect, EffectSpawn);
         }
         else if(accuracy < 0.05f)
         {
-            Instantiate(PerfectEffect, ButtonToPress.transform);
+            Instantiate(PerfectEffect, EffectSpawn);
         }
         else
         {
-            Instantiate(LateEffect, ButtonToPress.transform);
+            Instantiate(LateEffect, EffectSpawn);
         }
     }
     private void Miss()
     {
-        Instantiate(missEffect,ButtonToPress.transform);
+        Instantiate(missEffect, EffectSpawn);
         if(PlayerAnimator != null)
         {
             PlayerAnimator.SetTrigger("HitTrigger");

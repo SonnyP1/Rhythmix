@@ -20,7 +20,7 @@ public class HeathComponent : MonoBehaviour
     public void TakeDmg(float dmg)
     {
         HP = Mathf.Clamp(HP - dmg, 0, MaxHP);
-        print("Took dmg" + " Current health is at " + HP);
+        //print("Took dmg" + " Current health is at " + HP);
         UpdateHealthBar();
         if(HP <= 0)
         {
