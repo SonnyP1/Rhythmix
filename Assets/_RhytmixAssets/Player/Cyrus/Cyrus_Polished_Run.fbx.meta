@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d1737ba5539f9648880057bdbd56a33
+guid: a2af2e899c45b5d47b7699b5c2472a25
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -48,7 +48,7 @@ ModelImporter:
       firstFrame: 1
       lastFrame: 23
       wrapMode: 0
-      orientationOffsetY: 7.06
+      orientationOffsetY: 6.72
       level: 0
       cycleOffset: 0
       loop: 0

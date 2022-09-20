@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,11 +7,35 @@ public class BasicPlayer : MonoBehaviour
 {
     float _gravity = -9.8f;
     CharacterController characterController;
+    HeathComponent healthComp;
+    bool isDead = false;
+    [SerializeField] Animator[] playerAnimators;
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
+
+        healthComp = GetComponent<HeathComponent>();
+        healthComp.onDeath += Death;
     }
+
+    private void Death()
+    {
+        if(!isDead)
+        {
+            print("I Die");
+            isDead = false;
+            if(playerAnimators != null)
+            {
+                foreach(Animator animator in playerAnimators)
+                {
+                    animator.SetTrigger("DeathTrigger");
+                    animator.SetLayerWeight(1,0);
+                }
+            }
+        }
+    }
+
     void Update()
     {
         Vector3 playerVelocity = Vector3.zero;
