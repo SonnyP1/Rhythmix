@@ -175,14 +175,13 @@ public class Lane : MonoBehaviour
     private void Miss()
     {
         Instantiate(missEffect, EffectSpawn);
-        if(PlayerAnimator != null)
-        {
-            PlayerAnimator.SetTrigger("HitTrigger");
-        }
-
-        if (HealthComp != null)
+        if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
             HealthComp.TakeDmg(1);
+            if (PlayerAnimator != null)
+            {
+                PlayerAnimator.SetTrigger("HitTrigger");
+            }
         }
     }
 
