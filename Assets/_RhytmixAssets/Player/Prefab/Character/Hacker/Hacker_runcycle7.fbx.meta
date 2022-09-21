@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: 8d59803d36604e54e9d6c88a68433743
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 8605240351146184419
+    second: runcycle7
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'runcycle7' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Hacker_Rig:Spine1_M' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'Hacker_Rig:Spine1Part2_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hacker_Rig:Chest_M'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: runcycle7
+      takeName: runcycle7
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.9
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 20
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hacker_Rig:Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:RootPart1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:RootPart2_M
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Scapula_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Scapula_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger1_L
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger2_L
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger3_L
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger1_L
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger2_L
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger3_L
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger1_L
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger2_L
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger3_L
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger1_R
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger2_R
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:ThumbFinger3_R
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger1_R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger2_R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:IndexFinger3_R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger1_R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger2_R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:MiddleFinger3_R
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hacker_Rig:Spine1Part1_M
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Hacker_runcycle7(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:DeformationSystem
+      parentName: Hacker_runcycle7(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Root_M
+      parentName: Hacker_Rig:DeformationSystem
+      position: {x: -0.0000021889375, y: 0.008101798, z: -0.00015743909}
+      rotation: {x: -0.516438, y: 0.48300284, z: 0.51643807, w: -0.48300284}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: Hacker_Rig:Tail1_M
+      parentName: Hacker_Rig:Root_M
+      position: {x: 0.0004919905, y: -0.0009385365, z: 0}
+      rotation: {x: -0.000000029802326, y: 0.000000029802326, z: -0.99677116, w: -0.080294944}
+      scale: {x: 1.0000014, y: 1.0000014, z: 1.0000002}
+    - name: Hacker_Rig:Tail2_M
+      parentName: Hacker_Rig:Tail1_M
+      position: {x: -0.0009537762, y: 4.440892e-19, z: -1.110223e-18}
+      rotation: {x: -8.462335e-10, y: 7.0125084e-10, z: -0.026073955, w: 0.99966}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1.0000011}
+    - name: Hacker_Rig:Tail3_M
+      parentName: Hacker_Rig:Tail2_M
+      position: {x: -0.0008709421, y: -8.881784e-19, z: 4.5966106e-13}
+      rotation: {x: 0.000000019764606, y: 0.000000037225224, z: -0.18968616, w: 0.9818448}
+      scale: {x: 1.0000039, y: 1.0000014, z: 1.0000031}
+    - name: Hacker_Rig:Tail4_M
+      parentName: Hacker_Rig:Tail3_M
+      position: {x: -0.0007637633, y: 2.664535e-18, z: 4.4245167e-12}
+      rotation: {x: -0.000000037225227, y: 0.000000019764613, z: -0.1756306, w: 0.9844562}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.000001}
+    - name: Hacker_Rig:Tail5_M
+      parentName: Hacker_Rig:Tail4_M
+      position: {x: -0.0009598802, y: -2.664535e-18, z: 1.0493797e-11}
+      rotation: {x: 0.000000055423254, y: -0.000000031724873, z: -0.18660937, w: 0.9824342}
+      scale: {x: 1.0000067, y: 0.9999979, z: 1.0000032}
+    - name: Hacker_Rig:Tail6_M
+      parentName: Hacker_Rig:Tail5_M
+      position: {x: -0.0009234211, y: 0, z: 1.2005671e-11}
+      rotation: {x: -0, y: -0, z: 1.7582957e-15, w: 1}
+      scale: {x: 1.0000031, y: 0.9999997, z: 1.0000021}
+    - name: Hacker_Rig:RootPart1_M
+      parentName: Hacker_Rig:Root_M
+      position: {x: -0.0005283893, y: 4.440892e-19, z: 3.3306688e-19}
+      rotation: {x: -0.000000059604645, y: -0.000000059604645, z: -0, w: -1}
+      scale: {x: 1.0000005, y: 1.0000006, z: 1.0000005}
+    - name: Hacker_Rig:RootPart2_M
+      parentName: Hacker_Rig:RootPart1_M
+      position: {x: -0.0005283893, y: 4.440892e-19, z: 6.6613377e-19}
+      rotation: {x: -0.000000029802319, y: -0.000000029802326, z: -0.000000059604645, w: 1}
+      scale: {x: 1.0000012, y: 1.0000013, z: 1.0000002}
+    - name: Hacker_Rig:Spine1_M
+      parentName: Hacker_Rig:RootPart2_M
+      position: {x: -0.0005283893, y: 8.881784e-19, z: 1.7149909e-18}
+      rotation: {x: 0.000000027578437, y: 0.000000002403809, z: 0.077639826, w: 0.9969815}
+      scale: {x: 1.000002, y: 1.0000015, z: 1.0000023}
+    - name: Hacker_Rig:Spine1Part1_M
+      parentName: Hacker_Rig:Spine1_M
+      position: {x: -0.0005213436, y: -8.881784e-19, z: -4.440892e-19}
+      rotation: {x: -0.00000005942473, y: 0.000000004627693, z: 0.000000022351742, w: 1}
+      scale: {x: 1.000001, y: 1.0000017, z: 1.0000001}
+    - name: Hacker_Rig:Spine1Part2_M
+      parentName: Hacker_Rig:Spine1Part1_M
+      position: {x: -0.0005213436, y: 0, z: 0}
+      rotation: {x: 0.0000000023138538, y: 0.00000002971236, z: -0.000000029802319, w: 1}
+      scale: {x: 1.0000015, y: 1, z: 1.0000014}
+    - name: Hacker_Rig:Chest_M
+      parentName: Hacker_Rig:Spine1Part2_M
+      position: {x: -0.0005213436, y: -1.3322675e-18, z: 4.440892e-19}
+      rotation: {x: 0.00000012699167, y: 0.000000049999805, z: -0.05900696, w: 0.9982576}
+      scale: {x: 0.99999994, y: 1.0000004, z: 1}
+    - name: Hacker_Rig:Scapula_R
+      parentName: Hacker_Rig:Chest_M
+      position: {x: -0.00054751826, y: 0.000025266712, z: -0.0006821287}
+      rotation: {x: -0.010361638, y: 0.70710707, z: -0.010602683, w: -0.70695114}
+      scale: {x: 1.000005, y: 1.000002, z: 1.0000002}
+    - name: Hacker_Rig:Shoulder_R
+      parentName: Hacker_Rig:Scapula_R
+      position: {x: -0.00088713586, y: 2.469136e-16, z: 2.0872192e-17}
+      rotation: {x: -0.0017439432, y: -0.026080217, z: 0.0028726717, w: 0.9996543}
+      scale: {x: 1.0000049, y: 1.0000039, z: 1.0000043}
+    - name: Hacker_Rig:Elbow_R
+      parentName: Hacker_Rig:Shoulder_R
+      position: {x: -0.0017808636, y: 1.065814e-17, z: 1.9539925e-17}
+      rotation: {x: 0.0018611808, y: 0.017033294, z: -0.0401094, w: 0.9990484}
+      scale: {x: 1.0000036, y: 1.0000015, z: 1.0000012}
+    - name: Hacker_Rig:Wrist_R
+      parentName: Hacker_Rig:Elbow_R
+      position: {x: -0.0021519277, y: -2.664535e-18, z: -8.881784e-18}
+      rotation: {x: 0.0026590307, y: 0.029522788, z: 0.06265233, w: 0.99759513}
+      scale: {x: 1.0000027, y: 1.0000025, z: 1.0000032}
+    - name: Hacker_Rig:MiddleFinger1_R
+      parentName: Hacker_Rig:Wrist_R
+      position: {x: -0.0008626479, y: 0, z: -1.7763567e-18}
+      rotation: {x: 0.0000090859785, y: -0.08121858, z: 0.007360498, w: 0.9966692}
+      scale: {x: 1.0000064, y: 1.0000029, z: 1.0000004}
+    - name: Hacker_Rig:MiddleFinger2_R
+      parentName: Hacker_Rig:MiddleFinger1_R
+      position: {x: -0.00027044566, y: -8.881784e-19, z: 1.5987211e-17}
+      rotation: {x: 0.00034102914, y: -0.039861508, z: -0.000077919714, w: 0.9992051}
+      scale: {x: 1.0000061, y: 1.0000023, z: 0.9999978}
+    - name: Hacker_Rig:MiddleFinger3_R
+      parentName: Hacker_Rig:MiddleFinger2_R
+      position: {x: -0.000228675, y: 1.3322675e-18, z: -4.8849813e-18}
+      rotation: {x: 0.00043006122, y: -0.038529385, z: -0.000019554991, w: 0.9992574}
+      scale: {x: 1.0000101, y: 1.0000017, z: 0.99999624}
+    - name: Hacker_Rig:MiddleFinger4_R
+      parentName: Hacker_Rig:MiddleFinger3_R
+      position: {x: -0.00029943878, y: 1.6653344e-19, z: 1.7763567e-18}
+      rotation: {x: -0, y: -0.000000007450579, z: -0, w: 1}
+      scale: {x: 1.000001, y: 1.0000015, z: 1.000002}
+    - name: Hacker_Rig:ThumbFinger1_R
+      parentName: Hacker_Rig:Wrist_R
+      position: {x: -0.00040679952, y: 0.00036094303, z: -0.00014209619}
+      rotation: {x: -0.4132756, y: 0.09011324, z: -0.34996486, w: 0.8358274}
+      scale: {x: 1.0000057, y: 0.9999961, z: 1.0000035}
+    - name: Hacker_Rig:ThumbFinger2_R
+      parentName: Hacker_Rig:ThumbFinger1_R
+      position: {x: -0.00024597827, y: 8.881784e-19, z: 7.9936054e-18}
+      rotation: {x: 0.00000011920925, y: -0.03021672, z: -0.000000007450578, w: 0.99954337}
+      scale: {x: 1.000002, y: 0.9999996, z: 1.0000004}
+    - name: Hacker_Rig:ThumbFinger3_R
+      parentName: Hacker_Rig:ThumbFinger2_R
+      position: {x: -0.00014997897, y: 3.5527134e-18, z: 1.9179102e-17}
+      rotation: {x: -0.00000034842228, y: -0.035937283, z: 0.0000012847859, w: 0.99935406}
+      scale: {x: 1.0000039, y: 1.0000017, z: 0.99999744}
+    - name: Hacker_Rig:ThumbFinger4_R
+      parentName: Hacker_Rig:ThumbFinger3_R
+      position: {x: -0.00022798227, y: -3.5527134e-18, z: 2.664535e-18}
+      rotation: {x: 1.4210851e-14, y: -0, z: -3.733124e-15, w: 1}
+      scale: {x: 0.99999803, y: 1.0000004, z: 0.99999994}
+    - name: Hacker_Rig:IndexFinger1_R
+      parentName: Hacker_Rig:Wrist_R
+      position: {x: -0.0008588501, y: 0.00028083014, z: -0.00008409202}
+      rotation: {x: -0.015030568, y: -0.0801262, z: -0.012539365, w: 0.9965925}
+      scale: {x: 1.0000062, y: 1.0000027, z: 1.0000001}
+    - name: Hacker_Rig:IndexFinger2_R
+      parentName: Hacker_Rig:IndexFinger1_R
+      position: {x: -0.00029607184, y: -1.3322675e-18, z: 0}
+      rotation: {x: 0.000000005587934, y: -0.032594673, z: 0.0025929797, w: 0.99946535}
+      scale: {x: 1.0000024, y: 0.99999994, z: 0.9999977}
+    - name: Hacker_Rig:IndexFinger3_R
+      parentName: Hacker_Rig:IndexFinger2_R
+      position: {x: -0.00021585147, y: 4.440892e-19, z: 2.664535e-18}
+      rotation: {x: -0.013866586, y: -0.039551634, z: 0.0008525621, w: 0.99912095}
+      scale: {x: 1.000007, y: 1.0000023, z: 0.99999887}
+    - name: Hacker_Rig:IndexFinger4_R
+      parentName: Hacker_Rig:IndexFinger3_R
+      position: {x: -0.00020610943, y: -5.8286703e-18, z: 1.7763567e-18}
+      rotation: {x: 0.0000000018626447, y: -0, z: -4.6566118e-10, w: 1}
+      scale: {x: 1.000003, y: 1.0000015, z: 1.000001}
+    - name: Hacker_Rig:Scapula_L
+      parentName: Hacker_Rig:Chest_M
+      position: {x: -0.00054751826, y: 0.000025266712, z: 0.0006821287}
+      rotation: {x: 0.7071069, y: 0.010361722, z: 0.7069513, w: -0.010602504}
+      scale: {x: 1.0000038, y: 1.0000012, z: 1.0000005}
+    - name: Hacker_Rig:Shoulder_L
+      parentName: Hacker_Rig:Scapula_L
+      position: {x: 0.00088713586, y: -9.8143716e-17, z: -1.5987211e-17}
+      rotation: {x: 0.0017439376, y: 0.026080178, z: -0.002872707, w: -0.99965423}
+      scale: {x: 1.0000066, y: 1.0000031, z: 1.0000011}
+    - name: Hacker_Rig:Elbow_L
+      parentName: Hacker_Rig:Shoulder_L
+      position: {x: 0.0017808636, y: -2.0605739e-16, z: -1.6697754e-16}
+      rotation: {x: -0.0018612288, y: -0.017033087, z: 0.040109873, w: -0.99904835}
+      scale: {x: 1.0000058, y: 1.0000049, z: 1.0000027}
+    - name: Hacker_Rig:Wrist_L
+      parentName: Hacker_Rig:Elbow_L
+      position: {x: 0.0021519277, y: -3.2063238e-16, z: -4.0856204e-17}
+      rotation: {x: 0.0026589439, y: 0.029522715, z: 0.06265228, w: 0.99759513}
+      scale: {x: 1.0000015, y: 1.0000033, z: 1.000003}
+    - name: Hacker_Rig:MiddleFinger1_L
+      parentName: Hacker_Rig:Wrist_L
+      position: {x: 0.0008626479, y: -1.190159e-16, z: 2.664535e-18}
+      rotation: {x: 0.000009058505, y: -0.081222594, z: 0.0073613436, w: 0.9966688}
+      scale: {x: 1.0000072, y: 1.0000033, z: 1.0000024}
+    - name: Hacker_Rig:MiddleFinger2_L
+      parentName: Hacker_Rig:MiddleFinger1_L
+      position: {x: 0.00027044566, y: -4.8849813e-17, z: -8.881784e-18}
+      rotation: {x: 0.00034086467, y: -0.03985861, z: -0.00007896984, w: 0.99920523}
+      scale: {x: 1.0000058, y: 1.0000018, z: 0.99999934}
+    - name: Hacker_Rig:MiddleFinger3_L
+      parentName: Hacker_Rig:MiddleFinger2_L
+      position: {x: 0.000228675, y: -4.4408918e-17, z: 4.440892e-18}
+      rotation: {x: 0.00043007397, y: -0.038529716, z: -0.000021330447, w: 0.99925745}
+      scale: {x: 1.0000105, y: 1.0000014, z: 0.9999952}
+    - name: Hacker_Rig:MiddleFinger4_L
+      parentName: Hacker_Rig:MiddleFinger3_L
+      position: {x: 0.00029943878, y: -6.5947246e-17, z: 1.7763567e-18}
+      rotation: {x: -0, y: -0.000000007450579, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000017, z: 1.0000002}
+    - name: Hacker_Rig:ThumbFinger1_L
+      parentName: Hacker_Rig:Wrist_L
+      position: {x: 0.00040679952, y: -0.00036094303, z: 0.00014209619}
+      rotation: {x: 0.41327536, y: -0.09011262, z: 0.34996364, w: -0.8358282}
+      scale: {x: 1.0000049, y: 1.0000004, z: 1.0000068}
+    - name: Hacker_Rig:ThumbFinger2_L
+      parentName: Hacker_Rig:ThumbFinger1_L
+      position: {x: 0.00024597827, y: -1.1546318e-17, z: -6.128431e-17}
+      rotation: {x: 0.000000029802315, y: -0.03021656, z: 0.000000014901158, w: 0.9995434}
+      scale: {x: 1.0000046, y: 1.0000025, z: 1.0000077}
+    - name: Hacker_Rig:ThumbFinger3_L
+      parentName: Hacker_Rig:ThumbFinger2_L
+      position: {x: 0.00014997897, y: -3.5527134e-18, z: -5.1514347e-17}
+      rotation: {x: -0.0000006565512, y: -0.035938118, z: -0.0000009890853, w: 0.999354}
+      scale: {x: 1.0000015, y: 1.0000013, z: 0.9999983}
+    - name: Hacker_Rig:ThumbFinger4_L
+      parentName: Hacker_Rig:ThumbFinger3_L
+      position: {x: 0.00022798227, y: -1.4210854e-17, z: -5.462297e-17}
+      rotation: {x: -0, y: 0.000000014901158, z: -7.1054257e-15, w: 1}
+      scale: {x: 1.0000015, y: 1.0000011, z: 1.0000018}
+    - name: Hacker_Rig:IndexFinger1_L
+      parentName: Hacker_Rig:Wrist_L
+      position: {x: 0.0008588501, y: -0.00028083014, z: 0.00008409202}
+      rotation: {x: -0.015030511, y: -0.08012791, z: -0.012539862, w: 0.9965924}
+      scale: {x: 1.0000057, y: 1.0000021, z: 1.000002}
+    - name: Hacker_Rig:IndexFinger2_L
+      parentName: Hacker_Rig:IndexFinger1_L
+      position: {x: 0.00029607184, y: -5.32907e-17, z: -5.32907e-18}
+      rotation: {x: 0.00000008568165, y: -0.03259481, z: 0.0025930332, w: 0.9994653}
+      scale: {x: 1.000003, y: 1.0000021, z: 1.0000002}
+    - name: Hacker_Rig:IndexFinger3_L
+      parentName: Hacker_Rig:IndexFinger2_L
+      position: {x: 0.00021585147, y: -3.9968027e-17, z: -8.881784e-18}
+      rotation: {x: 0.013866524, y: 0.039547607, z: -0.0008517473, w: -0.9991212}
+      scale: {x: 1.0000082, y: 1.000003, z: 0.9999983}
+    - name: Hacker_Rig:IndexFinger4_L
+      parentName: Hacker_Rig:IndexFinger3_L
+      position: {x: 0.00020610943, y: -3.7359004e-17, z: -3.5527134e-18}
+      rotation: {x: -0, y: -0, z: -1.1641531e-10, w: 1}
+      scale: {x: 1.0000017, y: 0.9999997, z: 1.0000001}
+    - name: Hacker_Rig:Neck_M
+      parentName: Hacker_Rig:Chest_M
+      position: {x: -0.0010211727, y: 8.881784e-19, z: 2.664535e-18}
+      rotation: {x: -0.00000009752331, y: -0.00000014149609, z: 0.04687423, w: 0.9989009}
+      scale: {x: 1.0000029, y: 1.0000027, z: 1.000003}
+    - name: Hacker_Rig:Head_M
+      parentName: Hacker_Rig:Neck_M
+      position: {x: -0.0007401091, y: 0, z: 4.440892e-19}
+      rotation: {x: -0.0000000029017495, y: -0.0000000585677, z: 0.03212117, w: -0.999484}
+      scale: {x: 1.0000026, y: 1.0000019, z: 1.0000026}
+    - name: Hacker_Rig:HeadEnd_M
+      parentName: Hacker_Rig:Head_M
+      position: {x: -0.0033892763, y: -1.3877787e-19, z: -1.3873103e-18}
+      rotation: {x: 2.2204458e-16, y: -0, z: -1.6994878e-16, w: 1}
+      scale: {x: 0.99999744, y: 0.9999978, z: 0.99999815}
+    - name: Hacker_Rig:Hip_R
+      parentName: Hacker_Rig:Root_M
+      position: {x: 0.00074957433, y: 0.000002510835, z: -0.000728785}
+      rotation: {x: 0.09846589, y: -0.9951353, z: -0.0009281337, w: -0.0030601919}
+      scale: {x: 1.0000006, y: 0.99999976, z: 1.0000001}
+    - name: Hacker_Rig:Knee_R
+      parentName: Hacker_Rig:Hip_R
+      position: {x: -0.0030725927, y: 2.6822987e-16, z: -1.5658585e-15}
+      rotation: {x: -0.00000007954076, y: 0.00000008172355, z: 0.13664103, w: 0.9906207}
+      scale: {x: 1.0000033, y: 1.0000052, z: 1.0000033}
+    - name: Hacker_Rig:Ankle_R
+      parentName: Hacker_Rig:Knee_R
+      position: {x: -0.003544204, y: 9.325873e-18, z: -9.268141e-16}
+      rotation: {x: -0.018317338, y: 0.0043554385, z: -0.071751155, w: 0.99724483}
+      scale: {x: 1.0000001, y: 0.9999997, z: 0.99999994}
+    - name: Hacker_Rig:Toes_R
+      parentName: Hacker_Rig:Ankle_R
+      position: {x: -0.00058549066, y: 0.0010011785, z: 1.6684908e-13}
+      rotation: {x: 0.025661392, y: -0.00029538944, z: -0.678491, w: 0.73416036}
+      scale: {x: 1.0000004, y: 0.99999946, z: 1.0000001}
+    - name: Hacker_Rig:ToesEnd_R
+      parentName: Hacker_Rig:Toes_R
+      position: {x: -0.00094191113, y: -1.6653344e-18, z: -1.110223e-19}
+      rotation: {x: -0, y: -0, z: 0.0000000103145785, w: 1}
+      scale: {x: 1.0000001, y: 1.0000011, z: 1.0000002}
+    - name: Hacker_Rig:Hip_L
+      parentName: Hacker_Rig:Root_M
+      position: {x: 0.00074957433, y: 0.000002510835, z: 0.000728785}
+      rotation: {x: -0.9951353, y: -0.098465785, z: 0.0030602813, w: -0.0009281039}
+      scale: {x: 1.0000005, y: 1, z: 1.0000006}
+    - name: Hacker_Rig:Knee_L
+      parentName: Hacker_Rig:Hip_L
+      position: {x: 0.0030725927, y: 1.1758838e-12, z: -5.004601e-13}
+      rotation: {x: 0.0000000071013346, y: -0.000000077154255, z: -0.13664092, w: -0.9906207}
+      scale: {x: 1.0000011, y: 1.000002, z: 1.0000011}
+    - name: Hacker_Rig:Ankle_L
+      parentName: Hacker_Rig:Knee_L
+      position: {x: 0.003544204, y: 1.4740767e-12, z: 4.9316106e-16}
+      rotation: {x: -0.018317383, y: 0.0043553747, z: -0.07175127, w: 0.9972449}
+      scale: {x: 1.0000039, y: 1.0000039, z: 1.0000021}
+    - name: Hacker_Rig:Toes_L
+      parentName: Hacker_Rig:Ankle_L
+      position: {x: 0.00058549066, y: -0.0010011785, z: -2.5360535e-13}
+      rotation: {x: -0.02566126, y: 0.00029535775, z: 0.6784909, w: -0.7341604}
+      scale: {x: 0.9999985, y: 0.99999934, z: 0.99999946}
+    - name: Hacker_Rig:ToesEnd_L
+      parentName: Hacker_Rig:Toes_L
+      position: {x: 0.00094191113, y: -2.1094237e-18, z: 2.220446e-19}
+      rotation: {x: 0.0000000018626449, y: 0.0000000018626449, z: 0.000000009462837, w: 1}
+      scale: {x: 0.9999992, y: 0.9999998, z: 0.99999994}
+    - name: Hacker_Rig:Geometry
+      parentName: Hacker_runcycle7(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:geo
+      parentName: Hacker_Rig:Geometry
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Hoodie_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Jacket_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Hat_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Shoes_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Hood_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Gloves_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:HatLip_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Horns_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Head_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Tail_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hacker_Rig:Pants_new
+      parentName: Hacker_Rig:geo
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.19999999
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
