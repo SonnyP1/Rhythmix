@@ -27,8 +27,8 @@ public class PlayerInput : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Tap(Input.GetTouch(0));
-            Tap(Input.GetTouch(1));
-            Tap(Input.GetTouch(3));
+            //Tap(Input.GetTouch(1));
+            //Tap(Input.GetTouch(3));
 
             if (debugText != null)
             {
