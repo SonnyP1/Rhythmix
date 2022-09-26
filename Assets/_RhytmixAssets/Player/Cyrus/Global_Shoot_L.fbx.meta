@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 9e28ff4c8799add489c214813baadc19
+guid: 4ca615bcc7c2f3141b1d16b224cd4937
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 5522812681064789136
-    second: Run
+      74: 6964377421087678928
+    second: Global_Shoot_L
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -21,10 +21,10 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Run' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'RootPart2_M' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'Spine1Part1_M' is inbetween
+    animationImportWarnings: "\nClip 'Global_Shoot_L' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'RootPart2_M' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'Spine1Part1_M' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'Chest_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HairStrand1_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HairStrand1_L'
@@ -42,19 +42,19 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Run
-      takeName: Run
+      name: Global_Shoot_L
+      takeName: Global_Shoot_L
       internalID: 0
       firstFrame: 1
-      lastFrame: 23
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 1
+      loopTime: 0
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1

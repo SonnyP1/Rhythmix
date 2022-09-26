@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: d5e2ffcbab991824ea8c2f893937ac65
+guid: b7eb94f9b2fbdcd439e190b79aa57438
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 4769195246114860628
-    second: RunTest
+      74: 3687194865255120006
+    second: Global_Run
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -21,7 +21,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'RunTest' has import animation warnings that
+    animationImportWarnings: "\nClip 'Global_Run' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'RootPart2_M' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'Spine1Part1_M' is inbetween
@@ -42,8 +42,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: RunTest
-      takeName: RunTest
+      name: Global_Run
+      takeName: Global_Run
       internalID: 0
       firstFrame: 1
       lastFrame: 23
@@ -55,10 +55,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 1
       heightFromFeet: 0
