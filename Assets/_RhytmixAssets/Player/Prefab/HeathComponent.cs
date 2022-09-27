@@ -13,6 +13,10 @@ public class HeathComponent : MonoBehaviour
 
     private Coroutine healthRegen;
 
+    public float GetHealth()
+    {
+        return HP;
+    }
     private void Start()
     {
         GameUIManager = FindObjectOfType<GameUIManager>();

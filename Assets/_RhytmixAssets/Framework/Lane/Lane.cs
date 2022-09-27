@@ -38,12 +38,10 @@ public class Lane : MonoBehaviour
     public void HitNote(AttackType attackType)
     {
         PlayAttackAnimation(attackType);
-        print(attackType);
-
+        //print(attackType);
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
-            //print($"Hit on {inputIndex} note");
             Destroy(notes[inputIndex].gameObject);
             inputIndex++;
         }
@@ -158,31 +156,32 @@ public class Lane : MonoBehaviour
     private void Hit()
     {
         double accuracy = AbsValueDouble(audioTime - timeStamp);
-        Debug.Log(accuracy);
-        if(accuracy > 0.2f)
+        if(accuracy > 0.06f)
         {
+            Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
         }
         else if(accuracy < 0.05f)
         {
+            Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
         }
         else
         {
+            Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
         }
     }
     private void Miss()
     {
         Instantiate(missEffect, EffectSpawn);
-        if(PlayerAnimator != null)
-        {
-            PlayerAnimator.SetTrigger("HitTrigger");
-        }
-
-        if (HealthComp != null)
+        if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
             HealthComp.TakeDmg(1);
+            if (PlayerAnimator != null)
+            {
+                PlayerAnimator.SetTrigger("HitTrigger");
+            }
         }
     }
 
