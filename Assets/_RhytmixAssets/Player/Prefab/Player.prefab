@@ -82,7 +82,7 @@ MonoBehaviour:
   notePrefab: {fileID: 8141835081616531062, guid: d3acdaa8f0b4c424aaec20acce9b138a, type: 3}
   EffectSpawn: {fileID: 3105113090160096245}
   missEffect: {fileID: 7252506848818957568, guid: e063dfafcff147245b648c5eb49658c5, type: 3}
-  EarlyEffect: {fileID: 7252506848818957568, guid: 4b339ccc7132c514fad2c22695c38adf, type: 3}
+  EarlyEffect: {fileID: 7252506848818957568, guid: fa48b96adcd63f84680cdea768a045b1, type: 3}
   LateEffect: {fileID: 7252506848818957568, guid: 277916ddb5125de4381845cdeba14ee0, type: 3}
   PerfectEffect: {fileID: 7252506848818957568, guid: 25f0a31f89574b44696e685fbc500ac3, type: 3}
   PlayerAnimator: {fileID: 2303577246720996904}
