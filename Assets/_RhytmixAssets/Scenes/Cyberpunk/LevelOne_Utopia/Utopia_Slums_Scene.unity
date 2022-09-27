@@ -867,6 +867,10 @@ PrefabInstance:
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 14274438}
+    - target: {fileID: 6252635033570118137, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 85e412dbcd73d6b4598e5d808a5652e9, type: 2}
     - target: {fileID: 6434336627965686054, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Avatar
       value: 
