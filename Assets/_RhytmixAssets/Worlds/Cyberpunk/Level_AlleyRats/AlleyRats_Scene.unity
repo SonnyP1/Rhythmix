@@ -1244,6 +1244,8 @@ MonoBehaviour:
   Clickable:
     serializedVersion: 2
     m_Bits: 128
+  leftInput: 276
+  leftLane: {fileID: 1176988359}
 --- !u!1001 &1879826026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1588,7 +1590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: FileLoc
-      value: we_made_a_chart_pog.mid
+      value: testingHold.mid
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_Enabled

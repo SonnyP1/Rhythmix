@@ -6,7 +6,9 @@ public class Note : MonoBehaviour
 {
     double timeInstantiated;
     public float assignedTime;
+    public float endTime;
     LevelAudioManager _levelAudioManager;
+    [SerializeField] Transform EnemyModel;
     [SerializeField] MeshRenderer[] Meshrenderers;
     [SerializeField] AttackType NoteType;
 
@@ -14,11 +16,17 @@ public class Note : MonoBehaviour
         return NoteType;}
     void Start()
     {
-        foreach(MeshRenderer meshRender in Meshrenderers)
+        if(NoteType == AttackType.Hold)
+        {
+            //do work
+            EnemyModel.localPosition = new Vector3(0, 2, 10);
+
+        }
+
+        foreach (MeshRenderer meshRender in Meshrenderers)
         {
             meshRender.enabled = false;
         }
-
         _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         //Debug.Log("Note Started");
         timeInstantiated = _levelAudioManager.GetAudioSourceTime();
@@ -38,6 +46,12 @@ public class Note : MonoBehaviour
         else
         {
             transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
+            if (NoteType == AttackType.Hold)
+            {
+                GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, 0.5f, transform.position.z));
+                GetComponent<LineRenderer>().SetPosition(1, new Vector3(EnemyModel.position.x, 0.6f, EnemyModel.position.z));
+            }
+
             foreach (MeshRenderer meshRender in Meshrenderers)
             {
                 meshRender.enabled = true;

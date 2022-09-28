@@ -13,9 +13,15 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Text debugText;
     [SerializeField] LayerMask Clickable;
+    [Header("Debugging Inputs")]
+    [SerializeField] KeyCode leftInput;
+    [SerializeField] Lane leftLane;
+
+
     Lane lane;
     Vector3 start;
     float startTime = 0;
+    bool isHolding = false;
     void Start()
     {
         
@@ -41,6 +47,38 @@ public class PlayerInput : MonoBehaviour
         {
             MouseInput();
             PhoneInput();
+            KeyboardInput();
+        }
+    }
+
+    private void KeyboardInput()
+    {
+
+        if (Input.GetKeyDown(leftInput))
+        {
+            startTime = 0;
+            isHolding = false;
+        }
+        else if(Input.GetKey(leftInput))
+        {
+            startTime += Time.deltaTime;
+            if(startTime > .09 && !isHolding)
+            {
+                isHolding = true;
+                leftLane.HitNote(AttackType.Hold);
+            }
+        }
+        else if(Input.GetKeyUp(leftInput))
+        {
+            if(isHolding)
+            {
+                isHolding = false;
+                leftLane.HitNote(AttackType.Hold);
+            }
+            else
+            {
+                leftLane.HitNote(AttackType.Tap);
+            }
         }
     }
 

@@ -8,8 +8,7 @@ using System;
 public class Lane : MonoBehaviour
 {
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
-    [SerializeField] KeyCode input;
-    [SerializeField] GameObject notePrefab;
+    [SerializeField] GameObject[] notePrefab;
 
     [Header("Effects")]
     [SerializeField] Transform EffectSpawn;
@@ -26,6 +25,7 @@ public class Lane : MonoBehaviour
     HeathComponent HealthComp;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
+    public List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
     [SerializeField] LevelAudioManager _levelAudioManager;
 
     double timeStamp;
@@ -37,8 +37,8 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
+        print(attackType);
         PlayAttackAnimation(attackType);
-        //print(attackType);
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
@@ -119,6 +119,7 @@ public class Lane : MonoBehaviour
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _levelAudioManager.GetMidiFile().GetTempoMap());
                 timeStamps.Add((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f);
+                melanchallMidiNotes.Add(note);
             }
         }
     }
@@ -128,9 +129,17 @@ public class Lane : MonoBehaviour
         {
             if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
             {
-                var note = Instantiate(notePrefab, transform);
-                notes.Add(note.GetComponent<Note>());
-                note.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
+                GameObject noteObject = null;
+                if (melanchallMidiNotes[spawnIndex].Length > 32)
+                {
+                    noteObject = Instantiate(notePrefab[1], transform);
+                }
+                else
+                {
+                    noteObject = Instantiate(notePrefab[0], transform);
+                }
+                notes.Add(noteObject.GetComponent<Note>());
+                noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
                 spawnIndex++;
             }
         }
@@ -141,10 +150,6 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
-            if (Input.GetKeyDown(input))
-            {
-                HitNote(AttackType.Tap);
-            }
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
@@ -158,17 +163,17 @@ public class Lane : MonoBehaviour
         double accuracy = AbsValueDouble(audioTime - timeStamp);
         if(accuracy > 0.06f)
         {
-            Debug.Log("Early");
+            //Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
         }
         else if(accuracy < 0.05f)
         {
-            Debug.Log("Perfect");
+            //Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
         }
         else
         {
-            Debug.Log("Late");
+            //Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
         }
     }
