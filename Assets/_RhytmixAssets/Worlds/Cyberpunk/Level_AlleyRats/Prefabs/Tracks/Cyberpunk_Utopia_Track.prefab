@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.size
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: AccentSpawnTrans.Array.data[2]
@@ -280,19 +280,19 @@ PrefabInstance:
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[5]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 9afa45df7b301164fb02bf0d75e73865, type: 3}
+      objectReference: {fileID: 1094652551879488808, guid: 3a0cbbe394f352b4ab8fd46157cc0c92, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[6]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 770137a384f190849b98772bac4ca6f0, type: 3}
+      objectReference: {fileID: 6286851453481858602, guid: b05c9ab78c4df4143bb0a6a8299a0c69, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[7]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 770137a384f190849b98772bac4ca6f0, type: 3}
+      objectReference: {fileID: 8258865572321902169, guid: c45e89ec4638774489714dd90096b79f, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[8]
       value: 
-      objectReference: {fileID: 2285470589194842584, guid: 9afa45df7b301164fb02bf0d75e73865, type: 3}
+      objectReference: {fileID: 606991016401856999, guid: 947ac45be61e6524e9aa5784740d56d3, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: AccentEnvironmentToSpawn.Array.data[0]
       value: 
