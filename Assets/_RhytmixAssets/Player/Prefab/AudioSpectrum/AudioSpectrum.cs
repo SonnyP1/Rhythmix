@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class AudioSpectrum : MonoBehaviour
 {
+    [SerializeField] Material newMaterialChange;
     [SerializeField] GameObject _sampleGameObject;
     [SerializeField] float _maxScale;
     [SerializeField] AudioSampler _audioSampler;
     GameObject[] _sampleObjects = new GameObject[512];
+    [SerializeField] ScoreKeeper _scoreKeeper;
 
     private void Start()
     {
@@ -33,4 +35,12 @@ public class AudioSpectrum : MonoBehaviour
             }
         }
     }
+
+    public void ChangeSampleObjectColor(Color color)
+    {
+        Color colorToApply = new Color(color.r, color.g, color.b, newMaterialChange.color.a);
+        newMaterialChange.color = colorToApply;
+        newMaterialChange.SetColor("_EmissionColor", colorToApply);
+    }
+
 }

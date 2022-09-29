@@ -23,6 +23,7 @@ public class Lane : MonoBehaviour
     [SerializeField][Range(1,4)] int attackAnimationCount;
 
     HeathComponent HealthComp;
+    ScoreKeeper _scoreKeeper;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     public List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
@@ -33,7 +34,6 @@ public class Lane : MonoBehaviour
     double audioTime;
     int spawnIndex = 0;
     int inputIndex = 0;
-
 
     public void HitNote(AttackType attackType)
     {
@@ -132,6 +132,7 @@ public class Lane : MonoBehaviour
             _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         }
         HealthComp = GetComponentInParent<HeathComponent>();
+        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
     }
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
@@ -189,16 +190,19 @@ public class Lane : MonoBehaviour
         {
             //Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(5);
         }
         else if(accuracy < 0.05f)
         {
             //Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(10);
         }
         else
         {
             //Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(5);
         }
     }
     private void Miss()
@@ -212,6 +216,7 @@ public class Lane : MonoBehaviour
                 PlayerAnimator.SetTrigger("HitTrigger");
             }
         }
+        _scoreKeeper.ChangeScore(0);
     }
 
     private static double AbsValueDouble(double number)

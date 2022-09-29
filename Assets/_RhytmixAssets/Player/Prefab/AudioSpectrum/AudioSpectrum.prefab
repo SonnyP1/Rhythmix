@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc9a3c2460d3fc43a5cea98a03cf25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  newMaterialChange: {fileID: 0}
   _sampleGameObject: {fileID: 6763319223531778047, guid: ffaa56bab9bcdac40888d29c14db7f7b, type: 3}
   _maxScale: 500
   _audioSampler: {fileID: 0}
+  _scoreKeeper: {fileID: 0}
