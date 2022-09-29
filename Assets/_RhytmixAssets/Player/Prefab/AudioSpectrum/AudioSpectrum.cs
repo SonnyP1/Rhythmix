@@ -8,12 +8,12 @@ public class AudioSpectrum : MonoBehaviour
     [SerializeField] GameObject _sampleGameObject;
     [SerializeField] float _maxScale;
     [SerializeField] AudioSampler _audioSampler;
-    GameObject[] _sampleObjects = new GameObject[512];
+    GameObject[] _sampleObjects = new GameObject[64];
     [SerializeField] ScoreKeeper _scoreKeeper;
 
     private void Start()
     {
-        for (int i = 0; i < 512; i++)
+        for (int i = 0; i < 64; i++)
         {
             GameObject instance = (GameObject)Instantiate(_sampleGameObject);
             instance.transform.position = this.transform.position;
@@ -27,7 +27,7 @@ public class AudioSpectrum : MonoBehaviour
 
     private void Update()
     {
-        for (int i = 0; i < 512; i++)
+        for (int i = 0; i < 64; i++)
         {
             if (_sampleObjects != null)
             {

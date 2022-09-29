@@ -29,7 +29,6 @@ public class BasicPlayer : MonoBehaviour
             {
                 foreach(Animator animator in playerAnimators)
                 {
-                    print(animator.name);
                     animator.SetTrigger("DeathTrigger");
                     //animator.SetLayerWeight(1,0);
                 }

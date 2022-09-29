@@ -50,7 +50,7 @@ public class Lane : MonoBehaviour
             Hit();
             print(notes[inputIndex].GetNoteType() + " this is the note type right now");
 
-            if (notes[inputIndex].GetNoteType() == AttackType.Hold)
+            if (inputIndex != 0 && notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
 
 
