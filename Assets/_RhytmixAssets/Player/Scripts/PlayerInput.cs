@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public enum AttackType
-{Tap,SwipeRight,SwipeLeft,SwipeUp,Hold };
+{Tap,SwipeRight,SwipeLeft,SwipeUp,Hold,EndHold };
 
 
 public class PlayerInput : MonoBehaviour

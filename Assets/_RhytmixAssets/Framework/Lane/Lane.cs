@@ -37,19 +37,38 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        print(attackType);
+        //print(attackType);
         PlayAttackAnimation(attackType);
+
+        if (notes[inputIndex-1] != null && notes[inputIndex-1].hasStartedHolding)
+        {
+            print("Your a loser");
+            Miss();
+        }
+
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
-            if(notes[inputIndex].GetNoteType() == AttackType.Hold)
+            print(notes[inputIndex].GetNoteType() + " this is the note type right now");
+
+            if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
-                notes[inputIndex].SetIsHoldingNote(true);
+
+
+                if(!notes[inputIndex].hasStartedHolding)
+                {
+                    notes[inputIndex].SetIsHoldingNote(true);
+                }
+
             }
             else
             {
                 Destroy(notes[inputIndex].gameObject);
             }
+
+
+
+
             inputIndex++;
         }
         else

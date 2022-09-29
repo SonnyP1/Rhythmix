@@ -148,6 +148,7 @@ MonoBehaviour:
   - {fileID: 2696844361459641491}
   - {fileID: 1998344617819313611}
   NoteType: 4
+  hasStartedHolding: 0
 --- !u!120 &9111331475615272618
 LineRenderer:
   m_ObjectHideFlags: 0
