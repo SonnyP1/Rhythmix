@@ -152,7 +152,7 @@ public class Lane : MonoBehaviour
             if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
             {
                 GameObject noteObject = null;
-                if (melanchallMidiNotes[spawnIndex].Length > 32)
+                if (melanchallMidiNotes[spawnIndex].Length > 45)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
                 }

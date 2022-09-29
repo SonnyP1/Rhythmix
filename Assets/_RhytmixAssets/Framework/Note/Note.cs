@@ -56,6 +56,7 @@ public class Note : MonoBehaviour
             }
             if (NoteType == AttackType.Hold)
             {
+                //need to get how long the note is and sync it up right now not right timing
                 EnemyModel.localPosition = Vector3.Lerp(new Vector3(0, EnemyModel.localPosition.y, 1 * _levelAudioManager.GetNoteSpawnZ()), new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), t);
                 if (isHoldingNote == true)
                 {

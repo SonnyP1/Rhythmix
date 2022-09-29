@@ -838,6 +838,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1964040302}
     - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: noteRestriction
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 14274438}
@@ -1246,6 +1250,10 @@ MonoBehaviour:
     m_Bits: 128
   leftInput: 276
   leftLane: {fileID: 1176988359}
+  middleInput: 274
+  middleLane: {fileID: 330742864}
+  rightInput: 275
+  rightLane: {fileID: 1977959750}
 --- !u!1001 &1879826026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1590,7 +1598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: FileLoc
-      value: testingHold.mid
+      value: Rythmix_Cyberpunk_01.mid
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_Enabled

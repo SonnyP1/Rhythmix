@@ -16,12 +16,16 @@ public class PlayerInput : MonoBehaviour
     [Header("Debugging Inputs")]
     [SerializeField] KeyCode leftInput;
     [SerializeField] Lane leftLane;
+    [SerializeField] KeyCode middleInput;
+    [SerializeField] Lane middleLane;
+    [SerializeField] KeyCode rightInput;
+    [SerializeField] Lane rightLane;
 
 
     Lane lane;
     Vector3 start;
-    float startTime = 0;
-    bool isHolding = false;
+    float[] startTime = { 0,0,0 };
+    bool[] isHolding = { false ,false,false};
     void Start()
     {
         
@@ -53,31 +57,88 @@ public class PlayerInput : MonoBehaviour
 
     private void KeyboardInput()
     {
-
         if (Input.GetKeyDown(leftInput))
         {
-            startTime = 0;
-            isHolding = false;
+            startTime[0] = 0;
+            isHolding[0] = false;
         }
         else if(Input.GetKey(leftInput))
         {
-            startTime += Time.deltaTime;
-            if(startTime > .09 && !isHolding)
+            startTime[0] += Time.deltaTime;
+            if(startTime[0] > .09 && !isHolding[0])
             {
-                isHolding = true;
+                isHolding[0] = true;
                 leftLane.HitNote(AttackType.Hold);
             }
         }
         else if(Input.GetKeyUp(leftInput))
         {
-            if(isHolding)
+            if(isHolding[0])
             {
-                isHolding = false;
+                isHolding[0]= false;
                 leftLane.HitNote(AttackType.Hold);
             }
             else
             {
                 leftLane.HitNote(AttackType.Tap);
+            }
+        }
+
+
+        if (Input.GetKeyDown(middleInput))
+        {
+            startTime[1] = 0;
+            isHolding[1] = false;
+        }
+        else if (Input.GetKey(middleInput))
+        {
+            startTime[1] += Time.deltaTime;
+            if (startTime[1] > .09 && !isHolding[1])
+            {
+                isHolding[1] = true;
+                middleLane.HitNote(AttackType.Hold);
+            }
+        }
+        else if (Input.GetKeyUp(middleInput))
+        {
+            if (isHolding[1])
+            {
+                isHolding[1] = false;
+                middleLane.HitNote(AttackType.Hold);
+            }
+            else
+            {
+                middleLane.HitNote(AttackType.Tap);
+            }
+        }
+
+
+
+
+        if (Input.GetKeyDown(rightInput))
+        {
+            startTime[2] = 0;
+            isHolding[2] = false;
+        }
+        else if (Input.GetKey(rightInput))
+        {
+            startTime[2] += Time.deltaTime;
+            if (startTime[2] > .09 && !isHolding[2])
+            {
+                isHolding[2] = true;
+                rightLane.HitNote(AttackType.Hold);
+            }
+        }
+        else if (Input.GetKeyUp(rightInput))
+        {
+            if (isHolding[2])
+            {
+                isHolding[2] = false;
+                rightLane.HitNote(AttackType.Hold);
+            }
+            else
+            {
+                rightLane.HitNote(AttackType.Tap);
             }
         }
     }
@@ -98,7 +159,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            startTime = 0;
+            startTime[0] = 0;
             start = Input.mousePosition;
             Vector3 mousePosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
             Vector3 mousePosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
@@ -118,8 +179,8 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             //during the click
-            startTime += Time.deltaTime;
-            if (startTime > .5)
+            startTime[0] += Time.deltaTime;
+            if (startTime[0] > .5)
             {
                 lane.HitNote(AttackType.Hold);
             }
