@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class Note : MonoBehaviour
     [SerializeField] Transform EnemyModel;
     [SerializeField] MeshRenderer[] Meshrenderers;
     [SerializeField] AttackType NoteType;
-
+    bool isHoldingNote = false;
     public AttackType GetNoteType(){
         return NoteType;}
     void Start()
@@ -39,15 +40,28 @@ public class Note : MonoBehaviour
         float t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
 
 
-        if (t > 1)
+        if (t > 1 && NoteType != AttackType.Hold)
         {
             Destroy(gameObject);
         }
         else
         {
-            transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
+            if(!isHoldingNote)
+            {
+                transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
+            }
             if (NoteType == AttackType.Hold)
             {
+                EnemyModel.localPosition = Vector3.Lerp(new Vector3(0, EnemyModel.localPosition.y, 1 * _levelAudioManager.GetNoteSpawnZ()), new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), t);
+                if (isHoldingNote == true)
+                {
+                    transform.localPosition = transform.localPosition;
+                    if (t > 1)
+                    {
+                        Destroy(gameObject);
+                    }
+                }
+
                 GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, 0.5f, transform.position.z));
                 GetComponent<LineRenderer>().SetPosition(1, new Vector3(EnemyModel.position.x, 0.6f, EnemyModel.position.z));
             }
@@ -57,5 +71,10 @@ public class Note : MonoBehaviour
                 meshRender.enabled = true;
             }
         }
+    }
+
+    internal void SetIsHoldingNote(bool val)
+    {
+        isHoldingNote = val;
     }
 }

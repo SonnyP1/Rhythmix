@@ -42,14 +42,22 @@ public class Lane : MonoBehaviour
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
-            Destroy(notes[inputIndex].gameObject);
+            if(notes[inputIndex].GetNoteType() == AttackType.Hold)
+            {
+                notes[inputIndex].SetIsHoldingNote(true);
+            }
+            else
+            {
+                Destroy(notes[inputIndex].gameObject);
+            }
             inputIndex++;
         }
         else
         {
             //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
         }
-        if (timeStamp + marginOfError <= audioTime)
+
+        if (timeStamp + marginOfError <= audioTime && attackType != AttackType.Hold)
         {
             Miss();
             inputIndex++;
@@ -98,11 +106,6 @@ public class Lane : MonoBehaviour
             }
         }
     }
-
-    void ExitSwipe()
-    {
-        PlayerAnimator.SetLayerWeight(2, 0);
-    }
     public void Start()
     {
         if(_levelAudioManager != null)
@@ -138,6 +141,8 @@ public class Lane : MonoBehaviour
                 {
                     noteObject = Instantiate(notePrefab[0], transform);
                 }
+
+
                 notes.Add(noteObject.GetComponent<Note>());
                 noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
                 spawnIndex++;
