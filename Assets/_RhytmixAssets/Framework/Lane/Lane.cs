@@ -39,8 +39,7 @@ public class Lane : MonoBehaviour
     {
         //print(attackType);
         PlayAttackAnimation(attackType);
-
-        if (notes[inputIndex-1] != null && notes[inputIndex-1].hasStartedHolding)
+        if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].hasStartedHolding)
         {
             print("Your a loser");
             Miss();
@@ -82,6 +81,7 @@ public class Lane : MonoBehaviour
             inputIndex++;
             //print($"Missed {inputIndex} note");
         }
+
     }
 
     private void PlayAttackAnimation(AttackType attackType)

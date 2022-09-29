@@ -61,6 +61,7 @@ public class PlayerInput : MonoBehaviour
         {
             startTime[0] = 0;
             isHolding[0] = false;
+            leftLane.HitNote(AttackType.Tap);
         }
         else if(Input.GetKey(leftInput))
         {
@@ -80,7 +81,7 @@ public class PlayerInput : MonoBehaviour
             }
             else
             {
-                leftLane.HitNote(AttackType.Tap);
+                //leftLane.HitNote(AttackType.Tap);
             }
         }
 
@@ -89,6 +90,7 @@ public class PlayerInput : MonoBehaviour
         {
             startTime[1] = 0;
             isHolding[1] = false;
+            middleLane.HitNote(AttackType.Tap);
         }
         else if (Input.GetKey(middleInput))
         {
@@ -108,7 +110,7 @@ public class PlayerInput : MonoBehaviour
             }
             else
             {
-                middleLane.HitNote(AttackType.Tap);
+                //middleLane.HitNote(AttackType.Tap);
             }
         }
 
@@ -119,6 +121,7 @@ public class PlayerInput : MonoBehaviour
         {
             startTime[2] = 0;
             isHolding[2] = false;
+            rightLane.HitNote(AttackType.Tap);
         }
         else if (Input.GetKey(rightInput))
         {
@@ -138,7 +141,7 @@ public class PlayerInput : MonoBehaviour
             }
             else
             {
-                rightLane.HitNote(AttackType.Tap);
+                //rightLane.HitNote(AttackType.Tap);
             }
         }
     }
