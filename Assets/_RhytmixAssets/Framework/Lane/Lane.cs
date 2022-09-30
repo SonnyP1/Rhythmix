@@ -50,19 +50,17 @@ public class Lane : MonoBehaviour
             Hit();
             print(notes[inputIndex].GetNoteType() + " this is the note type right now");
 
-            if (inputIndex != 0 && notes[inputIndex].GetNoteType() == AttackType.Hold)
+            if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
-
-
                 if(!notes[inputIndex].hasStartedHolding)
                 {
                     notes[inputIndex].SetIsHoldingNote(true);
                 }
-
             }
             else
             {
                 Destroy(notes[inputIndex].gameObject);
+                print("Destroy in lane");
             }
 
 
@@ -156,12 +154,12 @@ public class Lane : MonoBehaviour
                 if (melanchallMidiNotes[spawnIndex].Length > 45)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
+                    noteObject.GetComponent<Note>().noteDuration = melanchallMidiNotes[spawnIndex].Length;
                 }
                 else
                 {
                     noteObject = Instantiate(notePrefab[0], transform);
                 }
-
 
                 notes.Add(noteObject.GetComponent<Note>());
                 noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];

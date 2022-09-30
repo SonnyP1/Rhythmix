@@ -8,6 +8,7 @@ public class Note : MonoBehaviour
     double timeInstantiated;
     public float assignedTime;
     public float endTime;
+    public long noteDuration;
     LevelAudioManager _levelAudioManager;
     [SerializeField] Transform EnemyModel;
     [SerializeField] MeshRenderer[] Meshrenderers;
@@ -23,9 +24,10 @@ public class Note : MonoBehaviour
     {
         if(NoteType == AttackType.Hold)
         {
-            //do work
-            EnemyModel.localPosition = new Vector3(0, 2, 10);
-
+            noteDuration = noteDuration / (long)100;
+            endTime = (float)(timeInstantiated + noteDuration);
+            print("I spawn at this time " + timeInstantiated);
+            print("I end at this time " + endTime);
         }
 
         foreach (MeshRenderer meshRender in Meshrenderers)
@@ -33,15 +35,15 @@ public class Note : MonoBehaviour
             meshRender.enabled = false;
         }
         _levelAudioManager = FindObjectOfType<LevelAudioManager>();
-        //Debug.Log("Note Started");
         timeInstantiated = _levelAudioManager.GetAudioSourceTime();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
-        float t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
+        float  t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
 
 
         if (t > 1 && !isHoldingNote)
@@ -53,16 +55,18 @@ public class Note : MonoBehaviour
             if(!isHoldingNote)
             {
                 transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
+                if(NoteType == AttackType.Hold)
+                {
+                    EnemyModel.localPosition = Vector3.Lerp(Vector3.forward * (_levelAudioManager.GetNoteSpawnZ() + endTime), transform.localPosition, t);           
+                }
             }
             if (NoteType == AttackType.Hold)
             {
-                //need to get how long the note is and sync it up right now not right timing
-                EnemyModel.localPosition = Vector3.Lerp(new Vector3(0, EnemyModel.localPosition.y, 1 * _levelAudioManager.GetNoteSpawnZ()), new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), t);
                 if (isHoldingNote == true)
                 {
-                    print("HOLD IN PLACE");
-                    Meshrenderers[0].enabled = false;
+                    EnemyModel.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), transform.localPosition, t);           
                     transform.localPosition = transform.localPosition;
+                    Meshrenderers[0].enabled = false;
                     if (t > 1)
                     {
                         Destroy(gameObject);

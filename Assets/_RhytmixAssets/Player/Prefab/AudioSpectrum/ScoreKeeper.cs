@@ -52,7 +52,7 @@ public class ScoreKeeper : MonoBehaviour
 
             score += val * multiplier;
 
-            print("The score is " + score + " The Multiplier is " + multiplier + " Combo Meter at " + comboMeter);
+            //print("The score is " + score + " The Multiplier is " + multiplier + " Combo Meter at " + comboMeter);
         }
     }
 
