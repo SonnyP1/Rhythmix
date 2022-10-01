@@ -12,6 +12,7 @@ public class LevelAudioManager : MonoBehaviour
 {
     [SerializeField] Lane[] Lanes;
     [SerializeField] float SongDelayInSecounds;
+    public AudioSource audioSource;
 
     public double GetMarginOfError()
     {

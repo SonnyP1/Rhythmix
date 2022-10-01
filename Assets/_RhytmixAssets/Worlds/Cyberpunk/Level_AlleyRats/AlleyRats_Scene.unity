@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2705943684781461904, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3027536105561762127, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Name
@@ -815,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3027536105561762127, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3065741154392951144, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: input
@@ -1909,9 +1909,17 @@ PrefabInstance:
       value: holdingTest.mid
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: NoteTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1493370782}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: MarginOfError
       value: 0.1

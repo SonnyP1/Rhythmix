@@ -13,6 +13,7 @@ public class Note : MonoBehaviour
     [SerializeField] Transform EnemyModel;
     [SerializeField] MeshRenderer[] Meshrenderers;
     [SerializeField] AttackType NoteType;
+    Vector3 enemyStartPos;
     bool isHoldingNote = false;
     bool isFinishHolding = true;
     public bool hasStartedHolding = false;
@@ -22,20 +23,24 @@ public class Note : MonoBehaviour
         return NoteType;}
     void Start()
     {
-        if(NoteType == AttackType.Hold)
+        _levelAudioManager = FindObjectOfType<LevelAudioManager>();
+        timeInstantiated = _levelAudioManager.GetAudioSourceTime();
+
+        if (NoteType == AttackType.Hold)
         {
-            noteDuration = noteDuration / (long)100;
-            endTime = (float)(timeInstantiated + noteDuration);
-            print("I spawn at this time " + timeInstantiated);
+            print(noteDuration);
+            endTime = (float)(_levelAudioManager.audioSource.time + noteDuration);
+            //print("I spawn at this time " + timeInstantiated);
             print("I end at this time " + endTime);
+            //add correct position on get note spawn z need to add offset to the end position of the hold note replace 100 with the calculation i need
+            EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,_levelAudioManager.GetNoteSpawnZ() + 20);
+            enemyStartPos = EnemyModel.localPosition;
         }
 
         foreach (MeshRenderer meshRender in Meshrenderers)
         {
             meshRender.enabled = false;
         }
-        _levelAudioManager = FindObjectOfType<LevelAudioManager>();
-        timeInstantiated = _levelAudioManager.GetAudioSourceTime();
 
     }
 
@@ -46,6 +51,9 @@ public class Note : MonoBehaviour
         float  t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
 
 
+        //set when it should destory itself only use this during holding
+        float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
+        
         if (t > 1 && !isHoldingNote)
         {
             Destroy(gameObject);
@@ -55,21 +63,19 @@ public class Note : MonoBehaviour
             if(!isHoldingNote)
             {
                 transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
-                if(NoteType == AttackType.Hold)
-                {
-                    EnemyModel.localPosition = Vector3.Lerp(Vector3.forward * (_levelAudioManager.GetNoteSpawnZ() + endTime), transform.localPosition, t);           
-                }
             }
             if (NoteType == AttackType.Hold)
             {
                 if (isHoldingNote == true)
                 {
-                    EnemyModel.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), transform.localPosition, t);           
+                    EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3 (0,EnemyModel.localPosition.y,transform.localPosition.z), timeUntilEnd);       
                     transform.localPosition = transform.localPosition;
                     Meshrenderers[0].enabled = false;
-                    if (t > 1)
+                    print(timeUntilEnd);
+                    if (timeUntilEnd > 1)
                     {
                         Destroy(gameObject);
+                        print("NOTE DESTROY NOTE");
                     }
                 }
 

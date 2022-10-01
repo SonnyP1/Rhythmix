@@ -48,7 +48,7 @@ public class Lane : MonoBehaviour
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
-            print(notes[inputIndex].GetNoteType() + " this is the note type right now");
+            //print(notes[inputIndex].GetNoteType() + " this is the note type right now");
 
             if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
@@ -154,7 +154,8 @@ public class Lane : MonoBehaviour
                 if (melanchallMidiNotes[spawnIndex].Length > 45)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
-                    noteObject.GetComponent<Note>().noteDuration = melanchallMidiNotes[spawnIndex].Length;
+                    var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
+                    noteObject.GetComponent<Note>().noteDuration = metricTimeEnd.Seconds;
                 }
                 else
                 {
