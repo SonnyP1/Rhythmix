@@ -49,99 +49,104 @@ public class PlayerInput : MonoBehaviour
     {
         if(Time.timeScale != 0)
         {
-            MouseInput();
-            PhoneInput();
+            //MouseInput();
+            //PhoneInput();
             KeyboardInput();
         }
     }
 
     private void KeyboardInput()
     {
-        if (Input.GetKeyDown(leftInput))
+        if(leftLane.timeStamps.Count != 0)
         {
-            startTime[0] = 0;
-            isHolding[0] = false;
-            leftLane.HitNote(AttackType.Tap);
-        }
-        else if(Input.GetKey(leftInput))
-        {
-            startTime[0] += Time.deltaTime;
-            if(startTime[0] > .09 && !isHolding[0])
+            if (Input.GetKeyDown(leftInput))
             {
-                isHolding[0] = true;
-                leftLane.HitNote(AttackType.Hold);
+                startTime[0] = 0;
+                isHolding[0] = false;
+                leftLane.HitNote(AttackType.Tap);
             }
-        }
-        else if(Input.GetKeyUp(leftInput))
-        {
-            if(isHolding[0])
+            else if(Input.GetKey(leftInput))
             {
-                isHolding[0]= false;
-                leftLane.HitNote(AttackType.Hold);
+                startTime[0] += Time.deltaTime;
+                if(startTime[0] > .09 && !isHolding[0])
+                {
+                    isHolding[0] = true;
+                    leftLane.HitNote(AttackType.Hold);
+                }
             }
-            else
+            else if(Input.GetKeyUp(leftInput))
             {
-                //leftLane.HitNote(AttackType.Tap);
+                if(isHolding[0])
+                {
+                    isHolding[0]= false;
+                    leftLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //leftLane.HitNote(AttackType.Tap);
+                }
             }
         }
 
-
-        if (Input.GetKeyDown(middleInput))
+        if (middleLane.timeStamps.Count != 0)
         {
-            startTime[1] = 0;
-            isHolding[1] = false;
-            middleLane.HitNote(AttackType.Tap);
-        }
-        else if (Input.GetKey(middleInput))
-        {
-            startTime[1] += Time.deltaTime;
-            if (startTime[1] > .09 && !isHolding[1])
+            if (Input.GetKeyDown(middleInput))
             {
-                isHolding[1] = true;
-                middleLane.HitNote(AttackType.Hold);
-            }
-        }
-        else if (Input.GetKeyUp(middleInput))
-        {
-            if (isHolding[1])
-            {
+                startTime[1] = 0;
                 isHolding[1] = false;
-                middleLane.HitNote(AttackType.Hold);
+                middleLane.HitNote(AttackType.Tap);
             }
-            else
+            else if (Input.GetKey(middleInput))
             {
-                //middleLane.HitNote(AttackType.Tap);
+                startTime[1] += Time.deltaTime;
+                if (startTime[1] > .09 && !isHolding[1])
+                {
+                    isHolding[1] = true;
+                    middleLane.HitNote(AttackType.Hold);
+                }
             }
-        }
-
-
-
-
-        if (Input.GetKeyDown(rightInput))
-        {
-            startTime[2] = 0;
-            isHolding[2] = false;
-            rightLane.HitNote(AttackType.Tap);
-        }
-        else if (Input.GetKey(rightInput))
-        {
-            startTime[2] += Time.deltaTime;
-            if (startTime[2] > .09 && !isHolding[2])
+            else if (Input.GetKeyUp(middleInput))
             {
-                isHolding[2] = true;
-                rightLane.HitNote(AttackType.Hold);
+                if (isHolding[1])
+                {
+                    isHolding[1] = false;
+                    middleLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //middleLane.HitNote(AttackType.Tap);
+                }
             }
         }
-        else if (Input.GetKeyUp(rightInput))
-        {
-            if (isHolding[2])
+            if(rightLane.timeStamps.Count != 0)
             {
+
+            if (Input.GetKeyDown(rightInput))
+            {
+                startTime[2] = 0;
                 isHolding[2] = false;
-                rightLane.HitNote(AttackType.Hold);
+                rightLane.HitNote(AttackType.Tap);
             }
-            else
+            else if (Input.GetKey(rightInput))
             {
-                //rightLane.HitNote(AttackType.Tap);
+                startTime[2] += Time.deltaTime;
+                if (startTime[2] > .09 && !isHolding[2])
+                {
+                    isHolding[2] = true;
+                    rightLane.HitNote(AttackType.Hold);
+                }
+            }
+            else if (Input.GetKeyUp(rightInput))
+            {
+                if (isHolding[2])
+                {
+                    isHolding[2] = false;
+                    rightLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //rightLane.HitNote(AttackType.Tap);
+                }
             }
         }
     }

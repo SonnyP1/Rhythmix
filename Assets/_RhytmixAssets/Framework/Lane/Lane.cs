@@ -60,7 +60,6 @@ public class Lane : MonoBehaviour
             else
             {
                 Destroy(notes[inputIndex].gameObject);
-                print("Destroy in lane");
             }
 
 
@@ -139,7 +138,7 @@ public class Lane : MonoBehaviour
             if (note.NoteName == noteRestriction)
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _levelAudioManager.GetMidiFile().GetTempoMap());
-                timeStamps.Add((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f);
+                timeStamps.Add( + ((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f));
                 melanchallMidiNotes.Add(note);
             }
         }
@@ -151,11 +150,12 @@ public class Lane : MonoBehaviour
             if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
             {
                 GameObject noteObject = null;
-                if (melanchallMidiNotes[spawnIndex].Length > 45)
+                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
+                if (metricTimeEnd.Seconds > 0)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
-                    var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
                     noteObject.GetComponent<Note>().noteDuration = metricTimeEnd.Seconds;
+
                 }
                 else
                 {

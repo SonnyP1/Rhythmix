@@ -531,7 +531,7 @@ PrefabInstance:
       objectReference: {fileID: 1493370782}
     - target: {fileID: 2270491126607744113, guid: 1b470f9639ab10941bcd662b076fae8d, type: 3}
       propertyPath: _maxScale
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2270491126607744113, guid: 1b470f9639ab10941bcd662b076fae8d, type: 3}
       propertyPath: newMaterialChange
@@ -791,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 1526345563}
     - target: {fileID: 2667602313695375799, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: noteRestriction
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2667602313695375799, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: _levelAudioManager
@@ -807,7 +807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2705943684781461904, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3027536105561762127, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Name
@@ -815,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3027536105561762127, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3065741154392951144, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: input
@@ -827,7 +827,7 @@ PrefabInstance:
       objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
     - target: {fileID: 3065741154392951144, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: noteRestriction
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3065741154392951144, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: _levelAudioManager
@@ -864,6 +864,10 @@ PrefabInstance:
     - target: {fileID: 4214735926795313121, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Name
       value: PlayerPrefabGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214735926795313121, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5621218389262595131, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Layer
@@ -1090,7 +1094,7 @@ PrefabInstance:
       objectReference: {fileID: 1493370782}
     - target: {fileID: 2270491126607744113, guid: 1b470f9639ab10941bcd662b076fae8d, type: 3}
       propertyPath: _maxScale
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2270491126607744113, guid: 1b470f9639ab10941bcd662b076fae8d, type: 3}
       propertyPath: _scoreKeeper
@@ -1906,7 +1910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: FileLoc
-      value: holdingTest.mid
+      value: Rythmix_CyberPunk_01.mid
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: NoteTime
@@ -1951,6 +1955,10 @@ PrefabInstance:
     - target: {fileID: 3540333748101012591, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: m_Name
       value: SceneAudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012591, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}

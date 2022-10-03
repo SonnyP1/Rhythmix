@@ -62,8 +62,14 @@ public class LevelAudioManager : MonoBehaviour
     private void Start()
     {
         _songAudioSource = GetComponent<AudioSource>();
+        StartCoroutine(WaitToStartGame());
+    }
+
+    IEnumerator WaitToStartGame()
+    {
+        yield return new WaitForSeconds(5);
         string readFile = LoadStreamingAssets(FileLoc);
-        if(readFile != null)
+        if (readFile != null)
         {
             _midiFile = MidiFile.Read(readFile);
             GetDataFromMidi();
@@ -85,6 +91,7 @@ public class LevelAudioManager : MonoBehaviour
 
     public double GetAudioSourceTime()
     {
+        return _songAudioSource.time;
         return (double)_songAudioSource.timeSamples / _songAudioSource.clip.frequency;
     }
 

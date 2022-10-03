@@ -13,6 +13,7 @@ public class AudioSpectrum : MonoBehaviour
 
     private void Start()
     {
+        ChangeSampleObjectColor(Color.red);
         for (int i = 0; i < 64; i++)
         {
             GameObject instance = (GameObject)Instantiate(_sampleGameObject);
