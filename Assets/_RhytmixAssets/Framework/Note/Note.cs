@@ -8,7 +8,8 @@ public class Note : MonoBehaviour
     double timeInstantiated;
     public float assignedTime;
     public float endTime;
-    public long noteDuration;
+    public double noteDuration;
+    public float Speed;
     LevelAudioManager _levelAudioManager;
     [SerializeField] Transform EnemyModel;
     [SerializeField] MeshRenderer[] Meshrenderers;
@@ -32,12 +33,14 @@ public class Note : MonoBehaviour
             endTime = (float)(assignedTime + noteDuration);
             //print("I spawn at this time " + timeInstantiated);
             //print("I end at this time " + endTime);
-
             //add correct position on get note spawn z need to add offset to the end position of the hold note replace 100 with the calculation i need
-            float noteVelocity = (transform.localPosition.z - _levelAudioManager.NoteDespawnY()) / (endTime - assignedTime);
-            print(noteVelocity);
-            float d = (0.5f)*(noteVelocity)* noteDuration;
-            print(d);
+            float z1 = _levelAudioManager.GetNoteSpawnZ();
+            float z2 = _levelAudioManager.NoteDespawnY();
+            float t1 = (float)timeInstantiated;
+            float t2 = (float)noteDuration;
+            float velocity = (z2 - z1) / 2;
+            print(velocity);
+            float d = 32 * (float)(endTime);
             EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,_levelAudioManager.GetNoteSpawnZ() + d);
             enemyStartPos = EnemyModel.localPosition;
         }
@@ -54,9 +57,6 @@ public class Note : MonoBehaviour
     {
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
         float  t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
-
-
-        //set when it should destory itself only use this during holding
         
         if (t > 1 && !isHoldingNote)
         {
@@ -79,7 +79,6 @@ public class Note : MonoBehaviour
                     if (timeUntilEnd > 1)
                     {
                         Destroy(gameObject);
-                        //print("NOTE DESTROY NOTE");
                     }
                 }
 

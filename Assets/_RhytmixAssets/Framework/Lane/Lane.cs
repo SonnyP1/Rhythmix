@@ -154,7 +154,7 @@ public class Lane : MonoBehaviour
                 if (metricTimeEnd.Seconds > 0)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
-                    noteObject.GetComponent<Note>().noteDuration = metricTimeEnd.Seconds;
+                    noteObject.GetComponent<Note>().noteDuration = ((double)metricTimeEnd.Minutes * 60f + metricTimeEnd.Seconds + (double)metricTimeEnd.Milliseconds / 1000f);
                 }
                 else
                 {

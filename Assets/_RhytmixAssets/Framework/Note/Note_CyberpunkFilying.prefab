@@ -141,10 +141,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   assignedTime: 0
+  endTime: 0
+  noteDuration: 0
+  Speed: 1
+  EnemyModel: {fileID: 0}
   Meshrenderers:
   - {fileID: 2696844361459641491}
   - {fileID: 1998824668098338475}
   NoteType: 0
+  hasStartedHolding: 0
 --- !u!1001 &5119328078525231420
 PrefabInstance:
   m_ObjectHideFlags: 0

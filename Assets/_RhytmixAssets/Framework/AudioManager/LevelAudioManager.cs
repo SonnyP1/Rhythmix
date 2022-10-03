@@ -92,7 +92,6 @@ public class LevelAudioManager : MonoBehaviour
     public double GetAudioSourceTime()
     {
         return _songAudioSource.time;
-        return (double)_songAudioSource.timeSamples / _songAudioSource.clip.frequency;
     }
 
     public void StartSong()
