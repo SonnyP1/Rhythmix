@@ -32,8 +32,13 @@ public class Note : MonoBehaviour
             endTime = (float)(assignedTime + noteDuration);
             //print("I spawn at this time " + timeInstantiated);
             //print("I end at this time " + endTime);
+
             //add correct position on get note spawn z need to add offset to the end position of the hold note replace 100 with the calculation i need
-            EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,_levelAudioManager.GetNoteSpawnZ() + 20);
+            float noteVelocity = (transform.localPosition.z - _levelAudioManager.NoteDespawnY()) / (endTime - assignedTime);
+            print(noteVelocity);
+            float d = (0.5f)*(noteVelocity)* noteDuration;
+            print(d);
+            EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,_levelAudioManager.GetNoteSpawnZ() + d);
             enemyStartPos = EnemyModel.localPosition;
         }
 
@@ -52,7 +57,6 @@ public class Note : MonoBehaviour
 
 
         //set when it should destory itself only use this during holding
-        float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
         
         if (t > 1 && !isHoldingNote)
         {
@@ -68,6 +72,7 @@ public class Note : MonoBehaviour
             {
                 if (isHoldingNote == true)
                 {
+                    float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
                     EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3 (0,EnemyModel.localPosition.y,transform.localPosition.z), timeUntilEnd);       
                     transform.localPosition = transform.localPosition;
                     Meshrenderers[0].enabled = false;

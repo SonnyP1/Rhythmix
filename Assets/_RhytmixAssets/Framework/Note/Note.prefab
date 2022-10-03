@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedTime: 0
   endTime: 0
+  noteDuration: 0
   EnemyModel: {fileID: 860371195452780196}
   Meshrenderers:
   - {fileID: 2696844361459641491}
@@ -168,7 +169,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa8fb1ba03b99bd43a9faf11584ebd7a, type: 2}
+  - {fileID: 2100000, guid: 9c7c03402b909724383a3b6061ff73de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

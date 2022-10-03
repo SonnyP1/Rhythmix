@@ -6,13 +6,26 @@ public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] AudioSpectrum[] audioSpectrum;
     [SerializeField] AudioSource _levelMusic;
+    GameUIManager _UI;
     int score = 0;
     int comboMeter = 0;
     int multiplier = 1;
 
+    public void Start()
+    {
+        _UI = FindObjectOfType<GameUIManager>();
+    }
     public int GetComboMeter()
     {
         return comboMeter;
+    }
+    public int GetMultiplier()
+    {
+        return multiplier;
+    }
+    public int GetScore()
+    {
+        return score;
     }
 
     public void ChangeScore(int val)
@@ -21,6 +34,7 @@ public class ScoreKeeper : MonoBehaviour
         {
             //combo drop
             comboMeter = 0;
+            multiplier = 1; 
             audioSpectrum[0].ChangeSampleObjectColor(Color.red);
             StopAllCoroutines();
             StartCoroutine(ChangeVolume(.2f,false));
@@ -32,15 +46,15 @@ public class ScoreKeeper : MonoBehaviour
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.5f, true)); 
-                multiplier = 8;
+                multiplier = 4;
                 audioSpectrum[0].ChangeSampleObjectColor(Color.green);
             }
             else if(comboMeter > 5)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.45f, true));
-                multiplier = 4;
-                audioSpectrum[0].ChangeSampleObjectColor(Color.yellow);
+                multiplier = 3;
+                audioSpectrum[0].ChangeSampleObjectColor(Color.magenta);
             }
             else if(comboMeter > 2)
             {
@@ -54,6 +68,8 @@ public class ScoreKeeper : MonoBehaviour
 
             //print("The score is " + score + " The Multiplier is " + multiplier + " Combo Meter at " + comboMeter);
         }
+        _UI.UpdateMultiplier();
+        _UI.UpdateScore();
     }
 
     IEnumerator ChangeVolume(float val , bool increase)
