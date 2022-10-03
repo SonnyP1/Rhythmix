@@ -33,16 +33,10 @@ public class Note : MonoBehaviour
             endTime = (float)(assignedTime + noteDuration);
             //print("I spawn at this time " + timeInstantiated);
             //print("I end at this time " + endTime);
-            //add correct position on get note spawn z need to add offset to the end position of the hold note replace 100 with the calculation i need
-            float z1 = _levelAudioManager.GetNoteSpawnZ();
-            float z2 = _levelAudioManager.NoteDespawnY();
-            float t1 = (float)timeInstantiated;
-            float t2 = (float)noteDuration;
-            float velocity = (z2 - z1) / 2;
-            print(velocity);
-            float d = 32 * (float)(endTime);
-            EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,_levelAudioManager.GetNoteSpawnZ() + d);
+            EnemyModel.localPosition = new Vector3( 0,EnemyModel.localPosition.y,32 + (float)(noteDuration*100));
+
             enemyStartPos = EnemyModel.localPosition;
+
         }
 
         foreach (MeshRenderer meshRender in Meshrenderers)
@@ -56,8 +50,14 @@ public class Note : MonoBehaviour
     void Update()
     {
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
-        float  t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
+        float t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
+        float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
         
+        if(NoteType == AttackType.Hold)
+        {
+            EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), timeUntilEnd);
+        }
+
         if (t > 1 && !isHoldingNote)
         {
             Destroy(gameObject);
@@ -72,8 +72,7 @@ public class Note : MonoBehaviour
             {
                 if (isHoldingNote == true)
                 {
-                    float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
-                    EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3 (0,EnemyModel.localPosition.y,transform.localPosition.z), timeUntilEnd);       
+    
                     transform.localPosition = transform.localPosition;
                     Meshrenderers[0].enabled = false;
                     if (timeUntilEnd > 1)
