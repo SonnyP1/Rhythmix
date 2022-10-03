@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public enum AttackType
-{Tap,SwipeRight,SwipeLeft,SwipeUp,Hold };
+{Tap,SwipeRight,SwipeLeft,SwipeUp,Hold,EndHold };
 
 
 public class PlayerInput : MonoBehaviour
@@ -13,9 +13,19 @@ public class PlayerInput : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] Text debugText;
     [SerializeField] LayerMask Clickable;
+    [Header("Debugging Inputs")]
+    [SerializeField] KeyCode leftInput;
+    [SerializeField] Lane leftLane;
+    [SerializeField] KeyCode middleInput;
+    [SerializeField] Lane middleLane;
+    [SerializeField] KeyCode rightInput;
+    [SerializeField] Lane rightLane;
+
+
     Lane lane;
     Vector3 start;
-    float startTime = 0;
+    float[] startTime = { 0,0,0 };
+    bool[] isHolding = { false ,false,false};
     void Start()
     {
         
@@ -39,8 +49,105 @@ public class PlayerInput : MonoBehaviour
     {
         if(Time.timeScale != 0)
         {
-            MouseInput();
-            PhoneInput();
+            //MouseInput();
+            //PhoneInput();
+            KeyboardInput();
+        }
+    }
+
+    private void KeyboardInput()
+    {
+        if(leftLane.timeStamps.Count != 0)
+        {
+            if (Input.GetKeyDown(leftInput))
+            {
+                startTime[0] = 0;
+                isHolding[0] = false;
+                leftLane.HitNote(AttackType.Tap);
+            }
+            else if(Input.GetKey(leftInput))
+            {
+                startTime[0] += Time.deltaTime;
+                if(startTime[0] > .09 && !isHolding[0])
+                {
+                    isHolding[0] = true;
+                    leftLane.HitNote(AttackType.Hold);
+                }
+            }
+            else if(Input.GetKeyUp(leftInput))
+            {
+                if(isHolding[0])
+                {
+                    isHolding[0]= false;
+                    leftLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //leftLane.HitNote(AttackType.Tap);
+                }
+            }
+        }
+
+        if (middleLane.timeStamps.Count != 0)
+        {
+            if (Input.GetKeyDown(middleInput))
+            {
+                startTime[1] = 0;
+                isHolding[1] = false;
+                middleLane.HitNote(AttackType.Tap);
+            }
+            else if (Input.GetKey(middleInput))
+            {
+                startTime[1] += Time.deltaTime;
+                if (startTime[1] > .09 && !isHolding[1])
+                {
+                    isHolding[1] = true;
+                    middleLane.HitNote(AttackType.Hold);
+                }
+            }
+            else if (Input.GetKeyUp(middleInput))
+            {
+                if (isHolding[1])
+                {
+                    isHolding[1] = false;
+                    middleLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //middleLane.HitNote(AttackType.Tap);
+                }
+            }
+        }
+            if(rightLane.timeStamps.Count != 0)
+            {
+
+            if (Input.GetKeyDown(rightInput))
+            {
+                startTime[2] = 0;
+                isHolding[2] = false;
+                rightLane.HitNote(AttackType.Tap);
+            }
+            else if (Input.GetKey(rightInput))
+            {
+                startTime[2] += Time.deltaTime;
+                if (startTime[2] > .09 && !isHolding[2])
+                {
+                    isHolding[2] = true;
+                    rightLane.HitNote(AttackType.Hold);
+                }
+            }
+            else if (Input.GetKeyUp(rightInput))
+            {
+                if (isHolding[2])
+                {
+                    isHolding[2] = false;
+                    rightLane.HitNote(AttackType.Hold);
+                }
+                else
+                {
+                    //rightLane.HitNote(AttackType.Tap);
+                }
+            }
         }
     }
 
@@ -60,7 +167,7 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            startTime = 0;
+            startTime[0] = 0;
             start = Input.mousePosition;
             Vector3 mousePosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
             Vector3 mousePosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
@@ -80,8 +187,8 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             //during the click
-            startTime += Time.deltaTime;
-            if (startTime > .5)
+            startTime[0] += Time.deltaTime;
+            if (startTime[0] > .5)
             {
                 lane.HitNote(AttackType.Hold);
             }

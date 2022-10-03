@@ -17,6 +17,12 @@ public class MissEffectScript : MonoBehaviour
         float newYPos = transform.position.y + (Time.deltaTime * 1);
         Vector3 newPos = new Vector3(transform.position.x,newYPos,transform.position.z);
         transform.SetPositionAndRotation(newPos,transform.rotation);
+
+        if (text.color.a <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 

@@ -8,8 +8,7 @@ using System;
 public class Lane : MonoBehaviour
 {
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
-    [SerializeField] KeyCode input;
-    [SerializeField] GameObject notePrefab;
+    [SerializeField] GameObject[] notePrefab;
 
     [Header("Effects")]
     [SerializeField] Transform EffectSpawn;
@@ -24,8 +23,10 @@ public class Lane : MonoBehaviour
     [SerializeField][Range(1,4)] int attackAnimationCount;
 
     HeathComponent HealthComp;
+    ScoreKeeper _scoreKeeper;
     List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
+    public List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
     [SerializeField] LevelAudioManager _levelAudioManager;
 
     double timeStamp;
@@ -34,27 +35,50 @@ public class Lane : MonoBehaviour
     int spawnIndex = 0;
     int inputIndex = 0;
 
-
     public void HitNote(AttackType attackType)
     {
-        PlayAttackAnimation(attackType);
         //print(attackType);
+        PlayAttackAnimation(attackType);
+        if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].hasStartedHolding)
+        {
+            print("Your a loser");
+            Miss();
+        }
+
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
             Hit();
-            Destroy(notes[inputIndex].gameObject);
+            //print(notes[inputIndex].GetNoteType() + " this is the note type right now");
+
+            if (notes[inputIndex].GetNoteType() == AttackType.Hold)
+            {
+                if(!notes[inputIndex].hasStartedHolding)
+                {
+                    notes[inputIndex].SetIsHoldingNote(true);
+                }
+            }
+            else
+            {
+                Destroy(notes[inputIndex].gameObject);
+            }
+
+
+
+
             inputIndex++;
         }
         else
         {
             //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
         }
-        if (timeStamp + marginOfError <= audioTime)
+
+        if (timeStamp + marginOfError <= audioTime && attackType != AttackType.Hold)
         {
             Miss();
             inputIndex++;
             //print($"Missed {inputIndex} note");
         }
+
     }
 
     private void PlayAttackAnimation(AttackType attackType)
@@ -98,11 +122,6 @@ public class Lane : MonoBehaviour
             }
         }
     }
-
-    void ExitSwipe()
-    {
-        PlayerAnimator.SetLayerWeight(2, 0);
-    }
     public void Start()
     {
         if(_levelAudioManager != null)
@@ -110,6 +129,7 @@ public class Lane : MonoBehaviour
             _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         }
         HealthComp = GetComponentInParent<HeathComponent>();
+        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
     }
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
@@ -118,7 +138,8 @@ public class Lane : MonoBehaviour
             if (note.NoteName == noteRestriction)
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _levelAudioManager.GetMidiFile().GetTempoMap());
-                timeStamps.Add((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f);
+                timeStamps.Add( + ((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f));
+                melanchallMidiNotes.Add(note);
             }
         }
     }
@@ -128,9 +149,21 @@ public class Lane : MonoBehaviour
         {
             if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
             {
-                var note = Instantiate(notePrefab, transform);
-                notes.Add(note.GetComponent<Note>());
-                note.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
+                GameObject noteObject = null;
+                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
+                if (metricTimeEnd.Seconds > 0)
+                {
+                    noteObject = Instantiate(notePrefab[1], transform);
+                    noteObject.GetComponent<Note>().noteDuration = metricTimeEnd.Seconds;
+
+                }
+                else
+                {
+                    noteObject = Instantiate(notePrefab[0], transform);
+                }
+
+                notes.Add(noteObject.GetComponent<Note>());
+                noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
                 spawnIndex++;
             }
         }
@@ -141,10 +174,6 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
-            if (Input.GetKeyDown(input))
-            {
-                HitNote(AttackType.Tap);
-            }
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
@@ -158,18 +187,21 @@ public class Lane : MonoBehaviour
         double accuracy = AbsValueDouble(audioTime - timeStamp);
         if(accuracy > 0.06f)
         {
-            Debug.Log("Early");
+            //Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(5);
         }
         else if(accuracy < 0.05f)
         {
-            Debug.Log("Perfect");
+            //Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(10);
         }
         else
         {
-            Debug.Log("Late");
+            //Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(5);
         }
     }
     private void Miss()
@@ -183,6 +215,7 @@ public class Lane : MonoBehaviour
                 PlayerAnimator.SetTrigger("HitTrigger");
             }
         }
+        _scoreKeeper.ChangeScore(0);
     }
 
     private static double AbsValueDouble(double number)

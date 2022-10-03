@@ -40,24 +40,28 @@ public class Track : MonoBehaviour
 
     private void SpawnEnvironment()
     {
-        if(EnvironmentToSpawn.Length <=0)
-        {
-            Debug.Log($"{gameObject.name} does not have EnvironmentToSpawn");
-            return;
-        }
-        foreach(Transform trans in SpawnTrans)
-        {
-            GameObject randEnviroment = Instantiate(PickRandomEnvironment(),trans);
-        }
-
-        if(HasAccentEnvironment)
-        {
-            //Random.value return a random value between 0-1 -- so 50% chance to spawn accentEnvironment
-            if (Random.value > 0.5)
+        bool fail = false;
+        if(fail == false)
+        { 
+            if(EnvironmentToSpawn.Length <=0)
             {
-                foreach (Transform trans in AccentSpawnTrans)
+                Debug.Log($"{gameObject.name} does not have EnvironmentToSpawn");
+                return;
+            }
+            foreach(Transform trans in SpawnTrans)
+            {
+                GameObject randEnviroment = Instantiate(PickRandomEnvironment(),trans);
+            }
+
+            if(HasAccentEnvironment)
+            {
+                //Random.value return a random value between 0-1 -- so 50% chance to spawn accentEnvironment
+                if (Random.value > 0.5)
                 {
-                    GameObject randAccentEnviroment = Instantiate(PickRandomAccentEnvironment(), trans);
+                    foreach (Transform trans in AccentSpawnTrans)
+                    {
+                        GameObject randAccentEnviroment = Instantiate(PickRandomAccentEnvironment(), trans);
+                    }
                 }
             }
         }

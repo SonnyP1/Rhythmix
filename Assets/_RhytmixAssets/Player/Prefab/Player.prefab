@@ -78,8 +78,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 7
-  input: 273
-  notePrefab: {fileID: 8141835081616531062, guid: d3acdaa8f0b4c424aaec20acce9b138a, type: 3}
+  notePrefab:
+  - {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
+  - {fileID: 8141835081616531062, guid: d3acdaa8f0b4c424aaec20acce9b138a, type: 3}
   EffectSpawn: {fileID: 3105113090160096245}
   missEffect: {fileID: 7252506848818957568, guid: e063dfafcff147245b648c5eb49658c5, type: 3}
   EarlyEffect: {fileID: 7252506848818957568, guid: fa48b96adcd63f84680cdea768a045b1, type: 3}
