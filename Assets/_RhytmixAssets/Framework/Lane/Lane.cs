@@ -154,8 +154,7 @@ public class Lane : MonoBehaviour
                 if (metricTimeEnd.Seconds > 0)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
-                    noteObject.GetComponent<Note>().noteDuration = metricTimeEnd.Seconds;
-
+                    noteObject.GetComponent<Note>().noteDuration = ((double)metricTimeEnd.Minutes * 60f + metricTimeEnd.Seconds + (double)metricTimeEnd.Milliseconds / 1000f);
                 }
                 else
                 {
@@ -189,19 +188,19 @@ public class Lane : MonoBehaviour
         {
             //Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(5);
+            _scoreKeeper.ChangeScore(501);
         }
         else if(accuracy < 0.05f)
         {
             //Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(10);
+            _scoreKeeper.ChangeScore(1010);
         }
         else
         {
             //Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(5);
+            _scoreKeeper.ChangeScore(501);
         }
     }
     private void Miss()

@@ -118,8 +118,8 @@ public class PlayerInput : MonoBehaviour
                 }
             }
         }
-            if(rightLane.timeStamps.Count != 0)
-            {
+        if(rightLane.timeStamps.Count != 0)
+        {
 
             if (Input.GetKeyDown(rightInput))
             {

@@ -143,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedTime: 0
   endTime: 0
+  noteDuration: 0
+  Speed: 1
   EnemyModel: {fileID: 860371195452780196}
   Meshrenderers:
   - {fileID: 2696844361459641491}
@@ -168,7 +170,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aa8fb1ba03b99bd43a9faf11584ebd7a, type: 2}
+  - {fileID: 2100000, guid: 9c7c03402b909724383a3b6061ff73de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,7 +193,7 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0.1, z: 6.93}
+  - {x: 0, y: 0.1, z: 14.43}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -280,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.58
+      value: 13.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
       propertyPath: m_LocalRotation.w
