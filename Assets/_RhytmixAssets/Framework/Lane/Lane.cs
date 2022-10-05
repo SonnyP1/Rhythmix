@@ -7,9 +7,12 @@ using System;
 
 public class Lane : MonoBehaviour
 {
+    [Header("Midi Files")]
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     [SerializeField] GameObject[] notePrefab;
-
+    [Header("Hit Note")]
+    [SerializeField] AudioClip HitSound;
+    AudioSource _hitSoundAudioSource;
     [Header("Effects")]
     [SerializeField] Transform EffectSpawn;
     [SerializeField] GameObject missEffect;
@@ -34,6 +37,17 @@ public class Lane : MonoBehaviour
     double audioTime;
     int spawnIndex = 0;
     int inputIndex = 0;
+    public void Start()
+    {
+        if(_levelAudioManager != null)
+        {
+            _levelAudioManager = FindObjectOfType<LevelAudioManager>();
+        }
+        HealthComp = GetComponentInParent<HeathComponent>();
+        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
+        _hitSoundAudioSource = new AudioSource();
+        _hitSoundAudioSource.clip = HitSound;
+    }
 
     public void HitNote(AttackType attackType)
     {
@@ -47,6 +61,7 @@ public class Lane : MonoBehaviour
 
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
         {
+            _hitSoundAudioSource.Play();
             Hit();
             //print(notes[inputIndex].GetNoteType() + " this is the note type right now");
 
@@ -122,15 +137,6 @@ public class Lane : MonoBehaviour
             }
         }
     }
-    public void Start()
-    {
-        if(_levelAudioManager != null)
-        {
-            _levelAudioManager = FindObjectOfType<LevelAudioManager>();
-        }
-        HealthComp = GetComponentInParent<HeathComponent>();
-        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
-    }
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
         foreach (var note in array)
@@ -202,6 +208,7 @@ public class Lane : MonoBehaviour
             Instantiate(LateEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
+
     }
     private void Miss()
     {
