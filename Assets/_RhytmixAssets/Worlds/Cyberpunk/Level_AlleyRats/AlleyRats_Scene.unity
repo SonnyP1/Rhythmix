@@ -1189,7 +1189,7 @@ PrefabInstance:
     - target: {fileID: 2438712078781448124, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: b20fbc04e37c70a449da13777aab1a24, type: 3}
+      objectReference: {fileID: 9000000, guid: aea058fadd744074e986f85a3c7b7424, type: 3}
     - target: {fileID: 2438712078781448124, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Controller
       value: 
@@ -1444,11 +1444,11 @@ PrefabInstance:
       objectReference: {fileID: 14274438}
     - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: attackAnimationCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: hasMultipleAttackAnimation
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7084381528527079738, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_LocalPosition.x
