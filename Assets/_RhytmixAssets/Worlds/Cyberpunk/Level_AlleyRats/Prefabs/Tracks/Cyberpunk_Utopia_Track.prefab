@@ -296,7 +296,7 @@ PrefabInstance:
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: EnvironmentToSpawn.Array.data[8]
       value: 
-      objectReference: {fileID: 606991016401856999, guid: 947ac45be61e6524e9aa5784740d56d3, type: 3}
+      objectReference: {fileID: 959080907636145083, guid: 1cc2ee6712a7c174b9864c0425065795, type: 3}
     - target: {fileID: -6428457511607344099, guid: 43fd41ca967aa024385e3430eaed48f6, type: 3}
       propertyPath: AccentEnvironmentToSpawn.Array.data[0]
       value: 
