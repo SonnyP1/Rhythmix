@@ -646,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
       propertyPath: _maxScale
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
       propertyPath: _scoreKeeper
