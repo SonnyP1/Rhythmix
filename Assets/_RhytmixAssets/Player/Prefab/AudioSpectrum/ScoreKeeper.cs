@@ -37,7 +37,7 @@ public class ScoreKeeper : MonoBehaviour
             multiplier = 1; 
             audioSpectrum[0].ChangeSampleObjectColor(Color.red);
             StopAllCoroutines();
-            StartCoroutine(ChangeVolume(.2f,false));
+            StartCoroutine(ChangeVolume(.3f,false));
         }
         else
         {

@@ -45,8 +45,11 @@ public class Lane : MonoBehaviour
         }
         HealthComp = GetComponentInParent<HeathComponent>();
         _scoreKeeper = GetComponentInParent<ScoreKeeper>();
-        _hitSoundAudioSource = new AudioSource();
-        _hitSoundAudioSource.clip = HitSound;
+        _hitSoundAudioSource = GetComponent<AudioSource>();
+        if(_hitSoundAudioSource != null)
+        {
+            _hitSoundAudioSource.clip = HitSound;
+        }
     }
 
     public void HitNote(AttackType attackType)
@@ -166,7 +169,7 @@ public class Lane : MonoBehaviour
                 {
                     noteObject = Instantiate(notePrefab[0], transform);
                 }
-
+                noteObject.name += spawnIndex.ToString();
                 notes.Add(noteObject.GetComponent<Note>());
                 noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
                 spawnIndex++;
