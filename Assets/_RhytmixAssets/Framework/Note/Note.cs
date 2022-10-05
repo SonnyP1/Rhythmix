@@ -105,10 +105,10 @@ public class Note : MonoBehaviour
         float t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
 
         float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
+        EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), timeUntilEnd);
 
         if (isHoldingNote)
         {
-            EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), timeUntilEnd);
             transform.localPosition = transform.localPosition;
             Meshrenderers[0].enabled = false;
             if (timeUntilEnd > 1)

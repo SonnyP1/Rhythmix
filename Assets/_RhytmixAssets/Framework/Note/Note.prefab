@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 70494e06b880c604db23d28f9d951e87, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,18 +318,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7fdd22ad257d945b1d17a58c4af890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedTime: 0
-  endTime: 0
-  noteDuration: 0
-  Speed: 1
+  NoteType: 4
   EnemyModel: {fileID: 860371195452780196}
   Meshrenderers:
   - {fileID: 2696844361459641491}
   - {fileID: 1998344617819313611}
-  NoteType: 4
   InnerRing: {fileID: 3452093878092636477}
   OuterRing: {fileID: 3349456886106849470}
-  hasStartedHolding: 0
 --- !u!120 &9111331475615272618
 LineRenderer:
   m_ObjectHideFlags: 0

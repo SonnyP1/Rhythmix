@@ -17,6 +17,8 @@ public class Lane : MonoBehaviour
 
     [Header("Effects")]
     [SerializeField] Transform EffectSpawn;
+    [SerializeField] Transform HitEffectSpawn;
+    [SerializeField] GameObject HitEffect;
     [SerializeField] GameObject missEffect;
     [SerializeField] GameObject EarlyEffect;
     [SerializeField] GameObject LateEffect;
@@ -207,7 +209,7 @@ public class Lane : MonoBehaviour
             Instantiate(LateEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
-
+        Instantiate(HitEffect,HitEffectSpawn);
     }
     private void Miss()
     {
