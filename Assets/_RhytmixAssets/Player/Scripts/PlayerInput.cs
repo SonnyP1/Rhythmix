@@ -31,6 +31,17 @@ public class PlayerInput : MonoBehaviour
     {
         Application.logMessageReceived += LogCallback;
     }
+    void Update()
+    {
+        if(Time.timeScale != 0)
+        {
+            PhoneInput();
+            KeyboardInput();
+        }
+    }
+
+
+
 
     private void LogCallback(string condition, string stackTrace, LogType type)
     {
@@ -39,24 +50,12 @@ public class PlayerInput : MonoBehaviour
             debugText.text += "\n" + condition;
         }
     }
-
-    void Update()
-    {
-        if(Time.timeScale != 0)
-        {
-            //MouseInput();
-            PhoneInput();
-            KeyboardInput();
-        }
-    }
-
     private void KeyboardInput()
     {
         InputKey(0);
         InputKey(1);
         InputKey(2);
     }
-
     private void InputKey(int index)
     {
         if (Lanes[index].GetTimeStampsList().Count != 0)
@@ -86,7 +85,6 @@ public class PlayerInput : MonoBehaviour
             }
         }
     }
-
     private void PhoneInput()
     {
         if (Input.touchCount > 0)
@@ -96,70 +94,6 @@ public class PlayerInput : MonoBehaviour
             Tap(2);
         }
     }
-
-    private void MouseInput()
-    {
-        /*
-        if (Input.GetMouseButtonDown(0))
-        {
-            startTime[0] = 0;
-            start = Input.mousePosition;
-            Vector3 mousePosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
-            Vector3 mousePosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
-
-            Vector3 mousePosFarPos = Camera.main.ScreenToWorldPoint(mousePosFar);
-            Vector3 mousePosClosePos = Camera.main.ScreenToWorldPoint(mousePosClose);
-
-
-            RaycastHit hit;
-            if (Physics.Raycast(mousePosClosePos, mousePosFarPos - mousePosClosePos, out hit, 100f, Clickable))
-            {
-                //print(hit.collider.gameObject.name);
-                lane = hit.collider.gameObject.GetComponent<Lane>();
-            }
-        }
-
-        if(Input.GetMouseButton(0))
-        {
-            //during the click
-            startTime[0] += Time.deltaTime;
-            if (startTime[0] > .5)
-            {
-                lane.HitNote(AttackType.Hold);
-            }
-        }
-
-        if(Input.GetMouseButtonUp(0))
-        {
-            //end of click
-            Vector3 end = Input.mousePosition;
-            if(lane != null)
-            {
-                if (Mathf.Abs(end.x - start.x) > 30)
-                {
-                    if(end.x > start.x)
-                    {
-                        lane.HitNote(AttackType.SwipeRight);
-                    }
-                    else
-                    {
-                        lane.HitNote(AttackType.SwipeLeft);
-                    }
-
-                }
-                else if(Mathf.Abs(end.y - start.y) > 50)
-                {
-                    lane.HitNote(AttackType.SwipeUp);
-                }
-                else
-                {
-                    lane.HitNote(AttackType.Tap);
-                }
-            }
-        }
-        */
-    }
-
     private void Tap(int index)
     {
         if (Input.GetTouch(index).phase == TouchPhase.Began)
@@ -177,37 +111,43 @@ public class PlayerInput : MonoBehaviour
             {
                 print(hit.collider.gameObject.name);
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
+                Lanes[index].HitNote(AttackType.Tap);
             }
         }
         //holding mechanics
         if(Input.GetTouch(index).phase == TouchPhase.Moved)
         {
-
+            startTime[index] += Time.deltaTime;
+            if (startTime[index] > .09 && !isHolding[index])
+            {
+                isHolding[index] = true;
+                Lanes[index].HitNote(AttackType.Hold);
+            }
         }
 
         if(Input.GetTouch(index).phase == TouchPhase.Ended)
         {
             Debug.Log("End Touch");
-            if(!Lanes[index])
-            {
-                Vector3 end = Input.GetTouch(index).position;
-                if (Mathf.Abs(end.x - start.x) > 30)
-                {
-                    if (end.x > start.x)
-                    {
-                        Lanes[index].HitNote(AttackType.SwipeRight);
-                    }
-                    else
-                    {
-                        Lanes[index].HitNote(AttackType.SwipeLeft);
-                    }
+            Vector3 end = Input.GetTouch(index).position;
 
+            if (isHolding[index])
+            {
+                isHolding[index] = false;
+                Lanes[index].HitNote(AttackType.Hold);
+            }
+            else if (Mathf.Abs(end.x - start.x) > 30)
+            {
+                if (end.x > start.x)
+                {
+                    Lanes[index].HitNote(AttackType.SwipeRight);
                 }
                 else
                 {
-                    Lanes[index].HitNote(AttackType.Tap);
+                    Lanes[index].HitNote(AttackType.SwipeLeft);
                 }
             }
         }
     }
+
+
 }
