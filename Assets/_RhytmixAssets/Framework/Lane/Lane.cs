@@ -10,9 +10,11 @@ public class Lane : MonoBehaviour
     [Header("Midi Files")]
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     [SerializeField] GameObject[] notePrefab;
+    [SerializeField] LevelAudioManager _levelAudioManager;
+
     [Header("Hit Note")]
     [SerializeField] AudioClip HitSound;
-    AudioSource _hitSoundAudioSource;
+
     [Header("Effects")]
     [SerializeField] Transform EffectSpawn;
     [SerializeField] GameObject missEffect;
@@ -25,12 +27,15 @@ public class Lane : MonoBehaviour
     [SerializeField] bool hasMultipleAttackAnimation;
     [SerializeField][Range(1,4)] int attackAnimationCount;
 
-    HeathComponent HealthComp;
-    ScoreKeeper _scoreKeeper;
-    List<Note> notes = new List<Note>();
-    public List<double> timeStamps = new List<double>();
-    public List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
-    [SerializeField] LevelAudioManager _levelAudioManager;
+    public List<double> GetTimeStampsList() { return timeStamps;}
+
+    //private variables
+    private HeathComponent HealthComp;
+    private ScoreKeeper _scoreKeeper;
+    private List<Note> notes = new List<Note>();
+    private List<double> timeStamps = new List<double>();
+    private List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
+    private AudioSource _hitSoundAudioSource;
 
     double timeStamp;
     double marginOfError;
@@ -39,13 +44,14 @@ public class Lane : MonoBehaviour
     int inputIndex = 0;
     public void Start()
     {
+        HealthComp = GetComponentInParent<HeathComponent>();
+        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
+        _hitSoundAudioSource = GetComponent<AudioSource>();
+
         if(_levelAudioManager != null)
         {
             _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         }
-        HealthComp = GetComponentInParent<HeathComponent>();
-        _scoreKeeper = GetComponentInParent<ScoreKeeper>();
-        _hitSoundAudioSource = GetComponent<AudioSource>();
         if(_hitSoundAudioSource != null)
         {
             _hitSoundAudioSource.clip = HitSound;
@@ -54,11 +60,9 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        //print(attackType);
         PlayAttackAnimation(attackType);
-        if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].hasStartedHolding)
+        if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].GetHasStartedHolding())
         {
-            print("Your a loser");
             Miss();
         }
 
@@ -66,11 +70,10 @@ public class Lane : MonoBehaviour
         {
             _hitSoundAudioSource.Play();
             Hit();
-            //print(notes[inputIndex].GetNoteType() + " this is the note type right now");
 
             if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
-                if(!notes[inputIndex].hasStartedHolding)
+                if(!notes[inputIndex].GetHasStartedHolding())
                 {
                     notes[inputIndex].SetIsHoldingNote(true);
                 }
@@ -80,21 +83,13 @@ public class Lane : MonoBehaviour
                 Destroy(notes[inputIndex].gameObject);
             }
 
-
-
-
             inputIndex++;
-        }
-        else
-        {
-            //print($"Hit inaccurate on {inputIndex} note with {AbsValueDouble(audioTime - timeStamp)} delay");
         }
 
         if (timeStamp + marginOfError <= audioTime && attackType != AttackType.Hold)
         {
             Miss();
             inputIndex++;
-            //print($"Missed {inputIndex} note");
         }
 
     }
@@ -154,27 +149,7 @@ public class Lane : MonoBehaviour
     }
     void Update()
     {
-        if (spawnIndex < timeStamps.Count)
-        {
-            if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
-            {
-                GameObject noteObject = null;
-                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
-                if (metricTimeEnd.Seconds > 0)
-                {
-                    noteObject = Instantiate(notePrefab[1], transform);
-                    noteObject.GetComponent<Note>().noteDuration = ((double)metricTimeEnd.Minutes * 60f + metricTimeEnd.Seconds + (double)metricTimeEnd.Milliseconds / 1000f);
-                }
-                else
-                {
-                    noteObject = Instantiate(notePrefab[0], transform);
-                }
-                noteObject.name += spawnIndex.ToString();
-                notes.Add(noteObject.GetComponent<Note>());
-                noteObject.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
-                spawnIndex++;
-            }
-        }
+        SpawnNotes();
 
         if (inputIndex < timeStamps.Count)
         {
@@ -190,24 +165,45 @@ public class Lane : MonoBehaviour
         }
 
     }
+    private void SpawnNotes()
+    {
+        if (spawnIndex < timeStamps.Count)
+        {
+            if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
+            {
+                GameObject noteObject = null;
+                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
+                if (metricTimeEnd.Seconds > 0)
+                {
+                    noteObject = Instantiate(notePrefab[1], transform);
+                    noteObject.GetComponent<Note>().SetNoteDuration(((double)metricTimeEnd.Minutes * 60f + metricTimeEnd.Seconds + (double)metricTimeEnd.Milliseconds / 1000f));
+                }
+                else
+                {
+                    noteObject = Instantiate(notePrefab[0], transform);
+                }
+                noteObject.name += spawnIndex.ToString();
+                notes.Add(noteObject.GetComponent<Note>());
+                noteObject.GetComponent<Note>().SetAssignedTime((float)timeStamps[spawnIndex]);
+                spawnIndex++;
+            }
+        }
+    }
     private void Hit()
     {
         double accuracy = AbsValueDouble(audioTime - timeStamp);
         if(accuracy > 0.06f)
         {
-            //Debug.Log("Early");
             Instantiate(EarlyEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
         else if(accuracy < 0.05f)
         {
-            //Debug.Log("Perfect");
             Instantiate(PerfectEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(1010);
         }
         else
         {
-            //Debug.Log("Late");
             Instantiate(LateEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
@@ -226,7 +222,6 @@ public class Lane : MonoBehaviour
         }
         _scoreKeeper.ChangeScore(0);
     }
-
     private static double AbsValueDouble(double number)
     {
         double num = number;

@@ -10,26 +10,22 @@ public enum AttackType
 
 public class PlayerInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] Text debugText;
+    [Header("Mobile Inputs")]
     [SerializeField] LayerMask Clickable;
-    [Header("Debugging Inputs")]
-    [SerializeField] KeyCode leftInput;
-    [SerializeField] Lane leftLane;
-    [SerializeField] KeyCode middleInput;
-    [SerializeField] Lane middleLane;
-    [SerializeField] KeyCode rightInput;
-    [SerializeField] Lane rightLane;
 
+    [Header("Keyboard Inputs")]
+    [SerializeField] KeyCode[] KeysCodes;
 
-    Lane lane;
-    Vector3 start;
-    float[] startTime = { 0,0,0 };
-    bool[] isHolding = { false ,false,false};
-    void Start()
-    {
-        
-    }
+    [Header("Lanes")]
+    [SerializeField] Lane[] Lanes;
+
+    [Header("Debugs")]
+    [SerializeField] Text debugText;
+
+    //private variables
+    private Vector3 start;
+    private float[] startTime = { 0,0,0 };
+    private bool[] isHolding = { false ,false,false};
 
     private void OnEnable()
     {
@@ -44,108 +40,48 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(Time.timeScale != 0)
         {
             //MouseInput();
-            //PhoneInput();
+            PhoneInput();
             KeyboardInput();
         }
     }
 
     private void KeyboardInput()
     {
-        if(leftLane.timeStamps.Count != 0)
-        {
-            if (Input.GetKeyDown(leftInput))
-            {
-                startTime[0] = 0;
-                isHolding[0] = false;
-                leftLane.HitNote(AttackType.Tap);
-            }
-            else if(Input.GetKey(leftInput))
-            {
-                startTime[0] += Time.deltaTime;
-                if(startTime[0] > .09 && !isHolding[0])
-                {
-                    isHolding[0] = true;
-                    leftLane.HitNote(AttackType.Hold);
-                }
-            }
-            else if(Input.GetKeyUp(leftInput))
-            {
-                if(isHolding[0])
-                {
-                    isHolding[0]= false;
-                    leftLane.HitNote(AttackType.Hold);
-                }
-                else
-                {
-                    //leftLane.HitNote(AttackType.Tap);
-                }
-            }
-        }
+        InputKey(0);
+        InputKey(1);
+        InputKey(2);
+    }
 
-        if (middleLane.timeStamps.Count != 0)
+    private void InputKey(int index)
+    {
+        if (Lanes[index].GetTimeStampsList().Count != 0)
         {
-            if (Input.GetKeyDown(middleInput))
+            if (Input.GetKeyDown(KeysCodes[index]))
             {
-                startTime[1] = 0;
-                isHolding[1] = false;
-                middleLane.HitNote(AttackType.Tap);
+                startTime[index] = 0;
+                isHolding[index] = false;
+                Lanes[index].HitNote(AttackType.Tap);
             }
-            else if (Input.GetKey(middleInput))
+            else if (Input.GetKey(KeysCodes[index]))
             {
-                startTime[1] += Time.deltaTime;
-                if (startTime[1] > .09 && !isHolding[1])
+                startTime[index] += Time.deltaTime;
+                if (startTime[index] > .09 && !isHolding[index])
                 {
-                    isHolding[1] = true;
-                    middleLane.HitNote(AttackType.Hold);
+                    isHolding[index] = true;
+                    Lanes[index].HitNote(AttackType.Hold);
                 }
             }
-            else if (Input.GetKeyUp(middleInput))
+            else if (Input.GetKeyUp(KeysCodes[index]))
             {
-                if (isHolding[1])
+                if (isHolding[index])
                 {
-                    isHolding[1] = false;
-                    middleLane.HitNote(AttackType.Hold);
-                }
-                else
-                {
-                    //middleLane.HitNote(AttackType.Tap);
-                }
-            }
-        }
-        if(rightLane.timeStamps.Count != 0)
-        {
-
-            if (Input.GetKeyDown(rightInput))
-            {
-                startTime[2] = 0;
-                isHolding[2] = false;
-                rightLane.HitNote(AttackType.Tap);
-            }
-            else if (Input.GetKey(rightInput))
-            {
-                startTime[2] += Time.deltaTime;
-                if (startTime[2] > .09 && !isHolding[2])
-                {
-                    isHolding[2] = true;
-                    rightLane.HitNote(AttackType.Hold);
-                }
-            }
-            else if (Input.GetKeyUp(rightInput))
-            {
-                if (isHolding[2])
-                {
-                    isHolding[2] = false;
-                    rightLane.HitNote(AttackType.Hold);
-                }
-                else
-                {
-                    //rightLane.HitNote(AttackType.Tap);
+                    isHolding[index] = false;
+                    Lanes[index].HitNote(AttackType.Hold);
                 }
             }
         }
@@ -153,18 +89,17 @@ public class PlayerInput : MonoBehaviour
 
     private void PhoneInput()
     {
-        //how many fingers are on the screen at a time
         if (Input.touchCount > 0)
         {
-            //print(Input.touchCount);
-            Tap(Input.GetTouch(0));
-            //Tap(Input.GetTouch(1));
-            //Tap(Input.GetTouch(3));
+            Tap(0);
+            Tap(1);
+            Tap(2);
         }
     }
 
     private void MouseInput()
     {
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             startTime[0] = 0;
@@ -222,16 +157,17 @@ public class PlayerInput : MonoBehaviour
                 }
             }
         }
+        */
     }
 
-    private void Tap(Touch touch)
+    private void Tap(int index)
     {
-        if (touch.phase == TouchPhase.Began)
+        if (Input.GetTouch(index).phase == TouchPhase.Began)
         {
             Debug.Log("Begin Touch");
-            start = touch.position; 
-            Vector3 touchPosFar = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, Camera.main.farClipPlane);
-            Vector3 touchPosClose = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, Camera.main.nearClipPlane);
+            start = Input.GetTouch(index).position; 
+            Vector3 touchPosFar = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.farClipPlane);
+            Vector3 touchPosClose = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.nearClipPlane);
 
             Vector3 touchPosFarPos = Camera.main.ScreenToWorldPoint(touchPosFar);
             Vector3 touchPosClosePos = Camera.main.ScreenToWorldPoint(touchPosClose);
@@ -240,39 +176,37 @@ public class PlayerInput : MonoBehaviour
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
                 print(hit.collider.gameObject.name);
-                lane = hit.collider.gameObject.GetComponent<Lane>();
+                Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
             }
         }
         //holding mechanics
-        if(touch.phase == TouchPhase.Moved)
+        if(Input.GetTouch(index).phase == TouchPhase.Moved)
         {
 
         }
 
-        if(touch.phase == TouchPhase.Ended)
+        if(Input.GetTouch(index).phase == TouchPhase.Ended)
         {
             Debug.Log("End Touch");
-            if(!lane)
+            if(!Lanes[index])
             {
-                Vector3 end = touch.position;
+                Vector3 end = Input.GetTouch(index).position;
                 if (Mathf.Abs(end.x - start.x) > 30)
                 {
                     if (end.x > start.x)
                     {
-                        lane.HitNote(AttackType.SwipeRight);
+                        Lanes[index].HitNote(AttackType.SwipeRight);
                     }
                     else
                     {
-                        lane.HitNote(AttackType.SwipeLeft);
+                        Lanes[index].HitNote(AttackType.SwipeLeft);
                     }
 
                 }
                 else
                 {
-                    lane.HitNote(AttackType.Tap);
+                    Lanes[index].HitNote(AttackType.Tap);
                 }
-
-                lane = null;
             }
         }
     }

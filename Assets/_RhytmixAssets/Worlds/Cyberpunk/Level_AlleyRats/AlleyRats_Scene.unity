@@ -2051,6 +2051,11 @@ MonoBehaviour:
   Clickable:
     serializedVersion: 2
     m_Bits: 128
+  KeysCodes: 140100001201000013010000
+  Lanes:
+  - {fileID: 1176988359}
+  - {fileID: 330742864}
+  - {fileID: 1977959750}
   leftInput: 276
   leftLane: {fileID: 1176988359}
   middleInput: 274
