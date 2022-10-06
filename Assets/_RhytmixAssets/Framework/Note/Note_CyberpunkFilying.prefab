@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4353266636806245229}
   - component: {fileID: 2696844361459641491}
   - component: {fileID: 8109982821358199095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 6889955608743065036}
   - component: {fileID: 2178387951884952565}
   - component: {fileID: 6374495605298259565}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Outer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 5362952556637710255}
   - component: {fileID: 387902915045285469}
   - component: {fileID: 4617465675024866211}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 5956640310517271889}
   - component: {fileID: 5064006993964616133}
   - component: {fileID: 6635432515004242273}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,6 +452,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
       propertyPath: m_Name
       value: PoliceDrone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8281579243681701473, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
