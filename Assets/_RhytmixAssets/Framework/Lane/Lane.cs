@@ -63,6 +63,11 @@ public class Lane : MonoBehaviour
     public void HitNote(AttackType attackType)
     {
         PlayAttackAnimation(attackType);
+        if(notes.Count == 0)
+        {
+            return;
+        }
+
         if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].GetHasStartedHolding())
         {
             Miss();

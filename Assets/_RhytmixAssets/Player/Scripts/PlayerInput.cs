@@ -58,30 +58,28 @@ public class PlayerInput : MonoBehaviour
     }
     private void InputKey(int index)
     {
-        if (Lanes[index].GetTimeStampsList().Count != 0)
+
+        if (Input.GetKeyDown(KeysCodes[index]))
         {
-            if (Input.GetKeyDown(KeysCodes[index]))
+            startTime[index] = 0;
+            isHolding[index] = false;
+            Lanes[index].HitNote(AttackType.Tap);
+        }
+        else if (Input.GetKey(KeysCodes[index]))
+        {
+            startTime[index] += Time.deltaTime;
+            if (startTime[index] > .09 && !isHolding[index])
             {
-                startTime[index] = 0;
+                isHolding[index] = true;
+                Lanes[index].HitNote(AttackType.Hold);
+            }
+        }
+        else if (Input.GetKeyUp(KeysCodes[index]))
+        {
+            if (isHolding[index])
+            {
                 isHolding[index] = false;
-                Lanes[index].HitNote(AttackType.Tap);
-            }
-            else if (Input.GetKey(KeysCodes[index]))
-            {
-                startTime[index] += Time.deltaTime;
-                if (startTime[index] > .09 && !isHolding[index])
-                {
-                    isHolding[index] = true;
-                    Lanes[index].HitNote(AttackType.Hold);
-                }
-            }
-            else if (Input.GetKeyUp(KeysCodes[index]))
-            {
-                if (isHolding[index])
-                {
-                    isHolding[index] = false;
-                    Lanes[index].HitNote(AttackType.Hold);
-                }
+                Lanes[index].HitNote(AttackType.Hold);
             }
         }
     }

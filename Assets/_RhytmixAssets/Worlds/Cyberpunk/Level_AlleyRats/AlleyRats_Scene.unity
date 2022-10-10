@@ -1165,6 +1165,10 @@ PrefabInstance:
       propertyPath: debugText
       value: 
       objectReference: {fileID: 134091543}
+    - target: {fileID: 2438712078781448124, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c72b577bd82af9d4190e5e071f07562d, type: 2}
     - target: {fileID: 2576365561957140242, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_ClearFlags
       value: 1

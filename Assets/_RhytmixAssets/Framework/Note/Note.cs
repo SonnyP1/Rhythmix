@@ -109,7 +109,7 @@ public class Note : MonoBehaviour
 
         if (isHoldingNote)
         {
-            transform.localPosition = transform.localPosition;
+            transform.localPosition = new Vector3(transform.localPosition.x,transform.localPosition.y,4);
             Meshrenderers[0].enabled = false;
             if (timeUntilEnd > 1)
             {
