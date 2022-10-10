@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2270491125742156193}
   - component: {fileID: 2270491125742156194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AudiosSampler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6536093478060293763}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AudioSpectrum&Sampler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 4464715422200133088, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
       propertyPath: m_Name
       value: AudioSpectrum
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464715422200133088, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4464715422200133090, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
       propertyPath: m_RootOrder
@@ -645,9 +649,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
+      propertyPath: _maxScale
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
+      propertyPath: _scoreKeeper
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
       propertyPath: _audioSampler
       value: 
       objectReference: {fileID: 2270491125742156194}
+    - target: {fileID: 4464715422200133091, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
+      propertyPath: newMaterialChange
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c7c03402b909724383a3b6061ff73de, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 580cce91506d5b341abb81314712ce9b, type: 3}
 --- !u!4 &2270491126607744112 stripped

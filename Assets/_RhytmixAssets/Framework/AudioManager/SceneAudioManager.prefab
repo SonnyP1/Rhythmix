@@ -43,8 +43,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2c83d00e56d3e4c449203133e9cefdd3, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -140,15 +140,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8bc757bd70d7b4b9129bfabab22e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SongFiftyPercentDoneInSecounds: 60
   Lanes:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   SongDelayInSecounds: 0
-  MarginOfError: 0.7
+  audioSource: {fileID: 3540333748101012584}
+  MarginOfError: 0.1
   InputDelayInMilliseconds: 0
-  FileLoc: we_made_a_chart_pog.mid
+  FileLoc: Rythmix_CyberPunk_01.mid
   NoteTime: 1
   NoteSpawnZ: 35
   NoteTapZ: 3
