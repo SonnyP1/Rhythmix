@@ -78,9 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'EARLY
-
-'
+  m_Text: BAD
 --- !u!1 &6395564495953046610
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +190,7 @@ GameObject:
   - component: {fileID: 3471540438920055287}
   - component: {fileID: 4741228565530100923}
   m_Layer: 0
-  m_Name: EarlyEffect
+  m_Name: BadEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
-    [SerializeField] AudioSpectrum[] audioSpectrum;
-    [SerializeField] AudioSource _levelMusic;
-    GameUIManager _UI;
+    [SerializeField] AudioSpectrum[] audioSpectrums;
+    private AudioSource _levelMusic;
+    private GameUIManager _UI;
     int score = 0;
     int comboMeter = 0;
     int multiplier = 1;
 
     public void Start()
     {
+        _levelMusic = FindObjectOfType<CoreGameDataHolder>().GetMusic();
         _UI = FindObjectOfType<GameUIManager>();
     }
     public int GetComboMeter()
@@ -35,7 +36,7 @@ public class ScoreKeeper : MonoBehaviour
             //combo drop
             comboMeter = 0;
             multiplier = 1; 
-            audioSpectrum[0].ChangeSampleObjectColor(Color.red);
+            audioSpectrums[0].ChangeSampleObjectColor(Color.red);
             StopAllCoroutines();
             StartCoroutine(ChangeVolume(.3f,false));
         }
@@ -47,21 +48,21 @@ public class ScoreKeeper : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.5f, true)); 
                 multiplier = 4;
-                audioSpectrum[0].ChangeSampleObjectColor(Color.green);
+                audioSpectrums[0].ChangeSampleObjectColor(Color.green);
             }
             else if(comboMeter > 5)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.45f, true));
                 multiplier = 3;
-                audioSpectrum[0].ChangeSampleObjectColor(Color.magenta);
+                audioSpectrums[0].ChangeSampleObjectColor(Color.magenta);
             }
             else if(comboMeter > 2)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.4f, true));
                 multiplier = 2;
-                audioSpectrum[0].ChangeSampleObjectColor(Color.blue);
+                audioSpectrums[0].ChangeSampleObjectColor(Color.blue);
             }
 
             score += val * multiplier;

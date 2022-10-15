@@ -7,19 +7,27 @@ using UnityEngine.UI;
 
 public class GameUIManager : MonoBehaviour
 {
-    [SerializeField] AudioSource Music;
     [SerializeField] GameObject PauseMenu;
-    [SerializeField] TextMeshProUGUI ScoreText;
-    [SerializeField] TextMeshProUGUI MultiplierText;
     private bool _isGamePause = false;
 
+    [Header("Score UI")]
+    [SerializeField] TextMeshProUGUI ScoreText;
+    [SerializeField] TextMeshProUGUI MultiplierText;
+
+    [Header("Player UI")]
     [SerializeField] Image PlayerHealthBar;
-    ScoreKeeper _scoreKeeper;
+
+
+    private ScoreKeeper _scoreKeeper;
+    private AudioSource _music;
 
     private void Start()
     {
+        CoreGameDataHolder coreGameData = FindObjectOfType<CoreGameDataHolder>();
+        _scoreKeeper = coreGameData.GetScoreKeeper();
+        _music = coreGameData.GetMusic();
+
         PauseMenu.SetActive(false);
-        _scoreKeeper = FindObjectOfType<ScoreKeeper>();
         if(_scoreKeeper != null)
         {
             UpdateScore();
@@ -64,14 +72,14 @@ public class GameUIManager : MonoBehaviour
     }
     private void UnPauseGame()
     {
-        Music.Play();
+        _music.Play();
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
         _isGamePause = false;
     }
     private void PauseGame()
     {
-        Music.Pause();
+        _music.Pause();
         Time.timeScale = 0f;
         PauseMenu.SetActive(true);
         _isGamePause = true;

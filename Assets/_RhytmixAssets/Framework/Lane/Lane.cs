@@ -19,12 +19,11 @@ public class Lane : MonoBehaviour
     [SerializeField] Transform EffectSpawn;
     [SerializeField] Transform HitEffectSpawn;
     [SerializeField] GameObject HitEffect;
-    [SerializeField] GameObject missEffect;
-    [SerializeField] GameObject EarlyEffect;
-    [SerializeField] GameObject LateEffect;
+    [SerializeField] GameObject MissEffect;
+    [SerializeField] GameObject BadHitEffect;
     [SerializeField] GameObject PerfectEffect;
 
-    [Header("AnimationForPlayer")]
+    [Header("Animation For Player")]
     [SerializeField] Animator PlayerAnimator;
     [SerializeField] bool hasMultipleAttackAnimation;
     [SerializeField][Range(1,4)] int attackAnimationCount;
@@ -201,7 +200,7 @@ public class Lane : MonoBehaviour
         double accuracy = AbsValueDouble(audioTime - timeStamp);
         if(accuracy > 0.06f)
         {
-            Instantiate(EarlyEffect, EffectSpawn);
+            Instantiate(BadHitEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
         else if(accuracy < 0.05f)
@@ -211,14 +210,14 @@ public class Lane : MonoBehaviour
         }
         else
         {
-            Instantiate(LateEffect, EffectSpawn);
+            Instantiate(BadHitEffect, EffectSpawn);
             _scoreKeeper.ChangeScore(501);
         }
         Instantiate(HitEffect,HitEffectSpawn);
     }
     private void Miss()
     {
-        Instantiate(missEffect, EffectSpawn);
+        Instantiate(MissEffect, EffectSpawn);
         if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
             HealthComp.TakeDmg(1);

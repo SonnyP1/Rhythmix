@@ -29,6 +29,7 @@ public class Note : MonoBehaviour
 
     //=============================================================private variables
     private LevelAudioManager _levelAudioManager;
+    private AudioSource _music;
     private Vector3 startScale;
     private Vector3 enemyStartPos;
     private bool isHoldingNote = false;
@@ -39,11 +40,12 @@ public class Note : MonoBehaviour
     private double noteDuration;
     private bool hasStartedHolding = false;
 
-
+    //=====================Unity Functions
     void Start()
     {
         _levelAudioManager = FindObjectOfType<LevelAudioManager>();
         timeInstantiated = _levelAudioManager.GetAudioSourceTime();
+        _music = FindObjectOfType<CoreGameDataHolder>().GetMusic();
         endTime = (float)(assignedTime + noteDuration);
 
         if (NoteType == AttackType.Hold)
@@ -54,23 +56,6 @@ public class Note : MonoBehaviour
 
         HideNote();
     }
-
-    private void HideNote()
-    {
-        if (OuterRing != null)
-        {
-            OuterRing.gameObject.SetActive(false);
-            InnerRing.gameObject.SetActive(false);
-            startScale = OuterRing.localScale;
-        }
-
-        foreach (MeshRenderer meshRender in Meshrenderers)
-        {
-            meshRender.enabled = false;
-        }
-    }
-
-    // Update is called once per frame
     void Update()
     {        
         if(NoteType == AttackType.Hold)
@@ -86,6 +71,7 @@ public class Note : MonoBehaviour
         UnHideNote();
     }
 
+    //======================Note Functions
     private void HandleNoteMovement()
     {
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
@@ -104,7 +90,7 @@ public class Note : MonoBehaviour
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
         float t = (float)(timeSinceInstantiated / (_levelAudioManager.GetNoteTime() * 2));
 
-        float timeUntilEnd = _levelAudioManager.audioSource.time / endTime;
+        float timeUntilEnd = _music.time / endTime;
         EnemyModel.localPosition = Vector3.Lerp(enemyStartPos, new Vector3(0, EnemyModel.localPosition.y, transform.localPosition.z), timeUntilEnd);
 
         if (isHoldingNote)
@@ -139,6 +125,8 @@ public class Note : MonoBehaviour
         }
     }
 
+
+    //=====================Visual Functions
     private void UnHideNote()
     {
         foreach (MeshRenderer meshRender in Meshrenderers)
@@ -147,6 +135,20 @@ public class Note : MonoBehaviour
         }
         OuterRing.gameObject.SetActive(true);
         InnerRing.gameObject.SetActive(true);
+    }
+    private void HideNote()
+    {
+        if (OuterRing != null)
+        {
+            OuterRing.gameObject.SetActive(false);
+            InnerRing.gameObject.SetActive(false);
+            startScale = OuterRing.localScale;
+        }
+
+        foreach (MeshRenderer meshRender in Meshrenderers)
+        {
+            meshRender.enabled = false;
+        }
     }
 
 }
