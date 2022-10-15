@@ -29,8 +29,8 @@ public class LevelAudioManager : MonoBehaviour
     //============================Private Variables==================
     private static MidiFile _midiFile;
     private AudioSource _songAudioSource;
+    private ScoreKeeper _scoreKeeper;
     private bool _isSongHalfWayDone = false;
-
 
     //=============================Getters=========================
     public float GetNoteTime()
@@ -62,11 +62,12 @@ public class LevelAudioManager : MonoBehaviour
          return InputDelayInMilliseconds;
     }
 
-
     //=====================Unity Functions=================
     private void Start()
     {
-        _songAudioSource = GetComponent<AudioSource>();
+        CoreGameDataHolder data = FindObjectOfType<CoreGameDataHolder>();
+        _songAudioSource = data.GetMusic();
+        _scoreKeeper = data.GetScoreKeeper();
         StartCoroutine(WaitToStartGame());
     }
     private void Update()
@@ -84,6 +85,7 @@ public class LevelAudioManager : MonoBehaviour
         var notes = _midiFile.GetNotes();
         var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
         notes.CopyTo(array, 0);
+        _scoreKeeper.SetNoteCount(array.Length);
 
         foreach (var lane in Lanes) lane.SetTimeStamps(array);
 

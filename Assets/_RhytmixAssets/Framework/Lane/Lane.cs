@@ -61,6 +61,11 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
+        if(HealthComp.GetHealth() <= 0 )
+        {
+            return;
+        }
+
         PlayAttackAnimation(attackType);
         if(notes.Count == 0)
         {
@@ -207,17 +212,17 @@ public class Lane : MonoBehaviour
         if(accuracy > 0.06f)
         {
             Instantiate(BadHitEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(501);
+            _scoreKeeper.ChangeScore(551);
         }
         else if(accuracy < 0.05f)
         {
             Instantiate(PerfectEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(1010);
+            _scoreKeeper.ChangeScore(1501);
         }
         else
         {
             Instantiate(BadHitEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(501);
+            _scoreKeeper.ChangeScore(551);
         }
         Instantiate(HitEffect,HitEffectSpawn);
     }

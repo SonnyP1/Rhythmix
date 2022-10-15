@@ -10,15 +10,27 @@ public class ScoreKeeper : MonoBehaviour
     int score = 0;
     int comboMeter = 0;
     int multiplier = 1;
+    float accuracy = 0;
+    float notesHit = 0;
+    float allNotes = 0;
+
 
     public void Start()
     {
         _levelMusic = FindObjectOfType<CoreGameDataHolder>().GetMusic();
         _UI = FindObjectOfType<GameUIManager>();
     }
+    public void SetNoteCount(float val)
+    {
+        allNotes = val;
+    }
     public int GetComboMeter()
     {
         return comboMeter;
+    }
+    public float GetAccuracy()
+    {
+        return accuracy;
     }
     public int GetMultiplier()
     {
@@ -31,6 +43,17 @@ public class ScoreKeeper : MonoBehaviour
 
     public void ChangeScore(int val)
     {
+        if(val > 1000)
+        {
+            notesHit++;
+        }
+        else if(val > 500)
+        {
+            notesHit += 0.5f;
+        }
+
+        accuracy = notesHit / allNotes;
+
         if(val == 0)
         {
             //combo drop
@@ -71,6 +94,7 @@ public class ScoreKeeper : MonoBehaviour
         }
         _UI.UpdateMultiplier();
         _UI.UpdateScore();
+        _UI.UpdateAccuracy();
     }
 
     IEnumerator ChangeVolume(float val , bool increase)

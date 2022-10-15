@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,4 +16,16 @@ public class CoreGameDataHolder : MonoBehaviour
         return _scoreKeeper;
     }
     [SerializeField] ScoreKeeper _scoreKeeper;
+
+    public GameUIManager GetGameUIManager()
+    {
+        return _UIGameManager;
+    }
+    [SerializeField] GameUIManager _UIGameManager;
+
+    public string GetSongTitle()
+    {
+        return _songTitle;
+    }
+    [SerializeField] string _songTitle;
 }

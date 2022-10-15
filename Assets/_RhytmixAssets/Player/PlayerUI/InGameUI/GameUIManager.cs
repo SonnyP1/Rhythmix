@@ -7,12 +7,18 @@ using UnityEngine.UI;
 
 public class GameUIManager : MonoBehaviour
 {
+    [SerializeField] GameObject InGameUI;
     [SerializeField] GameObject PauseMenu;
+    [SerializeField] GameObject GameOverMenu;
+    [SerializeField] GameObject WinMenu;
     private bool _isGamePause = false;
 
     [Header("Score UI")]
-    [SerializeField] TextMeshProUGUI ScoreText;
+    [SerializeField] TextMeshProUGUI[] ScoreText;
+    [SerializeField] TextMeshProUGUI[] AccuracyText;
     [SerializeField] TextMeshProUGUI MultiplierText;
+    [SerializeField] Slider SongSlider;
+    [SerializeField] TextMeshProUGUI SongTitle;
 
     [Header("Player UI")]
     [SerializeField] Image PlayerHealthBar;
@@ -20,24 +26,66 @@ public class GameUIManager : MonoBehaviour
 
     private ScoreKeeper _scoreKeeper;
     private AudioSource _music;
-
     private void Start()
     {
+        Time.timeScale = 1;
         CoreGameDataHolder coreGameData = FindObjectOfType<CoreGameDataHolder>();
+
+
         _scoreKeeper = coreGameData.GetScoreKeeper();
         _music = coreGameData.GetMusic();
+        SongTitle.text = coreGameData.GetSongTitle();
 
+        WinMenu.SetActive(false);
+        GameOverMenu.SetActive(false);
         PauseMenu.SetActive(false);
+
         if(_scoreKeeper != null)
         {
             UpdateScore();
             UpdateMultiplier();
+            UpdateAccuracy();
         }
     }
 
+    private void Update()
+    {
+        SongSlider.value = _music.time*4 / _music.clip.length;
+
+        if(SongSlider.value >= 1)
+        {
+            InGameUI.SetActive(false);
+            WinMenu.SetActive(true);
+            StopMusic();
+            Time.timeScale = 0;
+        }
+    }
+
+    public void Dead()
+    {
+        InGameUI.SetActive(false);
+        GameOverMenu.SetActive(true);
+
+        StopMusic();
+    }
+
+    private void StopMusic()
+    {
+        _music.Pause();
+    }
+    public void UpdateAccuracy()
+    {
+        foreach(TextMeshProUGUI textPro in AccuracyText)
+        {
+            textPro.text =  ((_scoreKeeper.GetAccuracy()*100)).ToString("F0") + "%";
+        }
+    }
     public void UpdateScore()
     {
-        ScoreText.text = _scoreKeeper.GetScore().ToString();
+        foreach (TextMeshProUGUI textPro in ScoreText)
+        {
+            textPro.text = _scoreKeeper.GetScore().ToString();
+        }
     }
 
     public void UpdateMultiplier()
@@ -55,8 +103,11 @@ public class GameUIManager : MonoBehaviour
 
     public void ReturnToMainMenuBtn()
     {
-        UnPauseGame();
         SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
+    }
+    public void TryAgainBtn()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
     public void PauseBtnClicked()
     {
@@ -79,7 +130,7 @@ public class GameUIManager : MonoBehaviour
     }
     private void PauseGame()
     {
-        _music.Pause();
+        StopMusic();
         Time.timeScale = 0f;
         PauseMenu.SetActive(true);
         _isGamePause = true;
