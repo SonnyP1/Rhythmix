@@ -321,8 +321,8 @@ MonoBehaviour:
   NoteType: 4
   EnemyModel: {fileID: 860371195452780196}
   Meshrenderers:
-  - {fileID: 2696844361459641491}
-  - {fileID: 1998344617819313611}
+  - {fileID: 1194064334893088542}
+  - {fileID: 52767382694835230}
   InnerRing: {fileID: 3452093878092636477}
   OuterRing: {fileID: 3349456886106849470}
 --- !u!120 &9111331475615272618
@@ -567,13 +567,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
+--- !u!1 &52767382694835230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
+  m_PrefabInstance: {fileID: 899064568998627663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &860371195452780196 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
-  m_PrefabInstance: {fileID: 899064568998627663}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &1998344617819313611 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 11fc51cb8730c354890d6d5dfbc1f301, type: 3}
   m_PrefabInstance: {fileID: 899064568998627663}
   m_PrefabAsset: {fileID: 0}

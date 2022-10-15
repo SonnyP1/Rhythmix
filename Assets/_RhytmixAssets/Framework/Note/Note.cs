@@ -11,12 +11,14 @@ public class Note : MonoBehaviour
 
     [Header("Models")]
     [SerializeField] Transform EnemyModel;
-    [SerializeField] MeshRenderer[] Meshrenderers;
+    [SerializeField] GameObject[] Meshrenderers;
 
 
     [Header("Hit Time Indicator")]
     [SerializeField] RectTransform InnerRing;
     [SerializeField] RectTransform OuterRing;
+
+
 
     //=============================================================Getters & Setters
     public bool GetHasStartedHolding(){ return hasStartedHolding; }
@@ -26,6 +28,9 @@ public class Note : MonoBehaviour
     public void SetAssignedTime(float val) { assignedTime = val; }
     internal void SetIsHoldingNote(bool val){ isHoldingNote = val; hasStartedHolding = true;}
 
+
+    //=============================================================public variables
+    public bool bIsAttacking = false;
 
     //=============================================================private variables
     private LevelAudioManager _levelAudioManager;
@@ -84,7 +89,6 @@ public class Note : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void HandleHoldingNoteMovement()
     {
         double timeSinceInstantiated = _levelAudioManager.GetAudioSourceTime() - timeInstantiated;
@@ -96,7 +100,7 @@ public class Note : MonoBehaviour
         if (isHoldingNote)
         {
             transform.localPosition = new Vector3(transform.localPosition.x,transform.localPosition.y,4);
-            Meshrenderers[0].enabled = false;
+            Meshrenderers[0].SetActive(false);
             if (timeUntilEnd > 1)
             {
                 Destroy(gameObject);
@@ -115,7 +119,6 @@ public class Note : MonoBehaviour
         GetComponent<LineRenderer>().SetPosition(0, new Vector3(transform.position.x, 0.5f, transform.position.z));
         GetComponent<LineRenderer>().SetPosition(1, new Vector3(EnemyModel.position.x, 0.6f, EnemyModel.position.z));
     }
-
     private void OuterRingLerping()
     {
         if (OuterRing != null)
@@ -125,13 +128,12 @@ public class Note : MonoBehaviour
         }
     }
 
-
     //=====================Visual Functions
     private void UnHideNote()
     {
-        foreach (MeshRenderer meshRender in Meshrenderers)
+        foreach (GameObject meshRender in Meshrenderers)
         {
-            meshRender.enabled = true;
+            meshRender.SetActive(true);
         }
         OuterRing.gameObject.SetActive(true);
         InnerRing.gameObject.SetActive(true);
@@ -145,10 +147,19 @@ public class Note : MonoBehaviour
             startScale = OuterRing.localScale;
         }
 
-        foreach (MeshRenderer meshRender in Meshrenderers)
+        foreach (GameObject meshRender in Meshrenderers)
         {
-            meshRender.enabled = false;
+            meshRender.SetActive(false);
         }
+    }
+
+    //======================Animation
+    public void PlayAttackAnimation()
+    {
+        Animator animator = EnemyModel.GetComponent<Animator>();
+        
+        if(animator != null)
+            animator.SetTrigger("Attack");
     }
 
 }

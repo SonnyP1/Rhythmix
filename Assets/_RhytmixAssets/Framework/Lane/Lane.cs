@@ -163,11 +163,17 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
+            if (timeStamp <= audioTime + 0.4f)
+            {
+                notes[inputIndex].PlayAttackAnimation();
+            }
+
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
                 inputIndex++;
             }
+
         }
 
     }
@@ -226,6 +232,7 @@ public class Lane : MonoBehaviour
                 PlayerAnimator.SetTrigger("HitTrigger");
             }
         }
+
         _scoreKeeper.ChangeScore(0);
     }
     private static double AbsValueDouble(double number)
