@@ -178,5 +178,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3388429800293128032, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: TrackSizeOffsetZ
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388429800293128032, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: TrackToSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 3220473469058107055, guid: b4a0bb2e3576e2f4ba55a8ca5d1da6d1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
