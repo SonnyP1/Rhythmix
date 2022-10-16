@@ -50,7 +50,7 @@ public class GameUIManager : MonoBehaviour
 
     private void Update()
     {
-        SongSlider.value = _music.time*4 / _music.clip.length;
+        SongSlider.value = _music.time/ _music.clip.length;
 
         if(SongSlider.value >= 1)
         {
