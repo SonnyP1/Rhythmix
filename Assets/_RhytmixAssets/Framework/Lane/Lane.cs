@@ -19,12 +19,11 @@ public class Lane : MonoBehaviour
     [SerializeField] Transform EffectSpawn;
     [SerializeField] Transform HitEffectSpawn;
     [SerializeField] GameObject HitEffect;
-    [SerializeField] GameObject missEffect;
-    [SerializeField] GameObject EarlyEffect;
-    [SerializeField] GameObject LateEffect;
+    [SerializeField] GameObject MissEffect;
+    [SerializeField] GameObject BadHitEffect;
     [SerializeField] GameObject PerfectEffect;
 
-    [Header("AnimationForPlayer")]
+    [Header("Animation For Player")]
     [SerializeField] Animator PlayerAnimator;
     [SerializeField] bool hasMultipleAttackAnimation;
     [SerializeField][Range(1,4)] int attackAnimationCount;
@@ -62,6 +61,11 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
+        if(HealthComp.GetHealth() <= 0 )
+        {
+            return;
+        }
+
         PlayAttackAnimation(attackType);
         if(notes.Count == 0)
         {
@@ -164,11 +168,17 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
+            if (timeStamp <= audioTime + 0.4f)
+            {
+                notes[inputIndex].PlayAttackAnimation();
+            }
+
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
                 inputIndex++;
             }
+
         }
 
     }
@@ -201,24 +211,24 @@ public class Lane : MonoBehaviour
         double accuracy = AbsValueDouble(audioTime - timeStamp);
         if(accuracy > 0.06f)
         {
-            Instantiate(EarlyEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(501);
+            Instantiate(BadHitEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(551);
         }
         else if(accuracy < 0.05f)
         {
             Instantiate(PerfectEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(1010);
+            _scoreKeeper.ChangeScore(1501);
         }
         else
         {
-            Instantiate(LateEffect, EffectSpawn);
-            _scoreKeeper.ChangeScore(501);
+            Instantiate(BadHitEffect, EffectSpawn);
+            _scoreKeeper.ChangeScore(551);
         }
         Instantiate(HitEffect,HitEffectSpawn);
     }
     private void Miss()
     {
-        Instantiate(missEffect, EffectSpawn);
+        Instantiate(MissEffect, EffectSpawn);
         if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
             HealthComp.TakeDmg(1);
@@ -227,6 +237,7 @@ public class Lane : MonoBehaviour
                 PlayerAnimator.SetTrigger("HitTrigger");
             }
         }
+
         _scoreKeeper.ChangeScore(0);
     }
     private static double AbsValueDouble(double number)

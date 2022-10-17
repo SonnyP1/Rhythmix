@@ -57,4 +57,9 @@ public class MainMenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("TestingScene", LoadSceneMode.Single);
     }
+
+    public void FeedbackBtnClick()
+    {
+        Application.OpenURL("https://forms.gle/jY27T1Rf6UGFVZw86");
+    }
 }

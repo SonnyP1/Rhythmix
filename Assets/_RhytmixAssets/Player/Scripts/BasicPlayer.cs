@@ -10,11 +10,12 @@ public class BasicPlayer : MonoBehaviour
     HeathComponent healthComp;
     bool isDead = false;
     [SerializeField] Animator[] playerAnimators;
-
+    private GameUIManager _UI;
     private void Start()
     {
+        CoreGameDataHolder data = FindObjectOfType<CoreGameDataHolder>();
+        _UI = data.GetGameUIManager();
         characterController = GetComponent<CharacterController>();
-
         healthComp = GetComponent<HeathComponent>();
         healthComp.onDeath += Death;
     }
@@ -33,6 +34,7 @@ public class BasicPlayer : MonoBehaviour
                     //animator.SetLayerWeight(1,0);
                 }
             }
+            _UI.Dead();
         }
     }
 
