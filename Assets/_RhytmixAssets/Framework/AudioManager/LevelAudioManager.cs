@@ -7,6 +7,7 @@ using Melanchall.DryWetMidi.Interaction;
 using System.IO;
 using System;
 using UnityEngine.Networking;
+using UnityEngine.Video;
 
 public class LevelAudioManager : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class LevelAudioManager : MonoBehaviour
     [SerializeField] float SongDelayInSecounds;
     [SerializeField] string FileLoc;
     [SerializeField] Lane[] Lanes;
+    [SerializeField] VideoPlayer VideoPlayer;
 
 
 
@@ -138,7 +140,8 @@ public class LevelAudioManager : MonoBehaviour
     }
     IEnumerator WaitToStartGame()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds((float)VideoPlayer.length + 0.5f);
+        VideoPlayer.gameObject.SetActive(false);
         string readFile = LoadStreamingAssets(FileLoc);
         if (readFile != null)
         {
