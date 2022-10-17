@@ -26,7 +26,10 @@ public class MainMenuManager : MonoBehaviour
         MainMenuCanvas.SetActive(false);
         CyberpunkSongSelectionCanvas.SetActive(true);
     }
-
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
     public void BackBtnClick()
     {
         FantasySongSelectionCanvas.SetActive(false);
