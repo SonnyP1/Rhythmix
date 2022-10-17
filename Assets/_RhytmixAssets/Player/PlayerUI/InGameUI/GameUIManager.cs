@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class GameUIManager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class GameUIManager : MonoBehaviour
 
     [Header("Player UI")]
     [SerializeField] Image PlayerHealthBar;
-
+    [SerializeField] VideoPlayer _videoPlayer;
 
     private ScoreKeeper _scoreKeeper;
     private AudioSource _music;
@@ -104,6 +105,12 @@ public class GameUIManager : MonoBehaviour
     public void ReturnToMainMenuBtn()
     {
         SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
+    }
+
+    public void SkipCutScene()
+    {
+        _videoPlayer.Stop();
+        _music.GetComponent<LevelAudioManager>().Skip();
     }
     public void TryAgainBtn()
     {

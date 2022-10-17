@@ -70,7 +70,12 @@ public class LevelAudioManager : MonoBehaviour
         CoreGameDataHolder data = FindObjectOfType<CoreGameDataHolder>();
         _songAudioSource = data.GetMusic();
         _scoreKeeper = data.GetScoreKeeper();
-        StartCoroutine(WaitToStartGame());
+        StartCoroutine(WaitToStartGame((float)VideoPlayer.length));
+    }
+    public void Skip()
+    {
+        StopAllCoroutines();
+        StartCoroutine(WaitToStartGame(0));
     }
     private void Update()
     {
@@ -138,9 +143,9 @@ public class LevelAudioManager : MonoBehaviour
             }
         }
     }
-    IEnumerator WaitToStartGame()
+    IEnumerator WaitToStartGame(float time)
     {
-        yield return new WaitForSeconds((float)VideoPlayer.length + 0.5f);
+        yield return new WaitForSeconds(time + 0.5f);
         VideoPlayer.gameObject.SetActive(false);
         string readFile = LoadStreamingAssets(FileLoc);
         if (readFile != null)
@@ -148,7 +153,6 @@ public class LevelAudioManager : MonoBehaviour
             _midiFile = MidiFile.Read(readFile);
             GetDataFromMidi();
         }
-
     }
 
 }

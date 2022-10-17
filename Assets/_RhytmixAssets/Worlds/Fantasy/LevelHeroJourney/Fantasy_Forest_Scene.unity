@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: notePrefab.Array.data[0]
       value: 
       objectReference: {fileID: 8141835081616531062, guid: 338eea1bb070b1c408eac051f97f9c98, type: 3}
+    - target: {fileID: 1799643711117315600, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.7540283
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799643711117315600, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.215271
+      objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321788, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Name
       value: CoreGame
@@ -202,6 +210,10 @@ PrefabInstance:
       propertyPath: TrackToSpawn.Array.data[0]
       value: 
       objectReference: {fileID: 3220473469058107055, guid: b4a0bb2e3576e2f4ba55a8ca5d1da6d1, type: 3}
+    - target: {fileID: 3388429800438681762, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: FileLoc
+      value: Rythmix_CyberPunk_05.mid
+      objectReference: {fileID: 0}
     - target: {fileID: 7153033649458390378, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
