@@ -319,6 +319,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321788, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Name
       value: CoreGame
@@ -365,6 +373,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321789, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388429800438681762, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: FileLoc
+      value: Rythmix_CyberPunk_05.mid
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153033649458390378, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153033649458390378, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7153033649458390378, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
