@@ -113,10 +113,10 @@ public class PlayerInput : MonoBehaviour
             }
         }
         //holding mechanics
-        if(Input.GetTouch(index).phase == TouchPhase.Moved)
+        if(Input.GetTouch(index).phase == TouchPhase.Moved || Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
-            startTime[index] += Time.deltaTime;
-            if (startTime[index] > .01f && !isHolding[index])
+
+            if (!isHolding[index])
             {
                 isHolding[index] = true;
                 Lanes[index].HitNote(AttackType.Hold);
