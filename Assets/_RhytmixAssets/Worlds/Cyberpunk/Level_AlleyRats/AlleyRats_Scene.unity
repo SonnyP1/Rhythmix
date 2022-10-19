@@ -319,6 +319,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
     - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -326,6 +330,14 @@ PrefabInstance:
     - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
+    - target: {fileID: 759823569220427909, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Name
+      value: Glitcher
       objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321788, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Name
@@ -387,5 +399,9 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
