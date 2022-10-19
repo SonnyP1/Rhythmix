@@ -140,15 +140,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8bc757bd70d7b4b9129bfabab22e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NoteTime: 1
+  NoteSpawnZ: 35
+  NoteTapZ: 3.5
+  InputDelayInMilliseconds: 0
+  MarginOfError: 0.1
+  SongDelayInSecounds: 0
+  FileLoc: Rythmix_CyberPunk_05.mid
   Lanes:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  SongDelayInSecounds: 0
-  audioSource: {fileID: 3540333748101012584}
-  MarginOfError: 0.1
-  InputDelayInMilliseconds: 0
-  FileLoc: Rythmix_CyberPunk_01.mid
-  NoteTime: 1
-  NoteSpawnZ: 35
-  NoteTapZ: 3
+  VideoPlayer: {fileID: 0}

@@ -8,17 +8,20 @@ public class MissEffectScript : MonoBehaviour
     [SerializeField] float FadeTime;
     [SerializeField] Text text;
 
+    public Text GetText()
+    {
+        return text;
+    }
     private void Start()
     {
         StartCoroutine(FadeTimer());
+        Debug.Log("Started");
     }
-    void Update()
+    public virtual void Update()
     {
-        float newYPos = transform.position.y + (Time.deltaTime * 1);
-        Vector3 newPos = new Vector3(transform.position.x,newYPos,transform.position.z);
-        transform.SetPositionAndRotation(newPos,transform.rotation);
+        transform.position += transform.up * 1 * Time.deltaTime;
 
-        if (text.color.a <= 0)
+        if (GetText().color.a <= 0)
         {
             Destroy(gameObject);
         }
@@ -35,7 +38,7 @@ public class MissEffectScript : MonoBehaviour
             float percent = Timer / FadeTime;
             Color newColor = text.color;
             newColor.a = 1f-percent;
-            text.color = newColor;
+            GetText().color = newColor;
             yield return new WaitForEndOfFrame();
         }
     }

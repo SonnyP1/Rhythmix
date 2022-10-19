@@ -68,7 +68,7 @@ public class PlayerInput : MonoBehaviour
         else if (Input.GetKey(KeysCodes[index]))
         {
             startTime[index] += Time.deltaTime;
-            if (startTime[index] > .09 && !isHolding[index])
+            if (startTime[index] > .02 && !isHolding[index])
             {
                 isHolding[index] = true;
                 Lanes[index].HitNote(AttackType.Hold);
@@ -116,7 +116,7 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetTouch(index).phase == TouchPhase.Moved)
         {
             startTime[index] += Time.deltaTime;
-            if (startTime[index] > .09 && !isHolding[index])
+            if (startTime[index] > .02 && !isHolding[index])
             {
                 isHolding[index] = true;
                 Lanes[index].HitNote(AttackType.Hold);

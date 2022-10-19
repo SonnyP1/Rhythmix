@@ -10,7 +10,16 @@ public class BasicPlayer : MonoBehaviour
     HeathComponent healthComp;
     bool isDead = false;
     [SerializeField] Animator[] playerAnimators;
+    [SerializeField] GameObject[] ClickHereEffect;
     private GameUIManager _UI;
+
+    public void ActivateClickEffect()
+    {
+        foreach(var obj in ClickHereEffect)
+        {
+            obj.SetActive(true);
+        }
+    }
     private void Start()
     {
         CoreGameDataHolder data = FindObjectOfType<CoreGameDataHolder>();

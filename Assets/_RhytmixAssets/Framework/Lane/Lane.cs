@@ -61,16 +61,13 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        if(HealthComp.GetHealth() <= 0 )
+
+        if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
         {
             return;
         }
 
         PlayAttackAnimation(attackType);
-        if(notes.Count == 0)
-        {
-            return;
-        }
 
         if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].GetHasStartedHolding())
         {

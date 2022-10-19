@@ -28,4 +28,10 @@ public class CoreGameDataHolder : MonoBehaviour
         return _songTitle;
     }
     [SerializeField] string _songTitle;
+
+    public GameObject GetPlayerGroup()
+    {
+        return _playerGroup;
+    }
+    [SerializeField] GameObject _playerGroup;
 }

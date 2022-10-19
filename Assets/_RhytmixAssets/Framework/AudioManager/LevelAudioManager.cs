@@ -33,6 +33,7 @@ public class LevelAudioManager : MonoBehaviour
     private AudioSource _songAudioSource;
     private ScoreKeeper _scoreKeeper;
     private bool _isSongHalfWayDone = false;
+    private GameObject _playerGroup;
 
     //=============================Getters=========================
     public float GetNoteTime()
@@ -70,6 +71,7 @@ public class LevelAudioManager : MonoBehaviour
         CoreGameDataHolder data = FindObjectOfType<CoreGameDataHolder>();
         _songAudioSource = data.GetMusic();
         _scoreKeeper = data.GetScoreKeeper();
+        _playerGroup = data.GetPlayerGroup();
         StartCoroutine(WaitToStartGame((float)VideoPlayer.length));
     }
     public void Skip()
@@ -146,6 +148,7 @@ public class LevelAudioManager : MonoBehaviour
     IEnumerator WaitToStartGame(float time)
     {
         yield return new WaitForSeconds(time + 0.5f);
+        _playerGroup.GetComponent<BasicPlayer>().ActivateClickEffect();
         VideoPlayer.gameObject.SetActive(false);
         string readFile = LoadStreamingAssets(FileLoc);
         if (readFile != null)
