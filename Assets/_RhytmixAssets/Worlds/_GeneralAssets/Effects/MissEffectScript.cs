@@ -15,7 +15,6 @@ public class MissEffectScript : MonoBehaviour
     private void Start()
     {
         StartCoroutine(FadeTimer());
-        Debug.Log("Started");
     }
     public virtual void Update()
     {

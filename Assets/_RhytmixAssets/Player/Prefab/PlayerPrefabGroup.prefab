@@ -841,6 +841,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8741831151369508801}
     m_Modifications:
+    - target: {fileID: 1327748933954802193, guid: 41025f7e74391604fa70a783e6a3d586, type: 3}
+      propertyPath: m_Size.x
+      value: 6.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327748933954802193, guid: 41025f7e74391604fa70a783e6a3d586, type: 3}
+      propertyPath: m_Center.x
+      value: -2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2303577246720996904, guid: 41025f7e74391604fa70a783e6a3d586, type: 3}
       propertyPath: m_Avatar
       value: 

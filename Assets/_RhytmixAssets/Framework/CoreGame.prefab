@@ -606,9 +606,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: NoteTapZ
+      value: 3.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: VideoPlayer
       value: 
       objectReference: {fileID: 4885437168994377353}
+    - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
+      propertyPath: MarginOfError
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3540333748101012586, guid: 009af17fa34df3c41a0f3db51f539475, type: 3}
       propertyPath: Lanes.Array.data[0]
       value: 
@@ -947,6 +955,14 @@ PrefabInstance:
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 3388429800438681762}
+    - target: {fileID: 2667602313695375799, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
+    - target: {fileID: 2705943684781461904, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Name
+      value: Glitcher
+      objectReference: {fileID: 0}
     - target: {fileID: 3008988699617874572, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -955,6 +971,18 @@ PrefabInstance:
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 3388429800438681762}
+    - target: {fileID: 3065741154392951144, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
+    - target: {fileID: 3189362608927234949, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Size.x
+      value: 2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189362608927234949, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4214735926795313121, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Name
       value: PlayerPrefabGroup
@@ -971,6 +999,10 @@ PrefabInstance:
       propertyPath: _levelAudioManager
       value: 
       objectReference: {fileID: 3388429800438681762}
+    - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: notePrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8141835081616531062, guid: 74bec8b183752ec449d145dde0ce82b0, type: 3}
     - target: {fileID: 8329692330511104156, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: m_Layer
       value: 8
