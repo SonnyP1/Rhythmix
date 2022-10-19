@@ -38,7 +38,6 @@ public class PlayerInput : MonoBehaviour
         {
             PhoneInput();
             KeyboardInput();
-            MouseClick(0);
         }
     }
 
@@ -86,49 +85,13 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    private void MouseClick(int index)
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Vector3 touchPosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
-            Vector3 touchPosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
-
-            Vector3 touchPosFarPos = Camera.main.ScreenToWorldPoint(touchPosFar);
-            Vector3 touchPosClosePos = Camera.main.ScreenToWorldPoint(touchPosClose);
-
-            RaycastHit hit;
-            Debug.DrawRay(touchPosClosePos, touchPosFarPos - touchPosClosePos,Color.green,100f);
-            if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
-            {
-                Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
-                Lanes[index].HitNote(AttackType.Tap);
-                Debug.Log(Lanes[index].name);
-                Debug.Log("SUCCESS HIT PLAYER");
-            }
-        }
-        else if(Input.GetMouseButton(0))
-        {
-            if (!isHolding[index])
-            {
-                isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
-        }
-        else if(Input.GetMouseButtonUp(0))
-        {
-
-            if (isHolding[index])
-            {
-                isHolding[index] = false;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
-        }
-    }
     private void PhoneInput()
     {
         if (Input.touchCount > 0)
         {
-            Tap(Input.touchCount - 1);
+            Tap(0);
+            Tap(1);
+            Tap(2);
         }
     }
     private void Tap(int index)
@@ -152,7 +115,7 @@ public class PlayerInput : MonoBehaviour
             }
         }
         //holding mechanics
-        if(Input.GetTouch(index).phase == TouchPhase.Moved || Input.GetTouch(index).phase == TouchPhase.Stationary)
+        if(Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
             if (!isHolding[index])
             {
