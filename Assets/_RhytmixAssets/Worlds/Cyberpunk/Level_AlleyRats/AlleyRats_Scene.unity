@@ -330,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 735f438c08dd7834f900d76888e39ac1, type: 3}
+      objectReference: {fileID: 9000000, guid: 76383ed7233fd5e4b81ba32a31c167e0, type: 3}
     - target: {fileID: 3388429799004321788, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Name
       value: CoreGame
