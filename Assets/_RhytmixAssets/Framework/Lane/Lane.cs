@@ -139,7 +139,7 @@ public class Lane : MonoBehaviour
             }
             else if(attackType == AttackType.SwipeUp)
             {
-                PlayerAnimator.SetLayerWeight(2,1);
+                PlayerAnimator.SetTrigger("JumpAttack");
             }
         }
     }
