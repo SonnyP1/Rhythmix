@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] Text debugText;
 
     //private variables
-    private Vector3 start;
+    private Vector3[] start;
     private float[] startTime = { 0,0,0 };
     private bool[] isHolding = { false ,false,false};
 
@@ -56,6 +56,12 @@ public class PlayerInput : MonoBehaviour
         InputKey(0);
         InputKey(1);
         InputKey(2);
+
+        //debuging
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Lanes[0].HitNote(AttackType.SwipeUp);
+        }
     }
     private void InputKey(int index)
     {
@@ -99,7 +105,7 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetTouch(index).phase == TouchPhase.Began)
         {
             Debug.Log("Begin Touch");
-            start = Input.GetTouch(index).position; 
+            start[index] = Input.GetTouch(index).position;
             Vector3 touchPosFar = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.farClipPlane);
             Vector3 touchPosClose = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.nearClipPlane);
 
@@ -136,9 +142,13 @@ public class PlayerInput : MonoBehaviour
                 isHolding[index] = false;
                 Lanes[index].HitNote(AttackType.Hold);
             }
-            else if (Mathf.Abs(end.x - start.x) > 30)
+            else if(Mathf.Abs(end.y - start[index].y) > 60)
             {
-                if (end.x > start.x)
+                Lanes[index].HitNote(AttackType.SwipeUp);
+            }
+            else if (Mathf.Abs(end.x - start[index].x) > 30)
+            {
+                if (end.x > start[index].x)
                 {
                     Lanes[index].HitNote(AttackType.SwipeRight);
                 }
