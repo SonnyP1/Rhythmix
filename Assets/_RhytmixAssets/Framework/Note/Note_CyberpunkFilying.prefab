@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7fdd22ad257d945b1d17a58c4af890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteType: 0
+  NoteType: 3
   EnemyModel: {fileID: 4648058683003016919}
   Meshrenderers:
   - {fileID: 8225039282946923724}
