@@ -38,6 +38,7 @@ public class PlayerInput : MonoBehaviour
         {
             PhoneInput();
             KeyboardInput();
+            Click();
         }
     }
 
@@ -169,4 +170,25 @@ public class PlayerInput : MonoBehaviour
     }
 
 
+
+
+    private void Click()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Begin Click");
+            Vector3 touchPosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
+            Vector3 touchPosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+
+            Vector3 touchPosFarPos = Camera.main.ScreenToWorldPoint(touchPosFar);
+            Vector3 touchPosClosePos = Camera.main.ScreenToWorldPoint(touchPosClose);
+
+            RaycastHit hit;
+            Debug.DrawRay(touchPosClosePos, touchPosFarPos - touchPosClosePos,Color.red,10f);
+            if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
+            {
+                Debug.Log(hit.collider.gameObject.name);
+            }
+        }
+    }
 }
