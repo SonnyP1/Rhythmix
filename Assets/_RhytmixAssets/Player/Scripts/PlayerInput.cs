@@ -80,15 +80,9 @@ public class PlayerInput : MonoBehaviour
             startTime[index] = 0;
             isHolding[index] = false;
             Lanes[index].HitNote(AttackType.Tap);
-        }
-        else if (Input.GetKey(KeysCodes[index]))
-        {
-            startTime[index] += Time.deltaTime;
-            if (startTime[index] > .1f && !isHolding[index])
-            {
-                isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
+
+            isHolding[index] = true;
+            Lanes[index].HitNote(AttackType.Hold);
         }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
@@ -124,20 +118,16 @@ public class PlayerInput : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
-                print(hit.collider.gameObject.name);
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
                 Lanes[index].HitNote(AttackType.Tap);
-            }
-        }
-        //holding mechanics
-        if(Input.GetTouch(index).phase == TouchPhase.Stationary)
-        {
-            if (!isHolding[index])
-            {
-                Debug.Log("Starting Holding");
-                isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-                Debug.Log(Lanes[index].name);
+
+                if (!isHolding[index])
+                {
+                    Debug.Log("Starting Holding");
+                    isHolding[index] = true;
+                    Lanes[index].HitNote(AttackType.Hold);
+                    Debug.Log(Lanes[index].name);
+                }
             }
         }
 
