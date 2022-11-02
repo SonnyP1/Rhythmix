@@ -6,7 +6,17 @@ ModelImporter:
   - first:
       74: 5522812681064789136
     second: CyrusSkeleton
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StingrayPBS1
+    second: {fileID: 2100000, guid: bf8eb7451d8be8548882d4cc386b9f2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StingrayPBS2
+    second: {fileID: 2100000, guid: 53c24154987c54148bcb6926f043c1d6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -9,6 +9,7 @@ public class Lane : MonoBehaviour
 {
     [Header("Midi Files")]
     [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
+    [SerializeField] Melanchall.DryWetMidi.MusicTheory.NoteName noteRestrictionSwipeUp;
     [SerializeField] GameObject[] notePrefab;
     [SerializeField] LevelAudioManager _levelAudioManager;
 
@@ -34,6 +35,7 @@ public class Lane : MonoBehaviour
     private HeathComponent HealthComp;
     private ScoreKeeper _scoreKeeper;
     private List<Note> notes = new List<Note>();
+    private List<Melanchall.DryWetMidi.MusicTheory.NoteName> notesRestriction = new List<Melanchall.DryWetMidi.MusicTheory.NoteName>();
     private List<double> timeStamps = new List<double>();
     private List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
     private AudioSource _hitSoundAudioSource;
@@ -64,7 +66,8 @@ public class Lane : MonoBehaviour
 
         if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
         {
-            return;
+            //check why this exist
+            //return;
         }
 
         PlayAttackAnimation(attackType);
@@ -147,11 +150,12 @@ public class Lane : MonoBehaviour
     {
         foreach (var note in array)
         {
-            if (note.NoteName == noteRestriction)
+            if (note.NoteName == noteRestriction || note.NoteName == noteRestrictionSwipeUp)
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _levelAudioManager.GetMidiFile().GetTempoMap());
                 timeStamps.Add( + ((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f));
                 melanchallMidiNotes.Add(note);
+                notesRestriction.Add(note.NoteName);
             }
         }
     }
@@ -187,7 +191,11 @@ public class Lane : MonoBehaviour
             {
                 GameObject noteObject = null;
                 var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
-                if (metricTimeEnd.Seconds > 0)
+                if (notesRestriction[spawnIndex] == noteRestrictionSwipeUp)
+                {
+                    noteObject = Instantiate(notePrefab[2], transform);
+                }
+                else if (metricTimeEnd.Seconds > 0)
                 {
                     noteObject = Instantiate(notePrefab[1], transform);
                     noteObject.GetComponent<Note>().SetNoteDuration(((double)metricTimeEnd.Minutes * 60f + metricTimeEnd.Seconds + (double)metricTimeEnd.Milliseconds / 1000f));

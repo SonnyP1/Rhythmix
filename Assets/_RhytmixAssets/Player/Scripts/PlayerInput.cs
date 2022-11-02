@@ -62,6 +62,14 @@ public class PlayerInput : MonoBehaviour
         {
             Lanes[0].HitNote(AttackType.SwipeUp);
         }
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            Lanes[1].HitNote(AttackType.SwipeUp);
+        }
+        if(Input.GetKeyDown(KeyCode.H))
+        {
+            Lanes[2].HitNote(AttackType.SwipeUp);
+        }
     }
     private void InputKey(int index)
     {
