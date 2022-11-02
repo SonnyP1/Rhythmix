@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1005661005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7888623649330988057, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+  m_PrefabInstance: {fileID: 1994989116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1005661008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005661005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b607293055c73ad45962dff2a6697b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1994989116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -137,6 +154,18 @@ PrefabInstance:
     - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580726603964113648, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580726603964113651, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 104.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580726603964113651, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -124.3
       objectReference: {fileID: 0}
     - target: {fileID: 1611677318208375973, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_IsActive

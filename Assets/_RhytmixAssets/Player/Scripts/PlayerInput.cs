@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] Text debugText;
 
     //private variables
-    private Vector3[] start;
+    private Vector3[] start = { Vector3.zero, Vector3.zero , Vector3.zero };
     private float[] startTime = { 0,0,0 };
     private bool[] isHolding = { false ,false,false};
 
@@ -96,11 +96,23 @@ public class PlayerInput : MonoBehaviour
 
     private void PhoneInput()
     {
-        if (Input.touchCount > 0)
+        if(Input.touchCount != null)
         {
-            Tap(0);
-            Tap(1);
-            Tap(2);
+            if(Input.touchCount == 1)
+            {
+                Tap(0);
+            }
+            else if(Input.touchCount == 2)
+            {
+                Tap(0);
+                Tap(1);
+            }
+            else
+            {
+                Tap(0);
+                Tap(1);
+                Tap(2);
+            }
         }
     }
     private void Tap(int index)
@@ -118,16 +130,20 @@ public class PlayerInput : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
+                Debug.Log("I hit something!");
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
                 Lanes[index].HitNote(AttackType.Tap);
+            }
+        }
 
-                if (!isHolding[index])
-                {
-                    Debug.Log("Starting Holding");
-                    isHolding[index] = true;
-                    Lanes[index].HitNote(AttackType.Hold);
-                    Debug.Log(Lanes[index].name);
-                }
+        if(Input.GetTouch(index).phase == TouchPhase.Stationary)
+        {
+            if (!isHolding[index])
+            {
+                Debug.Log("Starting Holding");
+                isHolding[index] = true;
+                Lanes[index].HitNote(AttackType.Hold);
+                Debug.Log(Lanes[index].name);
             }
         }
 
@@ -164,6 +180,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Click()
     {
+        /*
         if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("Begin Click");
@@ -178,7 +195,9 @@ public class PlayerInput : MonoBehaviour
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
                 Debug.Log(hit.collider.gameObject.name);
+                hit.collider.gameObject.GetComponent<Lane>().HitNote(AttackType.Tap);
             }
         }
+        */
     }
 }
