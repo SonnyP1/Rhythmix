@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8b989f649fe04c643bceba12cc064a74
+guid: 2d41b91d6707ae44eb4c1bbae73404b3
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -7547518214502086340
-    second: Glitcher_Run
+      74: 8746549236064035535
+    second: Glitcher_Stagger
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -23,7 +23,7 @@ ModelImporter:
       rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
       : rotation error = 3.364025 deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Glitcher_Run' has import animation warnings
+    animationImportWarnings: "\nClip 'Glitcher_Stagger' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
@@ -31,6 +31,8 @@ ModelImporter:
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
@@ -50,25 +52,25 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Glitcher_Run
-      takeName: Glitcher_Run
+      name: Glitcher_Stagger
+      takeName: Glitcher_Stagger
       internalID: 0
       firstFrame: 1
-      lastFrame: 23
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
