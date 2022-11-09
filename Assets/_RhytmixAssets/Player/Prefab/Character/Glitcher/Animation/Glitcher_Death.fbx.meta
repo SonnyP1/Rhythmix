@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 8b989f649fe04c643bceba12cc064a74
+guid: f6e404d1d556df24f844bd42e5588682
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -7547518214502086340
-    second: Glitcher_Run
+      74: 3917991540745672362
+    second: Glitcher_Death
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -21,19 +21,18 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
       rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
-      : rotation error = 3.364025 deg\n"
+      : rotation error = 1.658222 deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Glitcher_Run' has import animation warnings
+    animationImportWarnings: "\nClip 'Glitcher_Death' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
       humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
@@ -50,11 +49,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Glitcher_Run
-      takeName: Glitcher_Run
+      name: Glitcher_Death
+      takeName: Glitcher_Death
       internalID: 0
       firstFrame: 1
-      lastFrame: 23
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -66,7 +65,7 @@ ModelImporter:
       loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
+      keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
