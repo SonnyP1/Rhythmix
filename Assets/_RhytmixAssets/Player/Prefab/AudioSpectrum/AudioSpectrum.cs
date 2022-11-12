@@ -45,7 +45,7 @@ public class AudioSpectrum : MonoBehaviour
             {
                 if(_useBuffer)
                 {
-                    _sampleObjects[i].transform.localScale = new Vector3(1, (_audioSampler.GetSampleBuffer()[i] * _maxScale)+2, 1);
+                    _sampleObjects[i].transform.localScale = new Vector3(1, (_audioSampler.GetSampleBuffer()[i] * _maxScale)+ 2, 1);
                 }
                 else
                 {

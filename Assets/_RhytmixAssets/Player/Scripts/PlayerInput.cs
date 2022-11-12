@@ -96,7 +96,7 @@ public class PlayerInput : MonoBehaviour
 
     private void PhoneInput()
     {
-        if(Input.touchCount != null)
+        if(Input.touchCount < 0)
         {
             if(Input.touchCount == 1)
             {

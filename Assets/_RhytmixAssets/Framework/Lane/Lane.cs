@@ -63,11 +63,9 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        Debug.Log("Hit Note function call");
         if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
         {
-            //check why this exist
-            //return;
+            return;
         }
 
         PlayAttackAnimation(attackType);
