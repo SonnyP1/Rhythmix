@@ -23,6 +23,8 @@ public class PlayerInput : MonoBehaviour
     [Header("Debugs")]
     [SerializeField] Text debugText;
 
+    HeathComponent _playerHPComp;
+
     //private variables
     private Vector3[] start = { Vector3.zero, Vector3.zero , Vector3.zero };
     private float[] startTime = { 0,0,0 };
@@ -32,17 +34,19 @@ public class PlayerInput : MonoBehaviour
     {
         Application.logMessageReceived += LogCallback;
     }
+    private void Start()
+    {
+        _playerHPComp = GetComponent<HeathComponent>();
+    }
     void Update()
     {
-        if(Time.timeScale != 0)
+        if(_playerHPComp.GetHealth() >= 0)
         {
             PhoneInput();
             KeyboardInput();
             Click();
         }
     }
-
-
 
 
     private void LogCallback(string condition, string stackTrace, LogType type)

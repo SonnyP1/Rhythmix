@@ -8,6 +8,7 @@ public class AudioSpectrum : MonoBehaviour
     [Header("Looks")]
     [SerializeField] Material SamplerMat;
     [SerializeField] GameObject SampleGameObject;
+    [SerializeField] GameObject[] _fireEffects;
 
     [Header("Values")]
     [SerializeField] [Range(0, 512)] int SampleSpawner;
@@ -60,6 +61,21 @@ public class AudioSpectrum : MonoBehaviour
         Color colorToApply = new Color(color.r, color.g, color.b, SamplerMat.color.a);
         SamplerMat.color = colorToApply;
         SamplerMat.SetColor("_EmissionColor", colorToApply);
+    }
+
+    public void TurnOnFireEffect()
+    {
+        foreach(GameObject obj in _fireEffects)
+        {
+            obj.SetActive(true);
+        }
+    }
+    public void TurnOffFireEffect()
+    {
+        foreach (GameObject obj in _fireEffects)
+        {
+            obj.SetActive(false);
+        }
     }
 
 }
