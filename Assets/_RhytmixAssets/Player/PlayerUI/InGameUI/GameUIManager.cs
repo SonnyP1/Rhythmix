@@ -57,7 +57,7 @@ public class GameUIManager : MonoBehaviour
         {
             SongSlider.value = _music.time / _music.clip.length;
 
-            if (SongSlider.value >= 0.01f)
+            if (SongSlider.value >= 1f)
             {
                 InGameUI.SetActive(false);
                 WinMenu.SetActive(true);
