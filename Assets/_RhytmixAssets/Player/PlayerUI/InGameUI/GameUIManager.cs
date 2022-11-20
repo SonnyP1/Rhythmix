@@ -57,8 +57,9 @@ public class GameUIManager : MonoBehaviour
         {
             SongSlider.value = _music.time / _music.clip.length;
 
-            if (SongSlider.value >= 1f)
+            if (SongSlider.value >= 0.99f)
             {
+                Debug.Log("End Game!");
                 InGameUI.SetActive(false);
                 WinMenu.SetActive(true);
                 Time.timeScale = 1;

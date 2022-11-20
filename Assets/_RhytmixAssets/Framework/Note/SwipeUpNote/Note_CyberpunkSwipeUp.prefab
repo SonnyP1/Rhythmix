@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NoteType: 3
+  EffectPrefab: {fileID: 4547568682439354280, guid: 1459bacbc4fabd647b16b7ff9fe5cb33, type: 3}
   EnemyModel: {fileID: 4648058683003016919}
   Meshrenderers:
   - {fileID: 8225039282946923724}

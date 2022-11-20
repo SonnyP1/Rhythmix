@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-
     [Header("NoteType")]
     [SerializeField] AttackType NoteType;
+    [SerializeField] GameObject EffectPrefab;
 
     [Header("Models")]
     [SerializeField] Transform EnemyModel;
@@ -31,6 +31,7 @@ public class Note : MonoBehaviour
 
     //=============================================================public variables
     public bool bIsAttacking = false;
+    public bool bIsOnFire = false;
 
     //=============================================================private variables
     private LevelAudioManager _levelAudioManager;
@@ -172,4 +173,19 @@ public class Note : MonoBehaviour
             animator.SetTrigger("Attack");
     }
 
+    private void OnDestroy()
+    {
+        ScoreKeeper scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        if(scoreKeeper != null)
+        {
+            if(scoreKeeper.bOnFire)
+            {
+                if(EffectPrefab != null)
+                {
+                    GameObject effectObj = Instantiate(EffectPrefab,this.transform);
+                    effectObj.transform.parent = null;
+                }
+            }
+        }
+    }
 }

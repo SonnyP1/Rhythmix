@@ -65,7 +65,7 @@ public class Lane : MonoBehaviour
     {
         if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
         {
-            return;
+            //return;
         }
 
         PlayAttackAnimation(attackType);

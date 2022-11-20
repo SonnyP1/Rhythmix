@@ -5,6 +5,7 @@ using UnityEngine;
 public class ScoreKeeper : MonoBehaviour
 {
     [SerializeField] AudioSpectrum[] audioSpectrums;
+    public bool bOnFire = false;
     private AudioSource _levelMusic;
     private GameUIManager _UI;
     int score = 0;
@@ -66,6 +67,7 @@ public class ScoreKeeper : MonoBehaviour
             StartCoroutine(ChangeVolume(.3f,false));
             audioSpectrums[0].TurnOffFireEffect();
             audioSpectrums[1].TurnOffFireEffect();
+            bOnFire = false;
         }
         else
         {
@@ -76,6 +78,8 @@ public class ScoreKeeper : MonoBehaviour
                 StartCoroutine(ChangeVolume(.5f, true)); 
                 multiplier = 4;
                 audioSpectrums[0].ChangeSampleObjectColor(Color.green);
+                bOnFire = true;
+
 
                 audioSpectrums[0].TurnOnFireEffect();
                 audioSpectrums[1].TurnOnFireEffect();
@@ -96,8 +100,6 @@ public class ScoreKeeper : MonoBehaviour
             }
 
             score += val * multiplier;
-
-            //print("The score is " + score + " The Multiplier is " + multiplier + " Combo Meter at " + comboMeter);
         }
         _UI.UpdateMultiplier();
         _UI.UpdateScore();
