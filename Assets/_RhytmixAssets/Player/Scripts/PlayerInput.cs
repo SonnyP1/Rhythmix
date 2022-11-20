@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] Text debugText;
 
     //private variables
-    private Vector3[] start;
+    private Vector3[] start = { Vector3.zero, Vector3.zero , Vector3.zero };
     private float[] startTime = { 0,0,0 };
     private bool[] isHolding = { false ,false,false};
 
@@ -38,6 +38,7 @@ public class PlayerInput : MonoBehaviour
         {
             PhoneInput();
             KeyboardInput();
+            Click();
         }
     }
 
@@ -79,15 +80,9 @@ public class PlayerInput : MonoBehaviour
             startTime[index] = 0;
             isHolding[index] = false;
             Lanes[index].HitNote(AttackType.Tap);
-        }
-        else if (Input.GetKey(KeysCodes[index]))
-        {
-            startTime[index] += Time.deltaTime;
-            if (startTime[index] > .1f && !isHolding[index])
-            {
-                isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
+
+            isHolding[index] = true;
+            Lanes[index].HitNote(AttackType.Hold);
         }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
@@ -101,11 +96,23 @@ public class PlayerInput : MonoBehaviour
 
     private void PhoneInput()
     {
-        if (Input.touchCount > 0)
+        if(Input.touchCount < 0)
         {
-            Tap(0);
-            Tap(1);
-            Tap(2);
+            if(Input.touchCount == 1)
+            {
+                Tap(0);
+            }
+            else if(Input.touchCount == 2)
+            {
+                Tap(0);
+                Tap(1);
+            }
+            else
+            {
+                Tap(0);
+                Tap(1);
+                Tap(2);
+            }
         }
     }
     private void Tap(int index)
@@ -123,12 +130,12 @@ public class PlayerInput : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
-                print(hit.collider.gameObject.name);
+                Debug.Log("I hit something!");
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
                 Lanes[index].HitNote(AttackType.Tap);
             }
         }
-        //holding mechanics
+
         if(Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
             if (!isHolding[index])
@@ -169,4 +176,28 @@ public class PlayerInput : MonoBehaviour
     }
 
 
+
+
+    private void Click()
+    {
+        /*
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Begin Click");
+            Vector3 touchPosFar = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.farClipPlane);
+            Vector3 touchPosClose = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane);
+
+            Vector3 touchPosFarPos = Camera.main.ScreenToWorldPoint(touchPosFar);
+            Vector3 touchPosClosePos = Camera.main.ScreenToWorldPoint(touchPosClose);
+
+            RaycastHit hit;
+            Debug.DrawRay(touchPosClosePos, touchPosFarPos - touchPosClosePos,Color.red,10f);
+            if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
+            {
+                Debug.Log(hit.collider.gameObject.name);
+                hit.collider.gameObject.GetComponent<Lane>().HitNote(AttackType.Tap);
+            }
+        }
+        */
+    }
 }
