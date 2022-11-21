@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 6636db6ed81a1424ebe699d26379373f
+guid: 258158c67cbcd034c9005460e52b0ba2
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -2935999467424935292
-    second: Glitcher_Jump
+      74: -8858228118640380408
+    second: Glitcher_all_global_death
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -19,25 +19,31 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
-      rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
-      : rotation error = 1.356202 deg\n"
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Bone length in
+      copied configuration does not match position in animation file:\n\t'HipPart1_L'
+      : position error = 34.812717 mm\n\t'HipPart2_L' : position error = 34.812767
+      mm\n\t'Knee_L' : position error = 34.812767 mm\n\t'Ankle_L' : position error
+      = 35.959602 mm\n\t'Toes_L' : position error = 11.082904 mm\nCopied Avatar Rig
+      Configuration mis-match. Inbetween bone rotation in copied configuration does
+      not match rotation in animation file:\n\t'HipPart2_L' : rotation error = 10.649098
+      deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Glitcher_Jump' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart2_M'
+    animationImportWarnings: "\nClip 'Glitcher_all_global_death' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n\t'HipPart2_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
-      has translation animation that will be discarded.\n\t'ElbowPart2_R' has translation
-      animation that will be discarded.\n\t'Wrist_R' has translation animation that
-      will be discarded.\n\t'ShoulderPart2_L' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'Hip_L' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_R'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -52,8 +58,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Glitcher_Jump
-      takeName: Glitcher_Jump
+      name: Glitcher_all_global_death
+      takeName: Glitcher_all_global_death
       internalID: 0
       firstFrame: 1
       lastFrame: 14
@@ -63,7 +69,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
