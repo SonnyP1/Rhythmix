@@ -912,6 +912,18 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: MissEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: f1ec6454c1d00c6479a79988231af2ea, type: 3}
+    - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: BadHitEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 2bf8543866d99744ea03031d9b5710a2, type: 3}
+    - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: PerfectEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
     - target: {fileID: 634910212968218082, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -920,6 +932,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: MissEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: f1ec6454c1d00c6479a79988231af2ea, type: 3}
+    - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: BadHitEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 2bf8543866d99744ea03031d9b5710a2, type: 3}
+    - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: PerfectEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
     - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: attackAnimationCount
       value: 2
@@ -1076,6 +1100,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3388429800293128039, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -302
+      objectReference: {fileID: 0}
     - target: {fileID: 4885437168994377353, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_VideoClip
       value: 
@@ -1128,6 +1156,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: MissEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: f1ec6454c1d00c6479a79988231af2ea, type: 3}
+    - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: BadHitEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 2bf8543866d99744ea03031d9b5710a2, type: 3}
+    - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: PerfectEffect
+      value: 
+      objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
     - target: {fileID: 8267310101636705581, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 134.20001
