@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: BIG_build_cyber_BIG_build_cyberMat
+    second: {fileID: 2100000, guid: 14e7c690a84e70b4a94f0aca49134669, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert8
     second: {fileID: 2100000, guid: 3b3103d4d606cd744a11ef6757f06426, type: 2}
   - first:
