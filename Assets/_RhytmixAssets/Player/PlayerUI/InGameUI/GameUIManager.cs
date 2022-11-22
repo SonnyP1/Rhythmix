@@ -8,6 +8,7 @@ using UnityEngine.Video;
 
 public class GameUIManager : MonoBehaviour
 {
+    [SerializeField] BasicPlayer Player;
     [SerializeField] GameObject InGameUI;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject GameOverMenu;
@@ -47,20 +48,30 @@ public class GameUIManager : MonoBehaviour
             UpdateMultiplier();
             UpdateAccuracy();
         }
+        StartCoroutine(CheckTime());
     }
 
-    private void Update()
+    IEnumerator CheckTime()
     {
-        SongSlider.value = _music.time/ _music.clip.length;
-
-        if(SongSlider.value >= 0.99)
+        while(true)
         {
-            InGameUI.SetActive(false);
-            WinMenu.SetActive(true);
-            StopMusic();
-            Time.timeScale = 0;
+            SongSlider.value = _music.time / _music.clip.length;
+
+            if (SongSlider.value >= 0.99f)
+            {
+                Debug.Log("End Game!");
+                InGameUI.SetActive(false);
+                WinMenu.SetActive(true);
+                Time.timeScale = 1;
+                Player.StartMovement();
+                StopMusic();
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
         }
     }
+
 
     public void Dead()
     {

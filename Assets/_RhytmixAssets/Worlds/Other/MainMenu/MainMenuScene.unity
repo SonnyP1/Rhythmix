@@ -1540,6 +1540,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7515977117931521045, guid: ba2f6cbbd5d21894491d6341c083bbe2, type: 3}
+      propertyPath: m_Text
+      value: RHYTHMIX
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515977117931521045, guid: ba2f6cbbd5d21894491d6341c083bbe2, type: 3}
       propertyPath: m_Color.b
       value: 0.9811321
       objectReference: {fileID: 0}

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-
     [Header("NoteType")]
     [SerializeField] AttackType NoteType;
+    [SerializeField] GameObject EffectPrefab;
 
     [Header("Models")]
     [SerializeField] Transform EnemyModel;
@@ -31,6 +31,7 @@ public class Note : MonoBehaviour
 
     //=============================================================public variables
     public bool bIsAttacking = false;
+    public bool bIsOnFire = false;
 
     //=============================================================private variables
     private LevelAudioManager _levelAudioManager;
@@ -84,6 +85,10 @@ public class Note : MonoBehaviour
 
         transform.localPosition = Vector3.Lerp(Vector3.forward * _levelAudioManager.GetNoteSpawnZ(), Vector3.forward * _levelAudioManager.NoteDespawnY(), t);
 
+        if(t > .9f)
+        {
+            PlayAttackAnimation();
+        }
         if(t > 1)
         {
             Destroy(gameObject);
@@ -101,6 +106,12 @@ public class Note : MonoBehaviour
         {
             transform.localPosition = new Vector3(transform.localPosition.x,transform.localPosition.y,4);
             Meshrenderers[0].SetActive(false);
+
+            if (timeUntilEnd > .98f)
+            {
+                PlayAttackAnimation();
+            }
+
             if (timeUntilEnd > 1)
             {
                 Destroy(gameObject);
@@ -162,4 +173,19 @@ public class Note : MonoBehaviour
             animator.SetTrigger("Attack");
     }
 
+    private void OnDestroy()
+    {
+        ScoreKeeper scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        if(scoreKeeper != null)
+        {
+            if(scoreKeeper.bOnFire)
+            {
+                if(EffectPrefab != null)
+                {
+                    GameObject effectObj = Instantiate(EffectPrefab,this.transform);
+                    effectObj.transform.parent = null;
+                }
+            }
+        }
+    }
 }

@@ -63,10 +63,8 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-
         if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
         {
-            //check why this exist
             //return;
         }
 
@@ -168,11 +166,6 @@ public class Lane : MonoBehaviour
             timeStamp = timeStamps[inputIndex];
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
-
-            if (timeStamp <= audioTime + 0.4f)
-            {
-                notes[inputIndex].PlayAttackAnimation();
-            }
 
             if (timeStamp + marginOfError <= audioTime)
             {

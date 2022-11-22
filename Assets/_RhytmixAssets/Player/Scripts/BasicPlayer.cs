@@ -9,6 +9,7 @@ public class BasicPlayer : MonoBehaviour
     CharacterController characterController;
     HeathComponent healthComp;
     bool isDead = false;
+    [SerializeField] GameObject _cameraTransform;
     [SerializeField] Animator[] playerAnimators;
     [SerializeField] GameObject[] ClickHereEffect;
     private GameUIManager _UI;
@@ -28,12 +29,25 @@ public class BasicPlayer : MonoBehaviour
         healthComp = GetComponent<HeathComponent>();
         healthComp.onDeath += Death;
     }
+    public void StartMovement()
+    {
+        _cameraTransform.transform.parent = null;
+        StartCoroutine(Movement());
+    }
 
+    IEnumerator Movement()
+    {
+        while(true)
+        {
+            Debug.Log("MOVE");
+            characterController.Move(characterController.transform.forward * Time.deltaTime*10f);
+            yield return new WaitForEndOfFrame();
+        }
+    }
     private void Death()
     {
         if(!isDead)
         {
-            //print("I Die");
             isDead = false;
             if(playerAnimators != null)
             {

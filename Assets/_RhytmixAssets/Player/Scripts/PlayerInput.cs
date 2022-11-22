@@ -23,8 +23,10 @@ public class PlayerInput : MonoBehaviour
     [Header("Debugs")]
     [SerializeField] Text debugText;
 
+    HeathComponent _playerHPComp;
+
     //private variables
-    private Vector3[] start;
+    private Vector3[] start = { Vector3.zero, Vector3.zero , Vector3.zero };
     private float[] startTime = { 0,0,0 };
     private bool[] isHolding = { false ,false,false};
 
@@ -32,16 +34,19 @@ public class PlayerInput : MonoBehaviour
     {
         Application.logMessageReceived += LogCallback;
     }
+    private void Start()
+    {
+        _playerHPComp = GetComponent<HeathComponent>();
+    }
     void Update()
     {
-        if(Time.timeScale != 0)
+        if(_playerHPComp.GetHealth() >= 0)
         {
             PhoneInput();
             KeyboardInput();
+            //Click();
         }
     }
-
-
 
 
     private void LogCallback(string condition, string stackTrace, LogType type)
@@ -57,7 +62,6 @@ public class PlayerInput : MonoBehaviour
         InputKey(1);
         InputKey(2);
 
-        //debuging
         if(Input.GetKeyDown(KeyCode.F))
         {
             Lanes[0].HitNote(AttackType.SwipeUp);
@@ -79,15 +83,9 @@ public class PlayerInput : MonoBehaviour
             startTime[index] = 0;
             isHolding[index] = false;
             Lanes[index].HitNote(AttackType.Tap);
-        }
-        else if (Input.GetKey(KeysCodes[index]))
-        {
-            startTime[index] += Time.deltaTime;
-            if (startTime[index] > .1f && !isHolding[index])
-            {
-                isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
+
+            isHolding[index] = true;
+            Lanes[index].HitNote(AttackType.Hold);
         }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
@@ -101,18 +99,23 @@ public class PlayerInput : MonoBehaviour
 
     private void PhoneInput()
     {
-        if (Input.touchCount > 0)
+        if(Input.touchCount > 0)
         {
             Tap(0);
-            Tap(1);
-            Tap(2);
+            if(Input.touchCount > 1)
+            {
+                Tap(1);
+                if (Input.touchCount > 2)
+                {
+                    Tap(2);
+                }
+            }
         }
     }
     private void Tap(int index)
     {
         if (Input.GetTouch(index).phase == TouchPhase.Began)
         {
-            Debug.Log("Begin Touch");
             start[index] = Input.GetTouch(index).position;
             Vector3 touchPosFar = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.farClipPlane);
             Vector3 touchPosClose = new Vector3(Input.GetTouch(index).position.x, Input.GetTouch(index).position.y, Camera.main.nearClipPlane);
@@ -123,26 +126,22 @@ public class PlayerInput : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(touchPosClosePos, touchPosFarPos - touchPosClosePos, out hit, 100f, Clickable))
             {
-                print(hit.collider.gameObject.name);
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
                 Lanes[index].HitNote(AttackType.Tap);
+                Lanes[index].HitNote(AttackType.Hold);
             }
         }
-        //holding mechanics
+
         if(Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
             if (!isHolding[index])
             {
-                Debug.Log("Starting Holding");
                 isHolding[index] = true;
-                Lanes[index].HitNote(AttackType.Hold);
-                Debug.Log(Lanes[index].name);
             }
         }
 
         if(Input.GetTouch(index).phase == TouchPhase.Ended)
         {
-            Debug.Log("End Touch");
             Vector3 end = Input.GetTouch(index).position;
 
             if (isHolding[index])
@@ -154,19 +153,6 @@ public class PlayerInput : MonoBehaviour
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
             }
-            else if (Mathf.Abs(end.x - start[index].x) > 30)
-            {
-                if (end.x > start[index].x)
-                {
-                    Lanes[index].HitNote(AttackType.SwipeRight);
-                }
-                else
-                {
-                    Lanes[index].HitNote(AttackType.SwipeLeft);
-                }
-            }
         }
     }
-
-
 }
