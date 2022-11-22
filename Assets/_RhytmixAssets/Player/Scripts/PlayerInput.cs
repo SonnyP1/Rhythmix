@@ -85,14 +85,14 @@ public class PlayerInput : MonoBehaviour
             Lanes[index].HitNote(AttackType.Tap);
 
             isHolding[index] = true;
-            Lanes[index].HitNote(AttackType.Hold);
+            //Lanes[index].HitNote(AttackType.Hold);
         }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
             if (isHolding[index])
             {
                 isHolding[index] = false;
-                Lanes[index].HitNote(AttackType.Hold);
+                Lanes[index].HitNote(AttackType.EndHold);
             }
         }
     }
