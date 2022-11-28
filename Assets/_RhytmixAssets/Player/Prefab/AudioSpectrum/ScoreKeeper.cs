@@ -68,6 +68,7 @@ public class ScoreKeeper : MonoBehaviour
             audioSpectrums[0].TurnOffFireEffect();
             audioSpectrums[1].TurnOffFireEffect();
             bOnFire = false;
+            _UI.OnFireUI(false);
         }
         else
         {
@@ -83,6 +84,7 @@ public class ScoreKeeper : MonoBehaviour
 
                 audioSpectrums[0].TurnOnFireEffect();
                 audioSpectrums[1].TurnOnFireEffect();
+                _UI.OnFireUI(true);
             }
             else if(comboMeter > 5)
             {
