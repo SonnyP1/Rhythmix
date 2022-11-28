@@ -26,6 +26,9 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] Image PlayerHealthBar;
     [SerializeField] VideoPlayer _videoPlayer;
 
+    [Header("OnFire UI")]
+    [SerializeField] GameObject[] onFireUIObjs;
+
     private ScoreKeeper _scoreKeeper;
     private AudioSource _music;
     private void Start()
@@ -41,6 +44,7 @@ public class GameUIManager : MonoBehaviour
         WinMenu.SetActive(false);
         GameOverMenu.SetActive(false);
         PauseMenu.SetActive(false);
+        OnFireUI(false);
 
         if(_scoreKeeper != null)
         {
@@ -51,6 +55,13 @@ public class GameUIManager : MonoBehaviour
         StartCoroutine(CheckTime());
     }
 
+    public void OnFireUI(bool val)
+    {
+        foreach(GameObject obj in onFireUIObjs)
+        {
+            obj.SetActive(val);
+        }
+    }
     IEnumerator CheckTime()
     {
         while(true)

@@ -54,6 +54,7 @@ public class BasicPlayer : MonoBehaviour
                 foreach(Animator animator in playerAnimators)
                 {
                     animator.SetTrigger("DeathTrigger");
+                    animator.SetBool("isDead", true);
                     //animator.SetLayerWeight(1,0);
                 }
             }

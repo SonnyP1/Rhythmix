@@ -63,84 +63,81 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        if(notes.Count <= 0 || notes.Count >= melanchallMidiNotes.Count)
-        {
-            //return;
-        }
-
         PlayAttackAnimation(attackType);
 
-        if (inputIndex != 0 && notes[inputIndex-1] != null && notes[inputIndex-1].GetHasStartedHolding())
+        if(attackType == AttackType.EndHold)
         {
-            Miss();
+            if(notes.Count > 0)
+            {
+                if(notes[inputIndex-1] != null)
+                {
+                    Miss();
+                    return;
+                }
+            }
         }
 
-        if (AbsValueDouble(audioTime - timeStamp) < marginOfError && notes[inputIndex].GetNoteType() == attackType)
+        if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
         {
             _hitSoundAudioSource.Play();
             Hit();
-
             if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
                 if(!notes[inputIndex].GetHasStartedHolding())
                 {
                     notes[inputIndex].SetIsHoldingNote(true);
+                    inputIndex++;
                 }
             }
             else
             {
                 Destroy(notes[inputIndex].gameObject);
+                inputIndex++;
             }
-
-            inputIndex++;
         }
-
-        if (timeStamp + marginOfError <= audioTime && attackType != AttackType.Hold)
-        {
-            Miss();
-            inputIndex++;
-        }
-
     }
 
     private void PlayAttackAnimation(AttackType attackType)
     {
         if (PlayerAnimator != null)
         {
-            if(attackType == AttackType.Tap)
+            if(!PlayerAnimator.GetBool("isDead"))
             {
-                if (hasMultipleAttackAnimation)
+                if(attackType == AttackType.Tap)
                 {
-                    System.Random rand = new System.Random();
-                    int randomNum = rand.Next(1, attackAnimationCount + 1);
-                    //print(randomNum);
-                    switch (randomNum)
+                    if (hasMultipleAttackAnimation)
                     {
-                        case 1:
-                            PlayerAnimator.SetTrigger("AttackTrigger1");
-                            break;
-                        case 2:
-                            PlayerAnimator.SetTrigger("AttackTrigger2");
-                            break;
-                        case 3:
-                            PlayerAnimator.SetTrigger("AttackTrigger3");
-                            break;
-                        case 4:
-                            PlayerAnimator.SetTrigger("AttackTrigger4");
-                            break;
-                        default:
-                            PlayerAnimator.SetTrigger("AttackTrigger1");
-                            break;
+                        System.Random rand = new System.Random();
+                        int randomNum = rand.Next(1, attackAnimationCount + 1);
+                        //print(randomNum);
+                        switch (randomNum)
+                        {
+                            case 1:
+                                PlayerAnimator.SetTrigger("AttackTrigger1");
+                                break;
+                            case 2:
+                                PlayerAnimator.SetTrigger("AttackTrigger2");
+                                break;
+                            case 3:
+                                PlayerAnimator.SetTrigger("AttackTrigger3");
+                                break;
+                            case 4:
+                                PlayerAnimator.SetTrigger("AttackTrigger4");
+                                break;
+                            default:
+                                PlayerAnimator.SetTrigger("AttackTrigger1");
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        PlayerAnimator.SetTrigger("AttackTrigger1");
                     }
                 }
-                else
+                else if(attackType == AttackType.SwipeUp)
                 {
-                    PlayerAnimator.SetTrigger("AttackTrigger1");
+                    PlayerAnimator.SetTrigger("JumpAttack");
                 }
-            }
-            else if(attackType == AttackType.SwipeUp)
-            {
-                PlayerAnimator.SetTrigger("JumpAttack");
             }
         }
     }
@@ -167,7 +164,7 @@ public class Lane : MonoBehaviour
             marginOfError = _levelAudioManager.GetMarginOfError();
             audioTime = _levelAudioManager.GetAudioSourceTime() - (_levelAudioManager.GetInputDelayInMillieseconds() / 1000.0);
 
-            if (timeStamp + marginOfError <= audioTime)
+            if (timeStamp + marginOfError <= audioTime && notes[inputIndex].GetHasStartedHolding() == false)
             {
                 Miss();
                 inputIndex++;
