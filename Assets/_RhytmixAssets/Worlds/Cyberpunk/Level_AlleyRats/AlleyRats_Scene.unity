@@ -1021,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
     - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.data[0]
@@ -1057,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 721460878848065698, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.data[0]
@@ -1224,6 +1224,10 @@ PrefabInstance:
       value: -302
       objectReference: {fileID: 0}
     - target: {fileID: 3388429800438681762, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: FileLoc
+      value: Rythmix_CyberPunk_07.mid
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388429800438681762, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: MarginOfError
       value: 0.1
       objectReference: {fileID: 0}
@@ -1293,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
     - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.data[0]
