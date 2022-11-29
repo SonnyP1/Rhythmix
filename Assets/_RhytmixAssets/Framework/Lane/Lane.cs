@@ -80,7 +80,24 @@ public class Lane : MonoBehaviour
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
         {
             _hitSoundAudioSource.Play();
-            Hit();
+
+            if(notes[inputIndex].GetNoteType() == AttackType.SwipeUp)
+            {
+                if(attackType == AttackType.SwipeUp)
+                {
+                    Hit();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                Hit();
+            }
+
+
             if (notes[inputIndex].GetNoteType() == AttackType.Hold)
             {
                 if(!notes[inputIndex].GetHasStartedHolding())
