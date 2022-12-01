@@ -47,8 +47,24 @@ ModelImporter:
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
-    animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'Glitcher_all_global_shoot2':\n\tLeftLowerLeg
+      average position error 94.6 mm and maximum position error 103.0 mm at time
+      0: 5 (18.2%) Frame 5\n\tLeftFoot average position error 122.9 mm and maximum
+      position error 156.6 mm at time 0: 8 (31.8%) Frame 8\n\tRightLowerLeg average
+      position error 92.7 mm and maximum position error 107.0 mm at time 0:12 (50.0%)
+      Frame 12\n\tRightFoot average position error 112.3 mm and maximum position
+      error 161.2 mm at time 0:18 (77.3%) Frame 18\n\tLeftUpperArm average position
+      error 49.7 mm and maximum position error 59.9 mm at time 0:21 (90.9%) Frame
+      21\n\tLeftLowerArm average position error 72.7 mm and maximum position error
+      87.9 mm at time 0:18 (77.3%) Frame 18\n\tLeftHand average position error 99.6
+      mm and maximum position error 117.5 mm at time 0:17 (72.7%) Frame 17\n\tRightUpperArm
+      average position error 88.0 mm and maximum position error 110.2 mm at time
+      0: 3 (9.1%) Frame 3\n\tRightLowerArm average position error 104.4 mm and maximum
+      position error 111.5 mm at time 0:11 (45.5%) Frame 11\n\tRightHand average
+      position error 112.7 mm and maximum position error 126.2 mm at time 0: 8 (31.8%)
+      Frame 8\n\tHead average position error 15.8 mm and maximum position error 19.4
+      mm at time 0: 5 (18.2%) Frame 5\n"
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 1
