@@ -746,6 +746,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131180086}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1209210243 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8524546506343825459, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+  m_PrefabInstance: {fileID: 3388429799624548468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1232529745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6674086131269552521, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
@@ -1261,6 +1266,14 @@ PrefabInstance:
       propertyPath: _cameraTransform
       value: 
       objectReference: {fileID: 1232529745}
+    - target: {fileID: 942358106133004939, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: playerAnimators.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 942358106133004939, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: playerAnimators.Array.data[2]
+      value: 
+      objectReference: {fileID: 1209210243}
     - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -1577,7 +1590,8 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5448484792827832820, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
 --- !u!224 &3388429799624548469 stripped
 RectTransform:

@@ -118,7 +118,7 @@ public class Lane : MonoBehaviour
     {
         if (PlayerAnimator != null)
         {
-            if(!PlayerAnimator.GetBool("isDead"))
+            if(!PlayerAnimator.GetBool("DeathBool"))
             {
                 if(attackType == AttackType.Tap)
                 {
