@@ -85,7 +85,6 @@ public class PlayerInput : MonoBehaviour
             Lanes[index].HitNote(AttackType.Tap);
 
             isHolding[index] = true;
-            //Lanes[index].HitNote(AttackType.Hold);
         }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
@@ -128,14 +127,6 @@ public class PlayerInput : MonoBehaviour
             {
                 Lanes[index] = hit.collider.gameObject.GetComponent<Lane>();
                 Lanes[index].HitNote(AttackType.Tap);
-                Lanes[index].HitNote(AttackType.Hold);
-            }
-        }
-
-        if(Input.GetTouch(index).phase == TouchPhase.Stationary)
-        {
-            if (!isHolding[index])
-            {
                 isHolding[index] = true;
             }
         }
@@ -144,14 +135,15 @@ public class PlayerInput : MonoBehaviour
         {
             Vector3 end = Input.GetTouch(index).position;
 
-            if (isHolding[index])
-            {
-                isHolding[index] = false;
-                Lanes[index].HitNote(AttackType.Hold);
-            }
-            else if(Mathf.Abs(end.y - start[index].y) > 60)
+            isHolding[index] = false;
+            if(Mathf.Abs(end.y - start[index].y) > 60)
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
+                return;
+            }
+            else
+            {
+                Lanes[index].HitNote(AttackType.EndHold);
             }
         }
     }
