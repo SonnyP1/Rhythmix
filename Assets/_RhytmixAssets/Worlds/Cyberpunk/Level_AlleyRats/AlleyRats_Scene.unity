@@ -538,6 +538,67 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1001 &831113650
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.22095805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_Name
+      value: PoliceDroid_ShieldAnims
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b4aa5da2528aed4884aa936f972395a, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 70ebe106bbbf35141bb00b204abeb721, type: 3}
 --- !u!114 &837003065 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
@@ -1019,6 +1080,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761385467}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1906954132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.369
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.199
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.453
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_Name
+      value: PoliceDroid_BatonAnims
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cb155809dc9e1104e88636826f5e096f, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08ce52be72fac742b3ce895c2827e26, type: 3}
 --- !u!1 &1973432717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321789, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321789, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_LocalPosition.x
