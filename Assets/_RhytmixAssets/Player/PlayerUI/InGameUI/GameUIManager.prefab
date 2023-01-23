@@ -43,3 +43,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e711eac4adbee143b3420b904c02f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  InGameUI: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  GameOverMenu: {fileID: 0}
+  WinMenu: {fileID: 0}
+  ScoreText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  AccuracyText:
+  - {fileID: 0}
+  - {fileID: 0}
+  MultiplierText: {fileID: 0}
+  SongSlider: {fileID: 0}
+  SongTitle: {fileID: 0}
+  PlayerHealthBar: {fileID: 0}
+  _videoPlayer: {fileID: 0}
+  onFireUIObjs:
+  - {fileID: 0}

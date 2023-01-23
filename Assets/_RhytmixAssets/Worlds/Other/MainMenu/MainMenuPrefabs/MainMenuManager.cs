@@ -7,11 +7,9 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject MainMenuCanvas;
-    [SerializeField] GameObject FantasySongSelectionCanvas;
     [SerializeField] GameObject CyberpunkSongSelectionCanvas;
     private void Start()
     {
-        FantasySongSelectionCanvas.SetActive(false);
         CyberpunkSongSelectionCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
     }
@@ -19,7 +17,6 @@ public class MainMenuManager : MonoBehaviour
     public void FantasyWorldBtnClick()
     {
         MainMenuCanvas.SetActive(false);
-        FantasySongSelectionCanvas.SetActive(true);
     }
     public void CyberpunkWorldBtnClick()
     {
@@ -32,7 +29,6 @@ public class MainMenuManager : MonoBehaviour
     }
     public void BackBtnClick()
     {
-        FantasySongSelectionCanvas.SetActive(false);
         CyberpunkSongSelectionCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
     }
