@@ -32,15 +32,6 @@ public class MainMenuManager : MonoBehaviour
         CyberpunkSongSelectionCanvas.SetActive(false);
         MainMenuCanvas.SetActive(true);
     }
-    public void SongHeroJourneyBtnClick()
-    {
-        SceneManager.LoadScene("Fantasy_Forest_Scene", LoadSceneMode.Single);
-    }
-
-    public void SongCastleBtnClick()
-    {
-        SceneManager.LoadScene("Fantasy_Castle_Scene", LoadSceneMode.Single);
-    }
 
     public void SongAlleyRatsBtnClick()
     {
