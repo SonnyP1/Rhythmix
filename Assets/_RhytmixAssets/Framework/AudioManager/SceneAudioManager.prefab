@@ -142,11 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NoteTime: 1
   NoteSpawnZ: 35
-  NoteTapZ: 3.5
+  NoteTapZ: 3.3
   InputDelayInMilliseconds: 0
   MarginOfError: 0.1
   SongDelayInSecounds: 0
-  FileLoc: Rythmix_CyberPunk_05.mid
+  FileLoc: Rythmix_CyberPunk_07.mid
   Lanes:
   - {fileID: 0}
   - {fileID: 0}
