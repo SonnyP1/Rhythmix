@@ -44,9 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackToSpawn:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3220473469058107055, guid: a09f3fb586964114e8acce8245e3b648, type: 3}
   TrackSpeed: 20
   TrackSizeOffsetZ: 0
   LevelAudioManager: {fileID: 0}
