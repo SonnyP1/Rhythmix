@@ -33,12 +33,12 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -3
+    m_Value: -24
     min: -100
     max: 100
   tint:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: 33
     min: -100
     max: 100
 --- !u!114 &-1069662871034090494
@@ -57,19 +57,19 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 0.764151, g: 0.6372731, b: 0.6372731, a: 1}
+    m_Value: {r: 0.62411004, g: 0.62565196, b: 0.7075472, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 0.6886792, g: 0.6226026, b: 0.4703809, a: 1}
+    m_Value: {r: 1, g: 0.80532163, b: 0.6273585, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
   balance:
     m_OverrideState: 1
-    m_Value: -8
+    m_Value: -9
     min: -100
     max: 100
 --- !u!114 &11400000
@@ -110,15 +110,15 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.75
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 1.79
+    m_Value: 1
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.497
     min: 0
     max: 1
   clamp:
@@ -162,26 +162,26 @@ MonoBehaviour:
   m_AdvancedMode: 0
   postExposure:
     m_OverrideState: 0
-    m_Value: 0.02
+    m_Value: 0.16
   contrast:
-    m_OverrideState: 1
-    m_Value: 9
+    m_OverrideState: 0
+    m_Value: 42
     min: -100
     max: 100
   colorFilter:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_OverrideState: 0
+    m_Value: {r: 19.2, g: 22.337255, b: 32, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   hueShift:
-    m_OverrideState: 1
-    m_Value: -20
+    m_OverrideState: 0
+    m_Value: -180
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 33
+    m_Value: 40
     min: -100
     max: 100
 --- !u!114 &6391552480464413750
@@ -230,13 +230,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.7840207, y: 0.6758033, z: 1, w: 0}
+    m_Value: {x: 0.84429014, y: 0.6281862, z: 1, w: -0.31772572}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.872423, z: 0.93940985, w: 0}
+    m_Value: {x: 1, y: 0.8941471, z: 0.79670763, w: 0}
   highlights:
-    m_OverrideState: 1
-    m_Value: {x: 1, y: 0.95252943, z: 0.8385586, w: 0}
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0.99157643, z: 0.9852239, w: 0}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
