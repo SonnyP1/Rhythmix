@@ -204,6 +204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac009bb7498fcfb4b96614c4fd1f735c, type: 3}
+--- !u!1 &138583761 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4245135830134950725, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+  m_PrefabInstance: {fileID: 3388429799624548468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &238791100
 GameObject:
   m_ObjectHideFlags: 0
@@ -919,11 +924,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1584608663 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4245135830134950725, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
-  m_PrefabInstance: {fileID: 3388429799624548468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1634541730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1172081452124834314, guid: ac009bb7498fcfb4b96614c4fd1f735c, type: 3}
@@ -1478,7 +1478,7 @@ PrefabInstance:
     - target: {fileID: 8439029909539207442, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: onFireUIObjs.Array.data[0]
       value: 
-      objectReference: {fileID: 1584608663}
+      objectReference: {fileID: 138583761}
     - target: {fileID: 8439029909539207442, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: onFireUIObjs.Array.data[1]
       value: 
