@@ -94,6 +94,10 @@ public class Lane : MonoBehaviour
             }
             else
             {
+                if (notes[inputIndex].GetNoteType() == AttackType.SwipeUp)
+                {
+                    return;
+                }
                 Hit();
             }
 
