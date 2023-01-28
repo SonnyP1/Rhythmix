@@ -1095,6 +1095,10 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 218.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1617165170, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1629355937, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1341,7 +1345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3388429800438681762, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: MarginOfError
-      value: 0.1
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4885437168994377353, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_VideoClip
