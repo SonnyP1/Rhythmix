@@ -113,7 +113,7 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdateMultiplier()
     {
-        MultiplierText.text =  "X" +_scoreKeeper.GetMultiplier().ToString();
+        MultiplierText.text =  _scoreKeeper.GetMultiplier().ToString();
     }
     public void UpdatePlayerHealthBar(float percent)
     {

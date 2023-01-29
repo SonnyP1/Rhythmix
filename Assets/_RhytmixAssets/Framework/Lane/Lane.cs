@@ -81,9 +81,9 @@ public class Lane : MonoBehaviour
         {
             _hitSoundAudioSource.Play();
 
-            if(notes[inputIndex].GetNoteType() == AttackType.SwipeUp)
+            if(attackType == AttackType.SwipeUp)
             {
-                if(attackType == AttackType.SwipeUp)
+                if(notes[inputIndex].GetNoteType() == AttackType.SwipeUp)
                 {
                     Hit();
                 }
@@ -94,8 +94,14 @@ public class Lane : MonoBehaviour
             }
             else
             {
+                if (notes[inputIndex].GetNoteType() == AttackType.SwipeUp)
+                {
+                    return;
+                }
                 Hit();
             }
+
+
 
 
             if (notes[inputIndex].GetNoteType() == AttackType.Hold)
