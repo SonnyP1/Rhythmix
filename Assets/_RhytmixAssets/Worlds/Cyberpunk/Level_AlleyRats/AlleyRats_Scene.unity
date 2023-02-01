@@ -526,6 +526,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &808104599 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9155880596600700526, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+  m_PrefabInstance: {fileID: 3388429799624548468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &837003065 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
@@ -1263,7 +1268,11 @@ PrefabInstance:
     - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: 76383ed7233fd5e4b81ba32a31c167e0, type: 3}
+      objectReference: {fileID: 9000000, guid: 243b50f498708834d8d80c45058bcf24, type: 3}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: de92c81c7927a964c8c50db9e4833979, type: 2}
     - target: {fileID: 1138201368601983328, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1696,6 +1705,10 @@ PrefabInstance:
       propertyPath: PerfectEffect
       value: 
       objectReference: {fileID: 9206288947311026469, guid: 19c5a1e1ff25a704e8669306b9fa4488, type: 3}
+    - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: PlayerAnimator
+      value: 
+      objectReference: {fileID: 808104599}
     - target: {fileID: 8255226195663228472, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: notePrefab.Array.size
       value: 3
