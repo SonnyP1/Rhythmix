@@ -24,7 +24,6 @@ public class LevelAudioManager : MonoBehaviour
     [SerializeField] float SongDelayInSecounds;
     [SerializeField] string FileLoc;
     [SerializeField] Lane[] Lanes;
-    [SerializeField] VideoPlayer VideoPlayer;
 
 
 
@@ -72,7 +71,7 @@ public class LevelAudioManager : MonoBehaviour
         _songAudioSource = data.GetMusic();
         _scoreKeeper = data.GetScoreKeeper();
         _playerGroup = data.GetPlayerGroup();
-        StartCoroutine(WaitToStartGame((float)VideoPlayer.length));
+        StartCoroutine(WaitToStartGame(0.5f));
     }
     public void Skip()
     {
@@ -149,7 +148,6 @@ public class LevelAudioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time + 0.5f);
         _playerGroup.GetComponent<BasicPlayer>().ActivateClickEffect();
-        VideoPlayer.gameObject.SetActive(false);
         string readFile = LoadStreamingAssets(FileLoc);
         if (readFile != null)
         {
