@@ -21,7 +21,17 @@ ModelImporter:
   - first:
       74: -3412118355008324347
     second: JumpAttack
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hacker_Material
+    second: {fileID: 2100000, guid: 9a2bc72d00f32094daf438aa24bff615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StingrayPBS2
+    second: {fileID: 2100000, guid: 12a27a81de2f0e143b5dfa5788ba5b33, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
