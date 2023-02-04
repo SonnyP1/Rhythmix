@@ -38,9 +38,9 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
 
-    public void SongHomeStretchBtnClick()
+    public void TutorialBtnClick()
     {
-        SceneManager.LoadScene("Slums_Scene",LoadSceneMode.Single);
+        SceneManager.LoadScene("TutorialWorld",LoadSceneMode.Single);
     }
 
     public void TestingSceneBtnClick()

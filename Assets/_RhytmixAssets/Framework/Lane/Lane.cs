@@ -28,8 +28,11 @@ public class Lane : MonoBehaviour
     [SerializeField] Animator PlayerAnimator;
     [SerializeField] bool hasMultipleAttackAnimation;
     [SerializeField][Range(1,4)] int attackAnimationCount;
-
     public List<double> GetTimeStampsList() { return timeStamps;}
+
+    [Header("TutorialStuff")]
+    [SerializeField] bool isTutorial = false;
+    [SerializeField] TutorialWorld tutorialWorld;
 
     //private variables
     private HeathComponent HealthComp;
@@ -39,6 +42,7 @@ public class Lane : MonoBehaviour
     private List<double> timeStamps = new List<double>();
     private List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
     private AudioSource _hitSoundAudioSource;
+    private CoreGameDataHolder _gameDataHolder;
 
     double timeStamp;
     double marginOfError;
@@ -50,6 +54,7 @@ public class Lane : MonoBehaviour
         HealthComp = GetComponentInParent<HeathComponent>();
         _scoreKeeper = GetComponentInParent<ScoreKeeper>();
         _hitSoundAudioSource = GetComponent<AudioSource>();
+        _gameDataHolder= FindObjectOfType<CoreGameDataHolder>();
 
         if(_levelAudioManager != null)
         {

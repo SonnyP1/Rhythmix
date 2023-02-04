@@ -21,6 +21,7 @@ public class LevelAudioManager : MonoBehaviour
     [SerializeField] double MarginOfError; // in seconds
 
     [Header("Other")]
+    [SerializeField] float TimeToStartGame = 0.5f;
     [SerializeField] float SongDelayInSecounds;
     [SerializeField] string FileLoc;
     [SerializeField] Lane[] Lanes;
@@ -71,7 +72,7 @@ public class LevelAudioManager : MonoBehaviour
         _songAudioSource = data.GetMusic();
         _scoreKeeper = data.GetScoreKeeper();
         _playerGroup = data.GetPlayerGroup();
-        StartCoroutine(WaitToStartGame(0.5f));
+        StartCoroutine(WaitToStartGame(TimeToStartGame));
     }
     public void Skip()
     {
