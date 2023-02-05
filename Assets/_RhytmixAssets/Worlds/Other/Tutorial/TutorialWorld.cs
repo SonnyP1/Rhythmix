@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SubsystemsImplementation;
 
 public class TutorialWorld : MonoBehaviour
 {
@@ -83,15 +84,17 @@ public class TutorialWorld : MonoBehaviour
                 break;
             case 10:
                 Time.timeScale = 1f;
-                #if UNITY_STANDALONE_WIN
+                txt = "Tap on the respective lane to do a tap attack. Try It!";
+#if UNITY_STANDALONE_WIN
                 txt = "Pressed left, down, right arrow key to attack in that lane. Try It!";
-                #endif
+#endif
                 SetTutorialTxt(txt);
                 break;
             case 11:
-                #if UNITY_STANDALONE_WIN
+                txt = "Swipe up to do a swipe attack. Try It!";
+#if UNITY_STANDALONE_WIN
                 txt = "Pressed F, G, and H key to swipe up attack in that lane. Try It!";
-                #endif
+#endif
                 SetTutorialTxt(txt);
                 break;
             case 12:
