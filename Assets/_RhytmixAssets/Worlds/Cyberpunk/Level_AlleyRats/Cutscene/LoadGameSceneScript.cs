@@ -8,6 +8,7 @@ public class LoadGameSceneScript : MonoBehaviour
 {
     public void LoadGameScene()
     {
-        SceneManager.LoadScene(2,LoadSceneMode.Single);
+        Debug.Log("LOAD GAME");
+        SceneManager.LoadScene("AlleyRats_Scene",LoadSceneMode.Single);
     }
 }

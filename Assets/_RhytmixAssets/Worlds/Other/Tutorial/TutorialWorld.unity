@@ -456,6 +456,7 @@ MonoBehaviour:
   gameCanvas: {fileID: 298672069}
   terminalTxt: {fileID: 1633984695}
   terminalAnimator: {fileID: 1285549949}
+  txtToReadFrom: {fileID: 4900000, guid: 3cc2568bb39510f4899022cb3f1e9ec4, type: 3}
   healthUI: {fileID: 1978852813}
   pauseUI: {fileID: 1273780410}
   rightPlaceHolder: {fileID: 1325680165}

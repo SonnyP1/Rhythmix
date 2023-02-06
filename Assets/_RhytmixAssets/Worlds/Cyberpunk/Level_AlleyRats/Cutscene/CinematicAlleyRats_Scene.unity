@@ -1413,7 +1413,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 20
+  m_FocalLength: 44.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1422,7 +1422,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 61.927517
+  field of view: 30.000002
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -1447,8 +1447,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884620913}
-  m_LocalRotation: {x: -0.02815601, y: 0.92556775, z: 0.37093928, w: 0.07025488}
-  m_LocalPosition: {x: 8.794, y: -3.0099955, z: 4.511}
+  m_LocalRotation: {x: 0, y: 0.9390433, z: 0, w: 0.343799}
+  m_LocalPosition: {x: 5.81, y: -2.88, z: 6.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1626,6 +1626,7 @@ GameObject:
   - component: {fileID: 2075240573}
   - component: {fileID: 2075240572}
   - component: {fileID: 2075240574}
+  - component: {fileID: 2075240575}
   m_Layer: 0
   m_Name: CM_Camera
   m_TagString: Untagged
@@ -1702,6 +1703,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2075240575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075240571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a9ad2f5a777084c91b99ff612ff9c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2121712216
 GameObject:
   m_ObjectHideFlags: 0
