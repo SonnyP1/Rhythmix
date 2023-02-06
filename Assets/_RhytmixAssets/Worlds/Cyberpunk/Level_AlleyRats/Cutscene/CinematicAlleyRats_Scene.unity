@@ -857,6 +857,30 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5866666021909216657, guid: 70d7b3b3525c3e54493b47ec290f4604, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 70d7b3b3525c3e54493b47ec290f4604, type: 3}
+--- !u!1 &951719422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3bbb177dba532484597395a0370e3cd1, type: 3}
+  m_PrefabInstance: {fileID: 1160808700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &951719423
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951719422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 3bbb177dba532484597395a0370e3cd1, type: 3}
+  m_Controller: {fileID: 9100000, guid: d99d3c5aa7210de4b97e44e4b136ced6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1160808700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,7 +996,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.19262393
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 3bbb177dba532484597395a0370e3cd1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3bbb177dba532484597395a0370e3cd1, type: 3}
 --- !u!1 &1178258953
 GameObject:
@@ -1351,18 +1376,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1614101946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1614101943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35a9ad2f5a777084c91b99ff612ff9c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1657446897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1726,7 +1739,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 44.78461
+  m_FocalLength: 20
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1735,7 +1748,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30.000002
+  field of view: 61.927517
   orthographic: 0
   orthographic size: 5
   m_Depth: 1
@@ -1760,8 +1773,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884620913}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: -0.7071068}
-  m_LocalPosition: {x: 5.81, y: -1.04, z: 3.02}
+  m_LocalRotation: {x: -0.02815601, y: 0.92556775, z: 0.37093928, w: 0.07025488}
+  m_LocalPosition: {x: 8.794, y: -3.0099955, z: 4.511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
