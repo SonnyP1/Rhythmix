@@ -25,9 +25,10 @@ public class Lane : MonoBehaviour
     [SerializeField] GameObject PerfectEffect;
 
     [Header("Animation For Player")]
-    [SerializeField] Animator PlayerAnimator;
-    [SerializeField] bool hasMultipleAttackAnimation;
-    [SerializeField][Range(1,4)] int attackAnimationCount;
+    private AnimationHandler _animationHandler;
+    //[SerializeField] Animator PlayerAnimator;
+    //[SerializeField] bool hasMultipleAttackAnimation;
+    //[SerializeField][Range(1,4)] int attackAnimationCount;
     public List<double> GetTimeStampsList() { return timeStamps;}
 
     [Header("TutorialStuff")]
@@ -51,6 +52,7 @@ public class Lane : MonoBehaviour
     int inputIndex = 0;
     public void Start()
     {
+        _animationHandler = GetComponent<AnimationHandler>();
         HealthComp = GetComponentInParent<HeathComponent>();
         _scoreKeeper = GetComponentInParent<ScoreKeeper>();
         _hitSoundAudioSource = GetComponent<AudioSource>();
@@ -68,7 +70,7 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        PlayAttackAnimation(attackType);
+        _animationHandler.PlayAttackAnimation(attackType);
 
         if(attackType == AttackType.EndHold)
         {
@@ -125,50 +127,7 @@ public class Lane : MonoBehaviour
         }
     }
 
-    private void PlayAttackAnimation(AttackType attackType)
-    {
-        if (PlayerAnimator != null)
-        {
-            if(!PlayerAnimator.GetBool("DeathBool"))
-            {
-                if(attackType == AttackType.Tap)
-                {
-                    if (hasMultipleAttackAnimation)
-                    {
-                        System.Random rand = new System.Random();
-                        int randomNum = rand.Next(1, attackAnimationCount + 1);
-                        //print(randomNum);
-                        switch (randomNum)
-                        {
-                            case 1:
-                                PlayerAnimator.SetTrigger("AttackTrigger1");
-                                break;
-                            case 2:
-                                PlayerAnimator.SetTrigger("AttackTrigger2");
-                                break;
-                            case 3:
-                                PlayerAnimator.SetTrigger("AttackTrigger3");
-                                break;
-                            case 4:
-                                PlayerAnimator.SetTrigger("AttackTrigger4");
-                                break;
-                            default:
-                                PlayerAnimator.SetTrigger("AttackTrigger1");
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        PlayerAnimator.SetTrigger("AttackTrigger1");
-                    }
-                }
-                else if(attackType == AttackType.SwipeUp)
-                {
-                    PlayerAnimator.SetTrigger("JumpAttack");
-                }
-            }
-        }
-    }
+
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array)
     {
         foreach (var note in array)
@@ -255,10 +214,7 @@ public class Lane : MonoBehaviour
         if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
             HealthComp.TakeDmg(1);
-            if (PlayerAnimator != null)
-            {
-                PlayerAnimator.SetTrigger("HitTrigger");
-            }
+            _animationHandler.PlayHitAnimation();
         }
 
         _scoreKeeper.ChangeScore(0);

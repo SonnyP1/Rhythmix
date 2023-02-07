@@ -7,8 +7,8 @@ This is your score count!~
 This the name of the song your currently playing!~
 This is your combo meter! The max is 4 times!~
 Let's get to running!~
-Tap on the respective lane to do a tap attack. Try It!~
-Swipe up to do a swipe attack. Try It!~
+Press arrow key left, down, right to do a tap attack in each lane. Try It!~
+Press F, G , H to do a swipe up attack in each lane. Try It!~
 There are three types of enemies!~
 Tap Enemies.~
 Hold Enemies.~

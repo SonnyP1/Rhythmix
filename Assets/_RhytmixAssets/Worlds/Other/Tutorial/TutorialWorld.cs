@@ -1,20 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SubsystemsImplementation;
 using System.IO;
 using System.Text;
+using UnityEngine.UI;
 public class TutorialWorld : MonoBehaviour
 {
-    CoreGameDataHolder gameDataHolder;
-    int tutorialStep = 0;
-    int tutorialTxt = 0;
-    [SerializeField] GameObject gameCanvas;
+    [Header("Tutorial UI")]
     [SerializeField] TextMeshProUGUI terminalTxt;
     [SerializeField] Animator terminalAnimator;
+    [SerializeField] Image flash;
 
     [Header("In Game UI")]
+    [SerializeField] GameObject gameCanvas;
     [SerializeField] GameObject healthUI;
     [SerializeField] GameObject pauseUI;
     [SerializeField] GameObject rightPlaceHolder;
@@ -25,8 +23,11 @@ public class TutorialWorld : MonoBehaviour
     [SerializeField] GameObject songNameUI;
     [SerializeField] GameObject comboUI;
 
+    CoreGameDataHolder gameDataHolder;
     StringBuilder tutorialStringBuilder = new StringBuilder();
-
+    Coroutine textWritingCore;
+    Coroutine flashingImageCore;
+    int tutorialStep = 0;
     private void Start()
     {
         Debug.Log("Start Tutorial");
@@ -34,12 +35,8 @@ public class TutorialWorld : MonoBehaviour
         gameDataHolder.PauseGame();
         gameDataHolder.PauseMusic();
 
+        flashingImageCore = StartCoroutine(FlashImage());
         AssignStringBuilder();
-    }
-
-    public void SetTutorialTxt(string txt)
-    {
-        terminalTxt.SetText(txt);
     }
     public void Touch()
     {
@@ -55,7 +52,10 @@ public class TutorialWorld : MonoBehaviour
             txt += tutorialStringBuilder[i];
         }
 
-        SetTutorialTxt(txt);
+        if(textWritingCore != null)
+            StopCoroutine(textWritingCore);
+        textWritingCore = StartCoroutine(SetTutorialTxtConsole(txt));
+
         switch (tutorialStep)
         {
             case 1:
@@ -93,6 +93,9 @@ public class TutorialWorld : MonoBehaviour
     public void AssignStringBuilder()
     {
         string path = "Assets/_RhytmixAssets/Worlds/Other/Tutorial/TutorialTxt.txt";
+#if UNITY_STANDALONE_WIN
+        path = "Assets/_RhytmixAssets/Worlds/Other/Tutorial/TutorialTxtWindow.txt";
+#endif
 
         var lines = File.ReadAllLines(path);
         foreach(var line in lines)
@@ -100,5 +103,43 @@ public class TutorialWorld : MonoBehaviour
             tutorialStringBuilder.Append(line);
         }
 
+    }
+
+
+    IEnumerator SetTutorialTxtConsole(string txt)
+    {
+        StopCoroutine(flashingImageCore);
+        Color color = flash.color;
+        color.a = 255;
+        flash.color = color;
+
+
+        terminalTxt.text = "";
+
+        foreach(char letter in txt)
+        {
+            terminalTxt.text += letter;
+            terminalTxt.gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(terminalTxt.bounds.size.x,50);
+            yield return new WaitForSecondsRealtime(0.05f);
+        }
+
+        flashingImageCore = StartCoroutine(FlashImage());
+    }
+
+    IEnumerator FlashImage()
+    {
+        Color alphaZero = flash.color;
+        alphaZero.a = 0;
+        Color alphaMax = flash.color;
+        alphaMax.a = 255;
+
+
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            flash.color = alphaZero;
+            yield return new WaitForSecondsRealtime(0.5f);
+            flash.color = alphaMax;
+        }
     }
 }
