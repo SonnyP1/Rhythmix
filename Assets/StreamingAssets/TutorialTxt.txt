@@ -6,6 +6,7 @@ This is progression of the current song your playing.~
 This is your score count!~
 This the name of the song your currently playing!~
 This is your combo meter! The max is 4 times!~
+This is the bar hit area. Make sure to hit the note at this bar!~
 Let's get to running!~
 Tap on the respective lane to do a tap attack. Try It!~
 Swipe up to do a swipe attack. Try It!~
