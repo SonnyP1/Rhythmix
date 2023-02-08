@@ -64,7 +64,7 @@ public class ScoreKeeper : MonoBehaviour
             multiplier = 1; 
             audioSpectrums[0].ChangeSampleObjectColor(Color.red);
             StopAllCoroutines();
-            StartCoroutine(ChangeVolume(.3f,false));
+            StartCoroutine(ChangeVolume(.4f,false));
             audioSpectrums[0].TurnOffFireEffect();
             audioSpectrums[1].TurnOffFireEffect();
             bOnFire = false;
@@ -89,14 +89,14 @@ public class ScoreKeeper : MonoBehaviour
             else if(comboMeter > 5)
             {
                 StopAllCoroutines();
-                StartCoroutine(ChangeVolume(.45f, true));
+                StartCoroutine(ChangeVolume(.48f, true));
                 multiplier = 3;
                 audioSpectrums[0].ChangeSampleObjectColor(Color.magenta);
             }
             else if(comboMeter > 2)
             {
                 StopAllCoroutines();
-                StartCoroutine(ChangeVolume(.4f, true));
+                StartCoroutine(ChangeVolume(.45f, true));
                 multiplier = 2;
                 audioSpectrums[0].ChangeSampleObjectColor(Color.blue);
             }

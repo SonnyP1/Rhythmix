@@ -34,4 +34,30 @@ public class CoreGameDataHolder : MonoBehaviour
         return _playerGroup;
     }
     [SerializeField] GameObject _playerGroup;
+
+    //Game Related Functions
+    public void PauseGame()
+    {
+        PauseMusic();
+        Time.timeScale = 0f;
+    }
+
+    public void ContinueGame()
+    {
+        ContinueMusic();
+        Time.timeScale = 1f;
+    }
+
+
+    //Music Related Functions
+    public void ContinueMusic()
+    {
+        _music.Play();
+    }
+
+
+    public void PauseMusic()
+    {
+        _music.Pause();
+    }
 }

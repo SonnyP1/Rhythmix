@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Home Stretch
+  m_Text: Tutorial
 --- !u!1 &5964533090785132165
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ RectTransform:
   m_Children:
   - {fileID: 5964533092203624520}
   m_Father: {fileID: 5964533091095108217}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -439,8 +439,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5964533090982956906}
   - {fileID: 5964533091258253641}
+  - {fileID: 5964533090982956906}
   m_Father: {fileID: 5964533090894280544}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 5964533091258253643}
   - component: {fileID: 5964533091258253640}
   m_Layer: 5
-  m_Name: Song_HomeStretchBtn
+  m_Name: Song_Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -656,7 +656,7 @@ RectTransform:
   m_Children:
   - {fileID: 5964533090387241864}
   m_Father: {fileID: 5964533091095108217}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}

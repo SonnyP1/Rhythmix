@@ -38,7 +38,7 @@ public class HeathComponent : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        GameUIManager.UpdatePlayerHealthBar(HP/MaxHP);
+        GameUIManager.UpdatePlayerHealthBar((int)HP,(int)MaxHP);
     }
     void StartRegenerateHealth()
     {

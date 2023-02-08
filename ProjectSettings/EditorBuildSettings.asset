@@ -9,18 +9,12 @@ EditorBuildSettings:
     path: Assets/_RhytmixAssets/Worlds/Other/MainMenu/MainMenuScene.unity
     guid: 92c71d2006a06f74ba46391f5a51ea0a
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Fantasy/LevelHeroJourney/Fantasy_Forest_Scene.unity
-    guid: 6bcbda21130af5d458de0d0799d22637
+    path: Assets/_RhytmixAssets/Worlds/Other/Tutorial/TutorialWorld.unity
+    guid: 2f276293cda390944812f46841770bc2
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Fantasy/LevelCastleBattle/Fantasy_Castle_Scene.unity
-    guid: 9db893feaab395a40863f6a4f620e0f0
+    path: Assets/_RhytmixAssets/Worlds/Cyberpunk/Level_AlleyRats/Cutscene/CinematicAlleyRats_Scene.unity
+    guid: d298380582d1fe24b9184e4213782e28
   - enabled: 1
     path: Assets/_RhytmixAssets/Worlds/Cyberpunk/Level_AlleyRats/AlleyRats_Scene.unity
     guid: f6112aa3c6dcea64ebe1b9a0bc6da682
-  - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Cyberpunk/Level_HomeStretch/Slums_Scene.unity
-    guid: d3eb5f515a1ec2f46b792dba59efa5ca
-  - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Other/TestingScene/TestingScene.unity
-    guid: cc1b54226aedec646a2b281f540bfee9
   m_configObjects: {}

@@ -20,21 +20,26 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] AccuracyText;
     [SerializeField] TextMeshProUGUI MultiplierText;
     [SerializeField] Slider SongSlider;
+    [SerializeField] TextMeshProUGUI PercentageSong;
     [SerializeField] TextMeshProUGUI SongTitle;
 
     [Header("Player UI")]
-    [SerializeField] Image PlayerHealthBar;
-    [SerializeField] VideoPlayer _videoPlayer;
+    [SerializeField] GameObject[] PlayerHealthBars;
 
     [Header("OnFire UI")]
     [SerializeField] GameObject[] onFireUIObjs;
 
     private ScoreKeeper _scoreKeeper;
     private AudioSource _music;
+    private CoreGameDataHolder coreGameData;
     private void Start()
     {
-        Time.timeScale = 1;
-        CoreGameDataHolder coreGameData = FindObjectOfType<CoreGameDataHolder>();
+        if(FindObjectOfType<TutorialWorld>() == null)
+        {
+            Time.timeScale = 1;
+        }
+
+        coreGameData = FindObjectOfType<CoreGameDataHolder>();
 
 
         _scoreKeeper = coreGameData.GetScoreKeeper();
@@ -67,7 +72,7 @@ public class GameUIManager : MonoBehaviour
         while(true)
         {
             SongSlider.value = _music.time / _music.clip.length;
-
+            PercentageSong.text = ((SongSlider.value / SongSlider.maxValue)*100).ToString("f2");
             if (SongSlider.value >= 0.99f)
             {
                 Debug.Log("End Game!");
@@ -75,11 +80,11 @@ public class GameUIManager : MonoBehaviour
                 WinMenu.SetActive(true);
                 Time.timeScale = 1;
                 Player.StartMovement();
-                StopMusic();
+                coreGameData.PauseMusic();
                 break;
             }
 
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
         }
     }
 
@@ -89,12 +94,7 @@ public class GameUIManager : MonoBehaviour
         InGameUI.SetActive(false);
         GameOverMenu.SetActive(true);
 
-        StopMusic();
-    }
-
-    private void StopMusic()
-    {
-        _music.Pause();
+        coreGameData.PauseMusic();
     }
     public void UpdateAccuracy()
     {
@@ -113,15 +113,26 @@ public class GameUIManager : MonoBehaviour
 
     public void UpdateMultiplier()
     {
-        MultiplierText.text =  "X" +_scoreKeeper.GetMultiplier().ToString();
+        MultiplierText.text =  _scoreKeeper.GetMultiplier().ToString();
     }
-    public void UpdatePlayerHealthBar(float percent)
+    public void UpdatePlayerHealthBar(int healthRemaining , int maxHealth)
     {
-        if (PlayerHealthBar == null)
+        if (PlayerHealthBars.Length == 0)
         {
             return;
         }
-        PlayerHealthBar.fillAmount = percent;
+
+        for(int i = maxHealth; i > 0;i--)
+        {
+            if(healthRemaining < i)
+            {
+                PlayerHealthBars[i - 1].GetComponent<Animator>().SetBool("HasHealth",false);
+            }
+            else
+            {
+                PlayerHealthBars[i - 1].GetComponent<Animator>().SetBool("HasHealth",true);
+            }
+        }
     }
 
     public void ReturnToMainMenuBtn()
@@ -129,11 +140,6 @@ public class GameUIManager : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
     }
 
-    public void SkipCutScene()
-    {
-        _videoPlayer.Stop();
-        _music.GetComponent<LevelAudioManager>().Skip();
-    }
     public void TryAgainBtn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
@@ -143,24 +149,22 @@ public class GameUIManager : MonoBehaviour
         Debug.Log("Pause Button CLICKED");
         if(!_isGamePause)
         {
-            PauseGame();
+            PauseGameUI();
         }
         else
         {
-            UnPauseGame();
+            UnPauseGameUI();
         }
     }
-    private void UnPauseGame()
+    private void UnPauseGameUI()
     {
-        _music.Play();
-        Time.timeScale = 1f;
+        coreGameData.ContinueGame();
         PauseMenu.SetActive(false);
         _isGamePause = false;
     }
-    private void PauseGame()
+    private void PauseGameUI()
     {
-        StopMusic();
-        Time.timeScale = 0f;
+        coreGameData.PauseGame();
         PauseMenu.SetActive(true);
         _isGamePause = true;
     }

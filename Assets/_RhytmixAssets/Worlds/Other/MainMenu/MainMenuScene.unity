@@ -239,6 +239,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5964533090982956906, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533090982956906, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533090982956906, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 343.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533090982956906, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -117.18
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533090982956907, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_Name
       value: BeginPlay_SongBtn
@@ -251,17 +267,53 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SongAlleyRatsBtnClick
       objectReference: {fileID: 0}
+    - target: {fileID: 5964533091250136779, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Text
+      value: Cyberpunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253638, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Name
+      value: Song_Tutorial
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533091258253638, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 168409662}
+    - target: {fileID: 5964533091258253640, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TutorialBtnClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253641, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253641, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253641, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 343.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091258253641, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24.43
+      objectReference: {fileID: 0}
     - target: {fileID: 5964533091429223522, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_Name
       value: SongSelectionCyberpunkCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964533091429223522, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5964533091429223526, guid: ac64259681102ec44bfe98bff65e0b6b, type: 3}
       propertyPath: m_Pivot.x
