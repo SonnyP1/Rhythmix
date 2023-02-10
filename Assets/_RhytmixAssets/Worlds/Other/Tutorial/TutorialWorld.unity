@@ -1210,6 +1210,14 @@ PrefabInstance:
       propertyPath: tutorialWorld
       value: 
       objectReference: {fileID: 1036874189}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c312f2dd3561c5c4495f53656806d5af, type: 3}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: de92c81c7927a964c8c50db9e4833979, type: 2}
     - target: {fileID: 1580726603527464117, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_IsActive
       value: 1
