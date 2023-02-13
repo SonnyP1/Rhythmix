@@ -37,6 +37,13 @@ public class TutorialWorld : MonoBehaviour
     [SerializeField] TextMeshProUGUI comboNumberTxt;
     [SerializeField] GameObject hitLoc;
 
+    [Header("Tutorial Notes")]
+    [SerializeField] GameObject tapNote;
+    [SerializeField] GameObject holdNote;
+    [SerializeField] GameObject swipeUpNote;
+
+
+    //Private variables
     CoreGameDataHolder gameDataHolder;
     StringBuilder tutorialStringBuilder = new StringBuilder();
     int tutorialStep = 0;
@@ -172,6 +179,20 @@ public class TutorialWorld : MonoBehaviour
                 hitLoc.GetComponent<LineRenderer>().startColor = Color.blue;
                 hitLoc.GetComponent<LineRenderer>().endColor = Color.blue;
                 Time.timeScale = 1;
+                break;
+            case 15:
+                //show tap
+                tapNote.SetActive(true);
+                break;
+            case 17:
+                Destroy(tapNote);
+                //show hold
+                holdNote.SetActive(true);
+                break;
+            case 19:
+                Destroy(holdNote);
+                //show swipe up
+                swipeUpNote.SetActive(true);
                 break;
         }
     }
