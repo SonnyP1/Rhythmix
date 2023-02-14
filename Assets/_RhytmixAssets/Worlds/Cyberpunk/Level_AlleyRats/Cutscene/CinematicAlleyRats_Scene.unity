@@ -605,6 +605,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d99d3c5aa7210de4b97e44e4b136ced6, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 52b02bb0454a6664ab5cb8cad0b4e227, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 52b02bb0454a6664ab5cb8cad0b4e227, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52b02bb0454a6664ab5cb8cad0b4e227, type: 3}
 --- !u!4 &689855957 stripped
@@ -825,6 +833,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d1e57d1e88e52774b8dd9b9e04213212, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2a9d4d1d5b3cfb141b643324fd8bfd17, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2a9d4d1d5b3cfb141b643324fd8bfd17, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9d4d1d5b3cfb141b643324fd8bfd17, type: 3}
 --- !u!1 &1178258953
@@ -1552,6 +1568,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b537393a066b4e14081dc91895f22182, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 8f442d57efb238045bdc63c908c1e3a7, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 8f442d57efb238045bdc63c908c1e3a7, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6400609701913954439, guid: 8f442d57efb238045bdc63c908c1e3a7, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8245124
