@@ -455,7 +455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994601299882231946}
-  - component: {fileID: 3304129989420043289}
+  - component: {fileID: 1268220812794813435}
   m_Layer: 0
   m_Name: Note_CyberpunkSwipeUp
   m_TagString: Untagged
@@ -483,7 +483,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3304129989420043289
+--- !u!114 &1268220812794813435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,15 +495,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7fdd22ad257d945b1d17a58c4af890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteType: 3
+  NoteType: 0
   EffectPrefab: {fileID: 4547568682439354280, guid: 1459bacbc4fabd647b16b7ff9fe5cb33, type: 3}
   EnemyModel: {fileID: 4648058683003016919}
   Meshrenderers:
-  - {fileID: 8225039282946923724}
-  - {fileID: 5461432664246504557}
+  - {fileID: 3883674847020625757}
   InnerRing: {fileID: 5956640310517271889}
   OuterRing: {fileID: 6889955608743065036}
   bIsAttacking: 0
+  bIsOnFire: 0
 --- !u!1 &8743615842106858832
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 5956640310517271889}
   - component: {fileID: 5064006993964616133}
   - component: {fileID: 6635432515004242273}
+  - component: {fileID: 1314320358206006842}
   m_Layer: 0
   m_Name: Inner
   m_TagString: Untagged
@@ -681,6 +682,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1314320358206006842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995709892859558713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b39e851fd8dba4097f2bbcaf0fe8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 3
+  _height: 2
 --- !u!1001 &5119328078525231420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,14 +765,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
+--- !u!1 &3883674847020625757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8281579243681701473, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
+  m_PrefabInstance: {fileID: 5119328078525231420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4648058683003016919 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
-  m_PrefabInstance: {fileID: 5119328078525231420}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5461432664246504557 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 26a59ab5edb2e4e4cb81254483b7c1ad, type: 3}
   m_PrefabInstance: {fileID: 5119328078525231420}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5338623464400012166
@@ -860,10 +875,5 @@ PrefabInstance:
 --- !u!4 &7988954866712771879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2650616727731846817, guid: ff4f9b38c1ef6dc4f89fb0d945ad5234, type: 3}
-  m_PrefabInstance: {fileID: 5338623464400012166}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8225039282946923724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4049770048897654602, guid: ff4f9b38c1ef6dc4f89fb0d945ad5234, type: 3}
   m_PrefabInstance: {fileID: 5338623464400012166}
   m_PrefabAsset: {fileID: 0}
