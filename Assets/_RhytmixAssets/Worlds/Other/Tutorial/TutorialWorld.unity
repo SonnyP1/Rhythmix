@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21234824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6330593217394689410, guid: a306f87da258e1c48953335c4fcd985d, type: 3}
+  m_PrefabInstance: {fileID: 703394517}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &60980134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,6 +423,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5964763585808657382, guid: 34c5718eaddd30643981d528d72891b0, type: 3}
+      propertyPath: ThingToRotate
+      value: 
+      objectReference: {fileID: 953776289}
+    - target: {fileID: 5964763585808657382, guid: 34c5718eaddd30643981d528d72891b0, type: 3}
       propertyPath: TimeToWaitThenSpin
       value: 0.5
       objectReference: {fileID: 0}
@@ -629,6 +638,10 @@ PrefabInstance:
       propertyPath: RotateSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6902646508803478589, guid: a306f87da258e1c48953335c4fcd985d, type: 3}
+      propertyPath: ThingToRotate
+      value: 
+      objectReference: {fileID: 21234824}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a306f87da258e1c48953335c4fcd985d, type: 3}
 --- !u!1 &868713141
@@ -706,6 +719,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 868713141}
   m_CullTransparentMesh: 1
+--- !u!1 &953776289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3018265092843720203, guid: 34c5718eaddd30643981d528d72891b0, type: 3}
+  m_PrefabInstance: {fileID: 149898569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1036874187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1596,6 +1614,18 @@ PrefabInstance:
       propertyPath: tutorialWorld
       value: 
       objectReference: {fileID: 1036874189}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: c312f2dd3561c5c4495f53656806d5af, type: 3}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: de92c81c7927a964c8c50db9e4833979, type: 2}
+    - target: {fileID: 1071317149672197801, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1539569187653484250, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_IsActive
       value: 1
