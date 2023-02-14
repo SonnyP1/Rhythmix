@@ -18,3 +18,4 @@ Hold Enemies.~
 Hold enemies you need to tap then hold until their defeated.~
 Swipe Up Enemies.~
 Swipe up enemies you need to use a swipe up attack to defeat them.~
+Lets Play!~

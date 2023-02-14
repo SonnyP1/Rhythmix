@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7fdd22ad257d945b1d17a58c4af890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteType: 0
+  NoteType: 3
   EffectPrefab: {fileID: 4547568682439354280, guid: 1459bacbc4fabd647b16b7ff9fe5cb33, type: 3}
   EnemyModel: {fileID: 4648058683003016919}
   Meshrenderers:
@@ -617,7 +617,6 @@ GameObject:
   - component: {fileID: 5956640310517271889}
   - component: {fileID: 5064006993964616133}
   - component: {fileID: 6635432515004242273}
-  - component: {fileID: 1314320358206006842}
   m_Layer: 0
   m_Name: Inner
   m_TagString: Untagged
@@ -682,20 +681,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1314320358206006842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8995709892859558713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b39e851fd8dba4097f2bbcaf0fe8ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 3
-  _height: 2
 --- !u!1001 &5119328078525231420
 PrefabInstance:
   m_ObjectHideFlags: 0

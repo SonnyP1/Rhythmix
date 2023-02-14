@@ -10,6 +10,7 @@ using UnityEditor.SearchService;
 public class TutorialWorld : MonoBehaviour
 {
     [Header("Tutorial UI")]
+    [SerializeField] GameObject tutorialCanvas;
     [SerializeField] TextMeshProUGUI terminalTxt;
     [SerializeField] Animator terminalAnimator;
     [SerializeField] Image dot;
@@ -193,6 +194,13 @@ public class TutorialWorld : MonoBehaviour
                 Destroy(holdNote);
                 //show swipe up
                 swipeUpNote.SetActive(true);
+                break;
+            case 22:
+                Destroy(swipeUpNote);
+                Destroy(tutorialCanvas);
+                FindObjectOfType<LevelAudioManager>().Skip();
+                pauseUI.GetComponent<Button>().interactable = true;
+                Destroy(gameObject);
                 break;
         }
     }
