@@ -17,7 +17,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: StingrayPBS1
-    second: {fileID: 2100000, guid: a994bfddecb213c4f8a150a8b67ebfb7, type: 2}
+    second: {fileID: 2100000, guid: 0ef6772fb6289c440a5882d159bca5b4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
