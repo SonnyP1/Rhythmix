@@ -16,6 +16,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: StingrayPBS1
+    second: {fileID: 2100000, guid: a994bfddecb213c4f8a150a8b67ebfb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: lambert5
     second: {fileID: 2100000, guid: 0caaf0014a22fc04e90d4dc468904b19, type: 2}
   - first:
