@@ -63,6 +63,14 @@ public class AnimationHandler : MonoBehaviour
                 {
                     _playerAnimator.SetTrigger("JumpAttack");
                 }
+                else if(attackType == AttackType.Hold)
+                {
+                    _playerAnimator.SetTrigger("StartHoldTrigger");
+                }
+                else if(attackType == AttackType.EndHold)
+                {
+                    _playerAnimator.SetTrigger("EndHoldTrigger");
+                }
             }
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 using Melanchall.DryWetMidi.Interaction;
 using UnityEngine.UI;
 using System;
+using UnityEngine.Rendering.UI;
 
 public class Lane : MonoBehaviour
 {
@@ -70,7 +71,22 @@ public class Lane : MonoBehaviour
 
     public void HitNote(AttackType attackType)
     {
-        _animationHandler.PlayAttackAnimation(attackType);
+        if(attackType == AttackType.Tap)
+        {
+            if (notes[inputIndex].GetNoteType() == AttackType.Tap)
+            {
+                _animationHandler.PlayAttackAnimation(attackType);
+            }
+            else if(notes[inputIndex].GetNoteType() == AttackType.Hold)
+            {
+                Debug.Log("Start Hold");
+                _animationHandler.PlayAttackAnimation(AttackType.Hold);
+            }
+        }
+        else
+        {
+            _animationHandler.PlayAttackAnimation(attackType);
+        }
 
         if(attackType == AttackType.EndHold)
         {
@@ -227,5 +243,17 @@ public class Lane : MonoBehaviour
             num = -1 * number;
         }
         return num;
+    }
+
+    internal void CheckHoldingNote()
+    {
+        if(inputIndex-1 >= 0 && inputIndex-1 < notes.Count && notes[inputIndex-1] != null)
+        {
+            if (AbsValueDouble(audioTime - notes[inputIndex-1].GetEndTime()) < marginOfError)
+            {
+                Debug.Log("EndHold");
+                _animationHandler.PlayAttackAnimation(AttackType.EndHold);
+            }
+        }
     }
 }

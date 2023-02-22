@@ -86,12 +86,15 @@ public class PlayerInput : MonoBehaviour
 
             isHolding[index] = true;
         }
+        else if (Input.GetKey(KeysCodes[index]))
+        {
+            Lanes[index].CheckHoldingNote();
+        }
         else if (Input.GetKeyUp(KeysCodes[index]))
         {
             if (isHolding[index])
             {
                 isHolding[index] = false;
-                Lanes[index].HitNote(AttackType.EndHold);
             }
         }
     }

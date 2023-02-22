@@ -23,6 +23,10 @@ public class Note : MonoBehaviour
     //=============================================================Getters & Setters
     public bool GetHasStartedHolding(){ return hasStartedHolding; }
     public AttackType GetNoteType(){return NoteType;}
+    internal double GetEndTime()
+    {
+        return endTime;
+    }
     public bool GetIsFinishHolding() {return isFinishHolding; }
     public void SetNoteDuration(double val){noteDuration = val; }
     public void SetAssignedTime(float val) { assignedTime = val; }
@@ -188,4 +192,5 @@ public class Note : MonoBehaviour
             }
         }
     }
+
 }
