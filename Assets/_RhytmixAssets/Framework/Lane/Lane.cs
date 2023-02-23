@@ -249,7 +249,7 @@ public class Lane : MonoBehaviour
     {
         if(inputIndex-1 >= 0 && inputIndex-1 < notes.Count && notes[inputIndex-1] != null)
         {
-            if (AbsValueDouble(audioTime - notes[inputIndex-1].GetEndTime()) < marginOfError)
+            if (AbsValueDouble(audioTime - notes[inputIndex-1].GetEndTime()) < 0.1f)
             {
                 Debug.Log("EndHold");
                 _animationHandler.PlayAttackAnimation(AttackType.EndHold);

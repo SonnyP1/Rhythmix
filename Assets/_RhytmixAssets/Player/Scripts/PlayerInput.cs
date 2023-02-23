@@ -95,6 +95,7 @@ public class PlayerInput : MonoBehaviour
             if (isHolding[index])
             {
                 isHolding[index] = false;
+                Lanes[index].HitNote(AttackType.EndHold);
             }
         }
     }
@@ -134,7 +135,12 @@ public class PlayerInput : MonoBehaviour
             }
         }
 
-        if(Input.GetTouch(index).phase == TouchPhase.Ended)
+        if(Input.GetTouch(index).phase == TouchPhase.Moved || Input.GetTouch(index).phase == TouchPhase.Stationary)
+        {
+            Lanes[index].CheckHoldingNote();
+        }
+
+        if (Input.GetTouch(index).phase == TouchPhase.Ended)
         {
             Vector3 end = Input.GetTouch(index).position;
 
