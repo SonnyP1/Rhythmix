@@ -73,14 +73,21 @@ public class Lane : MonoBehaviour
     {
         if(attackType == AttackType.Tap)
         {
-            if (notes[inputIndex].GetNoteType() == AttackType.Tap)
+            if (inputIndex >= 0 && inputIndex < notes.Count && notes[inputIndex] != null)
+            {
+                if (notes[inputIndex].GetNoteType() == AttackType.Tap)
+                {
+                    _animationHandler.PlayAttackAnimation(attackType);
+                }
+                else if(notes[inputIndex].GetNoteType() == AttackType.Hold)
+                {
+                    Debug.Log("Start Hold");
+                    _animationHandler.PlayAttackAnimation(AttackType.Hold);
+                }
+            }
+            else
             {
                 _animationHandler.PlayAttackAnimation(attackType);
-            }
-            else if(notes[inputIndex].GetNoteType() == AttackType.Hold)
-            {
-                Debug.Log("Start Hold");
-                _animationHandler.PlayAttackAnimation(AttackType.Hold);
             }
         }
         else
