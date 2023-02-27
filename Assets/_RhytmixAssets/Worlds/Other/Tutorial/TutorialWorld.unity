@@ -1589,7 +1589,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 130450601117662076, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: _songTitle
-      value: Hot Cross Buns
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 400166867129694333, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: isTutorial
