@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 0a563604231d9044ca58ea871e94ca1c
+guid: 3ce3b01fc1aa93d468f50737d3fb6a00
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -809334826909414918
-    second: CyrusHoldWindup
+    second: CyrusHoldLoop
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -42,11 +42,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: CyrusHoldWindup
+      name: CyrusHoldLoop
       takeName: CyrusHoldWindup
       internalID: 0
-      firstFrame: 1
-      lastFrame: 10.6
+      firstFrame: 4.2
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -56,11 +56,11 @@ ModelImporter:
       loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 1
+      loopBlendPositionY: 0
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
