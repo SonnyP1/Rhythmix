@@ -25,11 +25,11 @@ public class Lane : MonoBehaviour
     [SerializeField] GameObject BadHitEffect;
     [SerializeField] GameObject PerfectEffect;
 
+    [Header("Icon")]
+    [SerializeField] IconUI Icon;
+
     [Header("Animation For Player")]
     private AnimationHandler _animationHandler;
-    //[SerializeField] Animator PlayerAnimator;
-    //[SerializeField] bool hasMultipleAttackAnimation;
-    //[SerializeField][Range(1,4)] int attackAnimationCount;
     public List<double> GetTimeStampsList() { return timeStamps;}
 
     [Header("TutorialStuff")]
@@ -236,6 +236,7 @@ public class Lane : MonoBehaviour
         Instantiate(MissEffect, EffectSpawn);
         if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
+            Icon.HurtIcon();
             HealthComp.TakeDmg(1);
             _animationHandler.PlayHitAnimation();
         }
