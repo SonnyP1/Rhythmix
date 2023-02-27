@@ -72,7 +72,7 @@ public class GameUIManager : MonoBehaviour
         while(true)
         {
             SongSlider.value = _music.time / _music.clip.length;
-            PercentageSong.text = ((SongSlider.value / SongSlider.maxValue)*100).ToString("f2");
+            PercentageSong.text = ((SongSlider.value / SongSlider.maxValue)*100).ToString("f0");
             if (SongSlider.value >= 0.99f)
             {
                 Debug.Log("End Game!");
