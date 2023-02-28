@@ -105,6 +105,7 @@ public class Lane : MonoBehaviour
                     return;
                 }
             }
+            return;
         }
 
         if (AbsValueDouble(audioTime - timeStamp) < marginOfError)
