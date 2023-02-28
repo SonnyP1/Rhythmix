@@ -590,6 +590,10 @@ PrefabInstance:
       propertyPath: m_BounceIntensity
       value: 218.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1040006803, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1111095435, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -617,6 +621,10 @@ PrefabInstance:
     - target: {fileID: 1629355937, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650364964, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1653960532, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder
@@ -1345,14 +1353,6 @@ PrefabInstance:
     - target: {fileID: 8520806602326749117, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8524546506343825459, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 453dca9d44b445a4d977239b6e570790, type: 3}
-    - target: {fileID: 8524546506343825459, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8657635077051734850, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_RootOrder

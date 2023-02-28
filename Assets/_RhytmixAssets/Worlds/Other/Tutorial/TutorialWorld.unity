@@ -815,6 +815,11 @@ MonoBehaviour:
   tapNote: {fileID: 1404083527}
   holdNote: {fileID: 149898570}
   swipeUpNote: {fileID: 339364712}
+--- !u!1 &1143653651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7909707539388379847, guid: 63b51d6485effd4428bbb7ff4fb468f0, type: 3}
+  m_PrefabInstance: {fileID: 1797929201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1186261488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1446,10 @@ PrefabInstance:
       propertyPath: RotateSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 1640738338627320855, guid: 63b51d6485effd4428bbb7ff4fb468f0, type: 3}
+      propertyPath: ThingToRotate
+      value: 
+      objectReference: {fileID: 1143653651}
     - target: {fileID: 3048857407539368662, guid: 63b51d6485effd4428bbb7ff4fb468f0, type: 3}
       propertyPath: m_Name
       value: Note_CyberpunkSwipeUp_Tutorial
