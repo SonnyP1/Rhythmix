@@ -36,6 +36,7 @@ public class TutorialWorld : MonoBehaviour
     [SerializeField] TextMeshProUGUI comboXTxt;
     [SerializeField] TextMeshProUGUI comboNumberTxt;
     [SerializeField] GameObject hitLoc;
+    [SerializeField] GameObject characterIcons;
 
     [Header("Tutorial Notes")]
     [SerializeField] GameObject tapNote;
@@ -95,6 +96,7 @@ public class TutorialWorld : MonoBehaviour
                 terminalAnimator.SetBool("isFade", true);
                 break;
             case 2:
+                characterIcons.SetActive(true);
                 rightPlaceHolder.SetActive(true);
                 leftPlaceHolder.SetActive(true);
                 break;

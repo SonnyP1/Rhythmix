@@ -580,6 +580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &403600216 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3373284388250177430, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+  m_PrefabInstance: {fileID: 3388429799624548468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &657808680 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7709578945546791844, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
@@ -812,6 +817,7 @@ MonoBehaviour:
   comboXTxt: {fileID: 1377362970}
   comboNumberTxt: {fileID: 1660753351}
   hitLoc: {fileID: 260554800}
+  characterIcons: {fileID: 403600216}
   tapNote: {fileID: 1404083527}
   holdNote: {fileID: 149898570}
   swipeUpNote: {fileID: 339364712}
@@ -1712,6 +1718,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3373284388250177430, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3388429799004321788, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Name
       value: CoreGame
@@ -1790,6 +1800,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3766795144183862680, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3985420841173803859, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4720012851032965396, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
