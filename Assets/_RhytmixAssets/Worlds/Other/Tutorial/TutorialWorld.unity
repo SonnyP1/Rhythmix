@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Rythmix! Any input to continue...
+  m_text: Welcome to Rythmix! Click here to continue...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 383d1d785d2b7414da836dc44f024bba, type: 2}
   m_sharedMaterial: {fileID: 2248204979284867324, guid: 383d1d785d2b7414da836dc44f024bba, type: 2}
