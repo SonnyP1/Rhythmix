@@ -73,17 +73,17 @@ public class MainMenuManager : MonoBehaviour
     public void LoadAlleyRatsEasy()
     {
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Easy.mid");
-        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
     public void LoadAlleyRatsMedium()
     {
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Medium.mid");
-        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
     public void LoadAlleyRatsHard()
     {
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Hard.mid");
-        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
+        SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
     //**********************************************************************Others
     public void FeedbackBtnClick()
