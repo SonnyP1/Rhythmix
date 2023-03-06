@@ -1786,6 +1786,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerPrefabGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 6252635033570118137, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: b29ca18411ffec04c99f0d3e62ff9cf5, type: 2}
+    - target: {fileID: 6434336627965686054, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 0c4c8beeaee383b4c8c86456c3f0718c, type: 2}
     - target: {fileID: 6743694658134064941, guid: a7e3c550603e23d4a9925c1cb21dbec4, type: 3}
       propertyPath: Icon
       value: 
