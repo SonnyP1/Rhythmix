@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 92c30d6c288ebdf448c453590ead0a23
+guid: 9ef80185d9159f347ac63b0dc523c71f
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: 69307214804821701
-    second: GlitcherHoldWindUp
+      74: -2447536154496914693
+    second: Glitcher_HoldLoop
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -25,24 +25,18 @@ ModelImporter:
       mm\n\t'Knee_L' : position error = 34.812767 mm\n\t'Ankle_L' : position error
       = 35.959602 mm\n\t'Toes_L' : position error = 11.082904 mm\nCopied Avatar Rig
       Configuration mis-match. Inbetween bone rotation in copied configuration does
-      not match rotation in animation file:\n\t'HipPart2_L' : rotation error = 9.173658
+      not match rotation in animation file:\n\t'HipPart2_L' : rotation error = 24.324471
       deg\n"
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'GlitcherHoldWindUp' has import animation warnings
+    animationImportWarnings: "\nClip 'Glitcher_HoldLoop' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
+      humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
-      has translation animation that will be discarded.\n\t'ElbowPart2_R' has translation
-      animation that will be discarded.\n\t'Wrist_R' has translation animation that
-      will be discarded.\n\t'ShoulderPart2_L' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'ElbowPart1_L' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_L'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Wrist_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Hip_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
       is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
@@ -59,25 +53,25 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: GlitcherHoldWindUp
-      takeName: GlitcherHoldWindUp
+      name: Glitcher_HoldLoop
+      takeName: Glitcher_HoldLoop
       internalID: 0
-      firstFrame: 1
-      lastFrame: 17
+      firstFrame: 24
+      lastFrame: 48
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -86,7 +80,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+      additiveReferencePoseFrame: 24
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -558,13 +552,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Glitcher_Global_Skeleton(Clone)
+    - name: Glitcher_all_Global_Skeleton(Clone)
       parentName: 
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: MotionSystem
-      parentName: Glitcher_Global_Skeleton(Clone)
+      parentName: Glitcher_all_Global_Skeleton(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -3594,7 +3588,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: DeformationSystem
-      parentName: Glitcher_Global_Skeleton(Clone)
+      parentName: Glitcher_all_Global_Skeleton(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -4049,7 +4043,7 @@ ModelImporter:
       rotation: {x: 0.0000001754164, y: 0.000001292348, z: -2.2669903e-13, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Geometry
-      parentName: Glitcher_Global_Skeleton(Clone)
+      parentName: Glitcher_all_Global_Skeleton(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -4135,7 +4129,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c3429eacdbf2e5646b9e29cf4bafb359, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 453dca9d44b445a4d977239b6e570790, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1

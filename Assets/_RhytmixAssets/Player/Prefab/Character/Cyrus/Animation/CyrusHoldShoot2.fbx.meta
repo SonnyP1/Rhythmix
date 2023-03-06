@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 389c5e130796215458c8e7229da8cac9
+guid: bede64e36acf9c04381e0a47580dff04
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -866799715761211006
-    second: Global_Shoot_L_Test
+      74: -1344283689836335654
+    second: CyrusHoldShoot2
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -21,7 +21,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Global_Shoot_L_Test' has import animation warnings
+    animationImportWarnings: "\nClip 'CyrusHoldShoot2' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'RootPart2_M' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n\t'Spine1Part1_M' is inbetween
@@ -42,8 +42,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Global_Shoot_L_Test
-      takeName: Global_Shoot_L_Test
+      name: CyrusHoldShoot2
+      takeName: CyrusHoldShoot2
       internalID: 0
       firstFrame: 1
       lastFrame: 23
@@ -53,14 +53,14 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
