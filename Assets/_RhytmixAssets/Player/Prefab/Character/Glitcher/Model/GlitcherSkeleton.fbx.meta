@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glitcher_Rig_Run_model_lambert2
-    second: {fileID: 2100000, guid: 924a6add9746d034a997694169c9ddee, type: 2}
+    second: {fileID: 2100000, guid: bf57de7e1f1d14d419d25bf97b729ce7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glitcher_Rig_Run_model_lambert3
-    second: {fileID: 2100000, guid: 6d656b5ed69b1904994f40911f6978ce, type: 2}
+    second: {fileID: 2100000, guid: bf57de7e1f1d14d419d25bf97b729ce7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glitcher_Rig_Run_model_lambert4
-    second: {fileID: 2100000, guid: 79fbaff6e3149964aae0f750b1ec2370, type: 2}
+    second: {fileID: 2100000, guid: bf57de7e1f1d14d419d25bf97b729ce7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -544,7 +544,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKFollowRoot
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRoot_M
@@ -564,57 +564,57 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingerOffset_M
       parentName: Glitcher_Rig_Run:FKRoot_M
-      position: {x: -0.00086104794, y: -3.5229944e-12, z: -0.0023338418}
+      position: {x: -0.086104795, y: -3.5229944e-10, z: -0.23338418}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwinger_M
       parentName: Glitcher_Rig_Run:HipSwingerOffset_M
-      position: {x: -2.220446e-18, y: -1.3877787e-19, z: -3.9443044e-33}
+      position: {x: -2.220446e-16, y: -1.3877788e-17, z: -3.9443045e-31}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingerStabilizerTarget
       parentName: Glitcher_Rig_Run:FKRoot_M
-      position: {x: -0.00086104794, y: -3.522995e-12, z: -0.0023338418}
+      position: {x: -0.086104795, y: -3.522995e-10, z: -0.23338418}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReverse
       parentName: Glitcher_Rig_Run:FKRoot_M
-      position: {x: -0.0017220959, y: 9.714452e-19, z: -3.015152e-18}
+      position: {x: -0.17220959, y: 9.7144515e-17, z: -3.015152e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReversePart1
       parentName: Glitcher_Rig_Run:HipSwingReverse
-      position: {x: 0.000574032, y: 0, z: 0}
+      position: {x: 0.057403203, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReversePart2
       parentName: Glitcher_Rig_Run:HipSwingReversePart1
-      position: {x: 0.000574032, y: 0, z: 0}
+      position: {x: 0.057403203, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReverseRoot
       parentName: Glitcher_Rig_Run:HipSwingReversePart2
-      position: {x: 0.000574032, y: -8.3266725e-19, z: 3.015152e-18}
+      position: {x: 0.057403203, y: -8.326673e-17, z: 3.015152e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReverseXPart1
       parentName: Glitcher_Rig_Run:HipSwingReverse
-      position: {x: 0.000574032, y: 0, z: 0}
+      position: {x: 0.057403203, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:HipSwingReverseXPart2
       parentName: Glitcher_Rig_Run:HipSwingReverse
-      position: {x: 0.001148064, y: -1.3877787e-19, z: 0}
+      position: {x: 0.114806406, y: -1.3877788e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKXRoot_M
       parentName: Glitcher_Rig_Run:FKExtraRoot_M
-      position: {x: 1.110223e-18, y: 2.7755575e-19, z: 0}
+      position: {x: 1.110223e-16, y: 2.7755576e-17, z: 0}
       rotation: {x: -5.551115e-17, y: 1.8503716e-17, z: 1.8503716e-17, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRootPart1_M
       parentName: Glitcher_Rig_Run:FKXRoot_M
-      position: {x: -0.000574032, y: 5.551115e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: 5.551115e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRootPart1_M
@@ -634,7 +634,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRootPart2_M
       parentName: Glitcher_Rig_Run:FKXRootPart1_M
-      position: {x: -0.000574032, y: 5.551115e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: 5.551115e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRootPart2_M
@@ -659,7 +659,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetSpine1_M
       parentName: Glitcher_Rig_Run:HipSwingerStabilizer
-      position: {x: -0.000574032, y: -5.551115e-19, z: -1.758107e-18}
+      position: {x: -0.057403203, y: -5.551115e-17, z: -1.758107e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraSpine1_M
@@ -679,7 +679,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetSpine1Part1_M
       parentName: Glitcher_Rig_Run:FKXSpine1_M
-      position: {x: -0.00046608385, y: 2.1510571e-18, z: -4.323997e-19}
+      position: {x: -0.046608385, y: 2.1510571e-16, z: -4.323997e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraSpine1Part1_M
@@ -699,7 +699,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetSpine1Part2_M
       parentName: Glitcher_Rig_Run:FKXSpine1Part1_M
-      position: {x: -0.00046608385, y: 2.0816683e-18, z: -4.323997e-19}
+      position: {x: -0.046608385, y: 2.0816683e-16, z: -4.323997e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraSpine1Part2_M
@@ -719,7 +719,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetChest_M
       parentName: Glitcher_Rig_Run:FKXSpine1Part2_M
-      position: {x: -0.00046608385, y: 1.9428903e-18, z: -1.264987e-18}
+      position: {x: -0.046608385, y: 1.9428903e-16, z: -1.264987e-16}
       rotation: {x: 0, y: -0, z: -0.08532495, w: 0.9963532}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraChest_M
@@ -739,12 +739,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToRoot_M
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetHip_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToRoot_M
-      position: {x: 0.00019581662, y: -0.00008064524, z: -0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: -0.08037894}
       rotation: {x: 0.0162021, y: 0.99965185, z: -0.017742865, w: -0.010904324}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraHip_R
@@ -764,7 +764,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetKnee_R
       parentName: Glitcher_Rig_Run:FKXHip_R
-      position: {x: -0.004028701, y: -6.2450048e-18, z: 1.3877787e-19}
+      position: {x: -0.40287012, y: -6.2450045e-16, z: 1.3877788e-17}
       rotation: {x: 0, y: 0, z: 0.05324714, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraKnee_R
@@ -784,7 +784,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetAnkle_R
       parentName: Glitcher_Rig_Run:FKXKnee_R
-      position: {x: -0.004608384, y: 8.187895e-18, z: -8.3266725e-19}
+      position: {x: -0.46083838, y: 8.1878953e-16, z: -8.326673e-17}
       rotation: {x: -0.0250025, y: -0.008641576, z: 0.00057201827, w: 0.9996499}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraAnkle_R
@@ -804,7 +804,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetToes_R
       parentName: Glitcher_Rig_Run:FKXAnkle_R
-      position: {x: -0.0006531982, y: 0.0013163825, z: 8.935481e-13}
+      position: {x: -0.06531982, y: 0.13163826, z: 8.935481e-11}
       rotation: {x: 0.004559327, y: 0.003982277, z: -0.6578248, w: 0.75314665}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraToes_R
@@ -824,7 +824,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetHip_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToRoot_M
-      position: {x: 0.00019581662, y: -0.00008064524, z: 0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: 0.08037894}
       rotation: {x: 0.99965185, y: -0.016202098, z: 0.010904324, w: -0.017742865}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraHip_L
@@ -844,7 +844,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetKnee_L
       parentName: Glitcher_Rig_Run:FKXHip_L
-      position: {x: 0.004028701, y: 7.216449e-18, z: -3.0531133e-18}
+      position: {x: 0.40287012, y: 7.2164497e-16, z: -3.0531133e-16}
       rotation: {x: 0, y: 0, z: 0.05324714, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraKnee_L
@@ -864,7 +864,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetAnkle_L
       parentName: Glitcher_Rig_Run:FKXKnee_L
-      position: {x: 0.004608384, y: -3.5735303e-18, z: -2.359224e-18}
+      position: {x: 0.46083838, y: -3.5735304e-16, z: -2.359224e-16}
       rotation: {x: -0.0250025, y: -0.008641576, z: 0.0005720198, w: 0.9996499}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraAnkle_L
@@ -884,7 +884,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetToes_L
       parentName: Glitcher_Rig_Run:FKXAnkle_L
-      position: {x: 0.0006531982, y: -0.0013163825, z: -2.8675447e-11}
+      position: {x: 0.06531982, y: -0.13163826, z: -0.0000000028675446}
       rotation: {x: 0.0045603104, y: 0.0039831363, z: -0.6578248, w: 0.75314665}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraToes_L
@@ -904,12 +904,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToChest_M
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: 2.8912893e-18, y: 0.012736175, z: -0.00053448515}
+      position: {x: 2.8912893e-16, y: 1.2736175, z: -0.053448517}
       rotation: {x: 0.5207599, y: -0.47834, z: -0.5207599, w: 0.47834}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetNeck_M
       parentName: Glitcher_Rig_Run:FKParentConstraintToChest_M
-      position: {x: -0.0018630506, y: -1.9428903e-18, z: 1.7095809e-18}
+      position: {x: -0.18630506, y: -1.9428903e-16, z: 1.7095809e-16}
       rotation: {x: 0, y: 0, z: -0.047635384, w: 0.99886477}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraNeck_M
@@ -929,7 +929,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetNeckPart1_M
       parentName: Glitcher_Rig_Run:FKXNeck_M
-      position: {x: -0.000508304, y: 2.220446e-18, z: 9.366716e-20}
+      position: {x: -0.050830398, y: 2.220446e-16, z: 9.366716e-18}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraNeckPart1_M
@@ -949,7 +949,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetNeckPart2_M
       parentName: Glitcher_Rig_Run:FKXNeckPart1_M
-      position: {x: -0.000508304, y: 3.330669e-18, z: 9.366716e-20}
+      position: {x: -0.050830398, y: 3.330669e-16, z: 9.366716e-18}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraNeckPart2_M
@@ -969,7 +969,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetHead_M
       parentName: Glitcher_Rig_Run:FKXNeckPart2_M
-      position: {x: -0.000508304, y: 2.220446e-18, z: -4.8761217e-19}
+      position: {x: -0.050830398, y: 2.220446e-16, z: -4.8761215e-17}
       rotation: {x: 0, y: 0, z: 0.08996424, w: 0.99594504}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKGlobalStaticHead_M
@@ -999,7 +999,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetJaw_M
       parentName: Glitcher_Rig_Run:FKXHead_M
-      position: {x: 0.00027543237, y: 0.0003976694, z: -7.497904e-19}
+      position: {x: 0.027543236, y: 0.03976694, z: -7.497904e-17}
       rotation: {x: 0, y: 0, z: -0.8561418, w: 0.5167409}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraJaw_M
@@ -1019,12 +1019,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKAimEye_R
       parentName: Glitcher_Rig_Run:FKXHead_M
-      position: {x: -0.00021920077, y: 0.0010314797, z: -0.00033566254}
+      position: {x: -0.021920078, y: 0.10314797, z: -0.033566255}
       rotation: {x: 0, y: 2.1590257e-16, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetEye_R
       parentName: Glitcher_Rig_Run:FKAimEye_R
-      position: {x: 1.3877787e-19, y: -2.220446e-18, z: 0}
+      position: {x: 1.3877788e-17, y: -2.220446e-16, z: 0}
       rotation: {x: -4.7767137e-16, y: 0.000000021855694, z: 0.000000021855694, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraEye_R
@@ -1044,12 +1044,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKAimEye_L
       parentName: Glitcher_Rig_Run:FKXHead_M
-      position: {x: -0.00021920077, y: 0.0010314797, z: 0.00033566254}
+      position: {x: -0.021920078, y: 0.10314797, z: 0.033566255}
       rotation: {x: 0, y: 2.1590257e-16, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetEye_L
       parentName: Glitcher_Rig_Run:FKAimEye_L
-      position: {x: -0, y: 2.220446e-18, z: 0}
+      position: {x: -0, y: 2.220446e-16, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraEye_L
@@ -1069,7 +1069,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetScapula_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToChest_M
-      position: {x: -0.00073387387, y: 0.00030963268, z: -0.00042806964}
+      position: {x: -0.073387384, y: 0.030963268, z: -0.042806964}
       rotation: {x: 0.03290885, y: -0.77655154, z: 0.026857674, w: 0.6286202}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraScapula_R
@@ -1089,7 +1089,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetScapula_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToChest_M
-      position: {x: -0.00073387387, y: 0.00030963268, z: 0.00042806964}
+      position: {x: -0.073387384, y: 0.030963268, z: 0.042806964}
       rotation: {x: 0.77655154, y: 0.032908842, z: 0.6286202, w: -0.026857678}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraScapula_L
@@ -1109,12 +1109,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToWrist_R
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: 0.004573748, y: 0.009011515, z: -0.00015363067}
+      position: {x: 0.4573748, y: 0.90115154, z: -0.015363066}
       rotation: {x: 0.31551397, y: 0.64922017, z: 0.6146084, w: 0.3181519}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger1_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_R
-      position: {x: -0.0009445681, y: -3.0531133e-18, z: 1.976197e-16}
+      position: {x: -0.09445681, y: -3.0531133e-16, z: 1.976197e-14}
       rotation: {x: -0.00021659152, y: -0.04166428, z: 0.009307206, w: 0.9990883}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger1_R
@@ -1124,7 +1124,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraMiddleFinger1_R
       parentName: Glitcher_Rig_Run:SDKFKMiddleFinger1_R
-      position: {x: 5.551115e-19, y: 3.469447e-20, z: 1.110223e-18}
+      position: {x: 5.551115e-17, y: 3.469447e-18, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKMiddleFinger1_R
@@ -1139,7 +1139,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger2_R
       parentName: Glitcher_Rig_Run:FKXMiddleFinger1_R
-      position: {x: -0.00030461632, y: 5.1569477e-14, z: -8.963941e-15}
+      position: {x: -0.030461632, y: 5.156948e-12, z: -8.963941e-13}
       rotation: {x: 0.000319513, y: 0.021989372, z: 0.000015414029, w: 0.9997582}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger2_R
@@ -1149,7 +1149,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraMiddleFinger2_R
       parentName: Glitcher_Rig_Run:SDKFKMiddleFinger2_R
-      position: {x: 5.551115e-19, y: 6.938894e-20, z: -1.110223e-18}
+      position: {x: 5.551115e-17, y: 6.938894e-18, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKMiddleFinger2_R
@@ -1164,7 +1164,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger3_R
       parentName: Glitcher_Rig_Run:FKXMiddleFinger2_R
-      position: {x: -0.0001679485, y: -8.6736174e-19, z: -2.8865798e-17}
+      position: {x: -0.01679485, y: -8.6736174e-17, z: -2.8865799e-15}
       rotation: {x: 0.00046585005, y: 0.0320326, z: -0.000002713143, w: 0.99948674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger3_R
@@ -1174,7 +1174,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraMiddleFinger3_R
       parentName: Glitcher_Rig_Run:SDKFKMiddleFinger3_R
-      position: {x: 5.551115e-19, y: -6.938894e-20, z: 1.110223e-18}
+      position: {x: 5.551115e-17, y: -6.938894e-18, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKMiddleFinger3_R
@@ -1189,7 +1189,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger1_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_R
-      position: {x: -0.00020064901, y: 0.00014122162, z: -0.00009896148}
+      position: {x: -0.020064902, y: 0.014122162, z: -0.009896148}
       rotation: {x: -0.459594, y: -0.0002875089, z: -0.35948196, w: 0.8121244}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger1_R
@@ -1209,7 +1209,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger2_R
       parentName: Glitcher_Rig_Run:FKXThumbFinger1_R
-      position: {x: -0.0003440774, y: 1.5119284e-12, z: 1.9814341e-12}
+      position: {x: -0.03440774, y: 1.5119284e-10, z: 1.9814342e-10}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKThumbFinger2_R
@@ -1219,7 +1219,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger2_R
       parentName: Glitcher_Rig_Run:SDKFKThumbFinger2_R
-      position: {x: -0, y: -5.551115e-19, z: -1.110223e-18}
+      position: {x: -0, y: -5.551115e-17, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKThumbFinger2_R
@@ -1234,7 +1234,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger3_R
       parentName: Glitcher_Rig_Run:FKXThumbFinger2_R
-      position: {x: -0.00016541436, y: -2.7755576e-18, z: 2.8865798e-17}
+      position: {x: -0.016541436, y: -2.7755576e-16, z: 2.8865799e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKThumbFinger3_R
@@ -1244,7 +1244,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger3_R
       parentName: Glitcher_Rig_Run:SDKFKThumbFinger3_R
-      position: {x: -0, y: 1.6653345e-18, z: 1.110223e-18}
+      position: {x: -0, y: 1.6653345e-16, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKThumbFinger3_R
@@ -1259,7 +1259,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger1_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_R
-      position: {x: -0.00084514276, y: 0.00023153496, z: -0.000017106046}
+      position: {x: -0.084514275, y: 0.023153495, z: -0.0017106045}
       rotation: {x: 0.004034708, y: -0.0285099, z: -0.1359894, w: 0.9902918}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger1_R
@@ -1269,7 +1269,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger1_R
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger1_R
-      position: {x: 5.551115e-19, y: -2.7755575e-19, z: 0}
+      position: {x: 5.551115e-17, y: -2.7755576e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger1_R
@@ -1284,7 +1284,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger2_R
       parentName: Glitcher_Rig_Run:FKXIndexFinger1_R
-      position: {x: -0.000258741, y: 2.1042335e-14, z: 9.991341e-14}
+      position: {x: -0.0258741, y: 2.1042335e-12, z: 9.991341e-12}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger2_R
@@ -1294,7 +1294,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger2_R
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger2_R
-      position: {x: -0, y: -5.551115e-19, z: 1.110223e-18}
+      position: {x: -0, y: -5.551115e-17, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger2_R
@@ -1309,7 +1309,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger3_R
       parentName: Glitcher_Rig_Run:FKXIndexFinger2_R
-      position: {x: -0.00017211535, y: -8.881784e-18, z: -4.773959e-17}
+      position: {x: -0.017211536, y: -8.881784e-16, z: -4.773959e-15}
       rotation: {x: -0.014280086, y: 0.050244115, z: 0.00014267724, w: 0.9986349}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger3_R
@@ -1319,7 +1319,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger3_R
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger3_R
-      position: {x: -5.551115e-19, y: -2.7755575e-19, z: 1.110223e-18}
+      position: {x: -5.551115e-17, y: -2.7755576e-17, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger3_R
@@ -1334,7 +1334,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetCup_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_R
-      position: {x: -0.00019928871, y: -0.00009963983, z: -0.0000011177651}
+      position: {x: -0.01992887, y: -0.009963983, z: -0.00011177651}
       rotation: {x: -0.0260611, y: -0.015481063, z: 0.01033643, w: 0.99948704}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKCup_R
@@ -1344,7 +1344,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraCup_R
       parentName: Glitcher_Rig_Run:SDKFKCup_R
-      position: {x: 1.110223e-18, y: 6.938894e-20, z: -1.110223e-18}
+      position: {x: 1.110223e-16, y: 6.938894e-18, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKCup_R
@@ -1359,7 +1359,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger1_R
       parentName: Glitcher_Rig_Run:FKXCup_R
-      position: {x: -0.0006153718, y: -0.0002610119, z: -0.00006644092}
+      position: {x: -0.06153718, y: -0.02610119, z: -0.0066440925}
       rotation: {x: 0.013638093, y: -0.06760896, z: 0.1658203, w: 0.98374116}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger1_R
@@ -1369,7 +1369,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraPinkyFinger1_R
       parentName: Glitcher_Rig_Run:SDKFKPinkyFinger1_R
-      position: {x: -5.551115e-19, y: 2.7755575e-19, z: 0}
+      position: {x: -5.551115e-17, y: 2.7755576e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKPinkyFinger1_R
@@ -1384,7 +1384,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger2_R
       parentName: Glitcher_Rig_Run:FKXPinkyFinger1_R
-      position: {x: -0.00022821857, y: -6.1062266e-18, z: -7.3274716e-17}
+      position: {x: -0.022821857, y: -6.1062266e-16, z: -7.327472e-15}
       rotation: {x: 0.0023266044, y: 0.0062766355, z: 0.00028591757, w: 0.9999776}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger2_R
@@ -1394,7 +1394,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraPinkyFinger2_R
       parentName: Glitcher_Rig_Run:SDKFKPinkyFinger2_R
-      position: {x: 1.6653345e-18, y: 2.7755575e-19, z: 0}
+      position: {x: 1.6653345e-16, y: 2.7755576e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKPinkyFinger2_R
@@ -1409,7 +1409,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger3_R
       parentName: Glitcher_Rig_Run:FKXPinkyFinger2_R
-      position: {x: -0.00013954187, y: -4.1633365e-18, z: -4.6629366e-17}
+      position: {x: -0.013954187, y: -4.1633366e-16, z: -4.6629367e-15}
       rotation: {x: 0.018705541, y: 0.05022928, z: 0.0012290676, w: 0.9985618}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger3_R
@@ -1419,7 +1419,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraPinkyFinger3_R
       parentName: Glitcher_Rig_Run:SDKFKPinkyFinger3_R
-      position: {x: -1.110223e-18, y: 0, z: 1.110223e-18}
+      position: {x: -1.110223e-16, y: 0, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKPinkyFinger3_R
@@ -1434,7 +1434,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger1_R
       parentName: Glitcher_Rig_Run:FKXCup_R
-      position: {x: -0.00067813124, y: -0.00011422239, z: -0.000029739735}
+      position: {x: -0.06781312, y: -0.011422239, z: -0.0029739735}
       rotation: {x: 0.025673246, y: -0.0048447484, z: 0.056418147, w: 0.99806535}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger1_R
@@ -1444,7 +1444,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRingFinger1_R
       parentName: Glitcher_Rig_Run:SDKFKRingFinger1_R
-      position: {x: 5.551115e-19, y: -1.3877787e-19, z: 0}
+      position: {x: 5.551115e-17, y: -1.3877788e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKRingFinger1_R
@@ -1459,7 +1459,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger2_R
       parentName: Glitcher_Rig_Run:FKXRingFinger1_R
-      position: {x: -0.000283909, y: 9.5062855e-18, z: -1.2656544e-16}
+      position: {x: -0.0283909, y: 9.506286e-16, z: -1.2656543e-14}
       rotation: {x: -0.002471485, y: -0.018848252, z: -0.000084889194, w: 0.99981934}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger2_R
@@ -1469,7 +1469,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRingFinger2_R
       parentName: Glitcher_Rig_Run:SDKFKRingFinger2_R
-      position: {x: -0, y: 6.938894e-20, z: 0}
+      position: {x: -0, y: 6.938894e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKRingFinger2_R
@@ -1484,7 +1484,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger3_R
       parentName: Glitcher_Rig_Run:FKXRingFinger2_R
-      position: {x: -0.00017166512, y: -4.2327254e-18, z: 1.2323476e-16}
+      position: {x: -0.017166512, y: -4.2327253e-16, z: 1.23234756e-14}
       rotation: {x: 0.0049418127, y: 0.037690107, z: 0.00007652508, w: 0.99927723}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger3_R
@@ -1494,7 +1494,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRingFinger3_R
       parentName: Glitcher_Rig_Run:SDKFKRingFinger3_R
-      position: {x: -5.551115e-19, y: 0, z: -1.110223e-18}
+      position: {x: -5.551115e-17, y: 0, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKRingFinger3_R
@@ -1509,12 +1509,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToScapula_R
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: 0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: 0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.074142195, y: 0.7032739, z: 0.7031684, w: 0.073912695}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetShoulder_R
       parentName: Glitcher_Rig_Run:FKParentConstraintToScapula_R
-      position: {x: -0.0010953624, y: 4.9057984e-17, z: 2.220446e-17}
+      position: {x: -0.10953624, y: 4.9057984e-15, z: 2.220446e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraShoulder_R
@@ -1534,7 +1534,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetElbow_R
       parentName: Glitcher_Rig_Run:FKXShoulder_R
-      position: {x: -0.0025635506, y: 1.110223e-18, z: -7.771561e-18}
+      position: {x: -0.25635505, y: 1.110223e-16, z: -7.771561e-16}
       rotation: {x: 0, y: 0, z: -0.033559427, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraElbow_R
@@ -1554,7 +1554,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetWrist_R
       parentName: Glitcher_Rig_Run:FKXElbow_R
-      position: {x: -0.0026456001, y: -3.330669e-18, z: -1.110223e-17}
+      position: {x: -0.26456, y: -3.330669e-16, z: -1.110223e-15}
       rotation: {x: 0.13499172, y: 0.00835606, z: 0.005260986, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraWrist_R
@@ -1574,12 +1574,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToWrist_L
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: -0.004573748, y: 0.009011515, z: -0.00015363077}
+      position: {x: -0.4573748, y: 0.90115154, z: -0.015363077}
       rotation: {x: 0.3181519, y: -0.6146084, z: 0.64922017, w: -0.31551397}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger1_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_L
-      position: {x: 0.0009445681, y: 4.5796697e-18, z: -1.9984015e-16}
+      position: {x: 0.09445681, y: 4.57967e-16, z: -1.9984014e-14}
       rotation: {x: -0.00021659152, y: -0.04166428, z: 0.009307206, w: 0.9990883}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger1_L
@@ -1604,7 +1604,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger2_L
       parentName: Glitcher_Rig_Run:FKXMiddleFinger1_L
-      position: {x: 0.00030461632, y: -5.1569334e-14, z: 8.966162e-15}
+      position: {x: 0.030461632, y: -5.1569335e-12, z: 8.966162e-13}
       rotation: {x: 0.000319513, y: 0.021989372, z: 0.000015414029, w: 0.9997582}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger2_L
@@ -1614,7 +1614,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraMiddleFinger2_L
       parentName: Glitcher_Rig_Run:SDKFKMiddleFinger2_L
-      position: {x: -0, y: 3.469447e-20, z: 0}
+      position: {x: -0, y: 3.469447e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKMiddleFinger2_L
@@ -1629,7 +1629,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetMiddleFinger3_L
       parentName: Glitcher_Rig_Run:FKXMiddleFinger2_L
-      position: {x: 0.0001679485, y: 8.3266725e-19, z: 2.553513e-17}
+      position: {x: 0.01679485, y: 8.326673e-17, z: 2.553513e-15}
       rotation: {x: 0.00046585005, y: 0.0320326, z: -0.000002713143, w: 0.99948674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKMiddleFinger3_L
@@ -1639,7 +1639,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraMiddleFinger3_L
       parentName: Glitcher_Rig_Run:SDKFKMiddleFinger3_L
-      position: {x: -0, y: -3.469447e-20, z: 0}
+      position: {x: -0, y: -3.469447e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKMiddleFinger3_L
@@ -1654,7 +1654,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger1_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_L
-      position: {x: 0.00020064901, y: -0.00014122162, z: 0.00009896148}
+      position: {x: 0.020064902, y: -0.014122162, z: 0.009896148}
       rotation: {x: -0.459594, y: -0.0002875089, z: -0.35948196, w: 0.8121244}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger1_L
@@ -1674,7 +1674,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger2_L
       parentName: Glitcher_Rig_Run:FKXThumbFinger1_L
-      position: {x: 0.0003440774, y: -1.5119301e-12, z: -1.9814387e-12}
+      position: {x: 0.03440774, y: -1.5119302e-10, z: -1.9814386e-10}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKThumbFinger2_L
@@ -1684,7 +1684,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger2_L
       parentName: Glitcher_Rig_Run:SDKFKThumbFinger2_L
-      position: {x: -0, y: 0, z: -1.110223e-18}
+      position: {x: -0, y: 0, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKThumbFinger2_L
@@ -1699,7 +1699,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetThumbFinger3_L
       parentName: Glitcher_Rig_Run:FKXThumbFinger2_L
-      position: {x: 0.00016541436, y: 1.6653345e-18, z: -2.553513e-17}
+      position: {x: 0.016541436, y: 1.6653345e-16, z: -2.553513e-15}
       rotation: {x: 0.000000014901161, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKThumbFinger3_L
@@ -1709,7 +1709,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraThumbFinger3_L
       parentName: Glitcher_Rig_Run:SDKFKThumbFinger3_L
-      position: {x: -1.110223e-18, y: 5.551115e-19, z: 1.110223e-18}
+      position: {x: -1.110223e-16, y: 5.551115e-17, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKThumbFinger3_L
@@ -1724,7 +1724,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger1_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_L
-      position: {x: 0.00084514276, y: -0.00023153496, z: 0.000017106046}
+      position: {x: 0.084514275, y: -0.023153495, z: 0.0017106045}
       rotation: {x: 0.004034708, y: -0.0285099, z: -0.1359894, w: 0.9902918}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger1_L
@@ -1734,7 +1734,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger1_L
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger1_L
-      position: {x: 5.551115e-19, y: 0, z: 0}
+      position: {x: 5.551115e-17, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger1_L
@@ -1749,7 +1749,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger2_L
       parentName: Glitcher_Rig_Run:FKXIndexFinger1_L
-      position: {x: 0.000258741, y: -2.1043168e-14, z: -9.991119e-14}
+      position: {x: 0.0258741, y: -2.1043167e-12, z: -9.991119e-12}
       rotation: {x: 0.000000010536712, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger2_L
@@ -1759,7 +1759,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger2_L
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger2_L
-      position: {x: 5.551115e-19, y: 5.551115e-19, z: 0}
+      position: {x: 5.551115e-17, y: 5.551115e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger2_L
@@ -1774,7 +1774,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetIndexFinger3_L
       parentName: Glitcher_Rig_Run:FKXIndexFinger2_L
-      position: {x: 0.00017211535, y: 8.049117e-18, z: 4.8849813e-17}
+      position: {x: 0.017211536, y: 8.049117e-16, z: 4.8849813e-15}
       rotation: {x: -0.014280086, y: 0.050244115, z: 0.00014267724, w: 0.9986349}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKIndexFinger3_L
@@ -1784,7 +1784,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraIndexFinger3_L
       parentName: Glitcher_Rig_Run:SDKFKIndexFinger3_L
-      position: {x: -5.551115e-19, y: -2.7755575e-19, z: -1.110223e-18}
+      position: {x: -5.551115e-17, y: -2.7755576e-17, z: -1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIndexFinger3_L
@@ -1799,7 +1799,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetCup_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToWrist_L
-      position: {x: 0.00019928871, y: 0.00009963983, z: 0.0000011177651}
+      position: {x: 0.01992887, y: 0.009963983, z: 0.00011177651}
       rotation: {x: -0.0260611, y: -0.015481063, z: 0.01033643, w: 0.99948704}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKCup_L
@@ -1809,7 +1809,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraCup_L
       parentName: Glitcher_Rig_Run:SDKFKCup_L
-      position: {x: -5.551115e-19, y: -6.938894e-20, z: 1.110223e-18}
+      position: {x: -5.551115e-17, y: -6.938894e-18, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKCup_L
@@ -1824,7 +1824,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger1_L
       parentName: Glitcher_Rig_Run:FKXCup_L
-      position: {x: 0.0006153718, y: 0.0002610119, z: 0.00006644092}
+      position: {x: 0.06153718, y: 0.02610119, z: 0.0066440925}
       rotation: {x: 0.013638093, y: -0.06760896, z: 0.1658203, w: 0.98374116}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger1_L
@@ -1834,7 +1834,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraPinkyFinger1_L
       parentName: Glitcher_Rig_Run:SDKFKPinkyFinger1_L
-      position: {x: 1.110223e-18, y: -2.7755575e-19, z: 0}
+      position: {x: 1.110223e-16, y: -2.7755576e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKPinkyFinger1_L
@@ -1849,7 +1849,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger2_L
       parentName: Glitcher_Rig_Run:FKXPinkyFinger1_L
-      position: {x: 0.00022821857, y: 5.8286707e-18, z: 7.4384945e-17}
+      position: {x: 0.022821857, y: 5.828671e-16, z: 7.438494e-15}
       rotation: {x: 0.0023266044, y: 0.0062766355, z: 0.00028591757, w: 0.9999776}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger2_L
@@ -1859,7 +1859,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraPinkyFinger2_L
       parentName: Glitcher_Rig_Run:SDKFKPinkyFinger2_L
-      position: {x: 1.6653345e-18, y: 0, z: 0}
+      position: {x: 1.6653345e-16, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKPinkyFinger2_L
@@ -1874,7 +1874,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetPinkyFinger3_L
       parentName: Glitcher_Rig_Run:FKXPinkyFinger2_L
-      position: {x: 0.00013954187, y: 3.330669e-18, z: 4.1078256e-17}
+      position: {x: 0.013954187, y: 3.330669e-16, z: 4.1078256e-15}
       rotation: {x: 0.018705541, y: 0.05022928, z: 0.0012290676, w: 0.9985618}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKPinkyFinger3_L
@@ -1899,7 +1899,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger1_L
       parentName: Glitcher_Rig_Run:FKXCup_L
-      position: {x: 0.00067813124, y: 0.00011422239, z: 0.000029739735}
+      position: {x: 0.06781312, y: 0.011422239, z: 0.0029739735}
       rotation: {x: 0.025673246, y: -0.0048447484, z: 0.056418147, w: 0.99806535}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger1_L
@@ -1924,7 +1924,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger2_L
       parentName: Glitcher_Rig_Run:FKXRingFinger1_L
-      position: {x: 0.000283909, y: -9.228729e-18, z: 1.2656544e-16}
+      position: {x: 0.0283909, y: -9.228729e-16, z: 1.2656543e-14}
       rotation: {x: -0.002471485, y: -0.018848252, z: -0.000084889194, w: 0.99981934}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger2_L
@@ -1934,7 +1934,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRingFinger2_L
       parentName: Glitcher_Rig_Run:SDKFKRingFinger2_L
-      position: {x: -0, y: 6.938894e-20, z: -2.220446e-18}
+      position: {x: -0, y: 6.938894e-18, z: -2.220446e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKRingFinger2_L
@@ -1949,7 +1949,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetRingFinger3_L
       parentName: Glitcher_Rig_Run:FKXRingFinger2_L
-      position: {x: 0.00017166512, y: 4.3021143e-18, z: -1.1990409e-16}
+      position: {x: 0.017166512, y: 4.3021142e-16, z: -1.19904095e-14}
       rotation: {x: 0.0049418127, y: 0.037690107, z: 0.00007652508, w: 0.99927723}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:SDKFKRingFinger3_L
@@ -1959,7 +1959,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraRingFinger3_L
       parentName: Glitcher_Rig_Run:SDKFKRingFinger3_L
-      position: {x: 1.110223e-18, y: 0, z: 1.110223e-18}
+      position: {x: 1.110223e-16, y: 0, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKRingFinger3_L
@@ -1974,12 +1974,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKParentConstraintToScapula_L
       parentName: Glitcher_Rig_Run:FKSystem
-      position: {x: -0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: -0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.07391269, y: -0.7031684, z: 0.7032739, w: -0.0741422}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetShoulder_L
       parentName: Glitcher_Rig_Run:FKParentConstraintToScapula_L
-      position: {x: 0.0010953624, y: -4.7149785e-17, z: -2.4424906e-17}
+      position: {x: 0.10953624, y: -4.7149784e-15, z: -2.4424907e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraShoulder_L
@@ -1999,7 +1999,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetElbow_L
       parentName: Glitcher_Rig_Run:FKXShoulder_L
-      position: {x: 0.0025635506, y: -4.440892e-18, z: 1.2212453e-17}
+      position: {x: 0.25635505, y: -4.440892e-16, z: 1.2212453e-15}
       rotation: {x: 0, y: 0, z: -0.033559427, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraElbow_L
@@ -2019,7 +2019,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKOffsetWrist_L
       parentName: Glitcher_Rig_Run:FKXElbow_L
-      position: {x: 0.0026456001, y: 2.7755575e-19, z: 1.3322676e-17}
+      position: {x: 0.26456, y: 2.7755576e-17, z: 1.3322676e-15}
       rotation: {x: 0.13499172, y: 0.00835606, z: 0.005260986, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKExtraWrist_L
@@ -2049,17 +2049,17 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKParentConstraintHip_R
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXOffsetHip_R
       parentName: Glitcher_Rig_Run:IKParentConstraintHip_R
-      position: {x: 0.00019581662, y: -0.00008064524, z: -0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: -0.08037894}
       rotation: {x: 0.0162021, y: 0.99965185, z: -0.017742865, w: -0.010904324}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXHip_R
       parentName: Glitcher_Rig_Run:IKXOffsetHip_R
-      position: {x: -0, y: 0, z: -1.3877787e-19}
+      position: {x: -0, y: 0, z: -1.3877788e-17}
       rotation: {x: -1.2226682e-16, y: -6.958504e-18, z: -3.152808e-32, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Hip_R
@@ -2069,7 +2069,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXKnee_R
       parentName: Glitcher_Rig_Run:IKXHip_R
-      position: {x: -0.004028701, y: -8.187895e-18, z: -2.359224e-18}
+      position: {x: -0.40287012, y: -8.1878953e-16, z: -2.359224e-16}
       rotation: {x: -2.8886164e-24, y: 6.0045864e-23, z: 0.05324715, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Knee_R
@@ -2079,32 +2079,32 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXAnkle_R
       parentName: Glitcher_Rig_Run:IKXKnee_R
-      position: {x: -0.004608384, y: 2.3141215e-17, z: 1.3877787e-19}
+      position: {x: -0.46083838, y: 2.3141215e-15, z: 1.3877788e-17}
       rotation: {x: -0.0250025, y: -0.008641578, z: 0.00057201827, w: 0.9996499}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXToes_R
       parentName: Glitcher_Rig_Run:IKXAnkle_R
-      position: {x: -0.0006531982, y: 0.0013163825, z: 8.9354826e-13}
+      position: {x: -0.06531982, y: 0.13163826, z: 8.935483e-11}
       rotation: {x: 0.004559325, y: 0.003982279, z: -0.6578248, w: 0.75314665}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKMessureFromHip_R
       parentName: Glitcher_Rig_Run:IKParentConstraintHip_R
-      position: {x: 0.00019581662, y: -0.00008064524, z: -0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: -0.08037894}
       rotation: {x: 0.0162021, y: 0.99965185, z: -0.017742865, w: -0.010904324}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKParentConstraintShoulder_R
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: 0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: 0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.074142195, y: 0.7032739, z: 0.7031684, w: 0.073912695}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXOffsetShoulder_R
       parentName: Glitcher_Rig_Run:IKParentConstraintShoulder_R
-      position: {x: -0.0010953624, y: 4.909268e-17, z: 2.4424906e-17}
+      position: {x: -0.10953624, y: 4.909268e-15, z: 2.4424907e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXShoulder_R
       parentName: Glitcher_Rig_Run:IKXOffsetShoulder_R
-      position: {x: -1.110223e-18, y: 0, z: 0}
+      position: {x: -1.110223e-16, y: 0, z: 0}
       rotation: {x: 0.0000000148925015, y: -5.079513e-10, z: 6.35533e-23, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Shoulder_R
@@ -2114,7 +2114,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXElbow_R
       parentName: Glitcher_Rig_Run:IKXShoulder_R
-      position: {x: -0.0025635506, y: 2.7755576e-18, z: -8.881784e-18}
+      position: {x: -0.25635505, y: 2.7755576e-16, z: -8.881784e-16}
       rotation: {x: 6.337679e-23, y: -3.4885603e-22, z: -0.03355944, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Elbow_R
@@ -2124,7 +2124,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXWrist_R
       parentName: Glitcher_Rig_Run:IKXElbow_R
-      position: {x: -0.0026456001, y: -3.6082247e-18, z: -1.3322676e-17}
+      position: {x: -0.26456, y: -3.6082248e-16, z: -1.3322676e-15}
       rotation: {x: 0.1349917, y: 0.008356061, z: 0.0052610002, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Wrist_R
@@ -2134,87 +2134,87 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKMessureFromShoulder_R
       parentName: Glitcher_Rig_Run:IKParentConstraintShoulder_R
-      position: {x: -0.0010953624, y: 4.9057984e-17, z: 2.6645352e-17}
+      position: {x: -0.10953624, y: 4.9057984e-15, z: 2.6645353e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKParentConstraintRoot_M
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXOffsetRoot_M
       parentName: Glitcher_Rig_Run:IKParentConstraintRoot_M
-      position: {x: -0, y: 1.3877787e-19, z: 0}
+      position: {x: -0, y: 1.3877788e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXRoot_M
       parentName: Glitcher_Rig_Run:IKXOffsetRoot_M
-      position: {x: -0, y: 1.3877787e-19, z: 9.860762e-34}
+      position: {x: -0, y: 1.3877788e-17, z: 9.860762e-32}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXRootPart1_M
       parentName: Glitcher_Rig_Run:IKXRoot_M
-      position: {x: -0.000574032, y: -4.1633362e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: -4.1633363e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXRootPart2_M
       parentName: Glitcher_Rig_Run:IKXRootPart1_M
-      position: {x: -0.000574032, y: 1.9428903e-18, z: -6.285226e-19}
+      position: {x: -0.057403203, y: 1.9428903e-16, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXSpine1_M
       parentName: Glitcher_Rig_Run:IKXRootPart2_M
-      position: {x: -0.000574032, y: -6.938894e-19, z: -1.758107e-18}
+      position: {x: -0.057403203, y: -6.938894e-17, z: -1.758107e-16}
       rotation: {x: 0, y: 0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXSpine1Part1_M
       parentName: Glitcher_Rig_Run:IKXSpine1_M
-      position: {x: -0.00046608385, y: 6.938894e-19, z: -4.323997e-19}
+      position: {x: -0.046608385, y: 6.938894e-17, z: -4.323997e-17}
       rotation: {x: 0, y: 0, z: 1.0408341e-17, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXSpine1Part2_M
       parentName: Glitcher_Rig_Run:IKXSpine1Part1_M
-      position: {x: -0.00046608385, y: 2.6367797e-18, z: -4.323997e-19}
+      position: {x: -0.046608385, y: 2.6367797e-16, z: -4.323997e-17}
       rotation: {x: 0, y: 0, z: 0.000000001137139, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXChest_M
       parentName: Glitcher_Rig_Run:IKXSpine1Part2_M
-      position: {x: -0.00046608385, y: 2.0816683e-18, z: 2.6931313e-18}
+      position: {x: -0.046608385, y: 2.0816683e-16, z: 2.6931312e-16}
       rotation: {x: 0, y: 0, z: -0.08532495, w: 0.9963532}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKfake0Spine_M
       parentName: Glitcher_Rig_Run:IKParentConstraintRoot_M
-      position: {x: -0, y: -1.3877787e-19, z: 9.860762e-34}
+      position: {x: -0, y: -1.3877788e-17, z: 9.860762e-32}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpRootPart1_M
       parentName: Glitcher_Rig_Run:IKfake0Spine_M
-      position: {x: -0.000574032, y: -2.7755575e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: -2.7755576e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpRootPart2_M
       parentName: Glitcher_Rig_Run:IKSpRootPart1_M
-      position: {x: -0.000574032, y: 1.6653345e-18, z: -5.9665737e-19}
+      position: {x: -0.057403203, y: 1.6653345e-16, z: -5.9665735e-17}
       rotation: {x: 1.19922395e-17, y: 1.8599785e-16, z: -0.0040628095, w: 0.9999918}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1_M
       parentName: Glitcher_Rig_Run:IKSpRootPart2_M
-      position: {x: -0.000574032, y: -5.551115e-19, z: -1.6943766e-18}
+      position: {x: -0.057403203, y: -5.551115e-17, z: -1.6943766e-16}
       rotation: {x: -2.6625586e-17, y: -3.317336e-16, z: 0.009059981, w: 0.999959}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1Part1_M
       parentName: Glitcher_Rig_Run:IKSpSpine1_M
-      position: {x: -0.00046539912, y: 0.000025255815, z: -4.429724e-19}
+      position: {x: -0.04653991, y: 0.0025255815, z: -4.429724e-17}
       rotation: {x: 4.028355e-17, y: 6.3934883e-16, z: -0.004995575, w: 0.99998754}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1Part2_M
       parentName: Glitcher_Rig_Run:IKSpSpine1Part1_M
-      position: {x: -0.00046539912, y: 0.000025255815, z: -5.2059093e-19}
+      position: {x: -0.04653991, y: 0.0025255815, z: -5.205909e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpChest_M
       parentName: Glitcher_Rig_Run:IKSpSpine1Part2_M
-      position: {x: -0.00046539912, y: 0.000025255815, z: -1.430797e-18}
+      position: {x: -0.04653991, y: 0.0025255815, z: -1.430797e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFixedOrientRoot_M
@@ -2224,27 +2224,27 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRootFollowOffset_M
       parentName: Glitcher_Rig_Run:IKFixedOrientRoot_M
-      position: {x: -0, y: 2.7755575e-19, z: -9.860762e-34}
+      position: {x: -0, y: 2.7755576e-17, z: -9.860762e-32}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpRootFollowOffset_M
       parentName: Glitcher_Rig_Run:IKFixedOrientRoot_M
-      position: {x: -0, y: 5.551115e-19, z: -2.9582283e-33}
+      position: {x: -0, y: 5.551115e-17, z: -2.9582284e-31}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKParentConstraintHip_L
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXOffsetHip_L
       parentName: Glitcher_Rig_Run:IKParentConstraintHip_L
-      position: {x: 0.00019581662, y: -0.00008064524, z: 0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: 0.08037894}
       rotation: {x: 0.99965185, y: -0.016202098, z: 0.010904324, w: -0.017742865}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXHip_L
       parentName: Glitcher_Rig_Run:IKXOffsetHip_L
-      position: {x: -1.110223e-18, y: 1.3877787e-19, z: 1.3877787e-19}
+      position: {x: -1.110223e-16, y: 1.3877788e-17, z: 1.3877788e-17}
       rotation: {x: 0.0000000074385436, y: 4.2334566e-10, z: -4.6754295e-24, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Hip_L
@@ -2254,7 +2254,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXKnee_L
       parentName: Glitcher_Rig_Run:IKXHip_L
-      position: {x: 0.004028701, y: 6.3837825e-18, z: -3.0531133e-18}
+      position: {x: 0.40287012, y: 6.3837824e-16, z: -3.0531133e-16}
       rotation: {x: 6.603028e-24, y: -2.3980456e-23, z: 0.05324715, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Knee_L
@@ -2264,32 +2264,32 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXAnkle_L
       parentName: Glitcher_Rig_Run:IKXKnee_L
-      position: {x: 0.004608384, y: 1.373901e-17, z: -2.359224e-18}
+      position: {x: 0.46083838, y: 1.373901e-15, z: -2.359224e-16}
       rotation: {x: -0.0250025, y: -0.008641577, z: 0.0005720198, w: 0.9996499}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXToes_L
       parentName: Glitcher_Rig_Run:IKXAnkle_L
-      position: {x: 0.0006531982, y: -0.0013163825, z: -2.8675447e-11}
+      position: {x: 0.06531982, y: -0.13163826, z: -0.0000000028675446}
       rotation: {x: 0.0045603095, y: 0.0039831367, z: -0.6578248, w: 0.75314665}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKMessureFromHip_L
       parentName: Glitcher_Rig_Run:IKParentConstraintHip_L
-      position: {x: 0.00019581662, y: -0.00008064524, z: 0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: 0.08037894}
       rotation: {x: 0.99965185, y: -0.016202098, z: 0.010904324, w: -0.017742865}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKParentConstraintShoulder_L
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: -0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.07391269, y: -0.7031684, z: 0.7032739, w: -0.0741422}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXOffsetShoulder_L
       parentName: Glitcher_Rig_Run:IKParentConstraintShoulder_L
-      position: {x: 0.0010953624, y: -4.711509e-17, z: -1.9984017e-17}
+      position: {x: 0.10953624, y: -4.711509e-15, z: -1.9984017e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXShoulder_L
       parentName: Glitcher_Rig_Run:IKXOffsetShoulder_L
-      position: {x: -2.220446e-18, y: 0, z: 2.220446e-18}
+      position: {x: -2.220446e-16, y: 0, z: 2.220446e-16}
       rotation: {x: 0.000000010530589, y: -3.591758e-10, z: 3.8198125e-23, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Shoulder_L
@@ -2299,7 +2299,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXElbow_L
       parentName: Glitcher_Rig_Run:IKXShoulder_L
-      position: {x: 0.0025635506, y: -2.7755576e-18, z: 6.661338e-18}
+      position: {x: 0.25635505, y: -2.7755576e-16, z: 6.661338e-16}
       rotation: {x: 5.379016e-23, y: -4.4799923e-22, z: -0.03355944, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Elbow_L
@@ -2309,7 +2309,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKXWrist_L
       parentName: Glitcher_Rig_Run:IKXElbow_L
-      position: {x: 0.0026456001, y: 1.110223e-18, z: 1.2212453e-17}
+      position: {x: 0.26456, y: 1.110223e-16, z: 1.2212453e-15}
       rotation: {x: 0.13499172, y: 0.008356062, z: 0.0052610002, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKX2Wrist_L
@@ -2319,82 +2319,82 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKMessureFromShoulder_L
       parentName: Glitcher_Rig_Run:IKParentConstraintShoulder_L
-      position: {x: 0.0010953624, y: -4.6664064e-17, z: -1.7763568e-17}
+      position: {x: 0.10953624, y: -4.6664066e-15, z: -1.7763568e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpineOffset_M
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpRootPart1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.000574032, y: -1.3877787e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: -1.3877788e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpRootPart2FollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.001148064, y: 1.2490011e-18, z: -1.2570452e-18}
+      position: {x: -0.114806406, y: 1.249001e-16, z: -1.2570452e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.0017220959, y: 8.3266725e-19, z: -3.015152e-18}
+      position: {x: -0.17220959, y: 8.326673e-17, z: -3.015152e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1Part1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.002187495, y: 0.000025255815, z: -3.447552e-18}
+      position: {x: -0.2187495, y: 0.0025255815, z: -3.4475522e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpSpine1Part2FollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.0026528942, y: 0.00005051163, z: -3.879951e-18}
+      position: {x: -0.26528943, y: 0.005051163, z: -3.8799511e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpChestFollowOffset_M
       parentName: Glitcher_Rig_Run:IKSpSpineOffset_M
-      position: {x: -0.003118293, y: 0.00007576744, z: -5.1449385e-18}
+      position: {x: -0.3118293, y: 0.007576744, z: -5.1449385e-16}
       rotation: {x: 0, y: -0, z: -0.11229836, w: 0.9936746}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpineOffset_M
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRoot_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0, y: -2.7755575e-19, z: 9.860762e-34}
+      position: {x: -0, y: -2.7755576e-17, z: 9.860762e-32}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRootPart1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.00057403225, y: -2.3486642e-12, z: -8.96108e-19}
+      position: {x: -0.057403225, y: -2.3486643e-10, z: -8.9610805e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRootPart2_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.0011480635, y: 0.0000000012936706, z: -1.9957722e-18}
+      position: {x: -0.11480635, y: 0.00000012936707, z: -1.9957721e-16}
       rotation: {x: 0, y: -0, z: -0.0040628007, w: 0.9999918}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.0017220766, y: 0.0000046656123, z: -3.603755e-18}
+      position: {x: -0.17220765, y: 0.00046656124, z: -3.6037551e-16}
       rotation: {x: 0, y: -0, z: -0.022107825, w: 0.9997556}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1Part1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.0021877051, y: 0.00002526879, z: -4.4590114e-18}
+      position: {x: -0.21877052, y: 0.0025268788, z: -4.459011e-16}
       rotation: {x: 0, y: -0, z: -0.02710191, w: 0.9996327}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1Part2_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.0026531047, y: 0.000050523056, z: -4.4843806e-18}
+      position: {x: -0.26531047, y: 0.0050523058, z: -4.4843804e-16}
       rotation: {x: 0, y: 1.9255365e-15, z: -0.027103594, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcChest_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset_M
-      position: {x: -0.003118293, y: 0.000075767435, z: -2.6909296e-18}
+      position: {x: -0.3118293, y: 0.0075767436, z: -2.6909297e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpineOffset3_M
@@ -2404,62 +2404,62 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformRootPart1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: 1.9299255e-19, y: 0.010206293, z: -0.00025395543}
+      position: {x: 1.9299255e-17, y: 1.0206293, z: -0.025395542}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformRootPart2_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: 7.8281514e-19, y: 0.0107746925, z: -0.0003341735}
+      position: {x: 7.8281514e-17, y: 1.0774692, z: -0.03341735}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformSpine1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: 1.8822664e-18, y: 0.011343724, z: -0.0004097718}
+      position: {x: 1.8822664e-16, y: 1.1343724, z: -0.04097718}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformSpine1Part1_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: 2.32968e-18, y: 0.011807663, z: -0.0004544411}
+      position: {x: 2.32968e-16, y: 1.1807663, z: -0.04544411}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformSpine1Part2_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: 1.9487012e-18, y: 0.0122720245, z: -0.00049447303}
+      position: {x: 1.9487012e-16, y: 1.2272024, z: -0.0494473}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcPociXformChest_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset3_M
-      position: {x: -2.5091374e-19, y: 0.012736175, z: -0.00053448515}
+      position: {x: -2.5091374e-17, y: 1.2736175, z: -0.053448517}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpineOffset2_M
       parentName: Glitcher_Rig_Run:IKJoints
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRootPart1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset2_M
-      position: {x: -0.000574032, y: -1.3877787e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: -1.3877788e-17, z: -6.285226e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcRootPart2FollowOffset_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset2_M
-      position: {x: -0.001148064, y: 1.3877788e-18, z: -1.2570452e-18}
+      position: {x: -0.114806406, y: 1.3877788e-16, z: -1.2570452e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset2_M
-      position: {x: -0.0017220959, y: 1.110223e-18, z: -3.015152e-18}
+      position: {x: -0.17220959, y: 1.110223e-16, z: -3.015152e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1Part1FollowOffset_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset2_M
-      position: {x: -0.002187495, y: 0.000025255815, z: -3.4461498e-18}
+      position: {x: -0.2187495, y: 0.0025255815, z: -3.4461498e-16}
       rotation: {x: 0, y: -0, z: -0.027103595, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKAcSpine1Part2FollowOffset_M
       parentName: Glitcher_Rig_Run:IKAcSpineOffset2_M
-      position: {x: -0.0026528942, y: 0.00005051163, z: -3.877147e-18}
+      position: {x: -0.26528943, y: 0.005051163, z: -3.877147e-16}
       rotation: {x: 0, y: -0, z: -0.027103594, w: 0.99963266}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKHandle
@@ -2474,7 +2474,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetLeg_R
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 0.0009690088, y: 0.0008204556, z: 0.00020982575}
+      position: {x: 0.09690088, y: 0.08204556, z: 0.020982575}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraLeg_R
@@ -2489,22 +2489,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKLegFootRockInnerPivot_R
       parentName: Glitcher_Rig_Run:IKLeg_R
-      position: {x: -0.00040818145, y: -0.0008204556, z: 0.0013162862}
+      position: {x: -0.040818147, y: -0.08204556, z: 0.13162862}
       rotation: {x: 0, y: -0.0060542473, z: -0, w: 0.9999817}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKLegFootRockOuterPivot_R
       parentName: Glitcher_Rig_Run:IKLegFootRockInnerPivot_R
-      position: {x: 0.00078442716, y: 0, z: -0.0000094987545}
+      position: {x: 0.078442715, y: 0, z: -0.00094987545}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedLeg_R
       parentName: Glitcher_Rig_Run:IKLegFootRockOuterPivot_R
-      position: {x: -0.00039221358, y: 0.0008204556, z: -0.0013116333}
+      position: {x: -0.039221358, y: 0.08204556, z: -0.13116333}
       rotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetHeel_R
       parentName: Glitcher_Rig_Run:IKLegFootRockOuterPivot_R
-      position: {x: -0.00039985453, y: -0.0000028838133, z: -0.0019426374}
+      position: {x: -0.03998545, y: -0.00028838133, z: -0.19426374}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerHeel_R
@@ -2514,7 +2514,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollExtraHeel_R
       parentName: Glitcher_Rig_Run:RollRollerHeel_R
-      position: {x: -0, y: -5.4210107e-22, z: 0}
+      position: {x: -0, y: -5.421011e-20, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollHeel_R
@@ -2524,7 +2524,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetToesEnd_R
       parentName: Glitcher_Rig_Run:RollHeel_R
-      position: {x: 0.000015017562, y: 0.00008745747, z: 0.0025564989}
+      position: {x: 0.0015017563, y: 0.008745747, z: 0.2556499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerToesEnd_R
@@ -2544,7 +2544,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetToes_R
       parentName: Glitcher_Rig_Run:RollToesEnd_R
-      position: {x: -0.000007376631, y: 0.000082683706, z: -0.00060911215}
+      position: {x: -0.00073766307, y: 0.00826837, z: -0.060911216}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerToes_R
@@ -2554,7 +2554,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollExtraToes_R
       parentName: Glitcher_Rig_Run:RollRollerToes_R
-      position: {x: -0, y: -3.469447e-20, z: 0}
+      position: {x: -0, y: -3.469447e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollToes_R
@@ -2564,12 +2564,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureConstrainToLeg_R
       parentName: Glitcher_Rig_Run:RollToes_R
-      position: {x: -2.6825044e-12, y: 0.0006531982, z: -0.0013163825}
+      position: {x: -2.6825045e-10, y: 0.06531982, z: -0.13163826}
       rotation: {x: 0, y: 0.0060542473, z: -0, w: 0.9999817}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleOffsetLeg_R
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 0.001199616, y: 0.0058890227, z: 0.008595375}
+      position: {x: 0.1199616, y: 0.5889023, z: 0.85953754}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleExtraLeg_R
@@ -2584,7 +2584,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetArm_R
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 0.004573748, y: 0.009011515, z: -0.00015363067}
+      position: {x: 0.4573748, y: 0.90115154, z: -0.015363066}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraArm_R
@@ -2599,7 +2599,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedOffsetArm_R
       parentName: Glitcher_Rig_Run:IKArm_R
-      position: {x: -1.6653345e-18, y: -1.110223e-18, z: 8.6736175e-20}
+      position: {x: -1.6653345e-16, y: -1.110223e-16, z: 8.673617e-18}
       rotation: {x: 0.31551397, y: 0.64922017, z: 0.6146084, w: 0.3181519}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedArm_R
@@ -2609,12 +2609,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureConstrainToArm_R
       parentName: Glitcher_Rig_Run:IKArm_R
-      position: {x: -4.440892e-18, y: 7.771561e-18, z: 1.994932e-18}
+      position: {x: -4.440892e-16, y: 7.771561e-16, z: 1.994932e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleOffsetArm_R
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 0.003971544, y: 0.011837997, z: -0.0052319667}
+      position: {x: 0.39715442, y: 1.1837996, z: -0.5231967}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleExtraArm_R
@@ -2629,7 +2629,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetcvSpine1_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 1.8032882e-19, y: 0.010206293, z: -0.0002539554}
+      position: {x: 1.8032883e-17, y: 1.0206293, z: -0.02539554}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtracvSpine1_M
@@ -2649,7 +2649,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetcvSpine2_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 5.539299e-19, y: 0.0107746925, z: -0.0003341748}
+      position: {x: 5.5392993e-17, y: 1.0774692, z: -0.033417482}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtracvSpine2_M
@@ -2669,7 +2669,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetcvSpine3_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 2.0571153e-18, y: 0.011343091, z: -0.00041439425}
+      position: {x: 2.0571152e-16, y: 1.134309, z: -0.041439425}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtracvSpine3_M
@@ -2689,7 +2689,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetcvSpine4_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 2.329616e-18, y: 0.011807453, z: -0.00045442456}
+      position: {x: 2.3296162e-16, y: 1.1807452, z: -0.045442455}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtracvSpine4_M
@@ -2709,7 +2709,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetcvSpine5_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 2.6021166e-18, y: 0.012271815, z: -0.0004944549}
+      position: {x: 2.6021167e-16, y: 1.2271816, z: -0.049445488}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtracvSpine5_M
@@ -2729,7 +2729,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetSpine2_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: 1.5804639e-18, y: 0.011184801, z: -0.0003903653}
+      position: {x: 1.580464e-16, y: 1.1184801, z: -0.03903653}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraSpine2_M
@@ -2744,7 +2744,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine2LocalOrient1_M
       parentName: Glitcher_Rig_Run:IKSpine2_M
-      position: {x: -9.860762e-34, y: 0, z: 0}
+      position: {x: -9.860762e-32, y: 0, z: 0}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine2LocalOrient2_M
@@ -2754,7 +2754,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetConstrainedSpine1_M
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridOffsetSpine1_M
@@ -2764,7 +2764,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetSpine1_M
       parentName: Glitcher_Rig_Run:IKhybridOffsetSpine1_M
-      position: {x: -0, y: -2.7755575e-19, z: 4.930381e-34}
+      position: {x: -0, y: -2.7755576e-17, z: 4.930381e-32}
       rotation: {x: -0.46374902, y: 0.53379476, z: 0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraSpine1_M
@@ -2784,7 +2784,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine1LocalOrient1_M
       parentName: Glitcher_Rig_Run:IKSpine1_M
-      position: {x: 3.0814904e-35, y: 0, z: 1.3877787e-19}
+      position: {x: 3.0814905e-33, y: 0, z: 1.3877788e-17}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine1LocalOrient2_M
@@ -2794,12 +2794,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridFollowSpine1_M
       parentName: Glitcher_Rig_Run:IKhybridOffsetSpine1_M
-      position: {x: 2.220446e-18, y: -4.1633362e-19, z: 0}
+      position: {x: 2.220446e-16, y: -4.1633363e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridExtraSpine1_M
       parentName: Glitcher_Rig_Run:IKhybridFollowSpine1_M
-      position: {x: -0, y: -2.7755575e-19, z: 4.930381e-34}
+      position: {x: -0, y: -2.7755576e-17, z: 4.930381e-32}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridSpine1_M
@@ -2809,7 +2809,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridOffsetSpine2_M
       parentName: Glitcher_Rig_Run:IKhybridSpine1_M
-      position: {x: -0.0015620015, y: 0.000001672641, z: -2.2932443e-18}
+      position: {x: -0.15620016, y: 0.00016726411, z: -2.2932443e-16}
       rotation: {x: 0, y: -0, z: -0.0061515444, w: 0.9999811}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridExtraSpine2_M
@@ -2824,7 +2824,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridOffsetSpine3_M
       parentName: Glitcher_Rig_Run:IKhybridSpine2_M
-      position: {x: -0.0015570853, y: 0.000054942382, z: 2.161848e-18}
+      position: {x: -0.15570854, y: 0.0054942383, z: 2.1618479e-16}
       rotation: {x: 0, y: -0, z: -0.020953802, w: 0.9997805}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKhybridExtraSpine3_M
@@ -2839,7 +2839,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetSpine3_M
       parentName: Glitcher_Rig_Run:IKhybridSpine3_M
-      position: {x: -0, y: -2.0816681e-19, z: -1.9721524e-33}
+      position: {x: -0, y: -2.0816682e-17, z: -1.9721525e-31}
       rotation: {x: -0.47804645, y: 0.5210294, z: 0.47804645, w: 0.5210294}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraSpine3_M
@@ -2854,12 +2854,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpineLocator6_M
       parentName: Glitcher_Rig_Run:IKSpine3_M
-      position: {x: 8.15915e-19, y: -1.2577873e-12, z: -1.0145114e-11}
+      position: {x: 8.15915e-17, y: -1.2577872e-10, z: -0.0000000010145114}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine3LocalOrient1_M
       parentName: Glitcher_Rig_Run:IKSpine3_M
-      position: {x: -2.4651904e-33, y: 0, z: 6.938894e-20}
+      position: {x: -2.4651903e-31, y: 0, z: 6.938894e-18}
       rotation: {x: 0.5207599, y: -0.47834, z: -0.5207599, w: 0.47834}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKSpine3LocalOrient2_M
@@ -2869,7 +2869,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetLeg_L
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: -0.0009690088, y: 0.0008204556, z: 0.00020982577}
+      position: {x: -0.09690088, y: 0.08204556, z: 0.020982577}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraLeg_L
@@ -2884,22 +2884,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKLegFootRockInnerPivot_L
       parentName: Glitcher_Rig_Run:IKLeg_L
-      position: {x: 0.00040818145, y: -0.0008204556, z: 0.0013162859}
+      position: {x: 0.040818147, y: -0.08204556, z: 0.13162859}
       rotation: {x: 0, y: 0.0060542473, z: -0, w: 0.9999817}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKLegFootRockOuterPivot_L
       parentName: Glitcher_Rig_Run:IKLegFootRockInnerPivot_L
-      position: {x: -0.00078442716, y: 0, z: -0.0000094987545}
+      position: {x: -0.078442715, y: 0, z: -0.00094987545}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedLeg_L
       parentName: Glitcher_Rig_Run:IKLegFootRockOuterPivot_L
-      position: {x: 0.00039221358, y: 0.0008204556, z: -0.001311633}
+      position: {x: 0.039221358, y: 0.08204556, z: -0.1311633}
       rotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetHeel_L
       parentName: Glitcher_Rig_Run:IKLegFootRockOuterPivot_L
-      position: {x: 0.00039985453, y: -0.0000028838144, z: -0.0019426374}
+      position: {x: 0.03998545, y: -0.00028838144, z: -0.19426374}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerHeel_L
@@ -2919,7 +2919,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetToesEnd_L
       parentName: Glitcher_Rig_Run:RollHeel_L
-      position: {x: -0.000015017617, y: 0.000087457476, z: 0.0025564989}
+      position: {x: -0.0015017617, y: 0.008745748, z: 0.2556499}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerToesEnd_L
@@ -2929,7 +2929,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollExtraToesEnd_L
       parentName: Glitcher_Rig_Run:RollRollerToesEnd_L
-      position: {x: -0, y: 1.7347234e-20, z: 0}
+      position: {x: -0, y: 1.7347235e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollToesEnd_L
@@ -2939,7 +2939,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollOffsetToes_L
       parentName: Glitcher_Rig_Run:RollToesEnd_L
-      position: {x: 0.000007376644, y: 0.000082683706, z: -0.00060911215}
+      position: {x: 0.0007376644, y: 0.00826837, z: -0.060911216}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollRollerToes_L
@@ -2949,7 +2949,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollExtraToes_L
       parentName: Glitcher_Rig_Run:RollRollerToes_L
-      position: {x: -0, y: 3.469447e-20, z: 0}
+      position: {x: -0, y: 3.469447e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RollToes_L
@@ -2959,12 +2959,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureConstrainToLeg_L
       parentName: Glitcher_Rig_Run:RollToes_L
-      position: {x: 2.971059e-11, y: 0.0006531982, z: -0.0013163825}
+      position: {x: 0.0000000029710592, y: 0.06531982, z: -0.13163826}
       rotation: {x: 0, y: -0.0060542473, z: -0, w: 0.9999817}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleOffsetLeg_L
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: -0.001199616, y: 0.0058890227, z: 0.008595375}
+      position: {x: -0.1199616, y: 0.5889023, z: 0.85953754}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleExtraLeg_L
@@ -2979,7 +2979,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKOffsetArm_L
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: -0.004573748, y: 0.009011515, z: -0.00015363077}
+      position: {x: -0.4573748, y: 0.90115154, z: -0.015363077}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKExtraArm_L
@@ -2994,7 +2994,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedOffsetArm_L
       parentName: Glitcher_Rig_Run:IKArm_L
-      position: {x: 5.551115e-19, y: -1.110223e-18, z: 1.2143064e-19}
+      position: {x: 5.551115e-17, y: -1.110223e-16, z: 1.2143064e-17}
       rotation: {x: 0.3181519, y: -0.6146084, z: 0.64922017, w: -0.31551397}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKFKAlignedArm_L
@@ -3004,12 +3004,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureConstrainToArm_L
       parentName: Glitcher_Rig_Run:IKArm_L
-      position: {x: -2.220446e-18, y: -4.440892e-18, z: -1.179612e-18}
+      position: {x: -2.220446e-16, y: -4.440892e-16, z: -1.179612e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleOffsetArm_L
       parentName: Glitcher_Rig_Run:IKHandleFollowMain
-      position: {x: -0.003971544, y: 0.011837997, z: -0.0052319667}
+      position: {x: -0.39715442, y: 1.1837996, z: -0.5231967}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PoleExtraArm_L
@@ -3074,12 +3074,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc1Leg_R
       parentName: Glitcher_Rig_Run:IKMessure
-      position: {x: 0.0008037894, y: 0.009432728, z: -0.000226225}
+      position: {x: 0.08037894, y: 0.9432728, z: -0.0226225}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc2Leg_R
       parentName: Glitcher_Rig_Run:IKmessureLoc1Leg_R
-      position: {x: 0.00016521945, y: -0.008612272, z: 0.00043605073}
+      position: {x: 0.016521946, y: -0.8612272, z: 0.043605074}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKdistanceLeg_R
@@ -3089,12 +3089,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc1Arm_R
       parentName: Glitcher_Rig_Run:IKMessure
-      position: {x: 0.0014994214, y: 0.013213074, z: -0.0001640976}
+      position: {x: 0.14994214, y: 1.3213074, z: -0.01640976}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc2Arm_R
       parentName: Glitcher_Rig_Run:IKmessureLoc1Arm_R
-      position: {x: 0.0030743268, y: -0.00420156, z: 0.000010466943}
+      position: {x: 0.30743268, y: -0.42015597, z: 0.0010466943}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKdistanceArm_R
@@ -3104,12 +3104,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc1Leg_L
       parentName: Glitcher_Rig_Run:IKMessure
-      position: {x: -0.0008037894, y: 0.009432728, z: -0.000226225}
+      position: {x: -0.08037894, y: 0.9432728, z: -0.0226225}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc2Leg_L
       parentName: Glitcher_Rig_Run:IKmessureLoc1Leg_L
-      position: {x: -0.00016521945, y: -0.008612272, z: 0.00043605073}
+      position: {x: -0.016521946, y: -0.8612272, z: 0.043605074}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKdistanceLeg_L
@@ -3119,12 +3119,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc1Arm_L
       parentName: Glitcher_Rig_Run:IKMessure
-      position: {x: -0.0014994214, y: 0.013213074, z: -0.00016409763}
+      position: {x: -0.14994214, y: 1.3213074, z: -0.016409762}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKmessureLoc2Arm_L
       parentName: Glitcher_Rig_Run:IKmessureLoc1Arm_L
-      position: {x: -0.0030743268, y: -0.00420156, z: 0.000010466865}
+      position: {x: -0.30743268, y: -0.42015597, z: 0.0010466865}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IKdistanceArm_L
@@ -3139,52 +3139,52 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKParentConstraintLeg_R
       parentName: Glitcher_Rig_Run:FKIKSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKLeg_R
       parentName: Glitcher_Rig_Run:FKIKParentConstraintLeg_R
-      position: {x: 0.0012689887, y: -0.00015431226, z: -0.001898895}
+      position: {x: 0.12689887, y: -0.015431226, z: -0.1898895}
       rotation: {x: -0.46374902, y: 0.53379476, z: 0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKParentConstraintArm_R
       parentName: Glitcher_Rig_Run:FKIKSystem
-      position: {x: 0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: 0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.074142195, y: 0.7032739, z: 0.7031684, w: 0.073912695}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKArm_R
       parentName: Glitcher_Rig_Run:FKIKParentConstraintArm_R
-      position: {x: -0.0024751173, y: 0.00016079655, z: -0.000102449994}
+      position: {x: -0.24751173, y: 0.016079655, z: -0.010244999}
       rotation: {x: 0.074142195, y: 0.7032739, z: 0.7031684, w: -0.073912695}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKParentConstraintSpine_M
       parentName: Glitcher_Rig_Run:FKIKSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKSpine_M
       parentName: Glitcher_Rig_Run:FKIKParentConstraintSpine_M
-      position: {x: -0.0010980129, y: 2.7755575e-19, z: 0.0018866323}
+      position: {x: -0.10980129, y: 2.7755576e-17, z: 0.18866323}
       rotation: {x: -0.46374902, y: 0.53379476, z: 0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKParentConstraintLeg_L
       parentName: Glitcher_Rig_Run:FKIKSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKLeg_L
       parentName: Glitcher_Rig_Run:FKIKParentConstraintLeg_L
-      position: {x: 0.0012689887, y: -0.00015431223, z: 0.001898895}
+      position: {x: 0.12689887, y: -0.015431223, z: 0.1898895}
       rotation: {x: -0.46374902, y: 0.53379476, z: 0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKParentConstraintArm_L
       parentName: Glitcher_Rig_Run:FKIKSystem
-      position: {x: -0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: -0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.07391269, y: -0.7031684, z: 0.7032739, w: -0.0741422}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKArm_L
       parentName: Glitcher_Rig_Run:FKIKParentConstraintArm_L
-      position: {x: 0.0024751173, y: -0.00016079655, z: 0.000102449994}
+      position: {x: 0.24751173, y: -0.016079655, z: 0.010244999}
       rotation: {x: 0.07391269, y: -0.7031684, z: 0.7032739, w: 0.0741422}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistSystem
@@ -3194,47 +3194,47 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetHead_M
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 5.61188e-19, y: 0.014592523, z: -0.0003765667}
+      position: {x: 5.6118805e-17, y: 1.4592522, z: -0.03765667}
       rotation: {x: 0.5429546, y: -0.45299038, z: -0.5429546, w: 0.45299038}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentHead_M
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetHead_M
-      position: {x: 4.440892e-18, y: 1.110223e-18, z: -2.9582283e-33}
+      position: {x: 4.440892e-16, y: 1.110223e-16, z: -2.9582284e-31}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistHead_M
       parentName: Glitcher_Rig_Run:TwistFollowParentHead_M
-      position: {x: -0.0015249121, y: 7.216449e-18, z: -5.282704e-19}
+      position: {x: -0.15249121, y: 7.2164497e-16, z: -5.2827043e-17}
       rotation: {x: 2.2664535e-17, y: 1.04264885e-16, z: 0.08996424, w: 0.99594504}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerHead_M
       parentName: Glitcher_Rig_Run:UnTwistHead_M
-      position: {x: -2.220446e-18, y: 7.112366e-19, z: -1.9721524e-33}
+      position: {x: -2.220446e-16, y: 7.112366e-17, z: -1.9721525e-31}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetKnee_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.0008037894, y: 0.009432728, z: -0.000226225}
+      position: {x: 0.08037894, y: 0.9432728, z: -0.0226225}
       rotation: {x: 0.47665036, y: 0.5401441, z: 0.467822, w: 0.5120463}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentKnee_R
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetKnee_R
-      position: {x: -1.110223e-18, y: -2.7755575e-19, z: -5.551115e-19}
+      position: {x: -1.110223e-16, y: -2.7755576e-17, z: -5.551115e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistKnee_R
       parentName: Glitcher_Rig_Run:TwistFollowParentKnee_R
-      position: {x: -0.004028701, y: -1.0408341e-17, z: -1.110223e-18}
+      position: {x: -0.40287012, y: -1.0408341e-15, z: -1.110223e-16}
       rotation: {x: 4.3361967e-11, y: -2.3122502e-12, z: 0.05324714, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerKnee_R
       parentName: Glitcher_Rig_Run:UnTwistKnee_R
-      position: {x: -1.110223e-18, y: 1.7347235e-19, z: -1.3877787e-19}
+      position: {x: -1.110223e-16, y: 1.7347235e-17, z: -1.3877788e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetHip_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentHip_R
@@ -3244,12 +3244,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistHip_R
       parentName: Glitcher_Rig_Run:TwistFollowParentHip_R
-      position: {x: 0.00019581662, y: -0.00008064524, z: -0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: -0.08037894}
       rotation: {x: 0.016202098, y: 0.99965185, z: -0.017742865, w: -0.010904324}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerHip_R
       parentName: Glitcher_Rig_Run:UnTwistHip_R
-      position: {x: 1.110223e-18, y: -1.3877787e-19, z: 0}
+      position: {x: 1.110223e-16, y: -1.3877788e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterHip0_R
@@ -3269,42 +3269,42 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetWrist_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.0030284636, y: 0.011157004, z: -0.00024404931}
+      position: {x: 0.30284637, y: 1.1157004, z: -0.024404932}
       rotation: {x: 0.27138278, y: 0.55928016, z: 0.6922816, w: 0.36647427}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentWrist_R
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetWrist_R
-      position: {x: -1.110223e-18, y: 0, z: 0}
+      position: {x: -1.110223e-16, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistWrist_R
       parentName: Glitcher_Rig_Run:TwistFollowParentWrist_R
-      position: {x: -0.0026456001, y: -3.0531133e-18, z: -8.881784e-18}
+      position: {x: -0.26456, y: -3.0531133e-16, z: -8.881784e-16}
       rotation: {x: 0.13499172, y: 0.00835606, z: 0.005260986, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerWrist_R
       parentName: Glitcher_Rig_Run:UnTwistWrist_R
-      position: {x: 5.551115e-19, y: -6.938894e-19, z: -3.330669e-18}
+      position: {x: 5.551115e-17, y: -6.938894e-17, z: -3.330669e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetElbow_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.0014994214, y: 0.013213074, z: -0.0001640976}
+      position: {x: 0.14994214, y: 1.3213074, z: -0.01640976}
       rotation: {x: 0.289999, y: 0.5498577, z: 0.7041903, w: 0.34303525}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentElbow_R
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetElbow_R
-      position: {x: 1.110223e-18, y: 0, z: 0}
+      position: {x: 1.110223e-16, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistElbow_R
       parentName: Glitcher_Rig_Run:TwistFollowParentElbow_R
-      position: {x: -0.0025635506, y: 1.110223e-18, z: -7.771561e-18}
+      position: {x: -0.25635505, y: 1.110223e-16, z: -7.771561e-16}
       rotation: {x: -2.226618e-16, y: -1.4653576e-17, z: -0.033559427, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerElbow_R
       parentName: Glitcher_Rig_Run:UnTwistElbow_R
-      position: {x: -3.330669e-18, y: 0, z: 1.110223e-18}
+      position: {x: -3.330669e-16, y: 0, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterElbow0_R
@@ -3324,22 +3324,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetShoulder_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: 0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.074142195, y: 0.7032739, z: 0.7031684, w: 0.073912695}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentShoulder_R
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetShoulder_R
-      position: {x: 5.551115e-19, y: 3.469447e-20, z: 0}
+      position: {x: 5.551115e-17, y: 3.469447e-18, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistShoulder_R
       parentName: Glitcher_Rig_Run:TwistFollowParentShoulder_R
-      position: {x: -0.0010953624, y: 4.8745734e-17, z: 2.4424906e-17}
+      position: {x: -0.10953624, y: 4.8745734e-15, z: 2.4424907e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerShoulder_R
       parentName: Glitcher_Rig_Run:UnTwistShoulder_R
-      position: {x: -1.110223e-18, y: -5.551115e-19, z: 0}
+      position: {x: -1.110223e-16, y: -5.551115e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterShoulder0_R
@@ -3359,27 +3359,27 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetKnee_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.0008037894, y: 0.009432728, z: -0.000226225}
+      position: {x: -0.08037894, y: 0.9432728, z: -0.0226225}
       rotation: {x: 0.5120463, y: -0.467822, z: 0.5401441, w: -0.47665036}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentKnee_L
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetKnee_L
-      position: {x: -1.110223e-18, y: -4.1633362e-19, z: 1.3877787e-19}
+      position: {x: -1.110223e-16, y: -4.1633363e-17, z: 1.3877788e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistKnee_L
       parentName: Glitcher_Rig_Run:TwistFollowParentKnee_L
-      position: {x: 0.004028701, y: 9.575674e-18, z: -2.359224e-18}
+      position: {x: 0.40287012, y: 9.575675e-16, z: -2.359224e-16}
       rotation: {x: 3.945928e-11, y: -7.550098e-11, z: 0.05324714, w: 0.99858135}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerKnee_L
       parentName: Glitcher_Rig_Run:UnTwistKnee_L
-      position: {x: -0, y: 1.04083406e-19, z: 0}
+      position: {x: -0, y: 1.0408341e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetHip_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374902, y: -0.53379476, z: -0.46374902, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentHip_L
@@ -3389,12 +3389,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistHip_L
       parentName: Glitcher_Rig_Run:TwistFollowParentHip_L
-      position: {x: 0.00019581662, y: -0.00008064524, z: 0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: 0.08037894}
       rotation: {x: 0.99965185, y: -0.016202096, z: 0.010904324, w: -0.017742865}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerHip_L
       parentName: Glitcher_Rig_Run:UnTwistHip_L
-      position: {x: -0, y: 4.1633362e-19, z: 0}
+      position: {x: -0, y: 4.1633363e-17, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterHip0_L
@@ -3414,42 +3414,42 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetWrist_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.0030284636, y: 0.011157004, z: -0.00024404931}
+      position: {x: -0.30284637, y: 1.1157004, z: -0.024404932}
       rotation: {x: -0.36647424, y: 0.69228154, z: -0.55928016, w: 0.27138275}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentWrist_L
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetWrist_L
-      position: {x: 1.110223e-18, y: -2.7755575e-19, z: -2.220446e-18}
+      position: {x: 1.110223e-16, y: -2.7755576e-17, z: -2.220446e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistWrist_L
       parentName: Glitcher_Rig_Run:TwistFollowParentWrist_L
-      position: {x: 0.0026456001, y: 0, z: 1.6653346e-17}
+      position: {x: 0.26456, y: 0, z: 1.6653346e-15}
       rotation: {x: 0.13499172, y: 0.00835606, z: 0.005260986, w: 0.9907975}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerWrist_L
       parentName: Glitcher_Rig_Run:UnTwistWrist_L
-      position: {x: 1.6653345e-18, y: 6.938894e-20, z: -2.220446e-18}
+      position: {x: 1.6653345e-16, y: 6.938894e-18, z: -2.220446e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetElbow_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.0014994214, y: 0.013213074, z: -0.00016409763}
+      position: {x: -0.14994214, y: 1.3213074, z: -0.016409762}
       rotation: {x: -0.34303525, y: 0.7041903, z: -0.5498577, w: 0.289999}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentElbow_L
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetElbow_L
-      position: {x: -1.110223e-18, y: 0, z: -2.220446e-18}
+      position: {x: -1.110223e-16, y: 0, z: -2.220446e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistElbow_L
       parentName: Glitcher_Rig_Run:TwistFollowParentElbow_L
-      position: {x: 0.0025635506, y: -3.8857806e-18, z: 1.2212453e-17}
+      position: {x: 0.25635505, y: -3.8857806e-16, z: 1.2212453e-15}
       rotation: {x: 3.8454602e-16, y: -1.2660084e-16, z: -0.033559427, w: 0.99943674}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerElbow_L
       parentName: Glitcher_Rig_Run:UnTwistElbow_L
-      position: {x: 1.110223e-18, y: 2.7755575e-19, z: 2.220446e-18}
+      position: {x: 1.110223e-16, y: 2.7755576e-17, z: 2.220446e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterElbow0_L
@@ -3469,22 +3469,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentOffsetShoulder_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.00042806964, y: 0.013441163, z: -0.00016376117}
+      position: {x: -0.042806964, y: 1.3441163, z: -0.016376117}
       rotation: {x: 0.07391269, y: -0.7031684, z: 0.7032739, w: -0.0741422}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistFollowParentShoulder_L
       parentName: Glitcher_Rig_Run:TwistFollowParentOffsetShoulder_L
-      position: {x: -2.7755575e-19, y: 0, z: 0}
+      position: {x: -2.7755576e-17, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:UnTwistShoulder_L
       parentName: Glitcher_Rig_Run:TwistFollowParentShoulder_L
-      position: {x: 0.0010953624, y: -4.70804e-17, z: -2.6645352e-17}
+      position: {x: 0.10953624, y: -4.70804e-15, z: -2.6645353e-15}
       rotation: {x: -0.112594895, y: -0.35231417, z: -0.02598186, w: 0.92872065}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwistBalancerShoulder_L
       parentName: Glitcher_Rig_Run:UnTwistShoulder_L
-      position: {x: -0, y: -1.110223e-18, z: 1.110223e-18}
+      position: {x: -0, y: -1.110223e-16, z: 1.110223e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:TwisterShoulder0_L
@@ -3504,32 +3504,32 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixKnee_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.0008893031, y: 0.0054281484, z: 0.00020558141}
+      position: {x: 0.08893031, y: 0.54281485, z: 0.020558141}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixWrist_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.004573748, y: 0.009011515, z: -0.00015363067}
+      position: {x: 0.4573748, y: 0.90115154, z: -0.015363066}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixElbow_R
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: 0.0030284636, y: 0.011157004, z: -0.00024404931}
+      position: {x: 0.30284637, y: 1.1157004, z: -0.024404932}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixKnee_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.0008893031, y: 0.0054281484, z: 0.00020558141}
+      position: {x: -0.08893031, y: 0.54281485, z: 0.020558141}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixWrist_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.004573748, y: 0.009011515, z: -0.00015363077}
+      position: {x: -0.4573748, y: 0.90115154, z: -0.015363077}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:FKIKMixElbow_L
       parentName: Glitcher_Rig_Run:TwistSystem
-      position: {x: -0.0030284636, y: 0.011157004, z: -0.00024404931}
+      position: {x: -0.30284637, y: 1.1157004, z: -0.024404932}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:DeformationSystem
@@ -3539,452 +3539,452 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Root_M
       parentName: Glitcher_Rig_Run:DeformationSystem
-      position: {x: -1.932723e-19, y: 0.009637894, z: -0.00017373596}
+      position: {x: -1.932723e-17, y: 0.9637894, z: -0.017373595}
       rotation: {x: 0.46374905, y: -0.53379476, z: -0.46374905, w: 0.53379476}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RootPart1_M
       parentName: Glitcher_Rig_Run:Root_M
-      position: {x: -0.000574032, y: 5.551115e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: 5.551115e-17, z: -6.285226e-17}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RootPart2_M
       parentName: Glitcher_Rig_Run:RootPart1_M
-      position: {x: -0.000574032, y: 6.938894e-19, z: -6.285226e-19}
+      position: {x: -0.057403203, y: 6.938894e-17, z: -6.285226e-17}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Spine1_M
       parentName: Glitcher_Rig_Run:RootPart2_M
-      position: {x: -0.000574032, y: -6.938894e-19, z: -1.758107e-18}
+      position: {x: -0.057403203, y: -6.938894e-17, z: -1.758107e-16}
       rotation: {x: -0.000000029802322, y: 0.000000029802322, z: -0.027103513, w: 0.9996327}
       scale: {x: 1.0000048, y: 1.0000031, z: 1.000004}
     - name: Glitcher_Rig_Run:Spine1Part1_M
       parentName: Glitcher_Rig_Run:Spine1_M
-      position: {x: -0.00046608385, y: 1.7347235e-18, z: -4.309977e-19}
+      position: {x: -0.046608385, y: 1.7347235e-16, z: -4.309977e-17}
       rotation: {x: -0, y: -0, z: 8.881783e-16, w: 1}
       scale: {x: 1, y: 1.0000005, z: 1}
     - name: Glitcher_Rig_Run:Spine1Part2_M
       parentName: Glitcher_Rig_Run:Spine1Part1_M
-      position: {x: -0.00046608385, y: 2.0122792e-18, z: -4.309977e-19}
+      position: {x: -0.046608385, y: 2.0122792e-16, z: -4.309977e-17}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: Glitcher_Rig_Run:Chest_M
       parentName: Glitcher_Rig_Run:Spine1Part2_M
-      position: {x: -0.00046608385, y: 1.7347235e-18, z: -1.2635851e-18}
+      position: {x: -0.046608385, y: 1.7347235e-16, z: -1.2635851e-16}
       rotation: {x: 0.000000032960557, y: -0.000000026267054, z: -0.085325025, w: 0.99635315}
       scale: {x: 0.9999979, y: 0.9999985, z: 0.99999744}
     - name: Glitcher_Rig_Run:Scapula_L
       parentName: Glitcher_Rig_Run:Chest_M
-      position: {x: -0.00073387387, y: 0.00030963268, z: 0.00042806964}
+      position: {x: -0.073387384, y: 0.030963268, z: 0.042806964}
       rotation: {x: 0.7765515, y: 0.032908794, z: 0.6286202, w: -0.02685761}
       scale: {x: 1.0000027, y: 0.9999992, z: 0.9999992}
     - name: Glitcher_Rig_Run:Shoulder_L
       parentName: Glitcher_Rig_Run:Scapula_L
-      position: {x: 0.0010953624, y: -4.7288562e-17, z: -2.4424906e-17}
+      position: {x: 0.10953624, y: -4.728856e-15, z: -2.4424907e-15}
       rotation: {x: 0.121502474, y: 0.0465742, z: 0.000016044825, w: -0.9914978}
       scale: {x: 1.0000032, y: 1.0000019, z: 0.9999992}
     - name: Glitcher_Rig_Run:ShoulderPart1_L
       parentName: Glitcher_Rig_Run:Shoulder_L
-      position: {x: 0.00085451675, y: -1.110223e-18, z: 3.330669e-18}
+      position: {x: 0.08545168, y: -1.110223e-16, z: 3.330669e-16}
       rotation: {x: -0.00000005960465, y: 0.11253753, z: 0.023520824, w: 0.99336904}
       scale: {x: 0.99999934, y: 1, z: 0.9999996}
     - name: Glitcher_Rig_Run:ShoulderPart2_L
       parentName: Glitcher_Rig_Run:ShoulderPart1_L
-      position: {x: 0.00085451675, y: -1.110223e-18, z: 4.440892e-18}
+      position: {x: 0.08545168, y: -1.110223e-16, z: 4.440892e-16}
       rotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Elbow_L
       parentName: Glitcher_Rig_Run:ShoulderPart2_L
-      position: {x: 0.00085451675, y: -1.110223e-18, z: 3.330669e-18}
+      position: {x: 0.08545168, y: -1.110223e-16, z: 3.330669e-16}
       rotation: {x: 0.00028669572, y: 0.008536764, z: -0.023668958, w: 0.9996834}
       scale: {x: 1, y: 1.0000007, z: 0.99999887}
     - name: Glitcher_Rig_Run:ElbowPart1_L
       parentName: Glitcher_Rig_Run:Elbow_L
-      position: {x: 0.0008818667, y: 1.110223e-18, z: 3.330669e-18}
+      position: {x: 0.088186674, y: 1.110223e-16, z: 3.330669e-16}
       rotation: {x: -0, y: -0, z: 3.3306696e-16, w: 1}
       scale: {x: 0.99999946, y: 1.0000015, z: 0.9999999}
     - name: Glitcher_Rig_Run:ElbowPart2_L
       parentName: Glitcher_Rig_Run:ElbowPart1_L
-      position: {x: 0.0008818667, y: 5.551115e-19, z: 4.440892e-18}
+      position: {x: 0.088186674, y: 5.551115e-17, z: 4.440892e-16}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000018, y: 0.99999887, z: 1.0000007}
     - name: Glitcher_Rig_Run:Wrist_L
       parentName: Glitcher_Rig_Run:ElbowPart2_L
-      position: {x: 0.0008818667, y: 8.3266725e-19, z: 4.440892e-18}
+      position: {x: 0.088186674, y: 8.326673e-17, z: 4.440892e-16}
       rotation: {x: -0.13499168, y: -0.00835599, z: -0.005261019, w: -0.9907975}
       scale: {x: 0.9999997, y: 1.0000001, z: 1.0000005}
     - name: Glitcher_Rig_Run:MiddleFinger1_L
       parentName: Glitcher_Rig_Run:Wrist_L
-      position: {x: 0.0009445681, y: 4.3021143e-18, z: -1.9872993e-16}
+      position: {x: 0.09445681, y: 4.3021142e-16, z: -1.9872994e-14}
       rotation: {x: -0.00021650639, y: -0.04166424, z: 0.009307145, w: 0.9990883}
       scale: {x: 1.0000026, y: 0.9999991, z: 1.0000021}
     - name: Glitcher_Rig_Run:MiddleFinger2_L
       parentName: Glitcher_Rig_Run:MiddleFinger1_L
-      position: {x: 0.00030461632, y: -5.156927e-14, z: 8.963941e-15}
+      position: {x: 0.030461632, y: -5.156927e-12, z: 8.963941e-13}
       rotation: {x: 0.0003193723, y: 0.021989428, z: 0.000015475349, w: 0.9997582}
       scale: {x: 1.0000008, y: 1.0000002, z: 1.0000023}
     - name: Glitcher_Rig_Run:MiddleFinger3_L
       parentName: Glitcher_Rig_Run:MiddleFinger2_L
-      position: {x: 0.0001679485, y: 6.591949e-19, z: 2.6645352e-17}
+      position: {x: 0.01679485, y: 6.591949e-17, z: 2.6645353e-15}
       rotation: {x: 0.00046587735, y: 0.03203252, z: -0.0000027269125, w: 0.9994868}
       scale: {x: 1.0000061, y: 1.0000036, z: 1.0000019}
     - name: Glitcher_Rig_Run:MiddleFinger4_L
       parentName: Glitcher_Rig_Run:MiddleFinger3_L
-      position: {x: 0.00020528593, y: -6.2450053e-19, z: -8.215651e-17}
+      position: {x: 0.020528594, y: -6.245005e-17, z: -8.215651e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:ThumbFinger1_L
       parentName: Glitcher_Rig_Run:Wrist_L
-      position: {x: 0.00020064901, y: -0.00014122162, z: 0.00009896148}
+      position: {x: 0.020064902, y: -0.014122162, z: 0.009896148}
       rotation: {x: 0.43064132, y: -0.08151055, z: 0.35689652, w: -0.8249418}
       scale: {x: 1.0000035, y: 1.000008, z: 0.999994}
     - name: Glitcher_Rig_Run:ThumbFinger2_L
       parentName: Glitcher_Rig_Run:ThumbFinger1_L
-      position: {x: 0.0003440774, y: -1.5119296e-12, z: -1.981443e-12}
+      position: {x: 0.03440774, y: -1.5119296e-10, z: -1.981443e-10}
       rotation: {x: -0, y: -0, z: -0.000000002823071, w: 1}
       scale: {x: 1.0000018, y: 1.0000035, z: 1.0000025}
     - name: Glitcher_Rig_Run:ThumbFinger3_L
       parentName: Glitcher_Rig_Run:ThumbFinger2_L
-      position: {x: 0.00016541436, y: 2.220446e-18, z: -2.3314683e-17}
+      position: {x: 0.016541436, y: 2.220446e-16, z: -2.3314684e-15}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000026, y: 1.0000027, z: 1.0000029}
     - name: Glitcher_Rig_Run:ThumbFinger4_L
       parentName: Glitcher_Rig_Run:ThumbFinger3_L
-      position: {x: 0.0001993468, y: 3.6204945e-10, z: 2.3136443e-10}
+      position: {x: 0.01993468, y: 0.000000036204945, z: 0.000000023136442}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IndexFinger1_L
       parentName: Glitcher_Rig_Run:Wrist_L
-      position: {x: 0.00084514276, y: -0.00023153496, z: 0.000017106046}
+      position: {x: 0.084514275, y: -0.023153495, z: 0.0017106045}
       rotation: {x: 0.003837138, y: -0.018612714, z: -0.081036545, w: 0.99652994}
       scale: {x: 0.99999684, y: 0.9999945, z: 0.9999985}
     - name: Glitcher_Rig_Run:IndexFinger2_L
       parentName: Glitcher_Rig_Run:IndexFinger1_L
-      position: {x: 0.000258741, y: -2.1042335e-14, z: -9.991119e-14}
+      position: {x: 0.0258741, y: -2.1042335e-12, z: -9.991119e-12}
       rotation: {x: 0.000000017229466, y: -0.000000013038514, z: 0.000000036758134, w: 1}
       scale: {x: 1.0000015, y: 1.0000008, z: 1.0000004}
     - name: Glitcher_Rig_Run:IndexFinger3_L
       parentName: Glitcher_Rig_Run:IndexFinger2_L
-      position: {x: 0.00017211535, y: 7.494006e-18, z: 4.773959e-17}
+      position: {x: 0.017211536, y: 7.494006e-16, z: 4.773959e-15}
       rotation: {x: -0.014286045, y: 0.041115142, z: 0.000116597046, w: 0.9990523}
       scale: {x: 1.0000112, y: 1.0000101, z: 1.0000073}
     - name: Glitcher_Rig_Run:IndexFinger4_L
       parentName: Glitcher_Rig_Run:IndexFinger3_L
-      position: {x: 0.00018188103, y: 6.3837825e-18, z: -4.440892e-17}
+      position: {x: 0.018188102, y: 6.3837824e-16, z: -4.440892e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Cup_L
       parentName: Glitcher_Rig_Run:Wrist_L
-      position: {x: 0.00019928871, y: 0.00009963983, z: 0.0000011177651}
+      position: {x: 0.01992887, y: 0.009963983, z: 0.00011177651}
       rotation: {x: 0.026061017, y: 0.015480949, z: -0.010336383, w: -0.99948704}
       scale: {x: 1.0000021, y: 1, z: 1.0000011}
     - name: Glitcher_Rig_Run:PinkyFinger1_L
       parentName: Glitcher_Rig_Run:Cup_L
-      position: {x: 0.0006153718, y: 0.0002610119, z: 0.00006644092}
+      position: {x: 0.06153718, y: 0.02610119, z: 0.0066440925}
       rotation: {x: 0.013185591, y: -0.0199837, z: 0.05847006, w: 0.998002}
       scale: {x: 0.99999636, y: 0.9999992, z: 1.0000012}
     - name: Glitcher_Rig_Run:PinkyFinger2_L
       parentName: Glitcher_Rig_Run:PinkyFinger1_L
-      position: {x: 0.00022821857, y: 5.2735593e-18, z: 7.5495166e-17}
+      position: {x: 0.022821857, y: 5.2735594e-16, z: 7.5495166e-15}
       rotation: {x: 0.0023265332, y: 0.0062766373, z: 0.000285998, w: 0.9999776}
       scale: {x: 0.99999946, y: 1, z: 0.99999887}
     - name: Glitcher_Rig_Run:PinkyFinger3_L
       parentName: Glitcher_Rig_Run:PinkyFinger2_L
-      position: {x: 0.00013954187, y: 3.330669e-18, z: 3.8857805e-17}
+      position: {x: 0.013954187, y: 3.330669e-16, z: 3.8857806e-15}
       rotation: {x: 0.018713426, y: 0.041103926, z: 0.0010056787, w: 0.99897915}
       scale: {x: 1.0000094, y: 1.0000031, z: 1.0000058}
     - name: Glitcher_Rig_Run:PinkyFinger4_L
       parentName: Glitcher_Rig_Run:PinkyFinger3_L
-      position: {x: 0.0001744727, y: 4.9960042e-18, z: -5.8841824e-17}
+      position: {x: 0.01744727, y: 4.996004e-16, z: -5.8841825e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:RingFinger1_L
       parentName: Glitcher_Rig_Run:Cup_L
-      position: {x: 0.00067813124, y: 0.00011422239, z: 0.000029739735}
+      position: {x: 0.06781312, y: 0.011422239, z: 0.0029739735}
       rotation: {x: 0.025673151, y: -0.004844755, z: 0.056418166, w: 0.9980654}
       scale: {x: 1.0000062, y: 1.0000052, z: 1.0000048}
     - name: Glitcher_Rig_Run:RingFinger2_L
       parentName: Glitcher_Rig_Run:RingFinger1_L
-      position: {x: 0.000283909, y: -9.298118e-18, z: 1.2434498e-16}
+      position: {x: 0.0283909, y: -9.298118e-16, z: 1.2434498e-14}
       rotation: {x: -0.0024714768, y: -0.01884827, z: -0.000084877014, w: 0.99981934}
       scale: {x: 0.9999978, y: 0.9999984, z: 0.9999979}
     - name: Glitcher_Rig_Run:RingFinger3_L
       parentName: Glitcher_Rig_Run:RingFinger2_L
-      position: {x: 0.00017166512, y: 4.2327254e-18, z: -1.1879387e-16}
+      position: {x: 0.017166512, y: 4.2327253e-16, z: -1.1879387e-14}
       rotation: {x: 0.004941836, y: 0.037690014, z: 0.00007648766, w: 0.9992773}
       scale: {x: 1.0000036, y: 1.0000007, z: 0.9999998}
     - name: Glitcher_Rig_Run:RingFinger4_L
       parentName: Glitcher_Rig_Run:RingFinger3_L
-      position: {x: 0.00018993701, y: 7.1470605e-18, z: 2.4424906e-17}
+      position: {x: 0.018993702, y: 7.1470607e-16, z: 2.4424907e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Neck_M
       parentName: Glitcher_Rig_Run:Chest_M
-      position: {x: -0.0018630506, y: -1.9428903e-18, z: 1.2357662e-18}
+      position: {x: -0.18630506, y: -1.9428903e-16, z: 1.2357661e-16}
       rotation: {x: -0, y: -0, z: -0.04763537, w: 0.99886477}
       scale: {x: 0.9999966, y: 0.9999991, z: 0.99999857}
     - name: Glitcher_Rig_Run:NeckPart1_M
       parentName: Glitcher_Rig_Run:Neck_M
-      position: {x: -0.000508304, y: 2.220446e-18, z: -3.3536836e-20}
+      position: {x: -0.050830398, y: 2.220446e-16, z: -3.3536836e-18}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:NeckPart2_M
       parentName: Glitcher_Rig_Run:NeckPart1_M
-      position: {x: -0.000508304, y: 4.440892e-18, z: -3.3536836e-20}
+      position: {x: -0.050830398, y: 4.440892e-16, z: -3.3536836e-18}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000032, y: 1.0000037, z: 1.0000026}
     - name: Glitcher_Rig_Run:Head_M
       parentName: Glitcher_Rig_Run:NeckPart2_M
-      position: {x: -0.000508304, y: 1.6653345e-18, z: -6.148161e-19}
+      position: {x: -0.050830398, y: 1.6653345e-16, z: -6.148161e-17}
       rotation: {x: -0, y: -0, z: 0.08996421, w: 0.99594504}
       scale: {x: 1.0000015, y: 0.9999991, z: 1.0000011}
     - name: Glitcher_Rig_Run:HeadEnd_M
       parentName: Glitcher_Rig_Run:Head_M
-      position: {x: -0.0014725731, y: -2.7755575e-19, z: -4.9422336e-19}
+      position: {x: -0.14725731, y: -2.7755576e-17, z: -4.9422334e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Eye_R
       parentName: Glitcher_Rig_Run:Head_M
-      position: {x: -0.00021920077, y: 0.0010314797, z: -0.00033566254}
+      position: {x: -0.021920078, y: 0.10314797, z: -0.033566255}
       rotation: {x: 0.000000015454312, y: 0.000000015454312, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:EyeEnd_R
       parentName: Glitcher_Rig_Run:Eye_R
-      position: {x: -0.00016755627, y: -6.661338e-18, z: 6.938894e-19}
+      position: {x: -0.016755627, y: -6.661338e-16, z: 6.938894e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Jaw_M
       parentName: Glitcher_Rig_Run:Head_M
-      position: {x: 0.00027543237, y: 0.0003976694, z: -6.757095e-19}
+      position: {x: 0.027543236, y: 0.03976694, z: -6.7570955e-17}
       rotation: {x: -6.45907e-17, y: 6.3623087e-17, z: -0.8561418, w: 0.5167409}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:JawEnd_M
       parentName: Glitcher_Rig_Run:Jaw_M
-      position: {x: -0.0010618923, y: -3.3306692e-17, z: 4.700588e-19}
+      position: {x: -0.10618923, y: -3.3306693e-15, z: 4.700588e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Eye_L
       parentName: Glitcher_Rig_Run:Head_M
-      position: {x: -0.00021920077, y: 0.0010314797, z: 0.00033566254}
+      position: {x: -0.021920078, y: 0.10314797, z: 0.033566255}
       rotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:EyeEnd_L
       parentName: Glitcher_Rig_Run:Eye_L
-      position: {x: -0.00016755627, y: -4.440892e-18, z: -6.2450053e-19}
+      position: {x: -0.016755627, y: -4.440892e-16, z: -6.245005e-17}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Scapula_R
       parentName: Glitcher_Rig_Run:Chest_M
-      position: {x: -0.00073387387, y: 0.00030963268, z: -0.00042806964}
+      position: {x: -0.073387384, y: 0.030963268, z: -0.042806964}
       rotation: {x: -0.032908797, y: 0.77655154, z: -0.026857615, w: -0.62862027}
       scale: {x: 0.999999, y: 0.9999985, z: 0.9999986}
     - name: Glitcher_Rig_Run:Shoulder_R
       parentName: Glitcher_Rig_Run:Scapula_R
-      position: {x: -0.0010953624, y: 4.8988587e-17, z: 1.9984017e-17}
+      position: {x: -0.10953624, y: 4.8988587e-15, z: 1.9984017e-15}
       rotation: {x: -0.12150256, y: -0.046573833, z: -0.000015983353, w: 0.9914979}
       scale: {x: 0.99999887, y: 1.000001, z: 1.0000008}
     - name: Glitcher_Rig_Run:ShoulderPart1_R
       parentName: Glitcher_Rig_Run:Shoulder_R
-      position: {x: -0.00085451675, y: 0, z: -2.220446e-18}
+      position: {x: -0.08545168, y: 0, z: -2.220446e-16}
       rotation: {x: -0.0000000074505797, y: 0.11253733, z: 0.023520708, w: 0.9933691}
       scale: {x: 1.0000015, y: 1.0000023, z: 1.0000018}
     - name: Glitcher_Rig_Run:ShoulderPart2_R
       parentName: Glitcher_Rig_Run:ShoulderPart1_R
-      position: {x: -0.00085451675, y: 1.6653345e-18, z: -4.440892e-18}
+      position: {x: -0.08545168, y: 1.6653345e-16, z: -4.440892e-16}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000019, y: 1.0000014, z: 1.0000012}
     - name: Glitcher_Rig_Run:Elbow_R
       parentName: Glitcher_Rig_Run:ShoulderPart2_R
-      position: {x: -0.00085451675, y: 0, z: -2.220446e-18}
+      position: {x: -0.08545168, y: 0, z: -2.220446e-16}
       rotation: {x: 0.0002866851, y: 0.00853603, z: -0.023669401, w: 0.9996834}
       scale: {x: 1.0000057, y: 1.0000029, z: 1.000001}
     - name: Glitcher_Rig_Run:ElbowPart1_R
       parentName: Glitcher_Rig_Run:Elbow_R
-      position: {x: -0.0008818667, y: -1.6653345e-18, z: -2.220446e-18}
+      position: {x: -0.088186674, y: -1.6653345e-16, z: -2.220446e-16}
       rotation: {x: -0, y: -0, z: 8.881783e-16, w: 1}
       scale: {x: 1.0000008, y: 1.0000002, z: 1.0000011}
     - name: Glitcher_Rig_Run:ElbowPart2_R
       parentName: Glitcher_Rig_Run:ElbowPart1_R
-      position: {x: -0.0008818667, y: -8.3266725e-19, z: -6.661338e-18}
+      position: {x: -0.088186674, y: -8.326673e-17, z: -6.661338e-16}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Wrist_R
       parentName: Glitcher_Rig_Run:ElbowPart2_R
-      position: {x: -0.0008818667, y: -1.3877788e-18, z: -1.110223e-18}
+      position: {x: -0.088186674, y: -1.3877788e-16, z: -1.110223e-16}
       rotation: {x: 0.13499168, y: 0.008356035, z: 0.005260989, w: 0.9907975}
       scale: {x: 0.9999985, y: 0.999999, z: 0.9999996}
     - name: Glitcher_Rig_Run:MiddleFinger1_R
       parentName: Glitcher_Rig_Run:Wrist_R
-      position: {x: -0.0009445681, y: -3.1225024e-18, z: 1.9650947e-16}
+      position: {x: -0.09445681, y: -3.1225023e-16, z: 1.9650948e-14}
       rotation: {x: -0.00021662565, y: -0.04166417, z: 0.009307236, w: 0.9990883}
       scale: {x: 1.0000019, y: 0.9999971, z: 0.99999994}
     - name: Glitcher_Rig_Run:MiddleFinger2_R
       parentName: Glitcher_Rig_Run:MiddleFinger1_R
-      position: {x: -0.00030461632, y: 5.156952e-14, z: -8.962831e-15}
+      position: {x: -0.030461632, y: 5.156952e-12, z: -8.962831e-13}
       rotation: {x: 0.00031951067, y: 0.021989373, z: 0.000015452502, w: 0.9997581}
       scale: {x: 0.9999996, y: 1.0000015, z: 1.0000015}
     - name: Glitcher_Rig_Run:MiddleFinger3_R
       parentName: Glitcher_Rig_Run:MiddleFinger2_R
-      position: {x: -0.0001679485, y: -9.714452e-19, z: -2.8865798e-17}
+      position: {x: -0.01679485, y: -9.7144515e-17, z: -2.8865799e-15}
       rotation: {x: 0.00046580855, y: 0.0320327, z: -0.000002683255, w: 0.99948674}
       scale: {x: 0.99999934, y: 1.0000004, z: 1.0000001}
     - name: Glitcher_Rig_Run:MiddleFinger4_R
       parentName: Glitcher_Rig_Run:MiddleFinger3_R
-      position: {x: -0.00020528593, y: 7.2858384e-19, z: 8.659739e-17}
+      position: {x: -0.020528594, y: 7.2858386e-17, z: 8.65974e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:ThumbFinger1_R
       parentName: Glitcher_Rig_Run:Wrist_R
-      position: {x: -0.00020064901, y: 0.00014122162, z: -0.00009896148}
+      position: {x: -0.020064902, y: 0.014122162, z: -0.009896148}
       rotation: {x: -0.43064085, y: 0.081511535, z: -0.35689598, w: 0.8249422}
       scale: {x: 1.0000069, y: 0.99999887, z: 0.99999493}
     - name: Glitcher_Rig_Run:ThumbFinger2_R
       parentName: Glitcher_Rig_Run:ThumbFinger1_R
-      position: {x: -0.0003440774, y: 1.5119277e-12, z: 1.9814374e-12}
+      position: {x: -0.03440774, y: 1.5119278e-10, z: 1.9814374e-10}
       rotation: {x: -0, y: -0, z: -0.000000009691575, w: 1}
       scale: {x: 1.0000019, y: 1.0000019, z: 0.9999998}
     - name: Glitcher_Rig_Run:ThumbFinger3_R
       parentName: Glitcher_Rig_Run:ThumbFinger2_R
-      position: {x: -0.00016541436, y: 0, z: 2.9976023e-17}
+      position: {x: -0.016541436, y: 0, z: 2.9976024e-15}
       rotation: {x: -0, y: -0, z: -0.00000001117587, w: 1}
       scale: {x: 1, y: 0.9999996, z: 1}
     - name: Glitcher_Rig_Run:ThumbFinger4_R
       parentName: Glitcher_Rig_Run:ThumbFinger3_R
-      position: {x: -0.0001993468, y: -3.6204945e-10, z: -2.3136443e-10}
+      position: {x: -0.01993468, y: -0.000000036204945, z: -0.000000023136442}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:IndexFinger1_R
       parentName: Glitcher_Rig_Run:Wrist_R
-      position: {x: -0.00084514276, y: 0.00023153496, z: -0.000017106046}
+      position: {x: -0.084514275, y: 0.023153495, z: -0.0017106045}
       rotation: {x: 0.0038371668, y: -0.018612817, z: -0.08103567, w: 0.99653}
       scale: {x: 1.0000025, y: 0.999996, z: 1.0000017}
     - name: Glitcher_Rig_Run:IndexFinger2_R
       parentName: Glitcher_Rig_Run:IndexFinger1_R
-      position: {x: -0.000258741, y: 2.1042335e-14, z: 9.991896e-14}
+      position: {x: -0.0258741, y: 2.1042335e-12, z: 9.991896e-12}
       rotation: {x: -0, y: -0, z: 0.000000014901161, w: 1}
       scale: {x: 0.99999696, y: 0.9999983, z: 0.9999977}
     - name: Glitcher_Rig_Run:IndexFinger3_R
       parentName: Glitcher_Rig_Run:IndexFinger2_R
-      position: {x: -0.00017211535, y: -9.1593395e-18, z: -4.5519144e-17}
+      position: {x: -0.017211536, y: -9.15934e-16, z: -4.5519144e-15}
       rotation: {x: -0.014286014, y: 0.04111569, z: 0.000117004376, w: 0.9990522}
       scale: {x: 1.0000066, y: 1.0000039, z: 1.0000048}
     - name: Glitcher_Rig_Run:IndexFinger4_R
       parentName: Glitcher_Rig_Run:IndexFinger3_R
-      position: {x: -0.00018188103, y: -5.2735593e-18, z: 4.5519144e-17}
+      position: {x: -0.018188102, y: -5.2735594e-16, z: 4.5519144e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Cup_R
       parentName: Glitcher_Rig_Run:Wrist_R
-      position: {x: -0.00019928871, y: -0.00009963983, z: -0.0000011177651}
+      position: {x: -0.01992887, y: -0.009963983, z: -0.00011177651}
       rotation: {x: -0.026061103, y: -0.015481004, z: 0.010336444, w: 0.9994871}
       scale: {x: 1.0000025, y: 1.0000012, z: 1.0000021}
     - name: Glitcher_Rig_Run:RingFinger1_R
       parentName: Glitcher_Rig_Run:Cup_R
-      position: {x: -0.00067813124, y: -0.00011422239, z: -0.000029739735}
+      position: {x: -0.06781312, y: -0.011422239, z: -0.0029739735}
       rotation: {x: 0.025673345, y: -0.004844725, z: 0.05641812, w: 0.99806535}
       scale: {x: 1.0000035, y: 1.0000017, z: 1.0000013}
     - name: Glitcher_Rig_Run:RingFinger2_R
       parentName: Glitcher_Rig_Run:RingFinger1_R
-      position: {x: -0.000283909, y: 9.783841e-18, z: -1.2878587e-16}
+      position: {x: -0.0283909, y: 9.783841e-16, z: -1.2878587e-14}
       rotation: {x: -0.002471611, y: -0.01884818, z: -0.00008481741, w: 0.99981934}
       scale: {x: 0.9999983, y: 0.99999994, z: 1}
     - name: Glitcher_Rig_Run:RingFinger3_R
       parentName: Glitcher_Rig_Run:RingFinger2_R
-      position: {x: -0.00017166512, y: -4.5102813e-18, z: 1.2323476e-16}
+      position: {x: -0.017166512, y: -4.510281e-16, z: 1.23234756e-14}
       rotation: {x: 0.004941848, y: 0.03769006, z: 0.00007651274, w: 0.9992773}
       scale: {x: 1.0000035, y: 1.0000021, z: 1.0000019}
     - name: Glitcher_Rig_Run:RingFinger4_R
       parentName: Glitcher_Rig_Run:RingFinger3_R
-      position: {x: -0.00018993701, y: -7.216449e-18, z: -2.6645352e-17}
+      position: {x: -0.018993702, y: -7.2164497e-16, z: -2.6645353e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:PinkyFinger1_R
       parentName: Glitcher_Rig_Run:Cup_R
-      position: {x: -0.0006153718, y: -0.0002610119, z: -0.00006644092}
+      position: {x: -0.06153718, y: -0.02610119, z: -0.0066440925}
       rotation: {x: 0.013185564, y: -0.019984258, z: 0.058472026, w: 0.9980019}
       scale: {x: 1, y: 1.0000006, z: 1}
     - name: Glitcher_Rig_Run:PinkyFinger2_R
       parentName: Glitcher_Rig_Run:PinkyFinger1_R
-      position: {x: -0.00022821857, y: -5.551115e-18, z: -7.3274716e-17}
+      position: {x: -0.022821857, y: -5.551115e-16, z: -7.327472e-15}
       rotation: {x: 0.0023266748, y: 0.006276652, z: 0.00028583407, w: 0.9999776}
       scale: {x: 1.0000056, y: 1.0000029, z: 1.000001}
     - name: Glitcher_Rig_Run:PinkyFinger3_R
       parentName: Glitcher_Rig_Run:PinkyFinger2_R
-      position: {x: -0.00013954187, y: -4.718448e-18, z: -4.773959e-17}
+      position: {x: -0.013954187, y: -4.718448e-16, z: -4.773959e-15}
       rotation: {x: 0.01871337, y: 0.041103557, z: 0.0010055469, w: 0.9989792}
       scale: {x: 0.99999386, y: 0.99999875, z: 0.9999985}
     - name: Glitcher_Rig_Run:PinkyFinger4_R
       parentName: Glitcher_Rig_Run:PinkyFinger3_R
-      position: {x: -0.0001744727, y: -5.8286707e-18, z: 5.9952046e-17}
+      position: {x: -0.01744727, y: -5.828671e-16, z: 5.9952048e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Hip_L
       parentName: Glitcher_Rig_Run:Root_M
-      position: {x: 0.00019581662, y: -0.00008064524, z: 0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: 0.08037894}
       rotation: {x: 0.99965185, y: -0.016202107, z: 0.010904327, w: -0.017742857}
       scale: {x: 1.0000013, y: 1.0000027, z: 1.0000013}
     - name: Glitcher_Rig_Run:HipPart1_L
       parentName: Glitcher_Rig_Run:Hip_L
-      position: {x: 0.0013429006, y: 5.4897406e-12, z: -1.9685073e-13}
+      position: {x: 0.13429005, y: 5.489741e-10, z: -1.9685073e-11}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1.0000035, y: 1.0000038, z: 1.000004}
     - name: Glitcher_Rig_Run:HipPart2_L
       parentName: Glitcher_Rig_Run:HipPart1_L
-      position: {x: 0.0013429006, y: 5.4897406e-12, z: -1.9685046e-13}
+      position: {x: 0.13429005, y: 5.489741e-10, z: -1.9685045e-11}
       rotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Knee_L
       parentName: Glitcher_Rig_Run:HipPart2_L
-      position: {x: 0.0013429006, y: 5.4897406e-12, z: -1.9685073e-13}
+      position: {x: 0.13429005, y: 5.489741e-10, z: -1.9685073e-11}
       rotation: {x: -0, y: 0.000000029802322, z: -0.053247124, w: -0.9985814}
       scale: {x: 0.9999977, y: 0.99999756, z: 0.999996}
     - name: Glitcher_Rig_Run:Ankle_L
       parentName: Glitcher_Rig_Run:Knee_L
-      position: {x: 0.004608384, y: 1.8838934e-11, z: -7.142545e-13}
+      position: {x: 0.46083838, y: 0.0000000018838935, z: -7.142545e-11}
       rotation: {x: -0.025002504, y: -0.008641584, z: 0.00057198846, w: 0.9996499}
       scale: {x: 1.0000049, y: 1.0000027, z: 1.0000039}
     - name: Glitcher_Rig_Run:Toes_L
       parentName: Glitcher_Rig_Run:Ankle_L
-      position: {x: 0.0006531982, y: -0.0013163825, z: -2.665567e-11}
+      position: {x: 0.06531982, y: -0.13163826, z: -0.000000002665567}
       rotation: {x: -0.004560303, y: -0.0039831586, z: 0.6578248, w: -0.7531467}
       scale: {x: 0.99999803, y: 1.0000008, z: 0.99999875}
     - name: Glitcher_Rig_Run:ToesEnd_L
       parentName: Glitcher_Rig_Run:Toes_L
-      position: {x: 0.00061474275, y: -2.2406367e-13, z: -1.2833495e-11}
+      position: {x: 0.061474275, y: -2.2406367e-11, z: -0.0000000012833494}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Hip_R
       parentName: Glitcher_Rig_Run:Root_M
-      position: {x: 0.00019581662, y: -0.00008064524, z: -0.0008037894}
+      position: {x: 0.019581662, y: -0.008064523, z: -0.08037894}
       rotation: {x: 0.016202094, y: 0.99965185, z: -0.017742874, w: -0.010904313}
       scale: {x: 1.0000005, y: 1, z: 1.0000013}
     - name: Glitcher_Rig_Run:HipPart1_R
       parentName: Glitcher_Rig_Run:Hip_R
-      position: {x: -0.0013429006, y: -5.4897406e-12, z: 1.3877787e-19}
+      position: {x: -0.13429005, y: -5.489741e-10, z: 1.3877788e-17}
       rotation: {x: 1.4551915e-11, y: -0, z: -0, w: 1}
       scale: {x: 1.0000014, y: 1.0000029, z: 1.0000027}
     - name: Glitcher_Rig_Run:HipPart2_R
       parentName: Glitcher_Rig_Run:HipPart1_R
-      position: {x: -0.0013429006, y: -5.4897406e-12, z: 1.3877787e-19}
+      position: {x: -0.13429005, y: -5.489741e-10, z: 1.3877788e-17}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Knee_R
       parentName: Glitcher_Rig_Run:HipPart2_R
-      position: {x: -0.0013429006, y: -5.4897406e-12, z: 1.3877787e-19}
+      position: {x: -0.13429005, y: -5.489741e-10, z: 1.3877788e-17}
       rotation: {x: -0.000000045300084, y: 0.000000026077803, z: 0.053247184, w: 0.99858135}
       scale: {x: 1.0000002, y: 1.0000014, z: 1.0000042}
     - name: Glitcher_Rig_Run:Ankle_R
       parentName: Glitcher_Rig_Run:Knee_R
-      position: {x: -0.004608384, y: -1.8838927e-11, z: 4.2564707e-14}
+      position: {x: -0.46083838, y: -0.0000000018838926, z: 4.2564706e-12}
       rotation: {x: -0.02500254, y: -0.008641511, z: 0.0005720258, w: 0.9996499}
       scale: {x: 1.0000007, y: 1, z: 0.9999947}
     - name: Glitcher_Rig_Run:Toes_R
       parentName: Glitcher_Rig_Run:Ankle_R
-      position: {x: -0.0006531982, y: 0.0013163825, z: -3.1539135e-12}
+      position: {x: -0.06531982, y: 0.13163826, z: -3.1539135e-10}
       rotation: {x: 0.004559392, y: 0.003982305, z: -0.6578248, w: 0.7531467}
       scale: {x: 1.0000004, y: 0.9999979, z: 1.0000001}
     - name: Glitcher_Rig_Run:ToesEnd_R
       parentName: Glitcher_Rig_Run:Toes_R
-      position: {x: -0.00061474275, y: -2.7804148e-16, z: 0.0000000015889229}
+      position: {x: -0.061474275, y: -2.7804148e-14, z: 0.00000015889229}
       rotation: {x: 0.0000001754164, y: 0.000001292348, z: -2.2669903e-13, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:Geometry
@@ -3999,7 +3999,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:model:Glitcher
       parentName: Glitcher_Rig_Run:model:geo
-      position: {x: -0, y: 0.009110717, z: 0}
+      position: {x: -0, y: 0.9110717, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Glitcher_Rig_Run:model:Knees_lp
@@ -4069,7 +4069,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 25
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
