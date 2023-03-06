@@ -72,6 +72,8 @@ public class LevelAudioManager : MonoBehaviour
         _songAudioSource = data.GetMusic();
         _scoreKeeper = data.GetScoreKeeper();
         _playerGroup = data.GetPlayerGroup();
+        FileLoc = PlayerPrefs.GetString("ChartDirPath");
+        Debug.Log(FileLoc);
         StartCoroutine(WaitToStartGame(TimeToStartGame));
     }
     public void Skip()

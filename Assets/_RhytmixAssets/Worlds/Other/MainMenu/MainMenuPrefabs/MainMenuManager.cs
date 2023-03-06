@@ -3,51 +3,89 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] GameObject MainMenuCanvas;
-    [SerializeField] GameObject CyberpunkSongSelectionCanvas;
-    private void Start()
+    [Header("TitleScreen")]
+    [SerializeField] GameObject TitleScreen;
+    public void PressToStartBtn()
     {
-        CyberpunkSongSelectionCanvas.SetActive(false);
-        MainMenuCanvas.SetActive(true);
+        TitleScreen.SetActive(false);
+        LevelSelections[0].SetActive(true);
+        MenuAudioSource.clip = Songs[1];
+        MenuAudioSource.Play();
     }
 
-    public void FantasyWorldBtnClick()
+    [Header("Level Selection")]
+    [SerializeField] GameObject[] LevelSelections;
+    private int cycleIndex = 0;
+    public void CycleThroughLevels()
     {
-        MainMenuCanvas.SetActive(false);
-    }
-    public void CyberpunkWorldBtnClick()
-    {
-        MainMenuCanvas.SetActive(false);
-        CyberpunkSongSelectionCanvas.SetActive(true);
-    }
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-    public void BackBtnClick()
-    {
-        CyberpunkSongSelectionCanvas.SetActive(false);
-        MainMenuCanvas.SetActive(true);
+        if(cycleIndex == 0)
+        {
+            LevelSelections[cycleIndex].SetActive(false);
+            cycleIndex = 1;
+            LevelSelections[cycleIndex].SetActive(true);
+            MenuAudioSource.clip = Songs[2];
+        }
+        else
+        {
+            LevelSelections[cycleIndex].SetActive(false);
+            cycleIndex = 0;
+            LevelSelections[cycleIndex].SetActive(true);
+            MenuAudioSource.clip = Songs[1];
+        }
+
+        MenuAudioSource.Play();
     }
 
-    public void SongAlleyRatsBtnClick()
+
+    [Header("AlleyRatsSelection")]
+    [SerializeField] VideoPlayer AlleyRatVideoPlayer;
+    [SerializeField] VideoClip EasyClip;
+    [SerializeField] VideoClip MediumClip;
+    [SerializeField] VideoClip HardClip;
+
+    [Header("Song")]
+    [SerializeField] AudioSource MenuAudioSource;
+    [SerializeField] AudioClip[] Songs;
+
+    public void AlleyRatsEasyOver()
     {
-        SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
+        AlleyRatVideoPlayer.clip = EasyClip;
+    }
+    public void AlleyRatsMediumOver()
+    {
+        AlleyRatVideoPlayer.clip = MediumClip;
+    }
+    public void AlleyRatsHardOver()
+    {
+        AlleyRatVideoPlayer.clip = HardClip; 
     }
 
-    public void TutorialBtnClick()
+    //**********************************************************************Load Levels
+    public void LoadTutorialLevel()
     {
+        PlayerPrefs.SetString("ChartDirPath","Tutorial.mid");
         SceneManager.LoadScene("TutorialWorld",LoadSceneMode.Single);
     }
-
-    public void TestingSceneBtnClick()
+    public void LoadAlleyRatsEasy()
     {
-        SceneManager.LoadScene("TestingScene", LoadSceneMode.Single);
+        PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Easy.mid");
+        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
     }
-
+    public void LoadAlleyRatsMedium()
+    {
+        PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Medium.mid");
+        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
+    }
+    public void LoadAlleyRatsHard()
+    {
+        PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Hard.mid");
+        SceneManager.LoadScene("AlleyRats_Scene", LoadSceneMode.Single);
+    }
+    //**********************************************************************Others
     public void FeedbackBtnClick()
     {
         Application.OpenURL("https://forms.gle/jY27T1Rf6UGFVZw86");
