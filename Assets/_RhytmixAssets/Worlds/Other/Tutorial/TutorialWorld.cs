@@ -36,6 +36,7 @@ public class TutorialWorld : MonoBehaviour
     [SerializeField] TextMeshProUGUI comboXTxt;
     [SerializeField] TextMeshProUGUI comboNumberTxt;
     [SerializeField] GameObject hitLoc;
+    [SerializeField] GameObject characterIcons;
 
     [Header("Tutorial Notes")]
     [SerializeField] GameObject tapNote;
@@ -95,6 +96,7 @@ public class TutorialWorld : MonoBehaviour
                 terminalAnimator.SetBool("isFade", true);
                 break;
             case 2:
+                characterIcons.SetActive(true);
                 rightPlaceHolder.SetActive(true);
                 leftPlaceHolder.SetActive(true);
                 break;
@@ -181,20 +183,17 @@ public class TutorialWorld : MonoBehaviour
                 Time.timeScale = 1;
                 break;
             case 15:
-                //show tap
                 tapNote.SetActive(true);
                 break;
-            case 17:
+            case 16:
                 Destroy(tapNote);
-                //show hold
                 holdNote.SetActive(true);
                 break;
-            case 19:
+            case 17:
                 Destroy(holdNote);
-                //show swipe up
                 swipeUpNote.SetActive(true);
                 break;
-            case 22:
+            case 19:
                 Destroy(swipeUpNote);
                 Destroy(tutorialCanvas);
                 FindObjectOfType<LevelAudioManager>().Skip();
