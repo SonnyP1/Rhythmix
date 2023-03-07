@@ -145,7 +145,7 @@ public class PlayerInput : MonoBehaviour
             Vector3 end = Input.GetTouch(index).position;
 
             isHolding[index] = false;
-            if(Mathf.Abs(end.y - start[index].y) > 60)
+            if(Mathf.Abs(end.y - start[index].y) > 30)
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
                 return;

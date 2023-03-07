@@ -90,4 +90,10 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.OpenURL("https://forms.gle/jY27T1Rf6UGFVZw86");
     }
+
+    public void ExitBtnClick()
+    {
+        Debug.Log("Quit Button!");
+        Application.Quit();
+    }
 }
