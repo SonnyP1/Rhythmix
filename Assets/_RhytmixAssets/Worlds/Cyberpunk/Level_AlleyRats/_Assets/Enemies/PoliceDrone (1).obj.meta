@@ -3,7 +3,12 @@ guid: 26a59ab5edb2e4e4cb81254483b7c1ad
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PoliceDrone_RETOPOMat
+    second: {fileID: 2100000, guid: d2dee027efb638e4b99d7f77e84a95bb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

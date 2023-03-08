@@ -2,20 +2,17 @@ This is the cyberpunk world!~
 Let's take a look at the UI.~
 This is the health! If you take five hits you die.~
 This is the pause button!~
-This is progression of the current song your playing.~
+This is progression of the current song you're playing.~
 This is your score count!~
-This the name of the song your currently playing!~
+This the name of the song you're currently playing!~
 This is your combo meter! The max is 4 times!~
 This is the bar hit area. Make sure to hit the note at this bar!~
 Let's get to running!~
-Tap on the respective lane to do a tap attack. Try It!~
+Tap on the respective lane to attack. Try It!~
 Swipe up to do a swipe attack. Try It!~
 There are three types of enemies!~
-Each enemy you need to press the correct attack type.~
-Tap Enemies.~
-Tap enemy you need to tap once to defeat them.~
-Hold Enemies.~
-Hold enemies you need to tap then hold until their defeated.~
-Swipe Up Enemies.~
-Swipe up enemies you need to use a swipe up attack to defeat them.~
+For each enemy, you need to press the correct attack type.~
+Tap Enemies: You need to TAP once to defeat them.~
+Hold Enemies: You need to TAP + HOLD until they're defeated.~
+Swipe Up Enemy: You need to use a SWIPE UP attack to defeat them.~
 Lets Play!~
