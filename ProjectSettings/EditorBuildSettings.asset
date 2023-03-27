@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Other/MainMenu/MainMenuScene.unity
+    path: Assets/_RhytmixAssets/TestingAssetFolder/Worlds/Other/MainMenu/MainMenuScene.unity
     guid: 92c71d2006a06f74ba46391f5a51ea0a
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Other/Tutorial/TutorialWorld.unity
+    path: Assets/_RhytmixAssets/TestingAssetFolder/Worlds/Other/Tutorial/TutorialWorld.unity
     guid: 2f276293cda390944812f46841770bc2
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Cyberpunk/Level_AlleyRats/Cutscene/CinematicAlleyRats_Scene.unity
+    path: Assets/_RhytmixAssets/TestingAssetFolder/Worlds/Cyberpunk/Level_AlleyRats/Cutscene/CinematicAlleyRats_Scene.unity
     guid: d298380582d1fe24b9184e4213782e28
   - enabled: 1
-    path: Assets/_RhytmixAssets/Worlds/Cyberpunk/Level_AlleyRats/AlleyRats_Scene.unity
+    path: Assets/_RhytmixAssets/TestingAssetFolder/Worlds/Cyberpunk/Level_AlleyRats/AlleyRats_Scene.unity
     guid: f6112aa3c6dcea64ebe1b9a0bc6da682
   m_configObjects: {}
