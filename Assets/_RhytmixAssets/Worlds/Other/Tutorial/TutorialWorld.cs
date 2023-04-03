@@ -9,7 +9,7 @@ using System.Collections.Generic;
 public class TutorialWorld : MonoBehaviour
 {
     [Header("Tutorial UI")]
-    [SerializeField] GameObject tutorialCanvas;
+    [SerializeField]  GameObject tutorialCanvas;
     [SerializeField] TextMeshProUGUI terminalTxt;
     [SerializeField] Animator terminalAnimator;
     [SerializeField] Image dot;

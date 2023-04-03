@@ -10,10 +10,20 @@ public class GameUIManager : MonoBehaviour
 {
     [SerializeField] BasicPlayer Player;
     [SerializeField] GameObject InGameUI;
-    [SerializeField] GameObject PauseMenu;
-    [SerializeField] GameObject GameOverMenu;
-    [SerializeField] GameObject WinMenu;
     private bool _isGamePause = false;
+
+    [Header("GameOverUI")]
+    [SerializeField] GameObject GameOverMenu;
+    [SerializeField] Animator GameOverAnimator;
+
+    [Header("PauseUI")]
+    [SerializeField] GameObject PauseMenu;
+    [SerializeField] Animator PauseAnimator;
+
+    [Header("WinUI")]
+    [SerializeField] GameObject WinMenu;
+    [SerializeField] Animator WinAnimator;
+
 
     [Header("Score UI")]
     [SerializeField] TextMeshProUGUI[] ScoreText;
@@ -46,9 +56,6 @@ public class GameUIManager : MonoBehaviour
         _music = coreGameData.GetMusic();
         SongTitle.text = coreGameData.GetSongTitle();
 
-        WinMenu.SetActive(false);
-        GameOverMenu.SetActive(false);
-        PauseMenu.SetActive(false);
         OnFireUI(false);
 
         if(_scoreKeeper != null)
@@ -77,7 +84,7 @@ public class GameUIManager : MonoBehaviour
             {
                 Debug.Log("End Game!");
                 InGameUI.SetActive(false);
-                WinMenu.SetActive(true);
+                WinAnimator.SetTrigger("Open");
                 Time.timeScale = 1;
                 Player.StartMovement();
                 coreGameData.PauseMusic();
@@ -93,7 +100,7 @@ public class GameUIManager : MonoBehaviour
     {
         InGameUI.SetActive(false);
         GameOverMenu.SetActive(true);
-
+        GameOverAnimator.SetTrigger("Open");
         coreGameData.PauseMusic();
     }
     public void UpdateAccuracy()
@@ -142,6 +149,7 @@ public class GameUIManager : MonoBehaviour
 
     public void TryAgainBtn()
     {
+        Debug.Log("TRY AGAIN");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
     public void PauseBtnClicked()
@@ -158,14 +166,16 @@ public class GameUIManager : MonoBehaviour
     }
     private void UnPauseGameUI()
     {
+        PauseAnimator.SetTrigger("Close");
+        PauseAnimator.ResetTrigger("Open");
         coreGameData.ContinueGame();
-        PauseMenu.SetActive(false);
         _isGamePause = false;
     }
     private void PauseGameUI()
     {
+        PauseAnimator.SetTrigger("Open");
+        PauseAnimator.ResetTrigger("Close");
         coreGameData.PauseGame();
-        PauseMenu.SetActive(true);
         _isGamePause = true;
     }
 }

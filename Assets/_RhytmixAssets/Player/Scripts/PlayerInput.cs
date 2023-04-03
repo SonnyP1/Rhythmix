@@ -62,15 +62,15 @@ public class PlayerInput : MonoBehaviour
         InputKey(1);
         InputKey(2);
 
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.A))
         {
             Lanes[0].HitNote(AttackType.SwipeUp);
         }
-        if(Input.GetKeyDown(KeyCode.G))
+        if(Input.GetKeyDown(KeyCode.S))
         {
             Lanes[1].HitNote(AttackType.SwipeUp);
         }
-        if(Input.GetKeyDown(KeyCode.H))
+        if(Input.GetKeyDown(KeyCode.D))
         {
             Lanes[2].HitNote(AttackType.SwipeUp);
         }
@@ -145,7 +145,7 @@ public class PlayerInput : MonoBehaviour
             Vector3 end = Input.GetTouch(index).position;
 
             isHolding[index] = false;
-            if(Mathf.Abs(end.y - start[index].y) > 60)
+            if(Mathf.Abs(end.y - start[index].y) > 30)
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
                 return;
