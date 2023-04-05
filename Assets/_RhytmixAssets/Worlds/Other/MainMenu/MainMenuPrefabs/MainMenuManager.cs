@@ -9,12 +9,16 @@ public class MainMenuManager : MonoBehaviour
 {
     [Header("TitleScreen")]
     [SerializeField] GameObject TitleScreen;
+
+    [Header("Selector")]
+    [SerializeField] Animator[] Selectors;
     public void PressToStartBtn()
     {
         TitleScreen.SetActive(false);
         LevelSelections[0].SetActive(true);
         MenuAudioSource.clip = Songs[1];
         MenuAudioSource.Play();
+        Selectors[0].SetTrigger("Open");
     }
 
     [Header("Level Selection")]
@@ -28,6 +32,7 @@ public class MainMenuManager : MonoBehaviour
             cycleIndex = 1;
             LevelSelections[cycleIndex].SetActive(true);
             MenuAudioSource.clip = Songs[2];
+            Selectors[1].SetTrigger("Open");
         }
         else
         {
@@ -35,6 +40,7 @@ public class MainMenuManager : MonoBehaviour
             cycleIndex = 0;
             LevelSelections[cycleIndex].SetActive(true);
             MenuAudioSource.clip = Songs[1];
+            Selectors[0].SetTrigger("Open");
         }
 
         MenuAudioSource.Play();

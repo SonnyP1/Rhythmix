@@ -1551,6 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973432718}
+  - component: {fileID: 1973432719}
   m_Layer: 0
   m_Name: _LevelEffects
   m_TagString: Untagged
@@ -1574,6 +1575,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973432719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973432717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b607293055c73ad45962dff2a6697b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978852813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7536675036146037955, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
