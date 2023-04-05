@@ -74,6 +74,8 @@ public class GameUIManager : MonoBehaviour
             obj.SetActive(val);
         }
     }
+
+    //CHECK IF GAME IS OVER 
     IEnumerator CheckTime()
     {
         while(true)
@@ -93,6 +95,9 @@ public class GameUIManager : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("EndCutscene");
     }
 
 
