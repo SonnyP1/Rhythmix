@@ -41,6 +41,7 @@ public class BasicPlayer : MonoBehaviour
         {
             Debug.Log("MOVE");
             characterController.Move(characterController.transform.forward * Time.deltaTime*10f);
+            characterController.Move(-characterController.transform.up * Time.deltaTime * 10f);
             yield return new WaitForEndOfFrame();
         }
     }
