@@ -20,11 +20,6 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Animator PauseAnimator;
 
-    [Header("WinUI")]
-    [SerializeField] GameObject WinMenu;
-    [SerializeField] Animator WinAnimator;
-
-
     [Header("Score UI")]
     [SerializeField] TextMeshProUGUI[] ScoreText;
     [SerializeField] TextMeshProUGUI[] AccuracyText;
@@ -86,7 +81,6 @@ public class GameUIManager : MonoBehaviour
             {
                 Debug.Log("End Game!");
                 InGameUI.SetActive(false);
-                WinAnimator.SetTrigger("Open");
                 Time.timeScale = 1;
                 Player.StartMovement();
                 coreGameData.PauseMusic();

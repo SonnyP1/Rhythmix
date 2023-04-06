@@ -1956,6 +1956,10 @@ PrefabInstance:
       propertyPath: PauseAnimator
       value: 
       objectReference: {fileID: 1285528951}
+    - target: {fileID: 8439029909539207442, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: AccuracyText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8520806602326749117, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

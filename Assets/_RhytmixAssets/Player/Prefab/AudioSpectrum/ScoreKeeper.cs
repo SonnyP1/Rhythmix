@@ -103,9 +103,8 @@ public class ScoreKeeper : MonoBehaviour
 
             score += val * multiplier;
         }
-
         PlayerPrefs.SetFloat("Score",score);
-        PlayerPrefs.SetFloat("Accuracy", accuracy);
+        PlayerPrefs.SetFloat("Accuracy",accuracy);
 
         _UI.UpdateMultiplier();
         _UI.UpdateScore();
