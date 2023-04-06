@@ -1,28 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndSceneScript : MonoBehaviour
 {
-    //animators
-    public Animator _policeAnimator;
-    public Animator _cameraAnimator;
+    [Header("Animators")]
+    [SerializeField] Animator _policeAnimator;
+    [SerializeField] Animator _cameraAnimator;
 
-    //buttons
-    public Button _continueButton;
-    public Button _returnToMenu;
+    [Header("Buttons")]
+    [SerializeField] Button _continueButton;
+    [SerializeField] Button _returnToMenu;
 
-    //other UI elements
-    public RectTransform _creditTextTransform;
-    public CanvasGroup _canvasGroup;
+    [Header("Other UI Elements")]
+    [SerializeField] RectTransform _creditTextTransform;
+    [SerializeField] CanvasGroup _canvasGroup;
+    [SerializeField] Canvas _scoreCanvas;
+    [SerializeField] TextMeshProUGUI _scoreTxt;
+    [SerializeField] TextMeshProUGUI _accuracyTxt;
     private void Start()
     {
+        _scoreTxt.text = PlayerPrefs.GetFloat("Score").ToString();
+        _accuracyTxt.text = (PlayerPrefs.GetFloat("Accuracy") * 100).ToString("F0") + "%";
+
         _returnToMenu.enabled = false;
+        _scoreCanvas.gameObject.SetActive(false);
 
         _continueButton.onClick.AddListener(ContinueScene);
         _returnToMenu.onClick.AddListener(ReturnToMenu);
+    }
+
+    public void ShowScore()
+    {
+        _scoreCanvas.gameObject.SetActive(true);
+        StartCoroutine(ShowScoreCanvas());
+    }
+
+    IEnumerator ShowScoreCanvas()
+    {
+        float time = 0;
+        float maxTime = 0.1f;
+        RectTransform scoreTransform = _scoreCanvas.GetComponent<RectTransform>();
+
+        while (true)
+        {
+            time += Time.deltaTime;
+            float percent = time / maxTime;
+            scoreTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.05f,0.05f,0.05f),percent);
+
+            if (percent >= 1)
+                break;
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     private void ReturnToMenu()
@@ -56,12 +88,12 @@ public class EndSceneScript : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
-        //make sure alpah fully 1
+        //make sure alpah is fully 1
         _canvasGroup.alpha = 1;
 
 
-        Vector3 endPos = new Vector3(0,100,0);
-        Vector3 startPos = new Vector3(0,-1500,0);
+        Vector3 endPos = new Vector3(0,35,0);
+        Vector3 startPos = new Vector3(0,-1000,0);
         maxTime = 10;
         while(true)
         {
