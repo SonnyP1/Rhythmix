@@ -92,9 +92,9 @@ public class EndSceneScript : MonoBehaviour
         _canvasGroup.alpha = 1;
 
 
-        Vector3 endPos = new Vector3(0,35,0);
+        Vector3 endPos = new Vector3(0,1000,0);
         Vector3 startPos = new Vector3(0,-1000,0);
-        maxTime = 10;
+        maxTime = 25;
         while(true)
         {
             time += Time.deltaTime;
@@ -107,5 +107,8 @@ public class EndSceneScript : MonoBehaviour
         }
 
         _returnToMenu.enabled = true;
+
+        yield return new WaitForSeconds(8f);
+        SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
     }
 }
