@@ -20,11 +20,6 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] Animator PauseAnimator;
 
-    [Header("WinUI")]
-    [SerializeField] GameObject WinMenu;
-    [SerializeField] Animator WinAnimator;
-
-
     [Header("Score UI")]
     [SerializeField] TextMeshProUGUI[] ScoreText;
     [SerializeField] TextMeshProUGUI[] AccuracyText;
@@ -74,6 +69,8 @@ public class GameUIManager : MonoBehaviour
             obj.SetActive(val);
         }
     }
+
+    //CHECK IF GAME IS OVER 
     IEnumerator CheckTime()
     {
         while(true)
@@ -84,7 +81,6 @@ public class GameUIManager : MonoBehaviour
             {
                 Debug.Log("End Game!");
                 InGameUI.SetActive(false);
-                WinAnimator.SetTrigger("Open");
                 Time.timeScale = 1;
                 Player.StartMovement();
                 coreGameData.PauseMusic();
@@ -93,6 +89,9 @@ public class GameUIManager : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("EndCutscene");
     }
 
 
