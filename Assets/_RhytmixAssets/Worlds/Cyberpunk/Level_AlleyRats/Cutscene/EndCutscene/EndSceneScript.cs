@@ -85,7 +85,7 @@ public class EndSceneScript : MonoBehaviour
         _continueButton.gameObject.SetActive(false);
         _policeAnimator.SetTrigger("PlayerClick");
         _cameraAnimator.SetTrigger("PlayerClick");
-        //StartCoroutine(StartCreditRoll());
+        StartCoroutine(StartCreditRoll());
     }
 
     IEnumerator StartCreditRoll()
@@ -127,6 +127,6 @@ public class EndSceneScript : MonoBehaviour
         _returnToMenu.enabled = true;
 
         yield return new WaitForSeconds(8f);
-        //SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
+        SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
     }
 }
