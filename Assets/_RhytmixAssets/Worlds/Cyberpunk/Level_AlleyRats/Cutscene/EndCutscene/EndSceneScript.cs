@@ -21,24 +21,6 @@ public class EndSceneScript : MonoBehaviour
     [SerializeField] Canvas _scoreCanvas;
     [SerializeField] TextMeshProUGUI _scoreTxt;
     [SerializeField] TextMeshProUGUI _accuracyTxt;
-
-    [Header("Tablet Geo")]
-    [SerializeField] GameObject TabletInHand;
-    [SerializeField] GameObject TabletOnHip;
-    [SerializeField] GameObject TabletSmash;
-
-
-    public void HideHipTablet()
-    {
-        TabletOnHip.SetActive(false);
-        TabletInHand.SetActive(true);
-    }
-
-    public void HideInHandTablet()
-    {
-        TabletInHand.SetActive(false);
-        TabletSmash.SetActive(true);
-    }
     private void Start()
     {
         _scoreTxt.text = PlayerPrefs.GetFloat("Score").ToString();
@@ -67,7 +49,7 @@ public class EndSceneScript : MonoBehaviour
         {
             time += Time.deltaTime;
             float percent = time / maxTime;
-            scoreTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.01f, 0.008f, 0.008f),percent);
+            scoreTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.05f,0.05f,0.05f),percent);
 
             if (percent >= 1)
                 break;
@@ -110,9 +92,9 @@ public class EndSceneScript : MonoBehaviour
         _canvasGroup.alpha = 1;
 
 
-        Vector3 endPos = new Vector3(0,1000,0);
+        Vector3 endPos = new Vector3(0,35,0);
         Vector3 startPos = new Vector3(0,-1000,0);
-        maxTime = 25;
+        maxTime = 10;
         while(true)
         {
             time += Time.deltaTime;
@@ -125,8 +107,5 @@ public class EndSceneScript : MonoBehaviour
         }
 
         _returnToMenu.enabled = true;
-
-        yield return new WaitForSeconds(8f);
-        SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);
     }
 }
