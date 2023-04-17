@@ -58,7 +58,9 @@ public class AudioSpectrum : MonoBehaviour
 
     public void ChangeSampleObjectColor(Color color)
     {
-        Color colorToApply = new Color(color.r, color.g, color.b, SamplerMat.color.a);
+        float factor = Mathf.Pow(2, 1.5f);
+
+        Color colorToApply = new Color(color.r *factor, color.g*factor, color.b*factor, SamplerMat.color.a);
         SamplerMat.color = colorToApply;
         SamplerMat.SetColor("_EmissionColor", colorToApply);
     }

@@ -209,8 +209,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 4162137630123542847}
     m_Modifications:
     - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bLoop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bobSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bobHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: speed1Lerp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: speed2Lerp
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
       propertyPath: timeToLerp
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bHasTwoSpeeds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5557805971057154871, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
       propertyPath: m_RootOrder

@@ -12,7 +12,6 @@ public class HeathComponent : MonoBehaviour
     GameUIManager GameUIManager;
 
     private Coroutine healthRegen;
-
     public float GetHealth()
     {
         return HP;
@@ -20,6 +19,7 @@ public class HeathComponent : MonoBehaviour
     private void Start()
     {
         GameUIManager = FindObjectOfType<GameUIManager>();
+        UpdateHealthBar();
     }
     public void TakeDmg(float dmg)
     {
