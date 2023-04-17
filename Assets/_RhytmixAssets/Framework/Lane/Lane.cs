@@ -81,7 +81,7 @@ public class Lane : MonoBehaviour
                 }
                 else if(notes[inputIndex].GetNoteType() == AttackType.Hold)
                 {
-                    Debug.Log("Start Hold");
+                    //Debug.Log("Start Hold");
                     _animationHandler.PlayAttackAnimation(AttackType.Hold);
                 }
             }
@@ -260,7 +260,7 @@ public class Lane : MonoBehaviour
         {
             if (AbsValueDouble(audioTime - notes[inputIndex-1].GetEndTime()) < 0.1f)
             {
-                Debug.Log("EndHold");
+                //Debug.Log("EndHold");
                 _animationHandler.PlayAttackAnimation(AttackType.EndHold);
             }
         }

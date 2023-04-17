@@ -35,15 +35,10 @@ public class ScoreKeeper : MonoBehaviour
     {
         return accuracy;
     }
-    public int GetMultiplier()
-    {
-        return multiplier;
-    }
     public int GetScore()
     {
         return score;
     }
-
     public void ChangeScore(int val)
     {
         if(val > 1000)
@@ -57,18 +52,23 @@ public class ScoreKeeper : MonoBehaviour
 
         accuracy = notesHit / allNotes;
 
+        Color comboColor = Color.red;
         if(val == 0)
         {
             //combo drop
             comboMeter = 0;
             multiplier = 1; 
-            audioSpectrums[0].ChangeSampleObjectColor(Color.red);
             StopAllCoroutines();
             StartCoroutine(ChangeVolume(.4f,false));
+
+            //Change Colors
+            comboColor = Color.red;
+            audioSpectrums[0].ChangeSampleObjectColor(comboColor);
+
+            //Turn Off OnFire Effects
             audioSpectrums[0].TurnOffFireEffect();
             audioSpectrums[1].TurnOffFireEffect();
             bOnFire = false;
-            _UI.OnFireUI(false);
         }
         else
         {
@@ -78,27 +78,35 @@ public class ScoreKeeper : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.5f, true)); 
                 multiplier = 4;
-                audioSpectrums[0].ChangeSampleObjectColor(Color.green);
+
+                //Change Colors
+                comboColor= Color.green;
+                audioSpectrums[0].ChangeSampleObjectColor(comboColor);
+
+                //Turn On OnFire Effects
                 bOnFire = true;
-
-
                 audioSpectrums[0].TurnOnFireEffect();
                 audioSpectrums[1].TurnOnFireEffect();
-                _UI.OnFireUI(true);
             }
             else if(comboMeter > 5)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.48f, true));
                 multiplier = 3;
-                audioSpectrums[0].ChangeSampleObjectColor(Color.magenta);
+
+                //Change Colors
+                comboColor = Color.magenta;
+                audioSpectrums[0].ChangeSampleObjectColor(comboColor);
             }
             else if(comboMeter > 2)
             {
                 StopAllCoroutines();
                 StartCoroutine(ChangeVolume(.45f, true));
                 multiplier = 2;
-                audioSpectrums[0].ChangeSampleObjectColor(Color.blue);
+
+                //Change Colors
+                comboColor = Color.blue;
+                audioSpectrums[0].ChangeSampleObjectColor(comboColor);
             }
 
             score += val * multiplier;
@@ -106,8 +114,8 @@ public class ScoreKeeper : MonoBehaviour
         PlayerPrefs.SetFloat("Score",score);
         PlayerPrefs.SetFloat("Accuracy",accuracy);
 
-        _UI.UpdateMultiplier();
-        _UI.UpdateScore();
+        _UI.UpdateMultiplier(multiplier,comboColor);
+        _UI.UpdateScore(comboColor);
         _UI.UpdateAccuracy();
     }
 

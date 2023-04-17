@@ -583,6 +583,22 @@ PrefabInstance:
       value: -17.6
       objectReference: {fileID: 0}
     - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bobSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: bobHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: speed1Lerp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
+      propertyPath: speed2Lerp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566538750912312384, guid: 4bd9fd4c0af9b2249af2547407ed4d3a, type: 3}
       propertyPath: timeToLerp
       value: 50
       objectReference: {fileID: 0}
