@@ -1,100 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &557210324
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 557210325}
-  - component: {fileID: 557210328}
-  - component: {fileID: 557210327}
-  - component: {fileID: 557210326}
-  m_Layer: 5
-  m_Name: OnFire
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &557210325
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557210324}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.63936, y: 0.63936, z: 0.63936}
-  m_Children: []
-  m_Father: {fileID: 3388429799740496455}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &557210328
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557210324}
-  m_CullTransparentMesh: 1
---- !u!114 &557210327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557210324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: -5148411764650930933, guid: 2118128884c7de3429eacdec05bf8619, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!95 &557210326
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557210324}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 128b9b8dc496d204bae64a98e387504b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2005062318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1030,7 @@ GameObject:
   - component: {fileID: 9063575607588896114}
   - component: {fileID: 7402310589804282505}
   - component: {fileID: 1863848140693685990}
+  - component: {fileID: 996385096888552235}
   m_Layer: 5
   m_Name: Health_2
   m_TagString: Untagged
@@ -1181,6 +1087,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &996385096888552235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697467366059109190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe61b856aeab414e845f497180134f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullHealthBarSegment: {fileID: 482885809080726613}
+  EmptyHealthBarSegment: {fileID: 7422492557607741813}
+  HealthBarBroken: {fileID: 5127718523266532758}
 --- !u!1 &1975242298649338871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,6 +1113,7 @@ GameObject:
   - component: {fileID: 5536679854326513196}
   - component: {fileID: 6974829033180531640}
   - component: {fileID: 6197643526566164225}
+  - component: {fileID: 55764825236676272}
   m_Layer: 5
   m_Name: Health_4
   m_TagString: Untagged
@@ -1248,6 +1170,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &55764825236676272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975242298649338871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe61b856aeab414e845f497180134f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullHealthBarSegment: {fileID: 5371068157145942011}
+  EmptyHealthBarSegment: {fileID: 5507429378071238182}
+  HealthBarBroken: {fileID: 6027334172148462596}
 --- !u!1 &2012779064170271655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,6 +1654,7 @@ GameObject:
   - component: {fileID: 4333935582532401460}
   - component: {fileID: 4188612123329995079}
   - component: {fileID: 2707202721903491671}
+  - component: {fileID: 5835184121247926799}
   m_Layer: 5
   m_Name: Health_5
   m_TagString: Untagged
@@ -1773,6 +1711,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5835184121247926799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847450170782678557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe61b856aeab414e845f497180134f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullHealthBarSegment: {fileID: 7253148206742381200}
+  EmptyHealthBarSegment: {fileID: 7509324385419100461}
+  HealthBarBroken: {fileID: 8148802471592089046}
 --- !u!1 &2949680618557778288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,6 +1983,7 @@ GameObject:
   - component: {fileID: 2449128386679760103}
   - component: {fileID: 1413756277794653778}
   - component: {fileID: 7580411772836323781}
+  - component: {fileID: 5054766422093286703}
   m_Layer: 5
   m_Name: Health_3
   m_TagString: Untagged
@@ -2086,6 +2040,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5054766422093286703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3364902734065733446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe61b856aeab414e845f497180134f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullHealthBarSegment: {fileID: 3093383262555481484}
+  EmptyHealthBarSegment: {fileID: 5014202326251345389}
+  HealthBarBroken: {fileID: 4345166687138247801}
 --- !u!1 &3388429798955021604
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,7 +2212,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 557210325}
   - {fileID: 8602481437766824227}
   m_Father: {fileID: 1580726604563217430}
   m_RootOrder: 4
@@ -2579,8 +2547,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.1
-  m_fontSizeBase: 23.1
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2615,7 +2583,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -21.287575, y: 0, z: 117.0813, w: 0}
+  m_margin: {x: -196.62468, y: 0, z: 117.0813, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5055,6 +5023,7 @@ GameObject:
   - component: {fileID: 7998793482550210409}
   - component: {fileID: 2941071942661414627}
   - component: {fileID: 7310172607328665423}
+  - component: {fileID: 8618715126790665432}
   m_Layer: 5
   m_Name: Health_1
   m_TagString: Untagged
@@ -5111,6 +5080,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8618715126790665432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6773734281118787656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe61b856aeab414e845f497180134f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FullHealthBarSegment: {fileID: 4548097374281136531}
+  EmptyHealthBarSegment: {fileID: 3476546139364817452}
+  HealthBarBroken: {fileID: 3240100245017490727}
 --- !u!1 &6976774266315552413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,7 +5126,7 @@ RectTransform:
   m_Children:
   - {fileID: 4843321722027919980}
   m_Father: {fileID: 3388429799740496455}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

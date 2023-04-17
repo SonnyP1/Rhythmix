@@ -23,7 +23,12 @@ public class GameUIManager : MonoBehaviour
     [Header("Score UI")]
     [SerializeField] TextMeshProUGUI[] ScoreText;
     [SerializeField] TextMeshProUGUI[] AccuracyText;
+
+    [Header("Multiplier UI")]
     [SerializeField] TextMeshProUGUI MultiplierText;
+    [SerializeField] TextMeshProUGUI MultiplierXText;
+    [SerializeField] float GlowIntensity;
+
     [SerializeField] Slider SongSlider;
     [SerializeField] TextMeshProUGUI PercentageSong;
     [SerializeField] TextMeshProUGUI SongTitle;
@@ -31,8 +36,7 @@ public class GameUIManager : MonoBehaviour
     [Header("Player UI")]
     [SerializeField] GameObject[] PlayerHealthBars;
 
-    [Header("OnFire UI")]
-    [SerializeField] GameObject[] onFireUIObjs;
+
 
     private ScoreKeeper _scoreKeeper;
     private AudioSource _music;
@@ -51,23 +55,14 @@ public class GameUIManager : MonoBehaviour
         _music = coreGameData.GetMusic();
         SongTitle.text = coreGameData.GetSongTitle();
 
-        OnFireUI(false);
 
         if(_scoreKeeper != null)
         {
-            UpdateScore();
-            UpdateMultiplier();
+            UpdateScore(Color.red);
+            UpdateMultiplier(1,Color.red);
             UpdateAccuracy();
         }
         StartCoroutine(CheckTime());
-    }
-
-    public void OnFireUI(bool val)
-    {
-        foreach(GameObject obj in onFireUIObjs)
-        {
-            obj.SetActive(val);
-        }
     }
 
     //CHECK IF GAME IS OVER 
@@ -109,17 +104,35 @@ public class GameUIManager : MonoBehaviour
             textPro.text =  ((_scoreKeeper.GetAccuracy()*100)).ToString("F0") + "%";
         }
     }
-    public void UpdateScore()
+    public void UpdateScore(Color newColor)
     {
         foreach (TextMeshProUGUI textPro in ScoreText)
         {
+            textPro.color = newColor;
             textPro.text = _scoreKeeper.GetScore().ToString();
         }
     }
 
-    public void UpdateMultiplier()
+    public void UpdateMultiplier(int multiplier , Color color)
     {
-        MultiplierText.text =  _scoreKeeper.GetMultiplier().ToString();
+        MultiplierText.color = color;
+        MultiplierXText.color = color;
+        if(MultiplierXText.materialForRendering.HasProperty("_GlowColor"))
+        {
+            float factor = Mathf.Pow(2, GlowIntensity);
+            Color glowColor = new Color(color.r * factor, color.g * factor, color.b * factor,color.a);
+            MultiplierXText.materialForRendering.SetColor("_GlowColor",glowColor);
+        }
+
+        MultiplierText.text = multiplier.ToString();
+    }
+
+    private void UpdateHealthBarColor(Color newColor)
+    {
+        foreach(GameObject healthObj in PlayerHealthBars)
+        {
+            healthObj.GetComponent<HealthBarUIComponentData>().FullHealthBarSegment.color = newColor;
+        }
     }
     public void UpdatePlayerHealthBar(int healthRemaining , int maxHealth)
     {
@@ -127,6 +140,30 @@ public class GameUIManager : MonoBehaviour
         {
             return;
         }
+
+        switch (healthRemaining)
+        {
+            case 5:
+                UpdateHealthBarColor(Color.cyan);
+                break;
+            case 4:
+                UpdateHealthBarColor(Color.green);
+                break;
+            case 3:
+                UpdateHealthBarColor(Color.yellow);
+                break;
+            case 2:
+                UpdateHealthBarColor(new Color(139f,64f,0));
+                break;
+            case 1:
+                UpdateHealthBarColor(Color.clear);
+                break;
+            default:
+                UpdateHealthBarColor(Color.clear);
+                break;
+
+        }
+
 
         for(int i = maxHealth; i > 0;i--)
         {
