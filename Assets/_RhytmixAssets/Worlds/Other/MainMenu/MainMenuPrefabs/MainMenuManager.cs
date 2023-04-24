@@ -11,6 +11,7 @@ public class MainMenuManager : MonoBehaviour
 {
     [Header("TitleScreen")]
     [SerializeField] GameObject _titleScreen;
+    [SerializeField] GameObject _selectionScreen;
 
     [Header("Level Selection")]
     [SerializeField] GameObject[] _levelSelections;
@@ -18,8 +19,11 @@ public class MainMenuManager : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] Button _rightBtn;
     [SerializeField] Button _leftBtn;
-    [SerializeField] Button _startBtn;
 
+    [SerializeField] Button _startBtn;
+    [SerializeField] Button _exitBtn;
+
+    [SerializeField] Button _tutorialBtn;
     [SerializeField] Button _easyBtn;
     [SerializeField] Button _medBtn;
     [SerializeField] Button _hardBtn;
@@ -37,14 +41,38 @@ public class MainMenuManager : MonoBehaviour
     private List<Vector3> _objScale = new List<Vector3>();
 
     private bool _tutorialSelected = true;
-    public void PressToStartBtn()
+
+    IEnumerator TitleToSelection()
     {
-        _titleScreen.SetActive(false);
-        _levelSelections[0].SetActive(true);
+        float time = 0.0f;
+        float maxTime = 1f;
+        while(true)
+        {
+            float percent = time / maxTime;
+            time += Time.deltaTime;
+            float oppositePercent = 1.0f - percent;
+
+            _titleScreen.GetComponent<CanvasGroup>().alpha = oppositePercent;
+            _selectionScreen.GetComponent<CanvasGroup>().alpha = percent;
+
+
+
+            if (percent >= 1)
+            {
+                _titleScreen.SetActive(false);
+                _startBtn.enabled = false;
+                break;
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     private void Start()
     {
+        _startBtn.onClick.AddListener(() => StartCoroutine(TitleToSelection()));
+        _exitBtn.onClick.AddListener(()=> Application.Quit());
+
         foreach(GameObject obj in _levelSelections)
         {
             _objPosition.Add(obj.transform.localPosition);
@@ -54,18 +82,13 @@ public class MainMenuManager : MonoBehaviour
         _rightBtn.onClick.AddListener(() => Selection(1));
         _leftBtn.onClick.AddListener(() => Selection(-1));
 
+        _tutorialBtn.onClick.AddListener(LoadTutorialLevel);
         _easyBtn.onClick.AddListener(LoadAlleyRatsEasy);
         _medBtn.onClick.AddListener(LoadAlleyRatsMedium);
         _hardBtn.onClick.AddListener(LoadAlleyRatsHard);
 
-        _startBtn.onClick.AddListener(StartSelectedScreen);
     }
 
-    private void StartSelectedScreen()
-    {
-        _titleScreen.SetActive(false);
-        _
-    }
 
 
     private void Selection(int shift)
@@ -226,11 +249,5 @@ public class MainMenuManager : MonoBehaviour
     public void FeedbackBtnClick()
     {
         Application.OpenURL("https://forms.gle/jY27T1Rf6UGFVZw86");
-    }
-
-    public void ExitBtnClick()
-    {
-        Debug.Log("Quit Button!");
-        Application.Quit();
     }
 }

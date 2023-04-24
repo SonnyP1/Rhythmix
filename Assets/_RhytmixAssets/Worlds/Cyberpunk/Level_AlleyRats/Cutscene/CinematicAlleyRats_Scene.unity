@@ -624,7 +624,16 @@ MonoBehaviour:
   car: {fileID: 793556769}
   pointOne: {fileID: 916936643}
   pointTwo: {fileID: 192251698}
-  timeToLerp: 20
+  speed1Lerp: 0
+  speed2Lerp: 0
+  bHasTwoSpeeds: 0
+  bLoop: 0
+  bobSpeed: 0
+  bobHeight: 0
+  Glow: 0
+  CarMtl: {fileID: 0}
+  CarObj: {fileID: 0}
+  CarColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &15582225
 GameObject:
   m_ObjectHideFlags: 0
@@ -8444,7 +8453,16 @@ MonoBehaviour:
   car: {fileID: 1597129715}
   pointOne: {fileID: 887447190}
   pointTwo: {fileID: 229468198}
-  timeToLerp: 15
+  speed1Lerp: 0
+  speed2Lerp: 0
+  bHasTwoSpeeds: 0
+  bLoop: 0
+  bobSpeed: 0
+  bobHeight: 0
+  Glow: 0
+  CarMtl: {fileID: 0}
+  CarObj: {fileID: 0}
+  CarColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &629864083
 GameObject:
   m_ObjectHideFlags: 0
@@ -25668,7 +25686,16 @@ MonoBehaviour:
   car: {fileID: 1837932011}
   pointOne: {fileID: 737496763}
   pointTwo: {fileID: 15582226}
-  timeToLerp: 15
+  speed1Lerp: 1
+  speed2Lerp: 1
+  bHasTwoSpeeds: 0
+  bLoop: 0
+  bobSpeed: 1
+  bobHeight: 1
+  Glow: 1
+  CarMtl: {fileID: 0}
+  CarObj: {fileID: 1837932010}
+  CarColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1533773460
 GameObject:
   m_ObjectHideFlags: 0
