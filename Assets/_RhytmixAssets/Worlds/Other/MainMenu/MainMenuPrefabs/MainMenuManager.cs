@@ -4,70 +4,115 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using System.Linq;
 
 public class MainMenuManager : MonoBehaviour
 {
     [Header("TitleScreen")]
     [SerializeField] GameObject TitleScreen;
 
-    [Header("Selector")]
-    [SerializeField] Animator[] Selectors;
+    [Header("Level Selection")]
+    [SerializeField] GameObject[] LevelSelections;
+
+    [Header("Buttons")]
+    [SerializeField] Button _rightBtn;
+    [SerializeField] Button _leftBtn;
+
+    private List<Vector3> _objPosition = new List<Vector3>();
+    private List<Vector3> _objScale = new List<Vector3>();
     public void PressToStartBtn()
     {
         TitleScreen.SetActive(false);
         LevelSelections[0].SetActive(true);
-        MenuAudioSource.clip = Songs[1];
-        MenuAudioSource.Play();
-        Selectors[0].SetTrigger("Open");
     }
 
-    [Header("Level Selection")]
-    [SerializeField] GameObject[] LevelSelections;
-    private int cycleIndex = 0;
-    public void CycleThroughLevels()
+    private void Start()
     {
-        if(cycleIndex == 0)
+        foreach(GameObject obj in LevelSelections)
         {
-            LevelSelections[cycleIndex].SetActive(false);
-            cycleIndex = 1;
-            LevelSelections[cycleIndex].SetActive(true);
-            MenuAudioSource.clip = Songs[2];
-            Selectors[1].SetTrigger("Open");
-        }
-        else
-        {
-            LevelSelections[cycleIndex].SetActive(false);
-            cycleIndex = 0;
-            LevelSelections[cycleIndex].SetActive(true);
-            MenuAudioSource.clip = Songs[1];
-            Selectors[0].SetTrigger("Open");
+            _objPosition.Add(obj.transform.localPosition);
+            _objScale.Add(obj.transform.localScale);
         }
 
-        MenuAudioSource.Play();
+        _rightBtn.onClick.AddListener(() => Selection(1));
+        _leftBtn.onClick.AddListener(() => Selection(-1));
     }
 
-
-    [Header("AlleyRatsSelection")]
-    [SerializeField] VideoPlayer AlleyRatVideoPlayer;
-    [SerializeField] VideoClip EasyClip;
-    [SerializeField] VideoClip MediumClip;
-    [SerializeField] VideoClip HardClip;
-
-    [Header("Song")]
-    [SerializeField] AudioSource MenuAudioSource;
-    [SerializeField] AudioClip[] Songs;
-
-    public void AlleyRatsEasyOver()
+    private void Selection(int shift)
     {
-        AlleyRatVideoPlayer.clip = EasyClip;
+
+
+        LevelSelections = ShiftIndex(LevelSelections,shift).ToArray();
+        StopAllCoroutines();
+        StartCoroutine(LerpToLoc());
     }
-    public void AlleyRatsMediumOver()
+
+    IEnumerator LerpToLoc()
     {
-        AlleyRatVideoPlayer.clip = MediumClip;
+        List<Color> orginalColor = new List<Color>();
+
+        foreach(GameObject selection in LevelSelections)
+        {
+            selection.SetActive(true);
+            orginalColor.Add(selection.GetComponent<Image>().color);
+        }
+        LevelSelections[2].SetActive(false);
+        LevelSelections[3].SetActive(false);
+
+        List<Vector3> positionToLerp = new List<Vector3>();
+        List<Vector3> startPos = new List<Vector3>();
+
+        List<Vector3> scaleToLerp = new List<Vector3>();
+        List<Vector3> startScale = new List<Vector3>();
+
+
+        for (int i = 0; i < LevelSelections.Length; i++)
+        {
+            startPos.Add(LevelSelections[i].transform.localPosition);
+            positionToLerp.Add(_objPosition[i]);
+
+            startScale.Add(LevelSelections[i].transform.localScale);
+            scaleToLerp.Add(_objScale[i]);
+        }
+
+        float time = 0f;
+        float maxTime = 0.5f;
+        while(true)
+        {
+            time += Time.deltaTime;
+            float percent = time / maxTime;
+
+            //Lerp Position-Color-Scale
+            for(int i = 0; i < LevelSelections.Length; i++)
+            {
+                LevelSelections[i].transform.localPosition = Vector3.Lerp(startPos[i],positionToLerp[i],percent);
+                LevelSelections[i].transform.localScale = Vector3.Lerp(startScale[i],scaleToLerp[i],percent);
+
+                if(i == 0)
+                    LevelSelections[i].GetComponent<Image>().color = Color.Lerp(orginalColor[i],Color.white,percent);
+                else
+                    LevelSelections[i].GetComponent<Image>().color = Color.Lerp(orginalColor[i],Color.gray,percent);
+            }
+
+            if(percent >= 1f)
+            {
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
     }
-    public void AlleyRatsHardOver()
+
+    private static int MathMod(int a, int b)
     {
-        AlleyRatVideoPlayer.clip = HardClip; 
+        int c = ((a % b) + b) % b;
+        return c;
+    }
+    public static IEnumerable<T> ShiftIndex<T>(IList<T> values, int shift)
+    {
+        for (int index = 0; index < values.Count; index++)
+        {
+            yield return values[MathMod(index - shift, values.Count)];
+        }
     }
 
     //**********************************************************************Load Levels
