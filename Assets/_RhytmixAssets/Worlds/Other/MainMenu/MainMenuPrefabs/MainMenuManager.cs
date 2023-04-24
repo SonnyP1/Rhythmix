@@ -5,30 +5,47 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 using System.Linq;
+using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
     [Header("TitleScreen")]
-    [SerializeField] GameObject TitleScreen;
+    [SerializeField] GameObject _titleScreen;
 
     [Header("Level Selection")]
-    [SerializeField] GameObject[] LevelSelections;
+    [SerializeField] GameObject[] _levelSelections;
 
     [Header("Buttons")]
     [SerializeField] Button _rightBtn;
     [SerializeField] Button _leftBtn;
+    [SerializeField] Button _startBtn;
+
+    [SerializeField] Button _easyBtn;
+    [SerializeField] Button _medBtn;
+    [SerializeField] Button _hardBtn;
+
+    [Header("Canvas Groups")]
+    [SerializeField] CanvasGroup _titleGroup;
+    [SerializeField] CanvasGroup _alleyRatsGroup;
+    [SerializeField] CanvasGroup _tutorialGroup;
+
+    [Header("Audio Sources")]
+    [SerializeField] AudioSource _alleyRatsSong;
+    [SerializeField] AudioSource _tutorialSong;
 
     private List<Vector3> _objPosition = new List<Vector3>();
     private List<Vector3> _objScale = new List<Vector3>();
+
+    private bool _tutorialSelected = true;
     public void PressToStartBtn()
     {
-        TitleScreen.SetActive(false);
-        LevelSelections[0].SetActive(true);
+        _titleScreen.SetActive(false);
+        _levelSelections[0].SetActive(true);
     }
 
     private void Start()
     {
-        foreach(GameObject obj in LevelSelections)
+        foreach(GameObject obj in _levelSelections)
         {
             _objPosition.Add(obj.transform.localPosition);
             _objScale.Add(obj.transform.localScale);
@@ -36,13 +53,34 @@ public class MainMenuManager : MonoBehaviour
 
         _rightBtn.onClick.AddListener(() => Selection(1));
         _leftBtn.onClick.AddListener(() => Selection(-1));
+
+        _easyBtn.onClick.AddListener(LoadAlleyRatsEasy);
+        _medBtn.onClick.AddListener(LoadAlleyRatsMedium);
+        _hardBtn.onClick.AddListener(LoadAlleyRatsHard);
+
+        _startBtn.onClick.AddListener(StartSelectedScreen);
     }
+
+    private void StartSelectedScreen()
+    {
+        _titleScreen.SetActive(false);
+        _
+    }
+
 
     private void Selection(int shift)
     {
+        if(_tutorialSelected)
+        {
+            _tutorialSelected = false;
+        }
+        else
+        {
+            _tutorialSelected = true;
+        }
 
 
-        LevelSelections = ShiftIndex(LevelSelections,shift).ToArray();
+        _levelSelections = ShiftIndex(_levelSelections,shift).ToArray();
         StopAllCoroutines();
         StartCoroutine(LerpToLoc());
     }
@@ -51,13 +89,13 @@ public class MainMenuManager : MonoBehaviour
     {
         List<Color> orginalColor = new List<Color>();
 
-        foreach(GameObject selection in LevelSelections)
+        foreach(GameObject selection in _levelSelections)
         {
             selection.SetActive(true);
-            orginalColor.Add(selection.GetComponent<Image>().color);
+            orginalColor.Add(selection.GetComponent<RawImage>().color);
         }
-        LevelSelections[2].SetActive(false);
-        LevelSelections[3].SetActive(false);
+        _levelSelections[2].SetActive(false);
+        _levelSelections[3].SetActive(false);
 
         List<Vector3> positionToLerp = new List<Vector3>();
         List<Vector3> startPos = new List<Vector3>();
@@ -66,12 +104,12 @@ public class MainMenuManager : MonoBehaviour
         List<Vector3> startScale = new List<Vector3>();
 
 
-        for (int i = 0; i < LevelSelections.Length; i++)
+        for (int i = 0; i < _levelSelections.Length; i++)
         {
-            startPos.Add(LevelSelections[i].transform.localPosition);
+            startPos.Add(_levelSelections[i].transform.localPosition);
             positionToLerp.Add(_objPosition[i]);
 
-            startScale.Add(LevelSelections[i].transform.localScale);
+            startScale.Add(_levelSelections[i].transform.localScale);
             scaleToLerp.Add(_objScale[i]);
         }
 
@@ -83,18 +121,66 @@ public class MainMenuManager : MonoBehaviour
             float percent = time / maxTime;
 
             //Lerp Position-Color-Scale
-            for(int i = 0; i < LevelSelections.Length; i++)
+            for(int i = 0; i < _levelSelections.Length; i++)
             {
-                LevelSelections[i].transform.localPosition = Vector3.Lerp(startPos[i],positionToLerp[i],percent);
-                LevelSelections[i].transform.localScale = Vector3.Lerp(startScale[i],scaleToLerp[i],percent);
+                _levelSelections[i].transform.localPosition = Vector3.Lerp(startPos[i],positionToLerp[i],percent);
+                _levelSelections[i].transform.localScale = Vector3.Lerp(startScale[i],scaleToLerp[i],percent);
 
                 if(i == 0)
-                    LevelSelections[i].GetComponent<Image>().color = Color.Lerp(orginalColor[i],Color.white,percent);
+                    _levelSelections[i].GetComponent<RawImage>().color = Color.Lerp(orginalColor[i],Color.white,percent);
                 else
-                    LevelSelections[i].GetComponent<Image>().color = Color.Lerp(orginalColor[i],Color.gray,percent);
+                    _levelSelections[i].GetComponent<RawImage>().color = Color.Lerp(orginalColor[i],Color.gray,percent);
             }
 
-            if(percent >= 1f)
+            float oppositePercent = 1.0f - percent;
+            _titleGroup.alpha = oppositePercent;
+
+            if (_tutorialSelected)
+            {
+                _alleyRatsGroup.alpha = oppositePercent;
+                _alleyRatsSong.volume = oppositePercent;
+                _tutorialGroup.alpha = 0f;
+            }
+            else
+            {
+                _tutorialGroup.alpha = oppositePercent;
+                _tutorialSong.volume = oppositePercent;
+                _alleyRatsGroup.alpha = 0f;
+            }
+
+
+            if (percent >= 1f)
+            {
+                if(_tutorialSelected)
+                    _titleGroup.GetComponent<TextMeshProUGUI>().text = "TUTORIAL";
+                else
+                    _titleGroup.GetComponent<TextMeshProUGUI>().text = "ALLEY RATS";
+
+                break;
+            }
+            yield return new WaitForEndOfFrame();
+        }
+
+        time = 0f;
+        while(true)
+        {
+            time += Time.deltaTime;
+            float percent = time / maxTime;
+
+            _titleGroup.alpha = percent;
+
+            if(_tutorialSelected)
+            {
+                _tutorialGroup.alpha = percent;
+                _tutorialSong.volume = percent;
+            }
+            else
+            {
+                _alleyRatsGroup.alpha = percent;
+                _alleyRatsSong.volume = percent;
+            }
+
+            if (percent >= 1)
             {
                 break;
             }
