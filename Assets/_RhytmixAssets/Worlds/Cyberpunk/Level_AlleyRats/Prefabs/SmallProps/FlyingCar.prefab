@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3853760870871226080}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -145,7 +145,16 @@ MonoBehaviour:
   car: {fileID: 2060659935124382594}
   pointOne: {fileID: 458007774548084196}
   pointTwo: {fileID: 6153030536356964408}
-  timeToLerp: 20
+  speed1Lerp: 0
+  speed2Lerp: 0
+  bHasTwoSpeeds: 0
+  bLoop: 0
+  bobSpeed: 0
+  bobHeight: 0
+  Glow: 3.5
+  CarMtl: {fileID: 2100000, guid: bfa68d51edf810f46a8517b0de0d983d, type: 2}
+  CarObj: {fileID: 7554230927253658326}
+  CarColor: {r: 1, g: 1, b: 1, a: 0}
 --- !u!1 &7755936743728939344
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79c4cfa646044a44aaa49f0013357ecc, type: 3}
+--- !u!1 &7554230927253658326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79c4cfa646044a44aaa49f0013357ecc, type: 3}
+  m_PrefabInstance: {fileID: 7212352973130983303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7178128322260959340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 79c4cfa646044a44aaa49f0013357ecc, type: 3}

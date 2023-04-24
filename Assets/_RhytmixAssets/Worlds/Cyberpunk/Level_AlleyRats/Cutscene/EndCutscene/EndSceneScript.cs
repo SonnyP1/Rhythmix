@@ -21,6 +21,24 @@ public class EndSceneScript : MonoBehaviour
     [SerializeField] Canvas _scoreCanvas;
     [SerializeField] TextMeshProUGUI _scoreTxt;
     [SerializeField] TextMeshProUGUI _accuracyTxt;
+
+    [Header("Tablet Geo")]
+    [SerializeField] GameObject TabletInHand;
+    [SerializeField] GameObject TabletOnHip;
+    [SerializeField] GameObject TabletSmash;
+
+
+    public void HideHipTablet()
+    {
+        TabletOnHip.SetActive(false);
+        TabletInHand.SetActive(true);
+    }
+
+    public void HideInHandTablet()
+    {
+        TabletInHand.SetActive(false);
+        TabletSmash.SetActive(true);
+    }
     private void Start()
     {
         _scoreTxt.text = PlayerPrefs.GetFloat("Score").ToString();
@@ -49,7 +67,7 @@ public class EndSceneScript : MonoBehaviour
         {
             time += Time.deltaTime;
             float percent = time / maxTime;
-            scoreTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.05f,0.05f,0.05f),percent);
+            scoreTransform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(0.01f, 0.008f, 0.008f),percent);
 
             if (percent >= 1)
                 break;

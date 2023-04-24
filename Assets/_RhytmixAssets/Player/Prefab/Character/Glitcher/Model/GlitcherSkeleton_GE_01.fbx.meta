@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: 6636db6ed81a1424ebe699d26379373f
+guid: 983d1558896085740a128f16cbb7585b
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: -2935999467424935292
-    second: Glitcher_Jump
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -19,67 +16,21 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: 
-    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
-      rotation in copied configuration does not match rotation in animation file:\n\t'HipPart2_L'
-      : rotation error = 1.356202 deg\n"
+    rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Glitcher_Jump' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'Hip_R' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n\t'HipPart2_R' is inbetween
-      humanoid transforms and has rotation animation that will be discarded.\n\t'RootPart2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part1_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'Spine1Part2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'NeckPart2_M'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ShoulderPart2_R'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'ElbowPart1_R'
-      has translation animation that will be discarded.\n\t'ElbowPart2_R' has translation
-      animation that will be discarded.\n\t'Wrist_R' has translation animation that
-      will be discarded.\n\t'ShoulderPart2_L' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'Hip_L' is inbetween humanoid
-      transforms and has rotation animation that will be discarded.\n\t'HipPart2_L'
-      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Glitcher_Jump
-      takeName: Glitcher_Jump
-      internalID: 0
-      firstFrame: 1
-      lastFrame: 14
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
-      keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -90,11 +41,11 @@ ModelImporter:
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -122,7 +73,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human:
@@ -3698,11 +3649,11 @@ ModelImporter:
     hasTranslationDoF: 1
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 983d1558896085740a128f16cbb7585b, type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
