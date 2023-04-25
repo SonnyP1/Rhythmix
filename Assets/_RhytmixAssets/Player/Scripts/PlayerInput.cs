@@ -138,22 +138,19 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetTouch(index).phase == TouchPhase.Moved || Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
             Lanes[index].CheckHoldingNote();
-        }
-
-        if (Input.GetTouch(index).phase == TouchPhase.Ended)
-        {
             Vector3 end = Input.GetTouch(index).position;
 
-            isHolding[index] = false;
             if(Mathf.Abs(end.y - start[index].y) > 30)
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
                 return;
             }
-            else
-            {
-                Lanes[index].HitNote(AttackType.EndHold);
-            }
+        }
+
+        if (Input.GetTouch(index).phase == TouchPhase.Ended)
+        {
+            isHolding[index] = false;
+            Lanes[index].HitNote(AttackType.EndHold);
         }
     }
 }

@@ -61,6 +61,10 @@ public class MainMenuManager : MonoBehaviour
             {
                 _titleScreen.SetActive(false);
                 _startBtn.enabled = false;
+                _tutorialBtn.enabled = true;
+                _easyBtn.enabled = true;
+                _medBtn.enabled = true;
+                _hardBtn.enabled = true;
                 break;
             }
 
@@ -70,6 +74,8 @@ public class MainMenuManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
+
         _startBtn.onClick.AddListener(() => StartCoroutine(TitleToSelection()));
         _exitBtn.onClick.AddListener(()=> Application.Quit());
 
@@ -87,6 +93,10 @@ public class MainMenuManager : MonoBehaviour
         _medBtn.onClick.AddListener(LoadAlleyRatsMedium);
         _hardBtn.onClick.AddListener(LoadAlleyRatsHard);
 
+        _tutorialBtn.enabled = false;
+        _easyBtn.enabled = false;
+        _medBtn.enabled = false;
+        _hardBtn.enabled = false;
     }
 
 
@@ -96,10 +106,19 @@ public class MainMenuManager : MonoBehaviour
         if(_tutorialSelected)
         {
             _tutorialSelected = false;
+            _tutorialBtn.enabled = false;
+            _easyBtn.enabled = true;
+            _medBtn.enabled = true;
+            _hardBtn.enabled = true;
         }
         else
         {
             _tutorialSelected = true;
+            _tutorialBtn.enabled = true;
+
+            _easyBtn.enabled = false;
+            _medBtn.enabled = false;
+            _hardBtn.enabled = false;
         }
 
 

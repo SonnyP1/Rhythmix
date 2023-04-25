@@ -821,6 +821,7 @@ MonoBehaviour:
   tapNote: {fileID: 1404083527}
   holdNote: {fileID: 149898570}
   swipeUpNote: {fileID: 339364712}
+  textAsset: {fileID: 4900000, guid: 3cc2568bb39510f4899022cb3f1e9ec4, type: 3}
 --- !u!1 &1143653651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7909707539388379847, guid: 63b51d6485effd4428bbb7ff4fb468f0, type: 3}
@@ -1620,6 +1621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1218153249, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 130450601117662076, guid: 34c7d5012eeafde49a884dd93670da17, type: 3}
       propertyPath: _songTitle
       value: Tutorial

@@ -25,7 +25,7 @@ public class CarScript : MonoBehaviour
     [SerializeField] Material CarMtl;
     [SerializeField] GameObject CarObj;
     [SerializeField] Color CarColor;
-    float time;
+    private float time;
     private float currentTimeToLerp;
 
     private void Start()
@@ -38,7 +38,7 @@ public class CarScript : MonoBehaviour
 
         if(CarObj.GetComponent<Renderer>().material.HasProperty("_EmissionColor"))
         {
-            Debug.Log("Property does exist");
+            //Debug.Log("Property does exist");
             materialToAssign.SetColor("_EmissionColor", CarColor);
         }
         CarObj.GetComponent<Renderer>().material = materialToAssign;

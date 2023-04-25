@@ -5,6 +5,8 @@ using System.IO;
 using System.Text;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Melanchall.DryWetMidi.Core;
+using UnityEngine.Networking;
 
 public class TutorialWorld : MonoBehaviour
 {
@@ -42,6 +44,7 @@ public class TutorialWorld : MonoBehaviour
     [SerializeField] GameObject tapNote;
     [SerializeField] GameObject holdNote;
     [SerializeField] GameObject swipeUpNote;
+    [SerializeField] TextAsset textAsset;
 
 
     //Private variables
@@ -227,20 +230,39 @@ public class TutorialWorld : MonoBehaviour
             StopCoroutine(core);
         }
     }
+
     public void AssignStringBuilder()
     {
         string path = Application.streamingAssetsPath + "/TutorialTxt.txt";
-#if UNITY_STANDALONE_WIN
-        path = Application.streamingAssetsPath + "/TutorialTxtWindow.txt";
-#endif
 
-        var lines = File.ReadAllLines(path);
-        foreach(var line in lines)
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            List<string> stringContent = new List<string>();
+            using (StreamReader sr = new StreamReader(new MemoryStream(textAsset.bytes)))
+            {
+                while(!sr.EndOfStream)
+                {
+                    stringContent.Add(sr.ReadLine());
+                }
+            }
+            ReadLines(stringContent.ToArray());
+        }
+        else if(Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            path = Application.streamingAssetsPath + "/TutorialTxtWindow.txt";
+            string[] lines = File.ReadAllLines(path);
+            ReadLines(lines);
+        }
+    }
+
+    private void ReadLines(string[] lines)
+    {
+        foreach(string line in lines)
         {
             tutorialStringBuilder.Append(line);
         }
-
     }
+
     IEnumerator SetTutorialTxtConsole(string txt)
     {
         StopCoroutine(flashingImageCore);
