@@ -85,8 +85,8 @@ public class MainMenuManager : MonoBehaviour
             _objScale.Add(obj.transform.localScale);
         }
 
-        _rightBtn.onClick.AddListener(() => Selection(1));
-        _leftBtn.onClick.AddListener(() => Selection(-1));
+        _rightBtn.onClick.AddListener(() => Selection(-1));
+        _leftBtn.onClick.AddListener(() => Selection(1));
 
         _tutorialBtn.onClick.AddListener(LoadTutorialLevel);
         _easyBtn.onClick.AddListener(LoadAlleyRatsEasy);

@@ -20,7 +20,9 @@ public class EndSceneScript : MonoBehaviour
     [SerializeField] CanvasGroup _canvasGroup;
     [SerializeField] Canvas _scoreCanvas;
     [SerializeField] TextMeshProUGUI _scoreTxt;
+    [SerializeField] TextMeshProUGUI _scoreTxt2;
     [SerializeField] TextMeshProUGUI _accuracyTxt;
+    [SerializeField] TextMeshProUGUI _accuracyTxt2;
 
     [Header("Tablet Geo")]
     [SerializeField] GameObject TabletInHand;
@@ -42,7 +44,9 @@ public class EndSceneScript : MonoBehaviour
     private void Start()
     {
         _scoreTxt.text = PlayerPrefs.GetFloat("Score").ToString();
+        _scoreTxt2.text = PlayerPrefs.GetFloat("Score").ToString();
         _accuracyTxt.text = (PlayerPrefs.GetFloat("Accuracy") * 100).ToString("F0") + "%";
+        _accuracyTxt2.text = (PlayerPrefs.GetFloat("Accuracy") * 100).ToString("F0") + "%";
 
         _returnToMenu.enabled = false;
         _scoreCanvas.gameObject.SetActive(false);
