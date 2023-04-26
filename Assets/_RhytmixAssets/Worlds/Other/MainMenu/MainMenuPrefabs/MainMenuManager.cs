@@ -107,6 +107,7 @@ public class MainMenuManager : MonoBehaviour
         {
             _tutorialSelected = false;
             _tutorialBtn.enabled = false;
+            _tutorialGroup.gameObject.SetActive(false);
             _easyBtn.enabled = true;
             _medBtn.enabled = true;
             _hardBtn.enabled = true;
@@ -115,6 +116,7 @@ public class MainMenuManager : MonoBehaviour
         {
             _tutorialSelected = true;
             _tutorialBtn.enabled = true;
+            _tutorialGroup.gameObject.SetActive(true);
 
             _easyBtn.enabled = false;
             _medBtn.enabled = false;
