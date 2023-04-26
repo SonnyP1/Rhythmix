@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 7486682833710301335
     second: Cinematic7
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glitcher_Rig_all_global_Glitcher_Rig_Run_model_lambert2
+    second: {fileID: 2100000, guid: 924a6add9746d034a997694169c9ddee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glitcher_Rig_all_global_Glitcher_Rig_Run_model_lambert3
+    second: {fileID: 2100000, guid: 79fbaff6e3149964aae0f750b1ec2370, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glitcher_Rig_all_global_Glitcher_Rig_Run_model_lambert4
+    second: {fileID: 2100000, guid: 924a6add9746d034a997694169c9ddee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +103,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.19999999
+    globalScale: 20
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
