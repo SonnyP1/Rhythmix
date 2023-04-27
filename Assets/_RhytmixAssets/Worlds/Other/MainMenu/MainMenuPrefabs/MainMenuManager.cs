@@ -59,7 +59,10 @@ public class MainMenuManager : MonoBehaviour
 
             if (percent >= 1)
             {
-                _titleScreen.SetActive(false);
+                _startBtn.GetComponent<GraphicRaycaster>().enabled = false;
+                _titleScreen.gameObject.SetActive(false);
+                _rightBtn.enabled = true;
+                _leftBtn.enabled = true;
                 _startBtn.enabled = false;
                 _tutorialBtn.enabled = true;
                 _easyBtn.enabled = true;
@@ -93,6 +96,8 @@ public class MainMenuManager : MonoBehaviour
         _medBtn.onClick.AddListener(LoadAlleyRatsMedium);
         _hardBtn.onClick.AddListener(LoadAlleyRatsHard);
 
+        _rightBtn.enabled = false;
+        _leftBtn.enabled = false;
         _tutorialBtn.enabled = false;
         _easyBtn.enabled = false;
         _medBtn.enabled = false;
