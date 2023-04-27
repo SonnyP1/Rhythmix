@@ -45,6 +45,7 @@ public class Lane : MonoBehaviour
     private List<Melanchall.DryWetMidi.Interaction.Note> melanchallMidiNotes = new List<Melanchall.DryWetMidi.Interaction.Note>();
     private AudioSource _hitSoundAudioSource;
     private CoreGameDataHolder _gameDataHolder;
+    private TempoMap _tempoMap;
 
     double timeStamp;
     double marginOfError;
@@ -158,7 +159,8 @@ public class Lane : MonoBehaviour
         {
             if (note.NoteName == noteRestriction || note.NoteName == noteRestrictionSwipeUp)
             {
-                var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _levelAudioManager.GetMidiFile().GetTempoMap());
+                _tempoMap = _levelAudioManager.GetMidiFile().GetTempoMap();
+                var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, _tempoMap);
                 timeStamps.Add( + ((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f));
                 melanchallMidiNotes.Add(note);
                 notesRestriction.Add(note.NoteName);
@@ -191,7 +193,7 @@ public class Lane : MonoBehaviour
             if (_levelAudioManager.GetAudioSourceTime() >= timeStamps[spawnIndex] - _levelAudioManager.GetNoteTime())
             {
                 GameObject noteObject = null;
-                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _levelAudioManager.GetMidiFile().GetTempoMap());
+                var metricTimeEnd = TimeConverter.ConvertTo<MetricTimeSpan>(melanchallMidiNotes[spawnIndex].Length, _tempoMap);
                 if (notesRestriction[spawnIndex] == noteRestrictionSwipeUp)
                 {
                     noteObject = Instantiate(notePrefab[2], transform);
@@ -237,7 +239,7 @@ public class Lane : MonoBehaviour
         Instantiate(MissEffect, EffectSpawn);
         if(HealthComp != null && HealthComp.GetHealth() != 0)
         {
-            Icon.HurtIcon();
+            //Icon.HurtIcon();
             HealthComp.TakeDmg(1);
             _animationHandler.PlayHitAnimation();
         }
