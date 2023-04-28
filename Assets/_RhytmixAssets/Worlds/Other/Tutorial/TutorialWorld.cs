@@ -247,7 +247,7 @@ public class TutorialWorld : MonoBehaviour
             }
             ReadLines(stringContent.ToArray());
         }
-        else if(Application.platform == RuntimePlatform.WindowsPlayer)
+        else
         {
             path = Application.streamingAssetsPath + "/TutorialTxtWindow.txt";
             string[] lines = File.ReadAllLines(path);

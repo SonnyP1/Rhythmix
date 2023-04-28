@@ -52,6 +52,9 @@ public class Lane : MonoBehaviour
     double audioTime;
     int spawnIndex = 0;
     int inputIndex = 0;
+    bool _holdingNote = false;
+
+    public bool GetIsHoldingNote() { return _holdingNote; }
     public void Start()
     {
         _animationHandler = GetComponent<AnimationHandler>();
@@ -82,7 +85,6 @@ public class Lane : MonoBehaviour
                 }
                 else if(notes[inputIndex].GetNoteType() == AttackType.Hold)
                 {
-                    //Debug.Log("Start Hold");
                     _animationHandler.PlayAttackAnimation(AttackType.Hold);
                 }
             }
@@ -260,9 +262,10 @@ public class Lane : MonoBehaviour
     {
         if(inputIndex-1 >= 0 && inputIndex-1 < notes.Count && notes[inputIndex-1] != null)
         {
+            _holdingNote = true;
             if (AbsValueDouble(audioTime - notes[inputIndex-1].GetEndTime()) < 0.1f)
             {
-                //Debug.Log("EndHold");
+                _holdingNote = false;
                 _animationHandler.PlayAttackAnimation(AttackType.EndHold);
             }
         }

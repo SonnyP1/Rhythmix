@@ -15,10 +15,10 @@ public class VideoManager : MonoBehaviour
     [SerializeField] bool bHasChild = false;
     [SerializeField] GameObject[] childerens;
 
-
-    private void Start()
+    public void StartVideo()
     {
         _videoPlayer = GetComponent<VideoPlayer>();
+        _videoPlayer.Play();
         _videoPlayer.loopPointReached += SwitchVideo;
 
         if (bHasChild)
@@ -29,12 +29,15 @@ public class VideoManager : MonoBehaviour
             }
         }
     }
+
+
     private void SwitchVideo(VideoPlayer source)
     {
         if(isSwitch == false)
         {
             _videoPlayer.clip = clipLoop;
             isSwitch = true;
+            _videoPlayer.Play();
             if(bHasChild)
             {
                 foreach(GameObject obj in childerens)

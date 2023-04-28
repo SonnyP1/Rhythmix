@@ -617,6 +617,7 @@ GameObject:
   - component: {fileID: 276946753}
   - component: {fileID: 276946752}
   - component: {fileID: 276946751}
+  - component: {fileID: 276946750}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -624,6 +625,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &276946750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276946749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b787907cf6b166548bdd206f6c99d9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _UIWLOGOGroup: {fileID: 2019135744}
+  _players:
+  - {fileID: 1801912922}
+  - {fileID: 583476779}
 --- !u!114 &276946751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +699,7 @@ RectTransform:
   - {fileID: 1885882443}
   - {fileID: 845837486}
   - {fileID: 1802011671}
+  - {fileID: 2019135741}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -860,7 +878,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -1218,7 +1236,6 @@ GameObject:
   - component: {fileID: 845837486}
   - component: {fileID: 845837489}
   - component: {fileID: 845837488}
-  - component: {fileID: 845837487}
   - component: {fileID: 845837490}
   m_Layer: 5
   m_Name: TitleCanvas
@@ -1249,23 +1266,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &845837487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 845837485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &845837488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,7 +1521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932228065577257838, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
       propertyPath: m_Name
-      value: ButtonSelection
+      value: ButtonSelectionTutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3932228066072694519, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
       propertyPath: m_text
@@ -2113,13 +2113,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3932228065577257838, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
       propertyPath: m_Name
-      value: ButtonSelection (1)
+      value: ButtonSelectionMed
       objectReference: {fileID: 0}
     - target: {fileID: 3932228066072694519, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
       propertyPath: m_text
       value: 'Medium
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299929203803132031, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5603521803056848075, guid: 67ca4b5a1dffccb4b8f80e80bffecea2, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
@@ -2996,7 +3000,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 0
@@ -3217,6 +3221,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1976093458}
   m_CullTransparentMesh: 1
+--- !u!1 &2019135740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2019135741}
+  - component: {fileID: 2019135743}
+  - component: {fileID: 2019135742}
+  - component: {fileID: 2019135744}
+  m_Layer: 5
+  m_Name: UIWLOGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2019135741
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019135740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 276946753}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2019135742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019135740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3af61ca562f50194eb6cfdcaad265ae9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2019135743
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019135740}
+  m_CullTransparentMesh: 1
+--- !u!225 &2019135744
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019135740}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &2037422266
 PrefabInstance:
   m_ObjectHideFlags: 0

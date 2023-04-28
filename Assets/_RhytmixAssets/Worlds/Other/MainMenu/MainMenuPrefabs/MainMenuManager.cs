@@ -112,19 +112,21 @@ public class MainMenuManager : MonoBehaviour
         {
             _tutorialSelected = false;
             _tutorialBtn.enabled = false;
-            _tutorialGroup.gameObject.SetActive(false);
+            _tutorialBtn.GetComponent<GraphicRaycaster>().enabled = false;
             _easyBtn.enabled = true;
             _medBtn.enabled = true;
+            _medBtn.GetComponent<GraphicRaycaster>().enabled = true;
             _hardBtn.enabled = true;
         }
         else
         {
             _tutorialSelected = true;
             _tutorialBtn.enabled = true;
-            _tutorialGroup.gameObject.SetActive(true);
+            _tutorialBtn.GetComponent<GraphicRaycaster>().enabled = true;
 
             _easyBtn.enabled = false;
             _medBtn.enabled = false;
+            _medBtn.GetComponent<GraphicRaycaster>().enabled = false;
             _hardBtn.enabled = false;
         }
 
@@ -253,21 +255,25 @@ public class MainMenuManager : MonoBehaviour
     //**********************************************************************Load Levels
     public void LoadTutorialLevel()
     {
+        Debug.Log("Load Tutorial");
         PlayerPrefs.SetString("ChartDirPath","Tutorial.mid");
         SceneManager.LoadScene("TutorialWorld",LoadSceneMode.Single);
     }
     public void LoadAlleyRatsEasy()
     {
+        Debug.Log("Load Easy");
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Easy.mid");
         SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
     public void LoadAlleyRatsMedium()
     {
+        Debug.Log("Load Med");
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Medium.mid");
         SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }
     public void LoadAlleyRatsHard()
     {
+        Debug.Log("Load Hard");
         PlayerPrefs.SetString("ChartDirPath", "AlleyRats_Hard.mid");
         SceneManager.LoadScene("CinematicAlleyRats_Scene", LoadSceneMode.Single);
     }

@@ -23,6 +23,7 @@ public class EndSceneScript : MonoBehaviour
     [SerializeField] TextMeshProUGUI _scoreTxt2;
     [SerializeField] TextMeshProUGUI _accuracyTxt;
     [SerializeField] TextMeshProUGUI _accuracyTxt2;
+    [SerializeField] CanvasGroup _imageCanvasGroup;
 
     [Header("Tablet Geo")]
     [SerializeField] GameObject TabletInHand;
@@ -114,8 +115,8 @@ public class EndSceneScript : MonoBehaviour
         _canvasGroup.alpha = 1;
 
 
-        Vector3 endPos = new Vector3(0,1000,0);
-        Vector3 startPos = new Vector3(0,-1000,0);
+        Vector3 endPos = new Vector3(0, 748.6418f, 0);
+        Vector3 startPos = new Vector3(0,-500,0);
         maxTime = 25;
         while(true)
         {
@@ -129,6 +130,19 @@ public class EndSceneScript : MonoBehaviour
         }
 
         _returnToMenu.enabled = true;
+
+        yield return new WaitForSeconds(1f);
+
+        time = 0f;
+        maxTime = 1f;
+        while(time <= maxTime)
+        {
+            time += Time.deltaTime;
+            float percent = time / maxTime;
+            _imageCanvasGroup.alpha = 1.0f - percent;
+
+            yield return new WaitForFixedUpdate();
+        }
 
         yield return new WaitForSeconds(8f);
         SceneManager.LoadScene("MainMenuScene",LoadSceneMode.Single);

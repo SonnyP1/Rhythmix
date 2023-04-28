@@ -29,6 +29,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3[] start = { Vector3.zero, Vector3.zero , Vector3.zero };
     private float[] startTime = { 0,0,0 };
     private bool[] isHolding = { false ,false,false};
+    private bool[] swipeUpActivate = { false, false, false };
 
     private void OnEnable()
     {
@@ -42,9 +43,14 @@ public class PlayerInput : MonoBehaviour
     {
         if(_playerHPComp.GetHealth() >= 0)
         {
-            PhoneInput();
-            KeyboardInput();
-            //Click();
+            if(Application.platform == RuntimePlatform.Android)
+            {
+                PhoneInput();
+            }
+            else
+            {
+                KeyboardInput();
+            }
         }
     }
 
@@ -138,17 +144,23 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetTouch(index).phase == TouchPhase.Moved || Input.GetTouch(index).phase == TouchPhase.Stationary)
         {
             Lanes[index].CheckHoldingNote();
+        }
+
+        if (Input.GetTouch(index).phase == TouchPhase.Moved)
+        {
             Vector3 end = Input.GetTouch(index).position;
 
-            if(Mathf.Abs(end.y - start[index].y) > 30)
+            if(Mathf.Abs(end.y - start[index].y) > 40 && !Lanes[index].GetIsHoldingNote() && !swipeUpActivate[index])
             {
                 Lanes[index].HitNote(AttackType.SwipeUp);
+                swipeUpActivate[index] = true;
                 return;
             }
         }
 
         if (Input.GetTouch(index).phase == TouchPhase.Ended)
         {
+            swipeUpActivate[index] = false;
             isHolding[index] = false;
             Lanes[index].HitNote(AttackType.EndHold);
         }
