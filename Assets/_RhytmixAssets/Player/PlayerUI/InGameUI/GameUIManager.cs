@@ -156,7 +156,7 @@ public class GameUIManager : MonoBehaviour
                 UpdateHealthBarColor(new Color(139f,64f,0));
                 break;
             case 1:
-                UpdateHealthBarColor(Color.clear);
+                UpdateHealthBarColor(Color.red);
                 break;
             default:
                 UpdateHealthBarColor(Color.clear);

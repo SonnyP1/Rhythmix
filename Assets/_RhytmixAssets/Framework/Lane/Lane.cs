@@ -102,7 +102,7 @@ public class Lane : MonoBehaviour
         {
             if(notes.Count > 0)
             {
-                if(notes[inputIndex-1] != null)
+                if(notes[inputIndex-1] != null && _holdingNote)
                 {
                     Miss();
                     return;

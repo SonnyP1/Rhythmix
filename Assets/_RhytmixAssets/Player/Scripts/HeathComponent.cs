@@ -28,6 +28,7 @@ public class HeathComponent : MonoBehaviour
         UpdateHealthBar();
         if(HP <= 0)
         {
+            GetComponent<PlayerInput>().enabled = false;
             if(onDeath != null)
             {
                 onDeath.Invoke();
